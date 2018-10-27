@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "XMLParsing",
+        "repositoryURL": "https://github.com/maxdesiatov/XMLParsing.git",
+        "state": {
+          "branch": "master",
+          "revision": "6d147739c7aa52b6b6d7ec5fd0d58740397ee233",
+          "version": null
+        }
+      },
+      {
+        "package": "ZIPFoundation",
+        "repositoryURL": "https://github.com/weichsel/ZIPFoundation.git",
+        "state": {
+          "branch": null,
+          "revision": "b5c53bef2deb7b20659b03b1223f0942599e5c41",
+          "version": "0.9.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
