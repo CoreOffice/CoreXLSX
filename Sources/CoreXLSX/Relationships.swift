@@ -9,6 +9,10 @@ import Foundation
 
 struct Relationships: Codable {
   let items: [Relationship]
+
+  enum CodingKeys: String, CodingKey {
+    case items = "relationship"
+  }
 }
 
 struct Relationship: Codable {

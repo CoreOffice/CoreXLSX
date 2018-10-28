@@ -16,8 +16,12 @@ public func sheets(filepath: String) throws -> [String] {
   }
 
   var result: Relationships?
+
+  let decoder = XMLDecoder()
+  decoder.keyDecodingStrategy = .convertFromCapitalized
   _ = try archive.extract(entry) {
-    result = try XMLDecoder().decode(Relationships.self, from: $0)
+    print(String(data: $0, encoding: .utf8)!)
+    result = try decoder.decode(Relationships.self, from: $0)
   }
 
   return result?.items.filter { $0.type == .officeDocument }
