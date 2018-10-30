@@ -6,24 +6,57 @@ public enum XLSXReaderError: Error {
   case relationshipsFileNotFound
 }
 
-public func sheets(filepath: String) throws -> [String] {
-  let archiveURL = URL(fileURLWithPath: filepath)
+public struct XLSXFile {
+  public let filepath: String
+  private let archive: Archive
+  private let decoder: XMLDecoder
 
-  guard let archive = Archive(url: archiveURL, accessMode: .read),
-  let entry = archive["_rels/.rels"]
-  else {
-    throw XLSXReaderError.relationshipsFileNotFound
+  init?(filepath: String) {
+    let archiveURL = URL(fileURLWithPath: filepath)
+
+    guard let archive = Archive(url: archiveURL, accessMode: .read) else {
+      return nil
+    }
+
+    self.archive = archive
+    self.filepath = filepath
+
+    decoder = XMLDecoder()
+    decoder.keyDecodingStrategy = .convertFromCapitalized
   }
 
-  var result: Relationships?
+  func parseEntry<T: Decodable>(_ path: String, _ type: T.Type) throws -> T {
+    guard let entry = archive[path] else {
+      throw XLSXReaderError.relationshipsFileNotFound
+    }
 
-  let decoder = XMLDecoder()
-  decoder.keyDecodingStrategy = .convertFromCapitalized
-  _ = try archive.extract(entry) {
-    print(String(data: $0, encoding: .utf8)!)
-    result = try decoder.decode(Relationships.self, from: $0)
+    var result: T?
+
+    _ = try archive.extract(entry) {
+      result = try decoder.decode(type, from: $0)
+    }
+
+    return result!
   }
 
-  return result?.items.filter { $0.type == .officeDocument }
-    .map { $0.target } ?? []
+  /// Return the list of paths to relationships of type `officeDocument`
+  func parseDocumentPaths() throws -> [String] {
+    return try parseEntry("_rels/.rels", Relationships.self).items
+      .filter { $0.type == .officeDocument }
+      .map { $0.target }
+  }
+
+  public func parseWorksheetPaths() throws -> [String] {
+    return try parseDocumentPaths().flatMap { (path: String) -> [String] in
+      var components = path.split(separator: "/")
+      components.insert("_rels", at: 1)
+      guard let filename = components.last else { return [] }
+      components[components.count - 1] = Substring(filename.appending(".rels"))
+
+      return
+        try parseEntry(components.joined(separator: "/"), Relationships.self)
+          .items.filter { $0.type == .worksheet }
+          .map { $0.target }
+    }
+  }
 }
