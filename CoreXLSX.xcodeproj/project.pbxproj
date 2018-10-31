@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D11B79B22189BD62005AF0C6 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B79B12189BD62005AF0C6 /* Worksheet.swift */; };
 		OBJ_100 /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* XMLReferencingEncoder.swift */; };
 		OBJ_101 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ISO8601DateFormatter.swift */; };
 		OBJ_102 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* XMLKey.swift */; };
@@ -102,6 +103,7 @@
 /* Begin PBXFileReference section */
 		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11B79B12189BD62005AF0C6 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		OBJ_13 /* CoreXLSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSXTests.swift; sourceTree = "<group>"; };
 		OBJ_14 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -276,7 +278,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -286,7 +288,6 @@
 				OBJ_44 /* Products */,
 			);
 			indentWidth = 2;
-			name = "";
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
@@ -303,6 +304,7 @@
 			children = (
 				OBJ_9 /* CoreXLSX.swift */,
 				OBJ_10 /* Relationships.swift */,
+				D11B79B12189BD62005AF0C6 /* Worksheet.swift */,
 			);
 			name = CoreXLSX;
 			path = Sources/CoreXLSX;
@@ -437,7 +439,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -489,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				D11B79B22189BD62005AF0C6 /* Worksheet.swift in Sources */,
 				OBJ_54 /* CoreXLSX.swift in Sources */,
 				OBJ_55 /* Relationships.swift in Sources */,
 			);

@@ -22,7 +22,6 @@ public struct XLSXFile {
     self.filepath = filepath
 
     decoder = XMLDecoder()
-    decoder.keyDecodingStrategy = .convertFromCapitalized
   }
 
   func parseEntry<T: Decodable>(_ path: String, _ type: T.Type) throws -> T {
@@ -41,12 +40,16 @@ public struct XLSXFile {
 
   /// Return the list of paths to relationships of type `officeDocument`
   func parseDocumentPaths() throws -> [String] {
+    decoder.keyDecodingStrategy = .convertFromCapitalized
+
     return try parseEntry("_rels/.rels", Relationships.self).items
       .filter { $0.type == .officeDocument }
       .map { $0.target }
   }
 
   public func parseWorksheetPaths() throws -> [String] {
+    decoder.keyDecodingStrategy = .convertFromCapitalized
+
     return try parseDocumentPaths().flatMap { (path: String) -> [String] in
       var components = path.split(separator: "/")
       components.insert("_rels", at: 1)
