@@ -13,6 +13,8 @@ struct Worksheet: Codable {
   let sheetViews: SheetViews
   let sheetFormatPr: SheetFormatPr
   let cols: Cols
+  let sheetData: SheetData
+  let mergeCells: MergeCells?
 }
 
 struct SheetPr: Codable {
@@ -72,4 +74,51 @@ struct Col: Codable {
   let width: String
   let style: String
   let customWidth: String
+}
+
+struct SheetData: Codable {
+  let rows: [Row]
+
+  enum CodingKeys: String, CodingKey {
+    case rows = "row"
+  }
+}
+
+struct Row: Codable {
+  let r: String
+  let ht: String
+  let customHeight: String
+  let cells: [Cell]
+
+  enum CodingKeys: String, CodingKey {
+    case cells = "c"
+    case r
+    case ht
+    case customHeight
+  }
+}
+
+struct Cell: Codable {
+  let r: String
+  let t: String?
+  let s: String
+  let formula: String?
+  let value: String?
+
+  enum CodingKeys: String, CodingKey {
+    case formula = "f"
+    case value = "v"
+    case r
+    case t
+    case s
+  }
+}
+
+struct MergeCells: Codable {
+  let count: Int
+  let items: [MergeCell]
+}
+
+struct MergeCell: Codable {
+  let ref: String
 }
