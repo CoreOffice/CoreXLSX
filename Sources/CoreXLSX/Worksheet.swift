@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Worksheet: Codable {
+public struct Worksheet: Codable {
   let sheetPr: SheetPr?
   let dimension: WorksheetDimension
   let sheetViews: SheetViews
@@ -117,6 +117,11 @@ struct Cell: Codable {
 struct MergeCells: Codable {
   let count: Int
   let items: [MergeCell]
+
+  enum CodingKeys: String, CodingKey {
+    case items = "mergeCell"
+    case count
+  }
 }
 
 struct MergeCell: Codable {

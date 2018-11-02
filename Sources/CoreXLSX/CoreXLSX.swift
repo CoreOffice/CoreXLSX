@@ -3,7 +3,7 @@ import ZIPFoundation
 import XMLParsing
 
 public enum XLSXReaderError: Error {
-  case relationshipsFileNotFound
+  case archiveEntryNotFound
 }
 
 public struct XLSXFile {
@@ -26,7 +26,7 @@ public struct XLSXFile {
 
   func parseEntry<T: Decodable>(_ path: String, _ type: T.Type) throws -> T {
     guard let entry = archive[path] else {
-      throw XLSXReaderError.relationshipsFileNotFound
+      throw XLSXReaderError.archiveEntryNotFound
     }
 
     var result: T?
@@ -52,6 +52,11 @@ public struct XLSXFile {
 
     return try parseDocumentPaths().flatMap { (path: String) -> [String] in
       var components = path.split(separator: "/")
+
+      // .rels file has paths relative to its directory,
+      // storing that path in `pathPrefix`
+      let pathPrefix = components.dropLast().joined(separator: "/")
+
       components.insert("_rels", at: 1)
       guard let filename = components.last else { return [] }
       components[components.count - 1] = Substring(filename.appending(".rels"))
@@ -59,7 +64,13 @@ public struct XLSXFile {
       return
         try parseEntry(components.joined(separator: "/"), Relationships.self)
           .items.filter { $0.type == .worksheet }
-          .map { $0.target }
+          .map { "\(pathPrefix)/\($0.target)" }
     }
+  }
+
+  public func parseWorksheet(at path: String) throws -> Worksheet {
+    decoder.keyDecodingStrategy = .useDefaultKeys
+
+    return try parseEntry(path, Worksheet.self)
   }
 }
