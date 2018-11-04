@@ -39,9 +39,9 @@ struct SheetViews: Codable {
 
 struct SheetView: Codable {
   let workbookViewId: String
-  let showGridLines: String
-  let defaultGridColor: String
-  let pane: Pane
+  let showGridLines: String?
+  let defaultGridColor: String?
+  let pane: Pane?
 }
 
 struct Pane: Codable {
@@ -53,11 +53,11 @@ struct Pane: Codable {
 }
 
 struct SheetFormatPr: Codable {
-  let defaultColWidth: String
+  let defaultColWidth: String?
   let defaultRowHeight: String
-  let customHeight: String
-  let outlineLevelRow: String
-  let outlineLevelCol: String
+  let customHeight: String?
+  let outlineLevelRow: String?
+  let outlineLevelCol: String?
 }
 
 struct Cols: Codable {
@@ -72,7 +72,7 @@ struct Col: Codable {
   let min: String
   let max: String
   let width: String
-  let style: String
+  let style: String?
   let customWidth: String
 }
 
@@ -86,8 +86,8 @@ struct SheetData: Codable {
 
 struct Row: Codable {
   let r: String
-  let ht: String
-  let customHeight: String
+  let ht: String?
+  let customHeight: String?
   let cells: [Cell]
 
   enum CodingKeys: String, CodingKey {
@@ -101,7 +101,7 @@ struct Row: Codable {
 struct Cell: Codable {
   let r: String
   let t: String?
-  let s: String
+  let s: String?
   let formula: String?
   let value: String?
 
