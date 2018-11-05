@@ -11,7 +11,7 @@ public struct XLSXFile {
   private let archive: Archive
   private let decoder: XMLDecoder
 
-  init?(filepath: String) {
+  public init?(filepath: String) {
     let archiveURL = URL(fileURLWithPath: filepath)
 
     guard let archive = Archive(url: archiveURL, accessMode: .read) else {
