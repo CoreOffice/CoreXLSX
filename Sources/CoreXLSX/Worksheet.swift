@@ -99,17 +99,19 @@ public struct Row: Codable {
 }
 
 public struct Cell: Codable {
-  public let r: String
-  public let t: String?
+  public let reference: String
+  public let type: String?
   public let s: String?
+  public let inlineString: InlineString?
   public let formula: String?
   public let value: String?
 
   enum CodingKeys: String, CodingKey {
     case formula = "f"
     case value = "v"
-    case r
-    case t
+    case inlineString = "is"
+    case reference = "r"
+    case type = "t"
     case s
   }
 }
@@ -126,4 +128,12 @@ public struct MergeCells: Codable {
 
 public struct MergeCell: Codable {
   public let ref: String
+}
+
+public struct InlineString: Codable {
+  let text: String
+
+  enum CodingKeys: String, CodingKey {
+    case text = "t"
+  }
 }
