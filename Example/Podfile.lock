@@ -1,0 +1,16 @@
+PODS:
+  - CoreXLSX (0.1.0)
+
+DEPENDENCIES:
+  - CoreXLSX (from `../`)
+
+EXTERNAL SOURCES:
+  CoreXLSX:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CoreXLSX: 443c492ab70fe4c70392be1b3dd3fd06c61c8a13
+
+PODFILE CHECKSUM: 68b3d80bfb3c3dedc54cabe6fd663139d9b8e00b
+
+COCOAPODS: 1.5.3

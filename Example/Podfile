@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CoreXLSXExample' do
+  pod 'CoreXLSX', :path => '../'
+
+  target 'CoreXLSXTests' do
+    inherit! :search_paths
+
+    
+  end
+end

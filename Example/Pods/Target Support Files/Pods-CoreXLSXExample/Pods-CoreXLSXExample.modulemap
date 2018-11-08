@@ -1,0 +1,6 @@
+framework module Pods_CoreXLSXExample {
+  umbrella header "Pods-CoreXLSXExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

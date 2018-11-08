@@ -1,0 +1,6 @@
+framework module Pods_CoreXLSXTests {
+  umbrella header "Pods-CoreXLSXTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
