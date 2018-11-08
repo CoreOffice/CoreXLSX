@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
+  s.swift_version    = '4.2'
   s.description      = <<-DESC
 XLSX (Excel spreadsheet) format suppport written in Pure Swift.
                        DESC
