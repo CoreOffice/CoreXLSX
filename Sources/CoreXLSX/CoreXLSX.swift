@@ -1,6 +1,6 @@
 import Foundation
 import ZIPFoundation
-import XMLParsing
+import XMLCoder
 
 public enum XLSXReaderError: Error {
   case archiveEntryNotFound

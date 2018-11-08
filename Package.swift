@@ -16,8 +16,8 @@ let package = Package(
   dependencies: [
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
-    .package(url: "https://github.com/maxdesiatov/XMLParsing.git",
-             .branch("master")),
+    .package(url: "https://github.com/maxdesiatov/XMLCoder.git",
+             .upToNextMajor(from: "0.1.0")),
     .package(url: "https://github.com/weichsel/ZIPFoundation.git",
              .upToNextMajor(from: "0.9.0")),
   ],
@@ -28,7 +28,7 @@ let package = Package(
     // packages which this package depends on.
     .target(
       name: "CoreXLSX",
-      dependencies: ["XMLParsing", "ZIPFoundation"]),
+      dependencies: ["XMLCoder", "ZIPFoundation"]),
     .testTarget(
       name: "CoreXLSXTests",
       dependencies: ["CoreXLSX"]),

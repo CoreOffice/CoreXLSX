@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03C7A8632245DA93A787AA18 /* Pods_CoreXLSX_pod_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D86A4A363D016AA5237A46 /* Pods_CoreXLSX_pod_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -15,7 +14,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		72F32EB9CBAEB64081D35612 /* Pods_CoreXLSXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */; };
-		7375FE2D8237E06C44F38C48 /* Pods_CoreXLSX_pod_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358BAE4074350E89FCA94446 /* Pods_CoreXLSX_pod_Example.framework */; };
 		8BE8494931C11C209B2F3944 /* Pods_CoreXLSXExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +51,9 @@
 		CA005AF46AE2EF05BA10BB0B /* Pods-CoreXLSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXTests/Pods-CoreXLSXTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA820D499A2925968F8F779B /* Pods-CoreXLSXExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample.release.xcconfig"; sourceTree = "<group>"; };
 		CC626190E23C3187CBD56E0F /* Pods-CoreXLSX.pod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSX.pod_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSX.pod_Example/Pods-CoreXLSX.pod_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D1BCEBD521944FA6000B550F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSXExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE826BAD89D91945EB1EAE81 /* CoreXLSX.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CoreXLSX.podspec; path = ../CoreXLSX.podspec; sourceTree = "<group>"; };
+		FE826BAD89D91945EB1EAE81 /* CoreXLSX.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CoreXLSX.podspec; path = ../CoreXLSX.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7375FE2D8237E06C44F38C48 /* Pods_CoreXLSX_pod_Example.framework in Frameworks */,
 				8BE8494931C11C209B2F3944 /* Pods_CoreXLSXExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C7A8632245DA93A787AA18 /* Pods_CoreXLSX_pod_Tests.framework in Frameworks */,
 				72F32EB9CBAEB64081D35612 /* Pods_CoreXLSXTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				FE826BAD89D91945EB1EAE81 /* CoreXLSX.podspec */,
+				D1BCEBD521944FA6000B550F /* Package.swift */,
 				999E62C771CA59BF3E1DF2A6 /* README.md */,
 				7E16389B64C87955489F7367 /* LICENSE.md */,
 			);
@@ -285,16 +283,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CoreXLSX/CoreXLSX.framework",
+				"${BUILT_PRODUCTS_DIR}/XMLCoder/XMLCoder.framework",
+				"${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreXLSX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMLCoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZIPFoundation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C70673269D8C4C3DBC2BCF54 /* [CP] Check Pods Manifest.lock */ = {
@@ -487,7 +489,7 @@
 			baseConfigurationReference = 5A48730722BE3013C8B2BA06 /* Pods-CoreXLSXExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CoreXLSX.pod/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CoreXLSXExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.CoreXLSXExample;
@@ -502,7 +504,7 @@
 			baseConfigurationReference = CA820D499A2925968F8F779B /* Pods-CoreXLSXExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CoreXLSX.pod/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CoreXLSXExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.CoreXLSXExample;

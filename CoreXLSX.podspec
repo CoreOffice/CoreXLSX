@@ -28,7 +28,7 @@ XLSX (Excel spreadsheet) format suppport written in Pure Swift.
   s.source           = { :git => 'https://github.com/MaxDesiatov/CoreXLSX.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/MaxDesiatov'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Sources/CoreXLSX/**/*.swift'
   
@@ -39,4 +39,5 @@ XLSX (Excel spreadsheet) format suppport written in Pure Swift.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ZIPFoundation', '~> 0.9'
+  s.dependency 'XMLCoder', '~> 0.1'
 end
