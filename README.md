@@ -11,7 +11,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-Model types in `CoreXLSX` directly map the internal structure of XLSX format with
+Model types in `CoreXLSX` directly map internal structure of XLSX format with
 more sensible naming applied to a few attributes. The API is pretty simple:
 
 ```swift
@@ -31,7 +31,9 @@ for path in try file.parseWorksheetPaths() {
 }
 ```
 
-This prints every cell from every worksheet in the given XLSX file.
+This prints every cell from every worksheet in the given XLSX file. Please refer to the
+[Worksheet model](./Sources/CoreXLSX/Worksheet.swift) for more atttributes you might
+need to read from a parsed file.
 
 ## Requirements
 
