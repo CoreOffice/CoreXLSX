@@ -1,6 +1,6 @@
 # CoreXLSX
 
-## Excel (XLSX) format support in pure Swift 
+## Excel spreadsheet (XLSX) format support in pure Swift 
 
 [![CI Status](https://img.shields.io/travis/MaxDesiatov/CoreXLSX.svg?style=flat)](https://travis-ci.org/MaxDesiatov/CoreXLSX)
 [![Version](https://img.shields.io/cocoapods/v/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)

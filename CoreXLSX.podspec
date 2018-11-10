@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CoreXLSX'
   s.version          = '0.1.0'
-  s.summary          = 'XLSX (Excel spreadsheet) format suppport written in Pure Swift'
+  s.summary          = 'Excel spreadsheet (XLSX) format support in pure Swift'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.swift_version    = '4.2'
   s.description      = <<-DESC
-XLSX (Excel spreadsheet) format suppport written in Pure Swift.
+Excel spreadsheet (XLSX) format support in pure Swift.
                        DESC
 
   s.homepage         = 'https://github.com/MaxDesiatov/CoreXLSX'
