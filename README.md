@@ -1,5 +1,7 @@
 # CoreXLSX
 
+## Excel (XLSX) format support in pure Swift 
+
 [![CI Status](https://img.shields.io/travis/MaxDesiatov/CoreXLSX.svg?style=flat)](https://travis-ci.org/MaxDesiatov/CoreXLSX)
 [![Version](https://img.shields.io/cocoapods/v/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![License](https://img.shields.io/cocoapods/l/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
@@ -9,7 +11,31 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Model types in `CoreXLSX` directly map the internal structure of XLSX format with
+more sensible naming applied to a few attributes. The API is pretty simple:
+
+```swift
+import CoreXLSX
+
+guard let file = XLSXFile(filepath: "./categories.xlsx") else {
+  fatalError("XLSX file corrupted or does not exist")
+}
+
+for path in try file.parseWorksheetPaths() {
+  let ws = try file.parseWorksheet(at: path)
+  for row in ws.sheetData.rows {
+    for c in row.cells {
+      print(c)
+    }
+  }
+}
+```
+
+This prints every cell from every worksheet in the given XLSX file.
+
 ## Requirements
+
+Xcode 10, Swift 4.2, iOS 9.0 or macOS 10.11
 
 ## Installation
 
@@ -26,4 +52,4 @@ pod 'CoreXLSX'
 
 ## License
 
-CoreXLSX is available under the Apache 2.0 license. See the LICENSE.md file for more info.
+CoreXLSX is available under the Apache 2.0 license. See the [LICENSE.md](./LICENSE.md) file for more info.
