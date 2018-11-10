@@ -10,6 +10,7 @@ public struct XLSXFile {
   public let filepath: String
   private let archive: Archive
   private let decoder: XMLDecoder
+  private let worksheetCache: [String: Worksheet]
 
   public init?(filepath: String) {
     let archiveURL = URL(fileURLWithPath: filepath)
@@ -71,6 +72,23 @@ public struct XLSXFile {
   public func parseWorksheet(at path: String) throws -> Worksheet {
     decoder.keyDecodingStrategy = .useDefaultKeys
 
-    return try parseEntry(path, Worksheet.self)
+    guard let result = worksheetCache[path] else {
+      return try parseEntry(path, Worksheet.self)
+    }
+
+    return result
+  }
+
+  public func cellsInWorksheet(at path: String, rows: [Int]) throws -> [Cell] {
+    let ws = parseWorksheet(at: path)
+
+    let references = rows.map { "\($0)" }
+    return ws.sheetData.rows.filter { references.contains($0.reference) }
+      .reduce([]) { $0 + $1 }
+  }
+
+  public func cellsInWorksheet(at path: String, columns: [String]) throws
+  -> [Cell] {
+    return []
   }
 }

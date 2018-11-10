@@ -85,14 +85,14 @@ public struct SheetData: Codable {
 }
 
 public struct Row: Codable {
-  public let r: String
+  public let reference: String
   public let ht: String?
   public let customHeight: String?
   public let cells: [Cell]
 
   enum CodingKeys: String, CodingKey {
     case cells = "c"
-    case r
+    case reference = "r"
     case ht
     case customHeight
   }
