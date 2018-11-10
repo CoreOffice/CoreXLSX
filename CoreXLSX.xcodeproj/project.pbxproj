@@ -107,6 +107,7 @@
 		D1982972219759CA00C6A761 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		D198297321975A4100C6A761 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D1982974219764D600C6A761 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		D1982975219766E900C6A761 /* CoreXLSX.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreXLSX.podspec; sourceTree = "<group>"; };
 		OBJ_10 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		OBJ_13 /* CoreXLSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSXTests.swift; sourceTree = "<group>"; };
 		OBJ_14 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -284,6 +285,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				D1982975219766E900C6A761 /* CoreXLSX.podspec */,
 				D1982974219764D600C6A761 /* LICENSE.md */,
 				D198297321975A4100C6A761 /* README.md */,
 				D1982972219759CA00C6A761 /* .travis.yml */,
