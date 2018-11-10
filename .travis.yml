@@ -1,0 +1,13 @@
+# references:
+# * https://www.objc.io/issues/6-build-tools/travis-ci/
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode10.1
+language: swift
+# cache: cocoapods
+# podfile: Example/Podfile
+before_install:
+- gem install cocoapods --pre # Since Travis is not always on latest version
+# - pod install --project-directory=Example
+script:
+- pod lib lint

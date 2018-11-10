@@ -12,9 +12,9 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		72F32EB9CBAEB64081D35612 /* Pods_CoreXLSXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */; };
 		8BE8494931C11C209B2F3944 /* Pods_CoreXLSXExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */; };
+		D19829712197596A00C6A761 /* CoreXLSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198296B2197595F00C6A761 /* CoreXLSXTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E1492773E1976A88C4D017F /* Pods-CoreXLSX.pod_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSX.pod_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSX.pod_Tests/Pods-CoreXLSX.pod_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		32B7C1891C073C3F29047F12 /* Pods-CoreXLSX.pod_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSX.pod_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSX.pod_Tests/Pods-CoreXLSX.pod_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		358BAE4074350E89FCA94446 /* Pods_CoreXLSX_pod_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSX_pod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45D86A4A363D016AA5237A46 /* Pods_CoreXLSX_pod_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSX_pod_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A48730722BE3013C8B2BA06 /* Pods-CoreXLSXExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CoreXLSXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreXLSXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,14 +39,14 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		775861F8B513EC6BD844F450 /* Pods-CoreXLSX.pod_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSX.pod_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSX.pod_Example/Pods-CoreXLSX.pod_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7E16389B64C87955489F7367 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		87BB7D503C89D21717D78885 /* Pods-CoreXLSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXTests/Pods-CoreXLSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		999E62C771CA59BF3E1DF2A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CA005AF46AE2EF05BA10BB0B /* Pods-CoreXLSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXTests/Pods-CoreXLSXTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA820D499A2925968F8F779B /* Pods-CoreXLSXExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample.release.xcconfig"; sourceTree = "<group>"; };
-		CC626190E23C3187CBD56E0F /* Pods-CoreXLSX.pod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSX.pod_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSX.pod_Example/Pods-CoreXLSX.pod_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D198296B2197595F00C6A761 /* CoreXLSXTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreXLSXTests.swift; sourceTree = "<group>"; };
+		D198296C2197595F00C6A761 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		D198296D2197595F00C6A761 /* categories.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = categories.xlsx; sourceTree = "<group>"; };
 		D1BCEBD521944FA6000B550F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSXExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE826BAD89D91945EB1EAE81 /* CoreXLSX.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CoreXLSX.podspec; path = ../CoreXLSX.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -79,10 +75,6 @@
 		1344B7BD354302F280A53C1E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC626190E23C3187CBD56E0F /* Pods-CoreXLSX.pod_Example.debug.xcconfig */,
-				775861F8B513EC6BD844F450 /* Pods-CoreXLSX.pod_Example.release.xcconfig */,
-				2E1492773E1976A88C4D017F /* Pods-CoreXLSX.pod_Tests.debug.xcconfig */,
-				32B7C1891C073C3F29047F12 /* Pods-CoreXLSX.pod_Tests.release.xcconfig */,
 				5A48730722BE3013C8B2BA06 /* Pods-CoreXLSXExample.debug.xcconfig */,
 				CA820D499A2925968F8F779B /* Pods-CoreXLSXExample.release.xcconfig */,
 				87BB7D503C89D21717D78885 /* Pods-CoreXLSXTests.debug.xcconfig */,
@@ -139,7 +131,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				D198296A2197595F00C6A761 /* CoreXLSXTests */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -167,12 +159,21 @@
 		B16ADD614AB6F7A2CE08FC50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				358BAE4074350E89FCA94446 /* Pods_CoreXLSX_pod_Example.framework */,
-				45D86A4A363D016AA5237A46 /* Pods_CoreXLSX_pod_Tests.framework */,
 				DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */,
 				4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D198296A2197595F00C6A761 /* CoreXLSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				D198296B2197595F00C6A761 /* CoreXLSXTests.swift */,
+				D198296C2197595F00C6A761 /* XCTestManifests.swift */,
+				D198296D2197595F00C6A761 /* categories.xlsx */,
+			);
+			name = CoreXLSXTests;
+			path = ../../Tests/CoreXLSXTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				D19829712197596A00C6A761 /* CoreXLSXTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +533,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreXLSX_Example.app/CoreXLSX_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreXLSXExample.app/CoreXLSXExample";
 			};
 			name = Debug;
 		};
@@ -550,7 +551,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreXLSX_Example.app/CoreXLSX_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreXLSXExample.app/CoreXLSXExample";
 			};
 			name = Release;
 		};
