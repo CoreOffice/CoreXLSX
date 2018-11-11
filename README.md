@@ -37,9 +37,9 @@ need to read from a parsed file.
 
 If you stumble upon a file that can't be parsed, please
 [file an issue](https://github.com/MaxDesiatov/CoreXLSX/issues) posting the exact
-error message. Thanks to use of standard Swift `Codable` protocol, we can easily
-understand which properties are missing and add them the model enabling broader
-format support.
+error message. Thanks to use of standard Swift `Codable` protocol, detailed errors are
+generated listing a missing attribute, so it can be easily added to the model enabling 
+broader format support.
 
 ## Requirements
 
