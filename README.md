@@ -61,7 +61,7 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 ```swift
 dependencies: [
   .package(url: "https://github.com/MaxDesiatov/CoreXLSX.git", 
-           .upToNextMajor(from: "0.2.1"))
+           .upToNextMajor(from: "0.2.2"))
 ]
 ```
 
