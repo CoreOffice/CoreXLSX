@@ -59,7 +59,7 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/MaxDesiatov/CoreXLSX.git", from: "0.2.0")
+  .package(url: "https://github.com/MaxDesiatov/CoreXLSX.git", from: "0.2.0")
 ]
 ```
 
