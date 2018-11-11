@@ -25,6 +25,8 @@ public struct XLSXFile {
     decoder = XMLDecoder()
   }
 
+  /// Parse a file within `archive` at `path`. Parsing result is
+  /// an instance of `type`.
   func parseEntry<T: Decodable>(_ path: String, _ type: T.Type) throws -> T {
     guard let entry = archive[path] else {
       throw XLSXReaderError.archiveEntryNotFound

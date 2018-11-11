@@ -12,6 +12,7 @@ public struct Worksheet: Codable {
   public let dimension: WorksheetDimension
   public let sheetViews: SheetViews
   public let sheetFormatPr: SheetFormatPr
+  // FIXME: rename this to `columns` before the next major release
   public let cols: Cols
   public let sheetData: SheetData
   public let mergeCells: MergeCells?
@@ -127,6 +128,7 @@ public struct MergeCells: Codable {
 }
 
 public struct MergeCell: Codable {
+  // FIXME: rename this to `reference` before the next major release
   public let ref: String
 }
 
