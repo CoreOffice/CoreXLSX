@@ -35,6 +35,12 @@ This prints every cell from every worksheet in the given XLSX file. Please refer
 [Worksheet model](./Sources/CoreXLSX/Worksheet.swift) for more atttributes you might
 need to read from a parsed file.
 
+If you stumble upon a file that can't be parsed, please
+[file an issue](https://github.com/MaxDesiatov/CoreXLSX/issues) posting the exact
+error message. Thanks to use of standard Swift `Codable` protocol, we can easily
+understand which properties are missing and add them the model enabling broader
+format support.
+
 ## Requirements
 
 Xcode 10, Swift 4.2, iOS 9.0 or macOS 10.11
