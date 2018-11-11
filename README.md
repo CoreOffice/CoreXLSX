@@ -32,8 +32,9 @@ for path in try file.parseWorksheetPaths() {
 ```
 
 This prints every cell from every worksheet in the given XLSX file. Please refer to the
-[Worksheet model](./Sources/CoreXLSX/Worksheet.swift) for more atttributes you might
-need to read from a parsed file.
+[Worksheet 
+model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet.swift)
+for more atttributes you might need to read from a parsed file.
 
 If you stumble upon a file that can't be parsed, please
 [file an issue](https://github.com/MaxDesiatov/CoreXLSX/issues) posting the exact
@@ -79,4 +80,6 @@ pod 'CoreXLSX'
 
 ## License
 
-CoreXLSX is available under the Apache 2.0 license. See the [LICENSE.md](./LICENSE.md) file for more info.
+CoreXLSX is available under the Apache 2.0 license. See the 
+[LICENSE](https://github.com/MaxDesiatov/CoreXLSX/blob/master/LICENSE.md) file for 
+more info.
