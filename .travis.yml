@@ -12,3 +12,8 @@ before_install:
 # - pod install --project-directory=Example
 script:
 - pod lib lint
+- swift package generate-xcodeproj --xcconfig-overrides Package.xcconfig
+- git checkout HEAD CoreXLSX.xcodeproj/xcshareddata/xcschemes/CoreXLSX-Package.xcscheme
+- xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX-Package
+after_success:
+- bash <(curl -s https://codecov.io/bash)

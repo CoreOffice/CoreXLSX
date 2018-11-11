@@ -85,20 +85,20 @@ public struct SheetData: Codable {
 }
 
 public struct Row: Codable {
-  public let r: String
+  public let reference: Int
   public let ht: String?
   public let customHeight: String?
   public let cells: [Cell]
 
   enum CodingKeys: String, CodingKey {
     case cells = "c"
-    case r
+    case reference = "r"
     case ht
     case customHeight
   }
 }
 
-public struct Cell: Codable {
+public struct Cell: Codable, Equatable {
   public let reference: String
   public let type: String?
   public let s: String?
@@ -130,7 +130,7 @@ public struct MergeCell: Codable {
   public let ref: String
 }
 
-public struct InlineString: Codable {
+public struct InlineString: Codable, Equatable {
   let text: String?
 
   enum CodingKeys: String, CodingKey {

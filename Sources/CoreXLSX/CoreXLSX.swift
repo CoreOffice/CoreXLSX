@@ -10,6 +10,7 @@ public struct XLSXFile {
   public let filepath: String
   private let archive: Archive
   private let decoder: XMLDecoder
+  private var worksheetCache = [String: Worksheet]()
 
   public init?(filepath: String) {
     let archiveURL = URL(fileURLWithPath: filepath)
@@ -38,7 +39,7 @@ public struct XLSXFile {
     return result!
   }
 
-  /// Return the list of paths to relationships of type `officeDocument`
+  /// Return an array of paths to relationships of type `officeDocument`
   func parseDocumentPaths() throws -> [String] {
     decoder.keyDecodingStrategy = .convertFromCapitalized
 
@@ -47,6 +48,7 @@ public struct XLSXFile {
       .map { $0.target }
   }
 
+  /// Parse and return an array of worksheets in this XLSX file.
   public func parseWorksheetPaths() throws -> [String] {
     decoder.keyDecodingStrategy = .convertFromCapitalized
 
@@ -68,9 +70,37 @@ public struct XLSXFile {
     }
   }
 
+  /// Parse a worksheet at a given path contained in this XLSX file.
   public func parseWorksheet(at path: String) throws -> Worksheet {
     decoder.keyDecodingStrategy = .useDefaultKeys
 
-    return try parseEntry(path, Worksheet.self)
+    guard let result = worksheetCache[path] else {
+      return try parseEntry(path, Worksheet.self)
+    }
+
+    return result
+  }
+
+  /// Return all cells that are contained in a given worksheet and set of rows.
+  public func cellsInWorksheet(at path: String, rows: [Int]) throws
+  -> [Cell] {
+    let ws = try parseWorksheet(at: path)
+
+    return ws.sheetData.rows.filter { rows.contains($0.reference) }
+      .reduce([]) { $0 + $1.cells }
+  }
+
+  /// Return all cells that are contained in a given worksheet and set of
+  /// columns.
+  public func cellsInWorksheet(at path: String, columns: [String]) throws
+  -> [Cell] {
+    let ws = try parseWorksheet(at: path)
+
+    return ws.sheetData.rows.map {
+      let rowReference = $0.reference
+      let targetReferences = columns.map { "\($0)\(rowReference)" }
+      return $0.cells.filter { targetReferences.contains($0.reference) }
+    }
+    .reduce([]) { $0 + $1 }
   }
 }
