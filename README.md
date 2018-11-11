@@ -47,6 +47,24 @@ Xcode 10, Swift 4.2, iOS 9.0 or macOS 10.11
 
 ## Installation
 
+### Swift Package Manager
+
+[Swift Package Manager](https://swift.org/package-manager/) is a tool for
+managing the distribution of Swift code. It’s integrated with the Swift build
+system to automate the process of downloading, compiling, and linking
+dependencies.
+
+Once you have your Swift package set up, adding `CoreXLSX` as a dependency is as
+easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+.package(url: "https://github.com/MaxDesiatov/CoreXLSX.git", from: "0.2.0")
+]
+```
+
+### CocoaPods
+
 CoreXLSX is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
