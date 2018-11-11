@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "XMLParsing",
-        "repositoryURL": "https://github.com/maxdesiatov/XMLParsing.git",
+        "package": "XMLCoder",
+        "repositoryURL": "https://github.com/maxdesiatov/XMLCoder.git",
         "state": {
-          "branch": "master",
-          "revision": "6d147739c7aa52b6b6d7ec5fd0d58740397ee233",
-          "version": null
+          "branch": null,
+          "revision": "4f28712b99d2ba94005c4d5c790fac509efc5493",
+          "version": "0.1.0"
         }
       },
       {

@@ -85,7 +85,7 @@ public struct SheetData: Codable {
 }
 
 public struct Row: Codable {
-  public let reference: String
+  public let reference: Int
   public let ht: String?
   public let customHeight: String?
   public let cells: [Cell]
@@ -98,7 +98,7 @@ public struct Row: Codable {
   }
 }
 
-public struct Cell: Codable {
+public struct Cell: Codable, Equatable {
   public let reference: String
   public let type: String?
   public let s: String?
@@ -130,7 +130,7 @@ public struct MergeCell: Codable {
   public let ref: String
 }
 
-public struct InlineString: Codable {
+public struct InlineString: Codable, Equatable {
   let text: String?
 
   enum CodingKeys: String, CodingKey {

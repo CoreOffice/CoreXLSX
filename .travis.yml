@@ -12,3 +12,5 @@ before_install:
 # - pod install --project-directory=Example
 script:
 - pod lib lint
+after_success:
+- bash <(curl -s https://codecov.io/bash)
