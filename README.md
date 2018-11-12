@@ -42,6 +42,15 @@ error message. Thanks to use of standard Swift `Codable` protocol, detailed erro
 generated listing a missing attribute, so it can be easily added to the model enabling 
 broader format support.
 
+## How does it work?
+
+Since every XLSX file is a zip archive of XML files, `CoreXLSX` uses 
+[`XMLCoder`](https://github.com/MaxDesiatov/XMLCoder) library and standard `Codable`
+protocols to map XML nodes and atrributes into plain Swift structs. 
+[`ZIPFoundation`](https://www.github.com/weichsel/ZIPFoundation) is used for 
+in-memory decompression of zip archives. A detailed description is [available 
+here](https://desiatov.com/swift-codable-xlsx/).
+
 ## Requirements
 
 Xcode 10, Swift 4.2, iOS 9.0 or macOS 10.11
