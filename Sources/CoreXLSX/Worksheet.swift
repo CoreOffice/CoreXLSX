@@ -12,10 +12,25 @@ public struct Worksheet: Codable {
   public let dimension: WorksheetDimension
   public let sheetViews: SheetViews
   public let sheetFormatPr: SheetFormatPr
-  // FIXME: rename this to `columns` before the next major release
-  public let cols: Cols
+  public let columns: Columns
+
+  @available(*, deprecated, renamed: "columns")
+  public var cols: Cols {
+    return columns
+  }
+
   public let sheetData: SheetData
   public let mergeCells: MergeCells?
+
+  enum CodingKeys: String, CodingKey {
+    case sheetPr
+    case dimension
+    case sheetViews
+    case sheetFormatPr
+    case columns = "cols"
+    case sheetData
+    case mergeCells
+  }
 }
 
 public struct SheetPr: Codable {
@@ -61,15 +76,21 @@ public struct SheetFormatPr: Codable {
   public let outlineLevelCol: String?
 }
 
-public struct Cols: Codable {
-  public let items: [Col]
+@available(*, deprecated, renamed: "Columns")
+public typealias Cols = Columns
+
+public struct Columns: Codable {
+  public let items: [Column]
 
   enum CodingKeys: String, CodingKey {
     case items = "col"
   }
 }
 
-public struct Col: Codable {
+@available(*, deprecated, renamed: "Column")
+public typealias Col = Column
+
+public struct Column: Codable {
   public let min: String
   public let max: String
   public let width: String
@@ -102,6 +123,12 @@ public struct Row: Codable {
 public struct Cell: Codable, Equatable {
   public let reference: String
   public let type: String?
+
+  /// Attribute "s" in a cell is an index into the styles table,
+  /// while the cell type "s" corresponds to the shared string table.
+  /// XMLCoder as version 0.1 can't distinguish between an attribute and a
+  /// node having the same name, so the property stays name `s` until
+  /// that's fixed.
   public let s: String?
   public let inlineString: InlineString?
   public let formula: String?
@@ -128,8 +155,16 @@ public struct MergeCells: Codable {
 }
 
 public struct MergeCell: Codable {
-  // FIXME: rename this to `reference` before the next major release
-  public let ref: String
+  public let reference: String
+
+  @available(*, deprecated, renamed: "reference")
+  public var ref: String {
+    return reference
+  }
+
+  enum CodingKeys: String, CodingKey {
+    case reference = "ref"
+  }
 }
 
 public struct InlineString: Codable, Equatable {
