@@ -103,6 +103,8 @@
 /* Begin PBXFileReference section */
 		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreXLSX.podspec; sourceTree = "<group>"; };
+		D155EAF6219ADF9C00D4F47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_11 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
@@ -291,9 +293,11 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */,
+				D155EAF6219ADF9C00D4F47E /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Configs */,
 				OBJ_9 /* Sources */,
@@ -303,7 +307,6 @@
 				OBJ_47 /* Products */,
 			);
 			indentWidth = 2;
-			name = "";
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
@@ -452,7 +455,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
