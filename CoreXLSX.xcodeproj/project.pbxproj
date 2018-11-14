@@ -103,6 +103,7 @@
 /* Begin PBXFileReference section */
 		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D123DCA0219C35BA007F6E04 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreXLSX.podspec; sourceTree = "<group>"; };
 		D155EAF6219ADF9C00D4F47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_11 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
@@ -296,6 +297,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				D123DCA0219C35BA007F6E04 /* CHANGELOG.md */,
 				D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */,
 				D155EAF6219ADF9C00D4F47E /* README.md */,
 				OBJ_6 /* Package.swift */,
