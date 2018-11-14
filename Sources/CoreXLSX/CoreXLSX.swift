@@ -2,8 +2,12 @@ import Foundation
 import ZIPFoundation
 import XMLCoder
 
-public enum XLSXReaderError: Error {
+@available(*, deprecated, renamed: "CoreXLSXError")
+public typealias XLSXReaderError = CoreXLSXError
+
+public enum CoreXLSXError: Error {
   case archiveEntryNotFound
+  case invalidCellReference
 }
 
 public struct XLSXFile {
@@ -29,7 +33,7 @@ public struct XLSXFile {
   /// an instance of `type`.
   func parseEntry<T: Decodable>(_ path: String, _ type: T.Type) throws -> T {
     guard let entry = archive[path] else {
-      throw XLSXReaderError.archiveEntryNotFound
+      throw CoreXLSXError.archiveEntryNotFound
     }
 
     var result: T?
