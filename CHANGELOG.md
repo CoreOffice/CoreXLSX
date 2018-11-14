@@ -1,7 +1,7 @@
 #  0.3.0 (November 13, 2018)
 
-* Improve Worksheet model property naming (#2).
-Some properties on Worksheet and its descendants had obscure names, most of that is 
+* Improve `Worksheet` model property naming ([#2](https://github.com/MaxDesiatov/CoreXLSX/pull/2)).
+Some properties on `Worksheet` and its descendants had obscure names, most of that is 
 fixed now with old names marked as deprecated.
 
 # 0.2.3 (November 12, 2018)
