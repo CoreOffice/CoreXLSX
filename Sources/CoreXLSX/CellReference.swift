@@ -7,24 +7,30 @@
 
 import Foundation
 
-struct CellReference {
-  let column: ColumnReference
-  let row: Int
+public struct CellReference {
+  public let column: ColumnReference
+  public let row: Int
 
-  init(_ column: ColumnReference, _ row: Int) {
+  public init(_ column: ColumnReference, _ row: Int) {
     self.column = column
     self.row = row
   }
 }
 
+extension CellReference: Equatable {
+  public static func == (lhs: CellReference, rhs: CellReference) -> Bool {
+    return lhs.column == rhs.column && lhs.row == rhs.row
+  }
+}
+
 extension CellReference: CustomStringConvertible {
-  var description: String {
+  public var description: String {
     return "\(column)\(row)"
   }
 }
 
 extension CellReference: Decodable {
-  init(from decoder: Decoder) throws {
+  public init(from decoder: Decoder) throws {
     let container = try decoder.singleValueContainer()
     let reference = try container.decode(String.self)
 
@@ -32,20 +38,21 @@ extension CellReference: Decodable {
       $0.unicodeScalars.allSatisfy {
         ColumnReference.allowedCharacters.contains($0)
       }
-    }) else { throw CoreXLSXError.invalidCellReference }
-
-    let column = reference.prefix(upTo: separatorIndex)
+    }),
+    let column = ColumnReference(reference.prefix(upTo: separatorIndex)) else {
+      throw CoreXLSXError.invalidCellReference
+    }
 
     guard let cell = Int(reference.suffix(from: separatorIndex)) else {
       throw CoreXLSXError.invalidCellReference
     }
 
-    self.init(ColumnReference(String(column)), cell)
+    self.init(column, cell)
   }
 }
 
 extension CellReference: Encodable {
-  func encode(to encoder: Encoder) throws {
+  public func encode(to encoder: Encoder) throws {
     var container = encoder.singleValueContainer()
     try container.encode(description)
   }

@@ -7,10 +7,18 @@
 
 import Foundation
 
-struct ColumnReference {
-  let value: String
+public struct ColumnReference {
+  public let value: String
 
-  init(_ value: String) {
+  public init?(_ value: String) {
+    self.init(Substring(value))
+  }
+
+  public init?(_ value: Substring) {
+    guard value.unicodeScalars.allSatisfy({
+      ColumnReference.allowedCharacters.contains($0)
+    }) else { return nil }
+
     self.value = value.uppercased()
   }
 
@@ -18,7 +26,7 @@ struct ColumnReference {
 }
 
 extension ColumnReference: CustomStringConvertible {
-  var description: String {
+  public var description: String {
     return "\(value)"
   }
 }
@@ -30,11 +38,5 @@ extension ColumnReference: Comparable {
 
   public static func == (lhs: ColumnReference, rhs: ColumnReference) -> Bool {
     return lhs.value == rhs.value
-  }
-}
-
-extension ColumnReference: ExpressibleByStringLiteral {
-  init(stringLiteral: String) {
-    self.init(stringLiteral)
   }
 }

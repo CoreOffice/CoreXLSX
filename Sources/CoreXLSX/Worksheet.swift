@@ -121,7 +121,7 @@ public struct Row: Codable {
 }
 
 public struct Cell: Codable, Equatable {
-  public let reference: String
+  public let reference: CellReference
   public let type: String?
 
   /// Attribute "s" in a cell is an index into the styles table,
@@ -155,6 +155,7 @@ public struct MergeCells: Codable {
 }
 
 public struct MergeCell: Codable {
+  /// A reference of format "A1:F1"
   public let reference: String
 
   @available(*, deprecated, renamed: "reference")
