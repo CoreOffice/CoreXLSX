@@ -95,7 +95,7 @@ final class XLSXReaderTests: XCTestCase {
     }
   }
 
-  static var allTests = [
+  static let allTests = [
     ("testColumnReference", testColumnReference),
     ("testPublicAPI", testPublicAPI),
     ("testLegacyPublicAPI", testLegacyPublicAPI),

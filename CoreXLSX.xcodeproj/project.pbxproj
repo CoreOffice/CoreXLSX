@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		D123DC9D219B471D007F6E04 /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123DC9C219B471D007F6E04 /* ColumnReference.swift */; };
 		D123DC9F219C29DD007F6E04 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123DC9E219C29DD007F6E04 /* CellReference.swift */; };
+		D15E8358219D7F0F00EB4544 /* RelationshipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E8357219D7F0F00EB4544 /* RelationshipsTests.swift */; };
 		OBJ_100 /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* XMLUnkeyedDecodingContainer.swift */; };
 		OBJ_101 /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* EncodingErrorExtension.swift */; };
 		OBJ_102 /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* XMLEncoder.swift */; };
@@ -105,11 +106,12 @@
 /* Begin PBXFileReference section */
 		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D123DCA0219C35BA007F6E04 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D123DC9C219B471D007F6E04 /* ColumnReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnReference.swift; sourceTree = "<group>"; };
 		D123DC9E219C29DD007F6E04 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
+		D123DCA0219C35BA007F6E04 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreXLSX.podspec; sourceTree = "<group>"; };
 		D155EAF6219ADF9C00D4F47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D15E8357219D7F0F00EB4544 /* RelationshipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsTests.swift; sourceTree = "<group>"; };
 		OBJ_11 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				OBJ_16 /* CoreXLSXTests.swift */,
 				OBJ_17 /* XCTestManifests.swift */,
+				D15E8357219D7F0F00EB4544 /* RelationshipsTests.swift */,
 			);
 			name = CoreXLSXTests;
 			path = Tests/CoreXLSXTests;
@@ -537,6 +540,7 @@
 			files = (
 				OBJ_83 /* CoreXLSXTests.swift in Sources */,
 				OBJ_84 /* XCTestManifests.swift in Sources */,
+				D15E8358219D7F0F00EB4544 /* RelationshipsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
