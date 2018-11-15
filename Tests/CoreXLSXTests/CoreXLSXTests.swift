@@ -75,7 +75,7 @@ final class XLSXReaderTests: XCTestCase {
         .reduce([], { $0 + $1 })
       XCTAssertEqual(allCells.count, 90)
 
-      let rowReferences = ws.sheetData.rows.map { $0.reference }
+      let rowReferences = ws.sheetData.rows.map { Int($0.reference) }
       let cellsFromRows = try file.cellsInWorksheet(at: sheetPath,
                                                     rows: rowReferences)
       XCTAssertEqual(allCells, cellsFromRows)

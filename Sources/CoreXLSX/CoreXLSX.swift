@@ -93,7 +93,7 @@ public struct XLSXFile {
   -> [Cell] {
     let ws = try parseWorksheet(at: path)
 
-    return ws.sheetData.rows.filter { rows.contains($0.reference) }
+    return ws.sheetData.rows.filter { rows.contains(Int($0.reference)) }
       .reduce([]) { $0 + $1.cells }
   }
 

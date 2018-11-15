@@ -9,9 +9,9 @@ import Foundation
 
 public struct CellReference {
   public let column: ColumnReference
-  public let row: Int
+  public let row: UInt
 
-  public init(_ column: ColumnReference, _ row: Int) {
+  public init(_ column: ColumnReference, _ row: UInt) {
     self.column = column
     self.row = row
   }
@@ -50,7 +50,7 @@ extension CellReference: Decodable {
       throw CoreXLSXError.invalidCellReference
     }
 
-    guard let cell = Int(reference.suffix(from: separatorIndex)) else {
+    guard let cell = UInt(reference.suffix(from: separatorIndex)) else {
       throw CoreXLSXError.invalidCellReference
     }
 

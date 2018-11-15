@@ -46,7 +46,7 @@ public struct Worksheet: Codable {
   }
 
   /// Return all cells that are contained in a given worksheet and set of rows.
-  public func cells(atRows rows: [Int]) -> [Cell] {
+  public func cells(atRows rows: [UInt]) -> [Cell] {
     return sheetData.rows.filter { rows.contains($0.reference) }
       .reduce([]) { $0 + $1.cells }
   }
@@ -126,7 +126,7 @@ public struct SheetData: Codable {
 }
 
 public struct Row: Codable {
-  public let reference: Int
+  public let reference: UInt
   public let ht: String?
   public let customHeight: String?
   public let cells: [Cell]
