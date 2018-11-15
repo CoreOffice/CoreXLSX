@@ -15,7 +15,7 @@ struct Relationships: Codable {
   }
 }
 
-struct Relationship: Codable {
+struct Relationship: Codable, Equatable {
   enum SchemaType: String, Codable {
     case officeDocument = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
     case extendedProperties = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties"

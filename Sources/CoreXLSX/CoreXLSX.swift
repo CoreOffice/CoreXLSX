@@ -2,8 +2,12 @@ import Foundation
 import ZIPFoundation
 import XMLCoder
 
-public enum XLSXReaderError: Error {
+@available(*, deprecated, renamed: "CoreXLSXError")
+public typealias XLSXReaderError = CoreXLSXError
+
+public enum CoreXLSXError: Error {
   case archiveEntryNotFound
+  case invalidCellReference
 }
 
 public struct XLSXFile {
@@ -29,7 +33,7 @@ public struct XLSXFile {
   /// an instance of `type`.
   func parseEntry<T: Decodable>(_ path: String, _ type: T.Type) throws -> T {
     guard let entry = archive[path] else {
-      throw XLSXReaderError.archiveEntryNotFound
+      throw CoreXLSXError.archiveEntryNotFound
     }
 
     var result: T?
@@ -84,23 +88,31 @@ public struct XLSXFile {
   }
 
   /// Return all cells that are contained in a given worksheet and set of rows.
+  @available(*, deprecated, renamed: "Worksheet.cells(atRows:)")
   public func cellsInWorksheet(at path: String, rows: [Int]) throws
   -> [Cell] {
     let ws = try parseWorksheet(at: path)
 
-    return ws.sheetData.rows.filter { rows.contains($0.reference) }
+    return ws.sheetData.rows.filter { rows.contains(Int($0.reference)) }
       .reduce([]) { $0 + $1.cells }
   }
 
   /// Return all cells that are contained in a given worksheet and set of
-  /// columns.
+  /// columns. This overloaded version is deprecated, you should pass
+  /// an array of `ColumnReference` values as `columns` instead of an array
+  /// of `String`s.
+  @available(*, deprecated, renamed: "Worksheet.cells(atColumns:)")
   public func cellsInWorksheet(at path: String, columns: [String]) throws
   -> [Cell] {
     let ws = try parseWorksheet(at: path)
 
     return ws.sheetData.rows.map {
       let rowReference = $0.reference
-      let targetReferences = columns.map { "\($0)\(rowReference)" }
+      let targetReferences = columns.compactMap {
+      (c: String) -> CellReference? in
+        guard let columnReference = ColumnReference(c) else { return nil }
+        return CellReference(columnReference, rowReference)
+      }
       return $0.cells.filter { targetReferences.contains($0.reference) }
     }
     .reduce([]) { $0 + $1 }

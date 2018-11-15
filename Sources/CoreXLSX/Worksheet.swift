@@ -31,6 +31,25 @@ public struct Worksheet: Codable {
     case sheetData
     case mergeCells
   }
+
+  /// Return all cells that are contained in a given worksheet and set of
+  /// columns.
+  public func cells(atColumns columns: [ColumnReference]) -> [Cell] {
+    return sheetData.rows.map {
+      let rowReference = $0.reference
+      let targetReferences = columns.map {
+        CellReference($0, rowReference)
+      }
+      return $0.cells.filter { targetReferences.contains($0.reference) }
+    }
+    .reduce([]) { $0 + $1 }
+  }
+
+  /// Return all cells that are contained in a given worksheet and set of rows.
+  public func cells(atRows rows: [UInt]) -> [Cell] {
+    return sheetData.rows.filter { rows.contains($0.reference) }
+      .reduce([]) { $0 + $1.cells }
+  }
 }
 
 public struct SheetPr: Codable {
@@ -79,7 +98,7 @@ public struct SheetFormatPr: Codable {
 @available(*, deprecated, renamed: "Columns")
 public typealias Cols = Columns
 
-public struct Columns: Codable {
+public struct Columns: Codable, Equatable {
   public let items: [Column]
 
   enum CodingKeys: String, CodingKey {
@@ -90,7 +109,7 @@ public struct Columns: Codable {
 @available(*, deprecated, renamed: "Column")
 public typealias Col = Column
 
-public struct Column: Codable {
+public struct Column: Codable, Equatable {
   public let min: String
   public let max: String
   public let width: String
@@ -107,7 +126,7 @@ public struct SheetData: Codable {
 }
 
 public struct Row: Codable {
-  public let reference: Int
+  public let reference: UInt
   public let ht: String?
   public let customHeight: String?
   public let cells: [Cell]
@@ -121,7 +140,7 @@ public struct Row: Codable {
 }
 
 public struct Cell: Codable, Equatable {
-  public let reference: String
+  public let reference: CellReference
   public let type: String?
 
   /// Attribute "s" in a cell is an index into the styles table,
@@ -155,6 +174,7 @@ public struct MergeCells: Codable {
 }
 
 public struct MergeCell: Codable {
+  /// A reference of format "A1:F1"
   public let reference: String
 
   @available(*, deprecated, renamed: "reference")
