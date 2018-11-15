@@ -8,7 +8,7 @@ language: swift
 # podfile: Example/Podfile
 before_install:
 - gem install cocoapods --pre # Since Travis is not always on latest version
-- pod repo update
+# - pod repo update
 # - pod install --project-directory=Example
 script:
 - pod lib lint
