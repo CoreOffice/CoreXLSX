@@ -5,23 +5,6 @@ final class XLSXReaderTests: XCTestCase {
   let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
   let sheetPath = "xl/worksheets/sheet1.xml"
 
-  func testColumnReference() {
-    XCTAssertNil(ColumnReference(""))
-    XCTAssertNil(ColumnReference("934875"))
-    XCTAssertNil(ColumnReference("ø∫≈Ω"))
-    XCTAssertEqual(ColumnReference("A"), ColumnReference("A"))
-    XCTAssertNotEqual(ColumnReference("A"), ColumnReference("B"))
-
-    guard let a = ColumnReference("A"), let b = ColumnReference("B") else {
-      XCTAssert(false, "failed to create simple column references")
-      return
-    }
-
-    XCTAssertTrue(a < b)
-    XCTAssertFalse(b < a)
-    XCTAssertFalse(a > b)
-  }
-
   func testPublicAPI() {
     do {
       guard let file =
@@ -96,7 +79,6 @@ final class XLSXReaderTests: XCTestCase {
   }
 
   static let allTests = [
-    ("testColumnReference", testColumnReference),
     ("testPublicAPI", testPublicAPI),
     ("testLegacyPublicAPI", testLegacyPublicAPI),
   ]
