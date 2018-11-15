@@ -53,6 +53,15 @@ final class XLSXReaderTests: XCTestCase {
       XCTAssertEqual(try file.parseWorksheetPaths(), [sheetPath])
 
       let ws = try file.parseWorksheet(at: sheetPath)
+      XCTAssertEqual(ws.columns, ws.cols)
+      guard let mcs = ws.mergeCells else {
+        XCTAssert(false, "expected to parse merge cells from categories.xlsx")
+        return
+      }
+      for mc in mcs.items {
+        XCTAssertEqual(mc.reference, mc.ref)
+      }
+
       let allCells = ws.sheetData.rows
         .map { $0.cells }
         .reduce([], { $0 + $1 })

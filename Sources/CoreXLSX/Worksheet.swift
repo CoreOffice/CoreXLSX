@@ -98,7 +98,7 @@ public struct SheetFormatPr: Codable {
 @available(*, deprecated, renamed: "Columns")
 public typealias Cols = Columns
 
-public struct Columns: Codable {
+public struct Columns: Codable, Equatable {
   public let items: [Column]
 
   enum CodingKeys: String, CodingKey {
@@ -109,7 +109,7 @@ public struct Columns: Codable {
 @available(*, deprecated, renamed: "Column")
 public typealias Col = Column
 
-public struct Column: Codable {
+public struct Column: Codable, Equatable {
   public let min: String
   public let max: String
   public let width: String
