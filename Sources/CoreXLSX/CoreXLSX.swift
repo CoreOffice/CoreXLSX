@@ -88,6 +88,7 @@ public struct XLSXFile {
   }
 
   /// Return all cells that are contained in a given worksheet and set of rows.
+  @available(*, deprecated, renamed: "Worksheet.cells(atRows:)")
   public func cellsInWorksheet(at path: String, rows: [Int]) throws
   -> [Cell] {
     let ws = try parseWorksheet(at: path)
@@ -97,27 +98,10 @@ public struct XLSXFile {
   }
 
   /// Return all cells that are contained in a given worksheet and set of
-  /// columns.
-  public func cellsInWorksheet(at path: String,
-                               columns: [ColumnReference]) throws -> [Cell] {
-      let ws = try parseWorksheet(at: path)
-
-      return ws.sheetData.rows.map {
-        let rowReference = $0.reference
-        let targetReferences = columns.map {
-          CellReference($0, rowReference)
-        }
-        return $0.cells.filter { targetReferences.contains($0.reference) }
-      }
-      .reduce([]) { $0 + $1 }
-  }
-
-  /// Return all cells that are contained in a given worksheet and set of
   /// columns. This overloaded version is deprecated, you should pass
   /// an array of `ColumnReference` values as `columns` instead of an array
   /// of `String`s.
-  @available(*, deprecated,
-  message: "use overloaded version with `[ColumnReference]` argument instead")
+  @available(*, deprecated, renamed: "Worksheet.cells(atColumns:)")
   public func cellsInWorksheet(at path: String, columns: [String]) throws
   -> [Cell] {
     let ws = try parseWorksheet(at: path)

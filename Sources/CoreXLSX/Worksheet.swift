@@ -31,6 +31,25 @@ public struct Worksheet: Codable {
     case sheetData
     case mergeCells
   }
+
+  /// Return all cells that are contained in a given worksheet and set of
+  /// columns.
+  public func cells(atColumns columns: [ColumnReference]) -> [Cell] {
+    return sheetData.rows.map {
+      let rowReference = $0.reference
+      let targetReferences = columns.map {
+        CellReference($0, rowReference)
+      }
+      return $0.cells.filter { targetReferences.contains($0.reference) }
+    }
+    .reduce([]) { $0 + $1 }
+  }
+
+  /// Return all cells that are contained in a given worksheet and set of rows.
+  public func cells(atRows rows: [Int]) -> [Cell] {
+    return sheetData.rows.filter { rows.contains($0.reference) }
+      .reduce([]) { $0 + $1.cells }
+  }
 }
 
 public struct SheetPr: Codable {

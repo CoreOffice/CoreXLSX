@@ -15,14 +15,18 @@ public struct ColumnReference {
   }
 
   public init?(_ value: Substring) {
-    guard value.unicodeScalars.allSatisfy({
+    guard !value.isEmpty, value.unicodeScalars.allSatisfy({
       ColumnReference.allowedCharacters.contains($0)
     }) else { return nil }
 
     self.value = value.uppercased()
   }
 
-  static let allowedCharacters = CharacterSet.letters
+  static let firstAllowedCharacter = "A" as UnicodeScalar
+  static let lastAllowedCharacter = "Z" as UnicodeScalar
+
+  static let allowedCharacters =
+    CharacterSet(charactersIn: firstAllowedCharacter...lastAllowedCharacter)
 }
 
 extension ColumnReference: CustomStringConvertible {

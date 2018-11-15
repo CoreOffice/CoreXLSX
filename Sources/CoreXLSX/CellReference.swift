@@ -34,12 +34,19 @@ extension CellReference: Decodable {
     let container = try decoder.singleValueContainer()
     let reference = try container.decode(String.self)
 
-    guard let separatorIndex = reference.lastIndex(where: {
+    guard let lastLetterIndex = reference.lastIndex(where: {
       $0.unicodeScalars.allSatisfy {
         ColumnReference.allowedCharacters.contains($0)
+
       }
-    }),
-    let column = ColumnReference(reference.prefix(upTo: separatorIndex)) else {
+    }) else {
+      throw CoreXLSXError.invalidCellReference
+    }
+
+    let separatorIndex = reference.index(after: lastLetterIndex)
+
+    guard let column =
+    ColumnReference(reference.prefix(upTo: separatorIndex)) else {
       throw CoreXLSXError.invalidCellReference
     }
 
