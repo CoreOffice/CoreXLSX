@@ -75,8 +75,22 @@ final class CellReferenceTests: XCTestCase {
     XCTAssertFalse(a > b)
   }
 
+  func testColumnReferenceStrideable() {
+    guard let a = ColumnReference("A"), let z = ColumnReference("z"),
+    let az = ColumnReference("Az") else {
+      XCTAssert(false, "failed to create simple column references")
+      return
+    }
+
+    let alphabetLength = 26
+
+    XCTAssertEqual((a...z).count, alphabetLength)
+    XCTAssertEqual((a...az).count, alphabetLength * 2)
+  }
+
   static let allTests = [
     ("testColumnReference", testColumnReference),
     ("testCellReference", testCellReference),
+    ("testColumnReferenceStrideable", testColumnReferenceStrideable),
   ]
 }

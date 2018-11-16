@@ -15,11 +15,17 @@ public struct ColumnReference {
   }
 
   public init?(_ value: Substring) {
-    guard !value.isEmpty, value.unicodeScalars.allSatisfy({
+    guard !value.isEmpty else {
+      return nil
+    }
+
+    let result = value.uppercased()
+
+    guard result.unicodeScalars.allSatisfy({
       ColumnReference.allowedCharacters.contains($0)
     }) else { return nil }
 
-    self.value = value.uppercased()
+    self.value = result
   }
 
   static let firstAllowedCharacter = "A" as UnicodeScalar
@@ -42,5 +48,15 @@ extension ColumnReference: Comparable {
 
   public static func == (lhs: ColumnReference, rhs: ColumnReference) -> Bool {
     return lhs.value == rhs.value
+  }
+}
+
+extension ColumnReference: Strideable {
+  public func distance(to: ColumnReference) -> Int {
+    return 0
+  }
+
+  public func advanced(by: Int) -> ColumnReference {
+    return self
   }
 }
