@@ -34,8 +34,11 @@ final class XLSXReaderTests: XCTestCase {
       let columnReferences = (firstColumn...lastColumn)
         .compactMap { UnicodeScalar($0) }
         .compactMap { ColumnReference(String($0)) }
-      let cellsFromAllColumns = ws.cells(atColumns: columnReferences)
-      XCTAssertEqual(allCells, cellsFromAllColumns)
+
+      XCTAssertEqual(allCells, ws.cells(atColumns: columnReferences))
+
+      let closedRange = ColumnReference("A")!...ColumnReference("F")!
+      XCTAssertEqual(allCells, ws.cells(atColumns: closedRange))
     } catch {
       XCTAssert(false, "unexpected error \(error)")
     }

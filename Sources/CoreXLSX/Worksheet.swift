@@ -34,19 +34,17 @@ public struct Worksheet: Codable {
 
   /// Return all cells that are contained in a given worksheet and set of
   /// columns.
-  public func cells(atColumns columns: [ColumnReference]) -> [Cell] {
+  public func cells<T>(atColumns: T) -> [Cell]
+  where T: Collection, T.Element == ColumnReference {
     return sheetData.rows.map {
-      let rowReference = $0.reference
-      let targetReferences = columns.map {
-        CellReference($0, rowReference)
-      }
-      return $0.cells.filter { targetReferences.contains($0.reference) }
+      return $0.cells.filter { atColumns.contains($0.reference.column) }
     }
     .reduce([]) { $0 + $1 }
   }
 
   /// Return all cells that are contained in a given worksheet and set of rows.
-  public func cells(atRows rows: [UInt]) -> [Cell] {
+  public func cells<T>(atRows rows: T) -> [Cell]
+  where T: Collection, T.Element == UInt {
     return sheetData.rows.filter { rows.contains($0.reference) }
       .reduce([]) { $0 + $1.cells }
   }

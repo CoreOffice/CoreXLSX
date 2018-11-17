@@ -75,8 +75,79 @@ final class CellReferenceTests: XCTestCase {
     XCTAssertFalse(a > b)
   }
 
+  func testColumnReferenceDistance() {
+    guard let a = ColumnReference("A"), let z = ColumnReference("z"),
+    let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
+    let ba = ColumnReference("ba"), let bz = ColumnReference("bz") else {
+      XCTAssert(false, "failed to create simple column references")
+      return
+    }
+    let alphabetLength = 26
+
+    XCTAssertEqual(a.intValue, 1)
+    XCTAssertEqual(z.intValue, alphabetLength)
+    XCTAssertEqual(aa.intValue, alphabetLength + 1)
+    XCTAssertEqual(az.intValue, alphabetLength * 2)
+    XCTAssertEqual(ba.intValue, alphabetLength * 2 + 1)
+    XCTAssertEqual((a...z).count, alphabetLength)
+    XCTAssertEqual((a...az).count, alphabetLength * 2)
+    XCTAssertEqual((a...ba).count, alphabetLength * 2 + 1)
+    XCTAssertEqual((az...ba).count, 2)
+    XCTAssertEqual((az...bz).count, alphabetLength + 1)
+  }
+
+  func testColumnReferenceIntInitializer() {
+    guard let a = ColumnReference("A"), let z = ColumnReference("z"),
+      let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
+      let ba = ColumnReference("ba"), let bz = ColumnReference("bz"),
+      let abc = ColumnReference("abc"), let azz = ColumnReference("azz"),
+      let zz = ColumnReference("zz"), let azza = ColumnReference("azza") else {
+        XCTAssert(false, "failed to create simple column references")
+        return
+    }
+
+    XCTAssertEqual(ColumnReference(a.intValue), a)
+    XCTAssertEqual(ColumnReference(z.intValue), z)
+    XCTAssertEqual(ColumnReference(az.intValue), az)
+    XCTAssertEqual(ColumnReference(zz.intValue), zz)
+    XCTAssertEqual(ColumnReference(aa.intValue), aa)
+    XCTAssertEqual(ColumnReference(ba.intValue), ba)
+    XCTAssertEqual(ColumnReference(bz.intValue), bz)
+    XCTAssertEqual(ColumnReference(abc.intValue), abc)
+    XCTAssertEqual(ColumnReference(azz.intValue), azz)
+    XCTAssertEqual(ColumnReference(azza.intValue), azza)
+  }
+
+  func testColumnReferenceStringInitializerPerformance() {
+    measure {
+      for _ in 0..<10_000 {
+        _ = ColumnReference("kjhbjhblkjn")
+      }
+    }
+  }
+
+  func testColumnReferenceIntInitializerPerformance() {
+    measure {
+      for _ in 0..<10_000 {
+        _ = ColumnReference(Int.max / 10)
+      }
+    }
+  }
+
+  func testColumnReferenceAdvancedBy() {
+    guard let a = ColumnReference("A"), let bz = ColumnReference("bz") else {
+      XCTAssert(false, "failed to create simple column references")
+      return
+    }
+
+    XCTAssertEqual((a...bz).reversed().reversed(), Array(a...bz))
+  }
+
   static let allTests = [
     ("testColumnReference", testColumnReference),
     ("testCellReference", testCellReference),
+    ("testColumnReferenceDistance", testColumnReferenceDistance),
+    ("testColumnReferenceStringInitializerPerformance",
+       testColumnReferenceStringInitializerPerformance)
   ]
 }
