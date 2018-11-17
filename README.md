@@ -33,7 +33,7 @@ for path in try file.parseWorksheetPaths() {
 ```
 
 This prints every cell from every worksheet in the given XLSX file. Please refer to the
-[Worksheet 
+[`Worksheet` 
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
