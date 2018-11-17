@@ -36,7 +36,6 @@ public struct Worksheet: Codable {
   /// columns.
   public func cells<T>(atColumns: T) -> [Cell]
   where T: Collection, T.Element == ColumnReference {
-    print("atColumns.count is \(atColumns.count)")
     return sheetData.rows.map {
       return $0.cells.filter { atColumns.contains($0.reference.column) }
     }
