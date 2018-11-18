@@ -29,6 +29,8 @@ Excel spreadsheet (XLSX) format support in pure Swift.
   s.source           = { :git => 'https://github.com/MaxDesiatov/CoreXLSX.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/MaxDesiatov'
 
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
 

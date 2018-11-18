@@ -7,6 +7,8 @@
 [![License](https://img.shields.io/cocoapods/l/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![Platform](https://img.shields.io/cocoapods/p/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![Coverage](https://img.shields.io/codecov/c/github/MaxDesiatov/CoreXLSX/master.svg?style=flat)](https://codecov.io/gh/maxdesiatov/CoreXLSX)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Example
 
@@ -54,7 +56,9 @@ here](https://desiatov.com/swift-codable-xlsx/).
 
 ## Requirements
 
-Xcode 10, Swift 4.2, iOS 9.0 or macOS 10.11
+* Xcode 10
+* Swift 4.2
+* iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11  
 
 ## Installation
 
@@ -83,6 +87,30 @@ it, simply add the following line to your `Podfile`:
 ```ruby
 pod 'CoreXLSX'
 ```
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a dependency manager that builds your dependencies and provides you with binary frameworks.
+
+Carthage can be installed with [Homebrew](https://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+Inside of your `Cartfile`, add GitHub path to `CoreXLSX`:
+
+```ogdl
+github "MaxDesiatov/CoreXLSX" ~> 0.3.0
+```
+
+Then, run the following command to build the framework:
+
+```bash
+$ carthage update
+```
+
+Drag the built frameworks (including the subdependencies `XMLCoder` and `ZIPFoundation` into your Xcode project.
 
 ## Author
 
