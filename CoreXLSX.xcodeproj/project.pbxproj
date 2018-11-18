@@ -48,6 +48,10 @@
 		D1EB9C6C21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
 		D1EB9C6D21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
 		D1EB9C6E21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
+		D1FD863E21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */; };
+		D1FD863F21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */; };
+		D1FD864021A1F09E00B7F8D6 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */; };
+		D1FD864121A1F09E00B7F8D6 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */; };
 		OBJ_62 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CellReference.swift */; };
 		OBJ_63 /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ColumnReference.swift */; };
 		OBJ_64 /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
@@ -108,6 +112,7 @@
 		D1A8191021A9D4ED004FCA33 /* CellQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellQueries.swift; sourceTree = "<group>"; };
 		D1C96B7F21A806A500303975 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
 		D1C96B8121A80E5900303975 /* WorkbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookTests.swift; sourceTree = "<group>"; };
+		D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
 		OBJ_11 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
 		OBJ_12 /* ColumnReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnReference.swift; sourceTree = "<group>"; };
 		OBJ_13 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
@@ -257,6 +262,8 @@
 				OBJ_13 /* CoreXLSX.swift */,
 				OBJ_14 /* Relationships.swift */,
 				D1C96B7F21A806A500303975 /* Workbook.swift */,
+				OBJ_15 /* Worksheet.swift */,
+				D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */,
 			);
 			name = CoreXLSX;
 			path = Sources/CoreXLSX;
@@ -596,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D15021E121A1CB0500BFA4FC /* CoreXLSX.swift in Sources */,
+				D1FD863F21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D15021DF21A1CB0500BFA4FC /* CellReference.swift in Sources */,
 				D1A8191221A9D4F7004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190D21A9D139004FCA33 /* Cell.swift in Sources */,
@@ -611,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D15021FD21A1D1DB00BFA4FC /* CoreXLSX.swift in Sources */,
+				D1FD864021A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D15021FB21A1D1DB00BFA4FC /* CellReference.swift in Sources */,
 				D1A8191321A9D4F8004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190E21A9D13B004FCA33 /* Cell.swift in Sources */,
@@ -626,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D150221321A1D97E00BFA4FC /* CoreXLSX.swift in Sources */,
+				D1FD864121A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D150221121A1D97E00BFA4FC /* CellReference.swift in Sources */,
 				D1A8191421A9D4F8004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190F21A9D13B004FCA33 /* Cell.swift in Sources */,
@@ -641,6 +651,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_62 /* CellReference.swift in Sources */,
+				D1FD863E21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				OBJ_63 /* ColumnReference.swift in Sources */,
 				D1A8191121A9D4ED004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190B21A9D0EF004FCA33 /* Cell.swift in Sources */,
