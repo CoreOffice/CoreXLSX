@@ -82,10 +82,15 @@ dependencies: [
 ### CocoaPods
 
 CoreXLSX is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your `Podfile`:
+it, simply add `pod 'CoreXLSX', '~> 0.3.0'` to your `Podfile` like shown here:
 
 ```ruby
-pod 'CoreXLSX'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+target '<Your Target Name>' do
+  pod 'CoreXLSX', '~> 0.3.0'
+end
 ```
 ### Carthage
 
