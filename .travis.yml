@@ -12,7 +12,6 @@ before_install:
 # - pod install --project-directory=Example
 script:
 - pod lib lint
-- carthage version
 - carthage update
 - xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX-Package
 after_success:
