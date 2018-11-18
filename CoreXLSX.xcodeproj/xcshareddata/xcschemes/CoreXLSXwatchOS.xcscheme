@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D15021D021A1CA7D00BFA4FC"
+               BlueprintIdentifier = "D150220421A1D8DC00BFA4FC"
                BuildableName = "CoreXLSX.framework"
-               BlueprintName = "CoreXLSXtvOS"
+               BlueprintName = "CoreXLSXwatchOS"
                ReferencedContainer = "container:CoreXLSX.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D15021D021A1CA7D00BFA4FC"
-            BuildableName = "CoreXLSX.framework"
-            BlueprintName = "CoreXLSXtvOS"
-            ReferencedContainer = "container:CoreXLSX.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -54,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D15021D021A1CA7D00BFA4FC"
+            BlueprintIdentifier = "D150220421A1D8DC00BFA4FC"
             BuildableName = "CoreXLSX.framework"
-            BlueprintName = "CoreXLSXtvOS"
+            BlueprintName = "CoreXLSXwatchOS"
             ReferencedContainer = "container:CoreXLSX.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D15021D021A1CA7D00BFA4FC"
+            BlueprintIdentifier = "D150220421A1D8DC00BFA4FC"
             BuildableName = "CoreXLSX.framework"
-            BlueprintName = "CoreXLSXtvOS"
+            BlueprintName = "CoreXLSXwatchOS"
             ReferencedContainer = "container:CoreXLSX.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
