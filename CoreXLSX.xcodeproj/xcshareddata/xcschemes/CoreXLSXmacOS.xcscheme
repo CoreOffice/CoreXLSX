@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CoreXLSX::CoreXLSX"
                BuildableName = "CoreXLSX.framework"
-               BlueprintName = "CoreXLSX"
+               BlueprintName = "CoreXLSXmacOS"
                ReferencedContainer = "container:CoreXLSX.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,6 +40,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CoreXLSX::CoreXLSX"
+            BuildableName = "CoreXLSX.framework"
+            BlueprintName = "CoreXLSXmacOS"
+            ReferencedContainer = "container:CoreXLSX.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -58,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CoreXLSX::CoreXLSX"
             BuildableName = "CoreXLSX.framework"
-            BlueprintName = "CoreXLSX"
+            BlueprintName = "CoreXLSXmacOS"
             ReferencedContainer = "container:CoreXLSX.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,6 +87,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CoreXLSX::CoreXLSX"
+            BuildableName = "CoreXLSX.framework"
+            BlueprintName = "CoreXLSXmacOS"
+            ReferencedContainer = "container:CoreXLSX.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
