@@ -5,6 +5,8 @@
 //  Created by Max Desiatov on 18/11/2018.
 //
 
+/// Attributes and nodes are documented at this url:
+/// https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table
 struct SharedStrings: Codable {
   struct Item: Codable {
     let text: String?
