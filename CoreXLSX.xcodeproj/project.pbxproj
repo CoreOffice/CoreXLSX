@@ -6,323 +6,254 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		"CoreXLSX::CoreXLSXPackageTests::ProductTarget" /* CoreXLSXPackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_74 /* Build configuration list for PBXAggregateTarget "CoreXLSXPackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_77 /* PBXTargetDependency */,
-			);
-			name = CoreXLSXPackageTests;
-			productName = CoreXLSXPackageTests;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		D123DC9D219B471D007F6E04 /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123DC9C219B471D007F6E04 /* ColumnReference.swift */; };
-		D123DC9F219C29DD007F6E04 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123DC9E219C29DD007F6E04 /* CellReference.swift */; };
-		D15E8358219D7F0F00EB4544 /* RelationshipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E8357219D7F0F00EB4544 /* RelationshipsTests.swift */; };
-		D15E835A219D87B100EB4544 /* CellReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E8359219D87B100EB4544 /* CellReferenceTests.swift */; };
-		OBJ_100 /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* XMLUnkeyedDecodingContainer.swift */; };
-		OBJ_101 /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* EncodingErrorExtension.swift */; };
-		OBJ_102 /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* XMLEncoder.swift */; };
-		OBJ_103 /* XMLEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* XMLEncodingStorage.swift */; };
-		OBJ_104 /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* XMLReferencingEncoder.swift */; };
-		OBJ_105 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ISO8601DateFormatter.swift */; };
-		OBJ_106 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* XMLKey.swift */; };
-		OBJ_107 /* XMLStackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* XMLStackParser.swift */; };
-		OBJ_114 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Package.swift */; };
-		OBJ_119 /* Archive+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Archive+Reading.swift */; };
-		OBJ_120 /* Archive+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Archive+Writing.swift */; };
-		OBJ_121 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Archive.swift */; };
-		OBJ_122 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Data+Compression.swift */; };
-		OBJ_123 /* Data+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Data+Serialization.swift */; };
-		OBJ_124 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Entry.swift */; };
-		OBJ_125 /* FileManager+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* FileManager+ZIP.swift */; };
-		OBJ_132 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Package.swift */; };
-		OBJ_57 /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CoreXLSX.swift */; };
-		OBJ_58 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Relationships.swift */; };
-		OBJ_59 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Worksheet.swift */; };
-		OBJ_61 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
-		OBJ_62 /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
-		OBJ_72 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_83 /* CoreXLSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CoreXLSXTests.swift */; };
-		OBJ_84 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* XCTestManifests.swift */; };
-		OBJ_86 /* CoreXLSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */; };
-		OBJ_87 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
-		OBJ_88 /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
-		OBJ_96 /* DecodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* DecodingErrorExtension.swift */; };
-		OBJ_97 /* XMLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* XMLDecoder.swift */; };
-		OBJ_98 /* XMLDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* XMLDecodingStorage.swift */; };
-		OBJ_99 /* XMLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XMLKeyedDecodingContainer.swift */; };
+		D15021C521A1C31800BFA4FC /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; };
+		D15021C621A1C31800BFA4FC /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; };
+		D15021C721A1C33E00BFA4FC /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; };
+		D15021C821A1C33E00BFA4FC /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; };
+		D15021CA21A1C3DF00BFA4FC /* XMLCoder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D15021CB21A1C3DF00BFA4FC /* ZIPFoundation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		OBJ_62 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CellReference.swift */; };
+		OBJ_63 /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ColumnReference.swift */; };
+		OBJ_64 /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
+		OBJ_65 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Relationships.swift */; };
+		OBJ_66 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Worksheet.swift */; };
+		OBJ_79 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_90 /* CellReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* CellReferenceTests.swift */; };
+		OBJ_91 /* CoreXLSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* CoreXLSXTests.swift */; };
+		OBJ_92 /* RelationshipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* RelationshipsTests.swift */; };
+		OBJ_93 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCTestManifests.swift */; };
+		OBJ_95 /* CoreXLSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D155EAEF219ADA9E00D4F47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "ZIPFoundation::ZIPFoundation";
-			remoteInfo = ZIPFoundation;
-		};
-		D155EAF0219ADA9E00D4F47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "XMLCoder::XMLCoder";
-			remoteInfo = XMLCoder;
-		};
-		D155EAF1219ADA9E00D4F47E /* PBXContainerItemProxy */ = {
+		D15021BE21A1C23700BFA4FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CoreXLSX::CoreXLSX";
 			remoteInfo = CoreXLSX;
 		};
-		D155EAF2219ADA9E00D4F47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "ZIPFoundation::ZIPFoundation";
-			remoteInfo = ZIPFoundation;
-		};
-		D155EAF3219ADA9E00D4F47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "XMLCoder::XMLCoder";
-			remoteInfo = XMLCoder;
-		};
-		D155EAF4219ADA9E00D4F47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "CoreXLSX::CoreXLSXTests";
-			remoteInfo = CoreXLSXTests;
-		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D15021C921A1C3BB00BFA4FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D15021CA21A1C3DF00BFA4FC /* XMLCoder.framework in CopyFiles */,
+				D15021CB21A1C3DF00BFA4FC /* ZIPFoundation.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D123DC9C219B471D007F6E04 /* ColumnReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnReference.swift; sourceTree = "<group>"; };
-		D123DC9E219C29DD007F6E04 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
-		D123DCA0219C35BA007F6E04 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreXLSX.podspec; sourceTree = "<group>"; };
-		D155EAF6219ADF9C00D4F47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D15E8357219D7F0F00EB4544 /* RelationshipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsTests.swift; sourceTree = "<group>"; };
-		D15E8359219D87B100EB4544 /* CellReferenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReferenceTests.swift; sourceTree = "<group>"; };
-		OBJ_11 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
-		OBJ_16 /* CoreXLSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSXTests.swift; sourceTree = "<group>"; };
-		OBJ_17 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
-		OBJ_22 /* Archive+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Reading.swift"; sourceTree = "<group>"; };
-		OBJ_23 /* Archive+Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Writing.swift"; sourceTree = "<group>"; };
-		OBJ_24 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
-		OBJ_26 /* Data+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Serialization.swift"; sourceTree = "<group>"; };
-		OBJ_27 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		OBJ_28 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIP.swift"; sourceTree = "<group>"; };
-		OBJ_29 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/ZIPFoundation.git-1553630773966528904/Package.swift"; sourceTree = "<group>"; };
-		OBJ_33 /* DecodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingErrorExtension.swift; sourceTree = "<group>"; };
-		OBJ_34 /* XMLDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecoder.swift; sourceTree = "<group>"; };
-		OBJ_35 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecodingStorage.swift; sourceTree = "<group>"; };
-		OBJ_36 /* XMLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_37 /* XMLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_39 /* EncodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingErrorExtension.swift; sourceTree = "<group>"; };
-		OBJ_40 /* XMLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncoder.swift; sourceTree = "<group>"; };
-		OBJ_41 /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncodingStorage.swift; sourceTree = "<group>"; };
-		OBJ_42 /* XMLReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLReferencingEncoder.swift; sourceTree = "<group>"; };
-		OBJ_43 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
-		OBJ_44 /* XMLKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKey.swift; sourceTree = "<group>"; };
-		OBJ_45 /* XMLStackParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStackParser.swift; sourceTree = "<group>"; };
-		OBJ_46 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/XMLCoder.git--8189013463900790701/Package.swift"; sourceTree = "<group>"; };
+		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZIPFoundation.framework; path = Carthage/Build/Mac/ZIPFoundation.framework; sourceTree = "<group>"; };
+		D15021C421A1C31800BFA4FC /* XMLCoder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XMLCoder.framework; path = Carthage/Build/Mac/XMLCoder.framework; sourceTree = "<group>"; };
+		OBJ_11 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
+		OBJ_12 /* ColumnReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnReference.swift; sourceTree = "<group>"; };
+		OBJ_13 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
+		OBJ_18 /* CellReferenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReferenceTests.swift; sourceTree = "<group>"; };
+		OBJ_19 /* CoreXLSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSXTests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* RelationshipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsTests.swift; sourceTree = "<group>"; };
+		OBJ_21 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Archive+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Reading.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* Archive+Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Writing.swift"; sourceTree = "<group>"; };
+		OBJ_29 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		OBJ_30 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
+		OBJ_31 /* Data+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Serialization.swift"; sourceTree = "<group>"; };
+		OBJ_32 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		OBJ_33 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIP.swift"; sourceTree = "<group>"; };
+		OBJ_34 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/ZIPFoundation.git-1553630773966528904/Package.swift"; sourceTree = "<group>"; };
+		OBJ_38 /* DecodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingErrorExtension.swift; sourceTree = "<group>"; };
+		OBJ_39 /* XMLDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecoder.swift; sourceTree = "<group>"; };
+		OBJ_40 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecodingStorage.swift; sourceTree = "<group>"; };
+		OBJ_41 /* XMLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		OBJ_42 /* XMLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		OBJ_44 /* EncodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingErrorExtension.swift; sourceTree = "<group>"; };
+		OBJ_45 /* XMLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncoder.swift; sourceTree = "<group>"; };
+		OBJ_46 /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncodingStorage.swift; sourceTree = "<group>"; };
+		OBJ_47 /* XMLReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLReferencingEncoder.swift; sourceTree = "<group>"; };
+		OBJ_48 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		OBJ_49 /* XMLKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKey.swift; sourceTree = "<group>"; };
+		OBJ_50 /* XMLStackParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStackParser.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/XMLCoder.git--8189013463900790701/Package.swift"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* Package.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Package.xcconfig; sourceTree = "<group>"; };
-		"XMLCoder::XMLCoder::Product" /* XMLCoder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_108 /* Frameworks */ = {
+		OBJ_67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				D15021C521A1C31800BFA4FC /* ZIPFoundation.framework in Frameworks */,
+				D15021C621A1C31800BFA4FC /* XMLCoder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_126 /* Frameworks */ = {
+		OBJ_94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_60 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_61 /* ZIPFoundation.framework in Frameworks */,
-				OBJ_62 /* XMLCoder.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_85 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_86 /* CoreXLSX.framework in Frameworks */,
-				OBJ_87 /* ZIPFoundation.framework in Frameworks */,
-				OBJ_88 /* XMLCoder.framework in Frameworks */,
+				D15021C721A1C33E00BFA4FC /* ZIPFoundation.framework in Frameworks */,
+				D15021C821A1C33E00BFA4FC /* XMLCoder.framework in Frameworks */,
+				OBJ_95 /* CoreXLSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D15021C221A1C31800BFA4FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D15021C421A1C31800BFA4FC /* XMLCoder.framework */,
+				D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* CoreXLSX */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* CoreXLSX.swift */,
-				OBJ_12 /* Relationships.swift */,
-				OBJ_13 /* Worksheet.swift */,
-				D123DC9C219B471D007F6E04 /* ColumnReference.swift */,
-				D123DC9E219C29DD007F6E04 /* CellReference.swift */,
+				OBJ_11 /* CellReference.swift */,
+				OBJ_12 /* ColumnReference.swift */,
+				OBJ_13 /* CoreXLSX.swift */,
+				OBJ_14 /* Relationships.swift */,
+				OBJ_15 /* Worksheet.swift */,
 			);
 			name = CoreXLSX;
 			path = Sources/CoreXLSX;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* Tests */ = {
+		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* CoreXLSXTests */,
+				OBJ_17 /* CoreXLSXTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_15 /* CoreXLSXTests */ = {
+		OBJ_17 /* CoreXLSXTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* CoreXLSXTests.swift */,
-				OBJ_17 /* XCTestManifests.swift */,
-				D15E8357219D7F0F00EB4544 /* RelationshipsTests.swift */,
-				D15E8359219D87B100EB4544 /* CellReferenceTests.swift */,
+				OBJ_18 /* CellReferenceTests.swift */,
+				OBJ_19 /* CoreXLSXTests.swift */,
+				OBJ_20 /* RelationshipsTests.swift */,
+				OBJ_21 /* XCTestManifests.swift */,
 			);
 			name = CoreXLSXTests;
 			path = Tests/CoreXLSXTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_19 /* Dependencies */ = {
+		OBJ_24 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_20 /* ZIPFoundation 0.9.6 */,
-				OBJ_30 /* XMLCoder 0.1.0 */,
+				OBJ_25 /* ZIPFoundation 0.9.6 */,
+				OBJ_35 /* XMLCoder 0.1.0 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_20 /* ZIPFoundation 0.9.6 */ = {
+		OBJ_25 /* ZIPFoundation 0.9.6 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_21 /* ZIPFoundation */,
-				OBJ_29 /* Package.swift */,
+				OBJ_26 /* ZIPFoundation */,
+				OBJ_34 /* Package.swift */,
 			);
 			name = "ZIPFoundation 0.9.6";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_21 /* ZIPFoundation */ = {
+		OBJ_26 /* ZIPFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* Archive+Reading.swift */,
-				OBJ_23 /* Archive+Writing.swift */,
-				OBJ_24 /* Archive.swift */,
-				OBJ_25 /* Data+Compression.swift */,
-				OBJ_26 /* Data+Serialization.swift */,
-				OBJ_27 /* Entry.swift */,
-				OBJ_28 /* FileManager+ZIP.swift */,
+				OBJ_27 /* Archive+Reading.swift */,
+				OBJ_28 /* Archive+Writing.swift */,
+				OBJ_29 /* Archive.swift */,
+				OBJ_30 /* Data+Compression.swift */,
+				OBJ_31 /* Data+Serialization.swift */,
+				OBJ_32 /* Entry.swift */,
+				OBJ_33 /* FileManager+ZIP.swift */,
 			);
 			name = ZIPFoundation;
 			path = ".build/checkouts/ZIPFoundation.git-1553630773966528904/Sources/ZIPFoundation";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_30 /* XMLCoder 0.1.0 */ = {
+		OBJ_35 /* XMLCoder 0.1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_31 /* XMLCoder */,
-				OBJ_46 /* Package.swift */,
+				OBJ_36 /* XMLCoder */,
+				OBJ_51 /* Package.swift */,
 			);
 			name = "XMLCoder 0.1.0";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_31 /* XMLCoder */ = {
+		OBJ_36 /* XMLCoder */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_32 /* Decoder */,
-				OBJ_38 /* Encoder */,
-				OBJ_43 /* ISO8601DateFormatter.swift */,
-				OBJ_44 /* XMLKey.swift */,
-				OBJ_45 /* XMLStackParser.swift */,
+				OBJ_37 /* Decoder */,
+				OBJ_43 /* Encoder */,
+				OBJ_48 /* ISO8601DateFormatter.swift */,
+				OBJ_49 /* XMLKey.swift */,
+				OBJ_50 /* XMLStackParser.swift */,
 			);
 			name = XMLCoder;
 			path = ".build/checkouts/XMLCoder.git--8189013463900790701/Sources/XMLCoder";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_32 /* Decoder */ = {
+		OBJ_37 /* Decoder */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_33 /* DecodingErrorExtension.swift */,
-				OBJ_34 /* XMLDecoder.swift */,
-				OBJ_35 /* XMLDecodingStorage.swift */,
-				OBJ_36 /* XMLKeyedDecodingContainer.swift */,
-				OBJ_37 /* XMLUnkeyedDecodingContainer.swift */,
+				OBJ_38 /* DecodingErrorExtension.swift */,
+				OBJ_39 /* XMLDecoder.swift */,
+				OBJ_40 /* XMLDecodingStorage.swift */,
+				OBJ_41 /* XMLKeyedDecodingContainer.swift */,
+				OBJ_42 /* XMLUnkeyedDecodingContainer.swift */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
 		};
-		OBJ_38 /* Encoder */ = {
+		OBJ_43 /* Encoder */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_39 /* EncodingErrorExtension.swift */,
-				OBJ_40 /* XMLEncoder.swift */,
-				OBJ_41 /* XMLEncodingStorage.swift */,
-				OBJ_42 /* XMLReferencingEncoder.swift */,
+				OBJ_44 /* EncodingErrorExtension.swift */,
+				OBJ_45 /* XMLEncoder.swift */,
+				OBJ_46 /* XMLEncodingStorage.swift */,
+				OBJ_47 /* XMLReferencingEncoder.swift */,
 			);
 			path = Encoder;
 			sourceTree = "<group>";
 		};
-		OBJ_47 /* Products */ = {
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Configs */,
+				OBJ_9 /* Sources */,
+				OBJ_16 /* Tests */,
+				OBJ_24 /* Dependencies */,
+				OBJ_52 /* Products */,
+				D15021C221A1C31800BFA4FC /* Frameworks */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */,
-				"XMLCoder::XMLCoder::Product" /* XMLCoder.framework */,
-				"ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */,
 				"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_5 = {
-			isa = PBXGroup;
-			children = (
-				D123DCA0219C35BA007F6E04 /* CHANGELOG.md */,
-				D155EAF5219ADF9C00D4F47E /* CoreXLSX.podspec */,
-				D155EAF6219ADF9C00D4F47E /* README.md */,
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Configs */,
-				OBJ_9 /* Sources */,
-				OBJ_14 /* Tests */,
-				OBJ_18 /* Example */,
-				OBJ_19 /* Dependencies */,
-				OBJ_47 /* Products */,
-			);
-			indentWidth = 2;
-			sourceTree = "<group>";
-			tabWidth = 2;
 		};
 		OBJ_7 /* Configs */ = {
 			isa = PBXGroup;
@@ -345,16 +276,14 @@
 /* Begin PBXNativeTarget section */
 		"CoreXLSX::CoreXLSX" /* CoreXLSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "CoreXLSX" */;
+			buildConfigurationList = OBJ_58 /* Build configuration list for PBXNativeTarget "CoreXLSX" */;
 			buildPhases = (
-				OBJ_56 /* Sources */,
-				OBJ_60 /* Frameworks */,
+				OBJ_61 /* Sources */,
+				OBJ_67 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_63 /* PBXTargetDependency */,
-				OBJ_65 /* PBXTargetDependency */,
 			);
 			name = CoreXLSX;
 			productName = CoreXLSX;
@@ -363,17 +292,16 @@
 		};
 		"CoreXLSX::CoreXLSXTests" /* CoreXLSXTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_79 /* Build configuration list for PBXNativeTarget "CoreXLSXTests" */;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "CoreXLSXTests" */;
 			buildPhases = (
-				OBJ_82 /* Sources */,
-				OBJ_85 /* Frameworks */,
+				OBJ_89 /* Sources */,
+				OBJ_94 /* Frameworks */,
+				D15021C921A1C3BB00BFA4FC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_89 /* PBXTargetDependency */,
-				OBJ_90 /* PBXTargetDependency */,
-				OBJ_91 /* PBXTargetDependency */,
+				OBJ_98 /* PBXTargetDependency */,
 			);
 			name = CoreXLSXTests;
 			productName = CoreXLSXTests;
@@ -382,9 +310,9 @@
 		};
 		"CoreXLSX::SwiftPMPackageDescription" /* CoreXLSXPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_68 /* Build configuration list for PBXNativeTarget "CoreXLSXPackageDescription" */;
+			buildConfigurationList = OBJ_75 /* Build configuration list for PBXNativeTarget "CoreXLSXPackageDescription" */;
 			buildPhases = (
-				OBJ_71 /* Sources */,
+				OBJ_78 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -392,66 +320,6 @@
 			);
 			name = CoreXLSXPackageDescription;
 			productName = CoreXLSXPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"XMLCoder::SwiftPMPackageDescription" /* XMLCoderPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_110 /* Build configuration list for PBXNativeTarget "XMLCoderPackageDescription" */;
-			buildPhases = (
-				OBJ_113 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = XMLCoderPackageDescription;
-			productName = XMLCoderPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"XMLCoder::XMLCoder" /* XMLCoder */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_92 /* Build configuration list for PBXNativeTarget "XMLCoder" */;
-			buildPhases = (
-				OBJ_95 /* Sources */,
-				OBJ_108 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = XMLCoder;
-			productName = XMLCoder;
-			productReference = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"ZIPFoundation::SwiftPMPackageDescription" /* ZIPFoundationPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_128 /* Build configuration list for PBXNativeTarget "ZIPFoundationPackageDescription" */;
-			buildPhases = (
-				OBJ_131 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ZIPFoundationPackageDescription;
-			productName = ZIPFoundationPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"ZIPFoundation::ZIPFoundation" /* ZIPFoundation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_115 /* Build configuration list for PBXNativeTarget "ZIPFoundation" */;
-			buildPhases = (
-				OBJ_118 /* Sources */,
-				OBJ_126 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ZIPFoundation;
-			productName = ZIPFoundation;
-			productReference = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -469,226 +337,61 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_47 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				"CoreXLSX::CoreXLSX" /* CoreXLSX */,
 				"CoreXLSX::SwiftPMPackageDescription" /* CoreXLSXPackageDescription */,
-				"CoreXLSX::CoreXLSXPackageTests::ProductTarget" /* CoreXLSXPackageTests */,
 				"CoreXLSX::CoreXLSXTests" /* CoreXLSXTests */,
-				"XMLCoder::XMLCoder" /* XMLCoder */,
-				"XMLCoder::SwiftPMPackageDescription" /* XMLCoderPackageDescription */,
-				"ZIPFoundation::ZIPFoundation" /* ZIPFoundation */,
-				"ZIPFoundation::SwiftPMPackageDescription" /* ZIPFoundationPackageDescription */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_113 /* Sources */ = {
+		OBJ_61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_114 /* Package.swift in Sources */,
+				OBJ_62 /* CellReference.swift in Sources */,
+				OBJ_63 /* ColumnReference.swift in Sources */,
+				OBJ_64 /* CoreXLSX.swift in Sources */,
+				OBJ_65 /* Relationships.swift in Sources */,
+				OBJ_66 /* Worksheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_118 /* Sources */ = {
+		OBJ_78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_119 /* Archive+Reading.swift in Sources */,
-				OBJ_120 /* Archive+Writing.swift in Sources */,
-				OBJ_121 /* Archive.swift in Sources */,
-				OBJ_122 /* Data+Compression.swift in Sources */,
-				OBJ_123 /* Data+Serialization.swift in Sources */,
-				OBJ_124 /* Entry.swift in Sources */,
-				OBJ_125 /* FileManager+ZIP.swift in Sources */,
+				OBJ_79 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_131 /* Sources */ = {
+		OBJ_89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_132 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_57 /* CoreXLSX.swift in Sources */,
-				D123DC9D219B471D007F6E04 /* ColumnReference.swift in Sources */,
-				D123DC9F219C29DD007F6E04 /* CellReference.swift in Sources */,
-				OBJ_58 /* Relationships.swift in Sources */,
-				OBJ_59 /* Worksheet.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_72 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_82 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_83 /* CoreXLSXTests.swift in Sources */,
-				D15E835A219D87B100EB4544 /* CellReferenceTests.swift in Sources */,
-				OBJ_84 /* XCTestManifests.swift in Sources */,
-				D15E8358219D7F0F00EB4544 /* RelationshipsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_95 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_96 /* DecodingErrorExtension.swift in Sources */,
-				OBJ_97 /* XMLDecoder.swift in Sources */,
-				OBJ_98 /* XMLDecodingStorage.swift in Sources */,
-				OBJ_99 /* XMLKeyedDecodingContainer.swift in Sources */,
-				OBJ_100 /* XMLUnkeyedDecodingContainer.swift in Sources */,
-				OBJ_101 /* EncodingErrorExtension.swift in Sources */,
-				OBJ_102 /* XMLEncoder.swift in Sources */,
-				OBJ_103 /* XMLEncodingStorage.swift in Sources */,
-				OBJ_104 /* XMLReferencingEncoder.swift in Sources */,
-				OBJ_105 /* ISO8601DateFormatter.swift in Sources */,
-				OBJ_106 /* XMLKey.swift in Sources */,
-				OBJ_107 /* XMLStackParser.swift in Sources */,
+				OBJ_90 /* CellReferenceTests.swift in Sources */,
+				OBJ_91 /* CoreXLSXTests.swift in Sources */,
+				OBJ_92 /* RelationshipsTests.swift in Sources */,
+				OBJ_93 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "ZIPFoundation::ZIPFoundation" /* ZIPFoundation */;
-			targetProxy = D155EAEF219ADA9E00D4F47E /* PBXContainerItemProxy */;
-		};
-		OBJ_65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "XMLCoder::XMLCoder" /* XMLCoder */;
-			targetProxy = D155EAF0219ADA9E00D4F47E /* PBXContainerItemProxy */;
-		};
-		OBJ_77 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CoreXLSX::CoreXLSXTests" /* CoreXLSXTests */;
-			targetProxy = D155EAF4219ADA9E00D4F47E /* PBXContainerItemProxy */;
-		};
-		OBJ_89 /* PBXTargetDependency */ = {
+		OBJ_98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CoreXLSX::CoreXLSX" /* CoreXLSX */;
-			targetProxy = D155EAF1219ADA9E00D4F47E /* PBXContainerItemProxy */;
-		};
-		OBJ_90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "ZIPFoundation::ZIPFoundation" /* ZIPFoundation */;
-			targetProxy = D155EAF2219ADA9E00D4F47E /* PBXContainerItemProxy */;
-		};
-		OBJ_91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "XMLCoder::XMLCoder" /* XMLCoder */;
-			targetProxy = D155EAF3219ADA9E00D4F47E /* PBXContainerItemProxy */;
+			targetProxy = D15021BE21A1C23700BFA4FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_111 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_112 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_116 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/ZIPFoundation_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ZIPFoundation;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = ZIPFoundation;
-			};
-			name = Debug;
-		};
-		OBJ_117 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/ZIPFoundation_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ZIPFoundation;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = ZIPFoundation;
-			};
-			name = Release;
-		};
-		OBJ_129 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_130 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -735,7 +438,7 @@
 			};
 			name = Release;
 		};
-		OBJ_54 /* Debug */ = {
+		OBJ_59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
 			buildSettings = {
@@ -743,6 +446,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSX_Info.plist;
@@ -760,7 +464,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_55 /* Release */ = {
+		OBJ_60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
 			buildSettings = {
@@ -768,6 +472,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSX_Info.plist;
@@ -785,7 +490,7 @@
 			};
 			name = Release;
 		};
-		OBJ_69 /* Debug */ = {
+		OBJ_76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -794,7 +499,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_70 /* Release */ = {
+		OBJ_77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -803,19 +508,7 @@
 			};
 			name = Release;
 		};
-		OBJ_75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_80 /* Debug */ = {
+		OBJ_87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
 			buildSettings = {
@@ -824,6 +517,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSXTests_Info.plist;
@@ -837,7 +531,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_81 /* Release */ = {
+		OBJ_88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
 			buildSettings = {
@@ -846,6 +540,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSXTests_Info.plist;
@@ -856,89 +551,12 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = CoreXLSXTests;
-			};
-			name = Release;
-		};
-		OBJ_93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/XMLCoder_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = XMLCoder;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = XMLCoder;
-			};
-			name = Debug;
-		};
-		OBJ_94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/XMLCoder_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = XMLCoder;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = XMLCoder;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_110 /* Build configuration list for PBXNativeTarget "XMLCoderPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_111 /* Debug */,
-				OBJ_112 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_115 /* Build configuration list for PBXNativeTarget "ZIPFoundation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_116 /* Debug */,
-				OBJ_117 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_128 /* Build configuration list for PBXNativeTarget "ZIPFoundationPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_129 /* Debug */,
-				OBJ_130 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "CoreXLSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -948,47 +566,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_53 /* Build configuration list for PBXNativeTarget "CoreXLSX" */ = {
+		OBJ_58 /* Build configuration list for PBXNativeTarget "CoreXLSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_54 /* Debug */,
-				OBJ_55 /* Release */,
+				OBJ_59 /* Debug */,
+				OBJ_60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_68 /* Build configuration list for PBXNativeTarget "CoreXLSXPackageDescription" */ = {
+		OBJ_75 /* Build configuration list for PBXNativeTarget "CoreXLSXPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_69 /* Debug */,
-				OBJ_70 /* Release */,
+				OBJ_76 /* Debug */,
+				OBJ_77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_74 /* Build configuration list for PBXAggregateTarget "CoreXLSXPackageTests" */ = {
+		OBJ_86 /* Build configuration list for PBXNativeTarget "CoreXLSXTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_75 /* Debug */,
-				OBJ_76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_79 /* Build configuration list for PBXNativeTarget "CoreXLSXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_80 /* Debug */,
-				OBJ_81 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_92 /* Build configuration list for PBXNativeTarget "XMLCoder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_93 /* Debug */,
-				OBJ_94 /* Release */,
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
