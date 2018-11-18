@@ -86,7 +86,8 @@ it, simply add `pod 'CoreXLSX', '~> 0.3.0'` to your `Podfile` like shown here:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 use_frameworks!
 target '<Your Target Name>' do
   pod 'CoreXLSX', '~> 0.3.0'
