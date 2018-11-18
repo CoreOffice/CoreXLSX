@@ -89,7 +89,8 @@ pod 'CoreXLSX'
 ```
 ### Carthage
 
-[Carthage](https://github.com/Carthage/Carthage) is a dependency manager that builds your dependencies and provides you with binary frameworks.
+[Carthage](https://github.com/Carthage/Carthage) is a dependency manager that builds 
+your dependencies and provides you with binary frameworks.
 
 Carthage can be installed with [Homebrew](https://brew.sh/) using the following command:
 
@@ -98,10 +99,11 @@ $ brew update
 $ brew install carthage
 ```
 
-Inside of your `Cartfile`, add GitHub path to `CoreXLSX`:
+Inside of your `Cartfile`, add GitHub path to `CoreXLSX` `master` branch (Carthage 
+support is not available in a stable release yet):
 
 ```ogdl
-github "MaxDesiatov/CoreXLSX" ~> 0.3.0
+github "MaxDesiatov/CoreXLSX" "master"
 ```
 
 Then, run the following command to build the framework:
@@ -110,7 +112,8 @@ Then, run the following command to build the framework:
 $ carthage update
 ```
 
-Drag the built frameworks (including the subdependencies `XMLCoder` and `ZIPFoundation` into your Xcode project.
+Drag the built frameworks (including the subdependencies `XMLCoder` and 
+`ZIPFoundation` into your Xcode project.
 
 ## Author
 
