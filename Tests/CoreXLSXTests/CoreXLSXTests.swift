@@ -37,8 +37,14 @@ final class XLSXReaderTests: XCTestCase {
 
       XCTAssertEqual(allCells, ws.cells(atColumns: columnReferences))
 
-      let closedRange = ColumnReference("A")!...ColumnReference("F")!
-      XCTAssertEqual(allCells, ws.cells(atColumns: closedRange))
+      let closedRange1 = ColumnReference("A")!...ColumnReference("F")!
+      XCTAssertEqual(allCells, ws.cells(atColumns: closedRange1))
+
+      let closedRange2 = ColumnReference("A")!...ColumnReference("C")!
+      let rowsRange: ClosedRange<UInt> = 3...10
+      let cellsInRange = ws.cells(atColumns: closedRange2, rows: rowsRange)
+      print(cellsInRange)
+      XCTAssertEqual(cellsInRange.count, closedRange2.count * rowsRange.count)
     } catch {
       XCTAssert(false, "unexpected error \(error)")
     }
