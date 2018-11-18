@@ -175,10 +175,8 @@
 		D15021C221A1C31800BFA4FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D15021F721A1D1A500BFA4FC /* XMLCoder.framework */,
-				D15021F821A1D1A500BFA4FC /* ZIPFoundation.framework */,
-				D150220D21A1D95400BFA4FC /* XMLCoder.framework */,
-				D150220E21A1D95400BFA4FC /* ZIPFoundation.framework */,
+				D15BA1B921A1EC6A00CB3C7B /* iOS */,
+				D15BA1BA21A1EC7C00CB3C7B /* watchOS */,
 				D15021E921A1CB7700BFA4FC /* macOS */,
 				D15021E821A1CB6300BFA4FC /* tvOS */,
 			);
@@ -201,6 +199,24 @@
 				D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */,
 			);
 			name = macOS;
+			sourceTree = "<group>";
+		};
+		D15BA1B921A1EC6A00CB3C7B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D15021F721A1D1A500BFA4FC /* XMLCoder.framework */,
+				D15021F821A1D1A500BFA4FC /* ZIPFoundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D15BA1BA21A1EC7C00CB3C7B /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D150220D21A1D95400BFA4FC /* XMLCoder.framework */,
+				D150220E21A1D95400BFA4FC /* ZIPFoundation.framework */,
+			);
+			name = watchOS;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* CoreXLSX */ = {

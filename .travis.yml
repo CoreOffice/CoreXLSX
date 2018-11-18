@@ -13,9 +13,10 @@ before_install:
 script:
 - pod lib lint
 - carthage update
-- xcodebuild test -enableCodeCoverage YES -scheme CoreXLSXmacOS
 - xcodebuild -scheme CoreXLSXiOS
 - xcodebuild -scheme CoreXLSXwatchOS
 - xcodebuild -scheme CoreXLSXtvOS
+- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/
+- xcodebuild test -enableCodeCoverage YES -scheme CoreXLSXmacOS
 after_success:
 - bash <(curl -s https://codecov.io/bash)
