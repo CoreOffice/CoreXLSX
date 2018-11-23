@@ -12,10 +12,10 @@ public struct Worksheet: Codable {
   public let dimension: WorksheetDimension
   public let sheetViews: SheetViews
   public let sheetFormatPr: SheetFormatPr
-  public let columns: Columns
+  public let columns: Columns?
 
   @available(*, deprecated, renamed: "columns")
-  public var cols: Cols {
+  public var cols: Cols? {
     return columns
   }
 
