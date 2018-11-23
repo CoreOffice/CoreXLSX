@@ -1,8 +1,9 @@
 import XCTest
 @testable import CoreXLSX
 
+let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
+
 final class XLSXReaderTests: XCTestCase {
-  let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
   let sheetPath = "xl/worksheets/sheet1.xml"
 
   func testPublicAPI() {
