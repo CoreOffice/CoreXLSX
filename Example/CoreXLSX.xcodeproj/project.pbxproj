@@ -15,6 +15,9 @@
 		72F32EB9CBAEB64081D35612 /* Pods_CoreXLSXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */; };
 		8BE8494931C11C209B2F3944 /* Pods_CoreXLSXExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */; };
 		D19829712197596A00C6A761 /* CoreXLSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198296B2197595F00C6A761 /* CoreXLSXTests.swift */; };
+		D1C96B7C21A7F46D00303975 /* CellReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7721A7F46400303975 /* CellReferenceTests.swift */; };
+		D1C96B7D21A7F46D00303975 /* RelationshipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7621A7F46400303975 /* RelationshipsTests.swift */; };
+		D1C96B7E21A7F46D00303975 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198296C2197595F00C6A761 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,8 @@
 		D198296C2197595F00C6A761 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		D198296D2197595F00C6A761 /* categories.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = categories.xlsx; sourceTree = "<group>"; };
 		D1BCEBD521944FA6000B550F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		D1C96B7621A7F46400303975 /* RelationshipsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipsTests.swift; sourceTree = "<group>"; };
+		D1C96B7721A7F46400303975 /* CellReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellReferenceTests.swift; sourceTree = "<group>"; };
 		DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSXExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE826BAD89D91945EB1EAE81 /* CoreXLSX.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CoreXLSX.podspec; path = ../CoreXLSX.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -168,6 +173,8 @@
 		D198296A2197595F00C6A761 /* CoreXLSXTests */ = {
 			isa = PBXGroup;
 			children = (
+				D1C96B7721A7F46400303975 /* CellReferenceTests.swift */,
+				D1C96B7621A7F46400303975 /* RelationshipsTests.swift */,
 				D198296B2197595F00C6A761 /* CoreXLSXTests.swift */,
 				D198296C2197595F00C6A761 /* XCTestManifests.swift */,
 				D198296D2197595F00C6A761 /* categories.xlsx */,
@@ -353,6 +360,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19829712197596A00C6A761 /* CoreXLSXTests.swift in Sources */,
+				D1C96B7E21A7F46D00303975 /* XCTestManifests.swift in Sources */,
+				D1C96B7C21A7F46D00303975 /* CellReferenceTests.swift in Sources */,
+				D1C96B7D21A7F46D00303975 /* RelationshipsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
