@@ -32,7 +32,7 @@ public struct Worksheet: Codable {
 
   public let data: Data?
 
-  @available(*, deprecated, renamed: "columns")
+  @available(*, deprecated, renamed: "data")
   public var sheetData: SheetData {
     return data ?? Data(rows: [])
   }
