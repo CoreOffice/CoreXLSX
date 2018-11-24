@@ -10,7 +10,24 @@ import Foundation
 @available(*, deprecated, renamed: "Worksheet.Data")
 public typealias SheetData = Worksheet.Data
 
+@available(*, deprecated, renamed: "Worksheet.Properties")
+public typealias SheetPr = Worksheet.Properties
+
+@available(*, deprecated, renamed: "Worksheet.FormatProperties")
+public typealias SheetFormatPr = Worksheet.FormatProperties
+
+@available(*, deprecated, renamed: "Worksheet.Dimension")
+public typealias WorksheetDimension = Worksheet.Dimension
+
 public struct Worksheet: Codable {
+  public struct Properties: Codable, Equatable {
+    public let pageSetUpProperties: PageSetUpProperties?
+
+    enum CodingKeys: String, CodingKey {
+      case pageSetUpProperties = "pageSetUpPr"
+    }
+  }
+
   public struct Data: Codable {
     public let rows: [Row]
 
@@ -19,10 +36,65 @@ public struct Worksheet: Codable {
     }
   }
 
-  public let sheetPr: SheetPr?
-  public let dimension: WorksheetDimension
+  public struct FormatProperties: Codable, Equatable {
+    @available(*, deprecated, renamed: "defaultColumnWidth")
+    public var defaultColWidth: String? {
+      return defaultColumnWidth
+    }
+
+    public let defaultColumnWidth: String?
+
+    public let defaultRowHeight: String
+    public let customHeight: String?
+    public let outlineLevelRow: String?
+
+    @available(*, deprecated, renamed: "outlineLevelColumn")
+    public var outlineLevelCol: String? {
+      return outlineLevelColumn
+    }
+
+    public let outlineLevelColumn: String?
+
+    enum CodingKeys: String, CodingKey {
+      case defaultColumnWidth = "defaultColWidth"
+      case defaultRowHeight
+      case customHeight
+      case outlineLevelRow
+      case outlineLevelColumn = "outlineLevelCol"
+    }
+  }
+
+  @available(*, deprecated, renamed: "properties")
+  public var sheetPr: SheetPr? {
+    return properties
+  }
+
+  public let properties: Properties?
+
+  public struct Dimension: Codable {
+    @available(*, deprecated, renamed: "reference")
+    public var ref: String {
+      return reference
+    }
+
+    public let reference: String
+
+    enum CodingKeys: String, CodingKey {
+      case reference = "ref"
+    }
+  }
+
+  /// https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheetdimension?view=openxml-2.8.1
+  public let dimension: Dimension
+
   public let sheetViews: SheetViews
-  public let sheetFormatPr: SheetFormatPr
+
+  @available(*, deprecated, renamed: "formatProperties")
+  public var sheetFormatPr: SheetFormatPr {
+    return formatProperties
+  }
+
+  public let formatProperties: FormatProperties
   public let columns: Columns?
 
   @available(*, deprecated, renamed: "columns")
@@ -40,55 +112,22 @@ public struct Worksheet: Codable {
   public let mergeCells: MergeCells?
 
   enum CodingKeys: String, CodingKey {
-    case sheetPr
+    case properties = "sheetPr"
     case dimension
     case sheetViews
-    case sheetFormatPr
+    case formatProperties = "sheetFormatPr"
     case columns = "cols"
     case data = "sheetData"
     case mergeCells
   }
-
-  /// Return all cells that are contained in a given worksheet and collection of
-  /// columns.
-  public func cells<T>(atColumns columns: T) -> [Cell]
-  where T: Collection, T.Element == ColumnReference {
-    return data?.rows.map {
-      return $0.cells.filter { columns.contains($0.reference.column) }
-    }
-    .reduce([]) { $0 + $1 } ?? []
-  }
-
-  /// Return all cells that are contained in a given worksheet and collection of
-  /// rows.
-  public func cells<T>(atRows rows: T) -> [Cell]
-  where T: Collection, T.Element == UInt {
-    return data?.rows.filter { rows.contains($0.reference) }
-      .reduce([]) { $0 + $1.cells } ?? []
-  }
-
-  /// Return all cells that are contained in a given worksheet and collections
-  /// of rows and columns.
-  public func cells<T1, T2>(atColumns columns: T1, rows: T2) -> [Cell]
-    where T1: Collection, T1.Element == ColumnReference,
-    T2: Collection, T2.Element == UInt {
-      return data?.rows.filter { rows.contains($0.reference) }.map {
-        return $0.cells.filter { columns.contains($0.reference.column) }
-      }
-      .reduce([]) { $0 + $1 } ?? []
-  }
 }
 
-public struct SheetPr: Codable {
-  public let pageSetUpPr: PageSetUpPr?
-}
+@available(*, deprecated, renamed: "PageSetUpProperties")
+typealias PageSetUpPr = PageSetUpProperties
 
-public struct PageSetUpPr: Codable {
-  public let fitToPage: String
-}
-
-public struct WorksheetDimension: Codable {
-  public let ref: String
+public struct PageSetUpProperties: Codable, Equatable {
+  public let fitToPage: Bool?
+  public let autoPageBreaks: Bool?
 }
 
 public struct SheetViews: Codable {
@@ -101,7 +140,7 @@ public struct SheetViews: Codable {
 
 public struct SheetView: Codable {
   public let workbookViewId: String
-  public let showGridLines: String?
+  public let showGridLines: Bool?
   public let defaultGridColor: String?
   public let pane: Pane?
 }
@@ -112,14 +151,6 @@ public struct Pane: Codable {
   public let ySplit: String
   public let activePane: String
   public let state: String
-}
-
-public struct SheetFormatPr: Codable {
-  public let defaultColWidth: String?
-  public let defaultRowHeight: String
-  public let customHeight: String?
-  public let outlineLevelRow: String?
-  public let outlineLevelCol: String?
 }
 
 @available(*, deprecated, renamed: "Columns")
@@ -141,44 +172,26 @@ public struct Column: Codable, Equatable {
   public let max: String
   public let width: String
   public let style: String?
-  public let customWidth: String
+  public let customWidth: String?
 }
 
 public struct Row: Codable {
   public let reference: UInt
-  public let ht: String?
+
+  @available(*, deprecated, renamed: "height")
+  public var ht: String? {
+    return height?.description
+  }
+
+  public let height: Double?
   public let customHeight: String?
   public let cells: [Cell]
 
   enum CodingKeys: String, CodingKey {
     case cells = "c"
     case reference = "r"
-    case ht
+    case height = "ht"
     case customHeight
-  }
-}
-
-public struct Cell: Codable, Equatable {
-  public let reference: CellReference
-  public let type: String?
-
-  /// Attribute "s" in a cell is an index into the styles table,
-  /// while the cell type "s" corresponds to the shared string table.
-  /// XMLCoder as version 0.1 can't distinguish between an attribute and a
-  /// node having the same name, so the property stays name `s` until
-  /// that's fixed.
-  public let s: String?
-  public let inlineString: InlineString?
-  public let formula: String?
-  public let value: String?
-
-  enum CodingKeys: String, CodingKey {
-    case formula = "f"
-    case value = "v"
-    case inlineString = "is"
-    case reference = "r"
-    case type = "t"
-    case s
   }
 }
 
