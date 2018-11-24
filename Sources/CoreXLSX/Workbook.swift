@@ -1,6 +1,6 @@
 //
 //  Workbook.swift
-//  CoreXLSXmacOS
+//  CoreXLSX
 //
 //  Created by Max Desiatov on 23/11/2018.
 //

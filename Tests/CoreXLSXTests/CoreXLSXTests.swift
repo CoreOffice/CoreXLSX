@@ -66,7 +66,13 @@ final class XLSXReaderTests: XCTestCase {
       XCTAssertEqual(try file.parseWorksheetPaths(), [sheetPath])
 
       let ws = try file.parseWorksheet(at: sheetPath)
-      XCTAssertEqual(ws.columns, ws.cols)
+      XCTAssertEqual(ws.cols, ws.columns)
+      XCTAssertEqual(ws.sheetPr, ws.properties)
+      XCTAssertEqual(ws.sheetFormatPr, ws.formatProperties)
+      XCTAssertEqual(ws.sheetFormatPr.defaultColWidth, ws.formatProperties.defaultColumnWidth)
+      XCTAssertEqual(ws.sheetFormatPr.outlineLevelCol, ws.formatProperties.outlineLevelColumn)
+      XCTAssertEqual(ws.dimension.ref, ws.dimension.reference)
+
       guard let mcs = ws.mergeCells else {
         XCTAssert(false, "expected to parse merge cells from categories.xlsx")
         return
@@ -79,6 +85,10 @@ final class XLSXReaderTests: XCTestCase {
         .map { $0.cells }
         .reduce([], { $0 + $1 })
       XCTAssertEqual(allCells.count, 90)
+
+      for r in ws.sheetData.rows {
+        XCTAssertEqual(r.height?.description, r.ht)
+      }
 
       let rowReferences = ws.sheetData.rows.map { Int($0.reference) }
       let cellsFromRows = try file.cellsInWorksheet(at: sheetPath,
