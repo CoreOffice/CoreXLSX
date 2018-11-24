@@ -18,12 +18,16 @@ final class XLSXReaderTests: XCTestCase {
       XCTAssertEqual(try file.parseWorksheetPaths(), [sheetPath])
 
       let ws = try file.parseWorksheet(at: sheetPath)
-      let allCells = ws.sheetData.rows
+      guard let sd = ws.data else {
+        XCTAssert(false, "no sheet data available")
+        return
+      }
+      let allCells = sd.rows
         .map { $0.cells }
         .reduce([], { $0 + $1 })
       XCTAssertEqual(allCells.count, 90)
 
-      let rowReferences = ws.sheetData.rows.map { $0.reference }
+      let rowReferences = sd.rows.map { $0.reference }
       let cellsFromRows = ws.cells(atRows: rowReferences)
       XCTAssertEqual(allCells, cellsFromRows)
 
