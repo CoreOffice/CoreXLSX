@@ -45,13 +45,41 @@ private let xml = """
 </worksheet>
 """.data(using: .utf8)!
 
+private let parsed = [
+  Column(min: 1,
+         max: 1,
+         width: 26.42578125,
+         style: nil,
+         customWidth: true),
+  Column(min: 2,
+         max: 2,
+         width:16.7109375,
+         style: nil,
+         customWidth: true),
+  Column(min: 3,
+         max: 3,
+         width: 9.140625,
+         style: 1,
+         customWidth: nil),
+  Column(min: 4,
+         max: 4,
+         width: 82,
+         style: nil,
+         customWidth: true),
+  Column(min: 6,
+         max: 6,
+         width: 16,
+         style: nil,
+         customWidth: true),
+]
+
 class WorksheetTests: XCTestCase {
   func testExample() {
     let decoder = XMLDecoder()
 
     do {
       let ws = try decoder.decode(Worksheet.self, from: xml)
-      XCTAssertEqual(ws.columns?.items[0].min, "1")
+      XCTAssertEqual(ws.columns?.items, parsed)
     } catch {
       XCTAssert(false, "unexpected error \(error)")
     }

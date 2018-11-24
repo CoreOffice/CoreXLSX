@@ -167,12 +167,13 @@ public struct Columns: Codable, Equatable {
 @available(*, deprecated, renamed: "Column")
 public typealias Col = Column
 
+/// https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1
 public struct Column: Codable, Equatable {
-  public let min: String
-  public let max: String
-  public let width: String
-  public let style: String?
-  public let customWidth: String?
+  public let min: UInt32
+  public let max: UInt32
+  public let width: Double
+  public let style: UInt32?
+  public let customWidth: Bool?
 }
 
 public struct Row: Codable {
