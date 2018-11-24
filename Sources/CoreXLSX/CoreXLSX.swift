@@ -88,8 +88,8 @@ public struct XLSXFile {
   -> [Cell] {
     let ws = try parseWorksheet(at: path)
 
-    return ws.sheetData.rows.filter { rows.contains(Int($0.reference)) }
-      .reduce([]) { $0 + $1.cells }
+    return ws.data?.rows.filter { rows.contains(Int($0.reference)) }
+      .reduce([]) { $0 + $1.cells } ?? []
   }
 
   /// Return all cells that are contained in a given worksheet and set of
@@ -101,7 +101,7 @@ public struct XLSXFile {
   -> [Cell] {
     let ws = try parseWorksheet(at: path)
 
-    return ws.sheetData.rows.map {
+    return ws.data?.rows.map {
       let rowReference = $0.reference
       let targetReferences = columns.compactMap {
       (c: String) -> CellReference? in
@@ -110,6 +110,6 @@ public struct XLSXFile {
       }
       return $0.cells.filter { targetReferences.contains($0.reference) }
     }
-    .reduce([]) { $0 + $1 }
+    .reduce([]) { $0 + $1 } ?? []
   }
 }

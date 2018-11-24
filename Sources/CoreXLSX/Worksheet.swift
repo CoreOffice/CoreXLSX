@@ -7,7 +7,18 @@
 
 import Foundation
 
+@available(*, deprecated, renamed: "Worksheet.Data")
+public typealias SheetData = Worksheet.Data
+
 public struct Worksheet: Codable {
+  public struct Data: Codable {
+    public let rows: [Row]
+
+    enum CodingKeys: String, CodingKey {
+      case rows = "row"
+    }
+  }
+
   public let sheetPr: SheetPr?
   public let dimension: WorksheetDimension
   public let sheetViews: SheetViews
@@ -19,7 +30,13 @@ public struct Worksheet: Codable {
     return columns
   }
 
-  public let sheetData: SheetData
+  public let data: Data?
+
+  @available(*, deprecated, renamed: "columns")
+  public var sheetData: SheetData {
+    return data ?? Data(rows: [])
+  }
+
   public let mergeCells: MergeCells?
 
   enum CodingKeys: String, CodingKey {
@@ -28,7 +45,7 @@ public struct Worksheet: Codable {
     case sheetViews
     case sheetFormatPr
     case columns = "cols"
-    case sheetData
+    case data = "sheetData"
     case mergeCells
   }
 
@@ -36,18 +53,18 @@ public struct Worksheet: Codable {
   /// columns.
   public func cells<T>(atColumns columns: T) -> [Cell]
   where T: Collection, T.Element == ColumnReference {
-    return sheetData.rows.map {
+    return data?.rows.map {
       return $0.cells.filter { columns.contains($0.reference.column) }
     }
-    .reduce([]) { $0 + $1 }
+    .reduce([]) { $0 + $1 } ?? []
   }
 
   /// Return all cells that are contained in a given worksheet and collection of
   /// rows.
   public func cells<T>(atRows rows: T) -> [Cell]
   where T: Collection, T.Element == UInt {
-    return sheetData.rows.filter { rows.contains($0.reference) }
-      .reduce([]) { $0 + $1.cells }
+    return data?.rows.filter { rows.contains($0.reference) }
+      .reduce([]) { $0 + $1.cells } ?? []
   }
 
   /// Return all cells that are contained in a given worksheet and collections
@@ -55,10 +72,10 @@ public struct Worksheet: Codable {
   public func cells<T1, T2>(atColumns columns: T1, rows: T2) -> [Cell]
     where T1: Collection, T1.Element == ColumnReference,
     T2: Collection, T2.Element == UInt {
-      return sheetData.rows.filter { rows.contains($0.reference) }.map {
+      return data?.rows.filter { rows.contains($0.reference) }.map {
         return $0.cells.filter { columns.contains($0.reference.column) }
       }
-      .reduce([]) { $0 + $1 }
+      .reduce([]) { $0 + $1 } ?? []
   }
 }
 
@@ -125,14 +142,6 @@ public struct Column: Codable, Equatable {
   public let width: String
   public let style: String?
   public let customWidth: String
-}
-
-public struct SheetData: Codable {
-  public let rows: [Row]
-
-  enum CodingKeys: String, CodingKey {
-    case rows = "row"
-  }
 }
 
 public struct Row: Codable {
