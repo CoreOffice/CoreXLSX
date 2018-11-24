@@ -31,6 +31,12 @@ private let xml = """
     <col min="6" max="6" width="16" customWidth="1"/>
   </cols>
   <sheetData>
+    <row r="1" spans="1:5" s="2" customFormat="1" ht="15.75" thickBot="1" x14ac:dyDescent="0.3">
+      <c r="A1" s="3" t="s"/>
+    </row>
+    <row r="3" spans="1:5" x14ac:dyDescent="0.25">
+      <c r="A3" t="s"/>
+    </row>
   </sheetData>
   <conditionalFormatting sqref="C56:C1048576 C1:C54">
     <cfRule type="duplicateValues" dxfId="2" priority="48"/>
@@ -80,6 +86,7 @@ class WorksheetTests: XCTestCase {
     do {
       let ws = try decoder.decode(Worksheet.self, from: xml)
       XCTAssertEqual(ws.columns?.items, parsed)
+      XCTAssertEqual(ws.cells(atRows: [1,3]).count, 2)
     } catch {
       XCTAssert(false, "unexpected error \(error)")
     }
