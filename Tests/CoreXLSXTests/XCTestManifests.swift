@@ -6,6 +6,7 @@ public func allTests() -> [XCTestCaseEntry] {
     testCase(CoreXLSXTests.allTests),
     testCase(RelationshipsTests.allTests),
     testCase(CellReferenceTests.allTests),
+    testCase(WorkbookTests.allTests),
   ]
 }
 #endif

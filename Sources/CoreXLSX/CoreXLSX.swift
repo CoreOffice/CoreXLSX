@@ -53,6 +53,16 @@ public struct XLSXFile {
       .map { $0.target }
   }
 
+  public func parseWorkbooks() throws -> [Workbook] {
+    let paths = try parseDocumentPaths()
+
+    decoder.keyDecodingStrategy = .useDefaultKeys
+
+    return try paths.map {
+      return try parseEntry($0, Workbook.self)
+    }
+  }
+
   /// Parse and return an array of worksheets in this XLSX file.
   public func parseWorksheetPaths() throws -> [String] {
     decoder.keyDecodingStrategy = .convertFromCapitalized

@@ -1,8 +1,9 @@
 import XCTest
 @testable import CoreXLSX
 
+let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
+
 final class XLSXReaderTests: XCTestCase {
-  let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
   let sheetPath = "xl/worksheets/sheet1.xml"
 
   func testPublicAPI() {
@@ -43,7 +44,6 @@ final class XLSXReaderTests: XCTestCase {
       let closedRange2 = ColumnReference("A")!...ColumnReference("C")!
       let rowsRange: ClosedRange<UInt> = 3...10
       let cellsInRange = ws.cells(atColumns: closedRange2, rows: rowsRange)
-      print(cellsInRange)
       XCTAssertEqual(cellsInRange.count, closedRange2.count * rowsRange.count)
     } catch {
       XCTAssert(false, "unexpected error \(error)")
