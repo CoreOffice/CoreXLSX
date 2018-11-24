@@ -34,6 +34,10 @@ private let xml = """
     <row r="1" spans="1:5" s="2" customFormat="1" ht="15.75" thickBot="1" x14ac:dyDescent="0.3">
       <c r="A1" s="3" t="s"/>
     </row>
+    <row r="2">
+      <c r="E2">
+      </c>
+    </row>
     <row r="3" spans="1:5" x14ac:dyDescent="0.25">
       <c r="A3" t="s"/>
     </row>
@@ -86,7 +90,7 @@ class WorksheetTests: XCTestCase {
     do {
       let ws = try decoder.decode(Worksheet.self, from: xml)
       XCTAssertEqual(ws.columns?.items, parsed)
-      XCTAssertEqual(ws.cells(atRows: [1,3]).count, 2)
+      XCTAssertEqual(ws.cells(atRows: 1...3).count, 3)
     } catch {
       XCTAssert(false, "unexpected error \(error)")
     }
