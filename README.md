@@ -43,7 +43,10 @@ If you stumble upon a file that can't be parsed, please
 [file an issue](https://github.com/MaxDesiatov/CoreXLSX/issues) posting the exact
 error message. Thanks to use of standard Swift `Codable` protocol, detailed errors are
 generated listing a missing attribute, so it can be easily added to the model enabling 
-broader format support.
+broader format support. Attaching a file that can't be parsed would also greatly help in 
+diagnosing issues. If these files contain any sensitive data, we suggest obfuscating or 
+generating fake data with same tools that generated original files, assuming the issue can 
+still be reproduced this way.
 
 ## How does it work?
 
