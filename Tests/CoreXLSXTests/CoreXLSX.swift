@@ -1,5 +1,5 @@
 //
-//  CoreXLSXTests.swift
+//  CoreXLSX.swift
 //  CoreXLSXTests
 //
 //  Created by Max Desiatov on 27/10/2018.

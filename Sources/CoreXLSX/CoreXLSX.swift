@@ -60,6 +60,12 @@ public struct XLSXFile {
       .map { $0.target }
   }
 
+  public func parseSharedStrings() throws -> SharedStrings {
+    decoder.keyDecodingStrategy = .useDefaultKeys
+
+    return try parseEntry("xl/sharedStrings.xml", SharedStrings.self)
+  }
+
   public func parseWorkbooks() throws -> [Workbook] {
     let paths = try parseDocumentPaths()
 

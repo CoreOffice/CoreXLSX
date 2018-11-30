@@ -7,10 +7,10 @@
 
 /// Attributes and nodes are documented at this url:
 /// https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table
-struct SharedStrings: Codable {
-  struct Item: Codable {
-    let text: String?
-    let richText: RichText?
+public struct SharedStrings: Codable, Equatable {
+  public struct Item: Codable, Equatable {
+    public let text: String?
+    public let richText: RichText?
 
     enum CodingKeys: String, CodingKey {
       case text = "t"
@@ -18,8 +18,8 @@ struct SharedStrings: Codable {
     }
   }
 
-  let uniqueCount: UInt
-  let items: [Item]
+  public let uniqueCount: UInt
+  public let items: [Item]
 
   enum CodingKeys: String, CodingKey {
     case items = "si"
@@ -27,45 +27,50 @@ struct SharedStrings: Codable {
   }
 }
 
-struct RichText: Codable {
-  struct Family: Codable {
-    let value: String
+public struct RichText: Codable, Equatable {
+  public struct Family: Codable, Equatable {
+    public let value: String
 
     enum CodingKeys: String, CodingKey {
       case value = "val"
     }
   }
 
-  struct Scheme: Codable {
-    let value: String
+  public struct Scheme: Codable, Equatable {
+    public let value: String
 
     enum CodingKeys: String, CodingKey {
       case value = "val"
     }
   }
 
-  struct Size: Codable {
-    let value: String
+  public struct Size: Codable, Equatable {
+    public let value: String
 
     enum CodingKeys: String, CodingKey {
       case value = "val"
     }
   }
 
-  struct Font: Codable {
-    let value: String
+  public struct Color: Codable, Equatable {
+    let theme: String?
+    let rgb: String?
+  }
+
+  public struct Font: Codable, Equatable {
+    public let value: String
 
     enum CodingKeys: String, CodingKey {
       case value = "val"
     }
   }
 
-  struct Properties: Codable {
-    let size: Size
-    let color: Color
-    let font: Font
-    let family: Family
-    let scheme: Scheme
+  public struct Properties: Codable, Equatable {
+    public let size: Size
+    public let color: Color
+    public let font: Font
+    public let family: Family
+    public let scheme: Scheme
 
     enum CodingKeys: String, CodingKey {
       case size = "sz"
@@ -76,10 +81,5 @@ struct RichText: Codable {
     }
   }
 
-  let properties: Properties
-}
-
-struct Color: Codable {
-  let theme: String?
-  let rgb: String?
+  public let properties: Properties
 }
