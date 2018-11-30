@@ -248,9 +248,9 @@
 			children = (
 				OBJ_11 /* CellReference.swift */,
 				OBJ_12 /* ColumnReference.swift */,
-				OBJ_15 /* Worksheet.swift */,
 				D1A8190A21A9D0EF004FCA33 /* Cell.swift */,
 				D1A8191021A9D4ED004FCA33 /* CellQueries.swift */,
+				OBJ_15 /* Worksheet.swift */,
 			);
 			path = Worksheet;
 			sourceTree = "<group>";
@@ -262,7 +262,6 @@
 				OBJ_13 /* CoreXLSX.swift */,
 				OBJ_14 /* Relationships.swift */,
 				D1C96B7F21A806A500303975 /* Workbook.swift */,
-				OBJ_15 /* Worksheet.swift */,
 				D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */,
 			);
 			name = CoreXLSX;
