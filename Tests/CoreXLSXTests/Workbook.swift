@@ -1,6 +1,6 @@
 //
-//  WorkbookTests.swift
-//  CoreXLSXmacOS
+//  Workbook.swift
+//  CoreXLSXTests
 //
 //  Created by Max Desiatov on 23/11/2018.
 //

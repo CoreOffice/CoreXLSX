@@ -1,5 +1,5 @@
 //
-//  CellReferenceTests.swift
+//  CellReference.swift
 //  CoreXLSXTests
 //
 //  Created by Max Desiatov on 15/11/2018.

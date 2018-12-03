@@ -5,8 +5,6 @@
 //  Created by Max Desiatov on 31/10/2018.
 //
 
-import Foundation
-
 @available(*, deprecated, renamed: "Worksheet.Data")
 public typealias SheetData = Worksheet.Data
 

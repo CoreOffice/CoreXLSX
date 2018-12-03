@@ -1,3 +1,10 @@
+//
+//  CoreXLSX.swift
+//  CoreXLSX
+//
+//  Created by Max Desiatov on 27/10/2018.
+//
+
 import Foundation
 import ZIPFoundation
 import XMLCoder
@@ -51,6 +58,12 @@ public struct XLSXFile {
     return try parseEntry("_rels/.rels", Relationships.self).items
       .filter { $0.type == .officeDocument }
       .map { $0.target }
+  }
+
+  public func parseSharedStrings() throws -> SharedStrings {
+    decoder.keyDecodingStrategy = .useDefaultKeys
+
+    return try parseEntry("xl/sharedStrings.xml", SharedStrings.self)
   }
 
   public func parseWorkbooks() throws -> [Workbook] {
