@@ -106,10 +106,8 @@ public struct XLSXFile {
       // storing that path in `pathPrefix`
       let pathPrefix = rels.0.dropLast().joined(separator: "/")
 
-      let result: [String] = rels.1.items.filter { $0.type == .worksheet }
+      return rels.1.items.filter { $0.type == .worksheet }
         .map { "\(pathPrefix)/\($0.target)" }
-
-      return result
     }
   }
 
