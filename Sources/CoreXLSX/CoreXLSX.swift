@@ -80,25 +80,35 @@ public struct XLSXFile {
     }
   }
 
-  /// Parse and return an array of worksheets in this XLSX file.
-  public func parseWorksheetPaths() throws -> [String] {
+  /// Return pairs of parsed document paths with corresponding relationships
+  public func parseDocumentRelationships() throws
+  -> [([Substring], Relationships)] {
     decoder.keyDecodingStrategy = .convertFromCapitalized
 
-    return try parseDocumentPaths().flatMap { (path: String) -> [String] in
-      var components = path.split(separator: "/")
-
-      // .rels file has paths relative to its directory,
-      // storing that path in `pathPrefix`
-      let pathPrefix = components.dropLast().joined(separator: "/")
+    return try parseDocumentPaths().compactMap { path -> ([Substring], Relationships)? in
+      let originalComponents = path.split(separator: "/")
+      var components = originalComponents
 
       components.insert("_rels", at: 1)
-      guard let filename = components.last else { return [] }
+      guard let filename = components.last else { return nil }
       components[components.count - 1] = Substring(filename.appending(".rels"))
 
-      return
-        try parseEntry(components.joined(separator: "/"), Relationships.self)
-          .items.filter { $0.type == .worksheet }
-          .map { "\(pathPrefix)/\($0.target)" }
+      let relationships = try parseEntry(components.joined(separator: "/"),
+                                         Relationships.self)
+      return (originalComponents, relationships)
+    }
+  }
+
+  /// Parse and return an array of worksheets in this XLSX file.
+  public func parseWorksheetPaths() throws -> [String] {
+    return try parseDocumentRelationships()
+    .flatMap { (pathComponents, relationships) -> [String] in
+      // .rels file has paths relative to its directory,
+      // storing that path in `pathPrefix`
+      let pathPrefix = pathComponents.dropLast().joined(separator: "/")
+
+      return relationships.items.filter { $0.type == .worksheet }
+        .map { "\(pathPrefix)/\($0.target)" }
     }
   }
 
