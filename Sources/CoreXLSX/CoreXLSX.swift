@@ -101,12 +101,13 @@ public struct XLSXFile {
 
   /// Parse and return an array of worksheets in this XLSX file.
   public func parseWorksheetPaths() throws -> [String] {
-    return try parseDocumentRelationships().flatMap { rels -> [String] in
+    return try parseDocumentRelationships()
+    .flatMap { (pathComponents, relationships) -> [String] in
       // .rels file has paths relative to its directory,
       // storing that path in `pathPrefix`
-      let pathPrefix = rels.0.dropLast().joined(separator: "/")
+      let pathPrefix = pathComponents.dropLast().joined(separator: "/")
 
-      return rels.1.items.filter { $0.type == .worksheet }
+      return relationships.items.filter { $0.type == .worksheet }
         .map { "\(pathPrefix)/\($0.target)" }
     }
   }
