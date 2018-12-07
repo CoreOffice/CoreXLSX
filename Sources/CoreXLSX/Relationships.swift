@@ -15,6 +15,7 @@ public struct Relationships: Codable, Equatable {
 
 public struct Relationship: Codable, Equatable {
   public enum SchemaType: String, Codable {
+    case calcChain = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain"
     case officeDocument = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
     case extendedProperties = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties"
     case coreProperties = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties"
