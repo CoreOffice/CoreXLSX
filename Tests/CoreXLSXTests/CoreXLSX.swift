@@ -78,7 +78,7 @@ final class CoreXLSXTests: XCTestCase {
       XCTAssertEqual(ws.sheetFormatPr, ws.formatProperties)
       XCTAssertEqual(ws.sheetFormatPr.defaultColWidth, ws.formatProperties.defaultColumnWidth)
       XCTAssertEqual(ws.sheetFormatPr.outlineLevelCol, ws.formatProperties.outlineLevelColumn)
-      XCTAssertEqual(ws.dimension.ref, ws.dimension.reference)
+      XCTAssertEqual(ws.dimension?.ref, ws.dimension?.reference)
 
       guard let mcs = ws.mergeCells else {
         XCTAssert(false, "expected to parse merge cells from categories.xlsx")
