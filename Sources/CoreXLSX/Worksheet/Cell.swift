@@ -11,8 +11,8 @@ public struct Cell: Codable, Equatable {
 
   /// FIXME: Attribute "s" in a cell is an index into the styles table,
   /// while the cell type "s" corresponds to the shared string table.
-  /// Can XMLCoder distinguish between an attribute and a
-  /// node having the same name?
+  /// Can XMLCoder distinguish between an attribute and an
+  /// element having the same name?
   public let s: String?
   public let inlineString: InlineString?
   public let formula: String?
