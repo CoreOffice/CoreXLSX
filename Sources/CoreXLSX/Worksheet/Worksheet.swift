@@ -83,7 +83,7 @@ public struct Worksheet: Codable {
   }
 
   /// https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheetdimension?view=openxml-2.8.1
-  public let dimension: Dimension
+  public let dimension: Dimension?
 
   public let sheetViews: SheetViews
 
@@ -144,11 +144,11 @@ public struct SheetView: Codable {
 }
 
 public struct Pane: Codable {
-  public let topLeftCell: String
-  public let xSplit: String
-  public let ySplit: String
-  public let activePane: String
-  public let state: String
+  public let topLeftCell: String?
+  public let xSplit: String?
+  public let ySplit: String?
+  public let activePane: String?
+  public let state: String?
 }
 
 @available(*, deprecated, renamed: "Columns")
