@@ -21,8 +21,9 @@ public struct XLSXFile {
   public let filepath: String
   private let archive: Archive
   private let decoder: XMLDecoder
+  private let bufferSize: UInt32
 
-  public init?(filepath: String) {
+  public init?(filepath: String, bufferSize: UInt32 = 10 * 1024 * 1024) {
     let archiveURL = URL(fileURLWithPath: filepath)
 
     guard let archive = Archive(url: archiveURL, accessMode: .read) else {
@@ -31,6 +32,7 @@ public struct XLSXFile {
 
     self.archive = archive
     self.filepath = filepath
+    self.bufferSize = bufferSize
 
     decoder = XMLDecoder()
   }
@@ -44,7 +46,7 @@ public struct XLSXFile {
 
     var result: T?
 
-    _ = try archive.extract(entry) {
+    _ = try archive.extract(entry, bufferSize: bufferSize) {
       result = try decoder.decode(type, from: $0)
     }
 
