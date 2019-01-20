@@ -134,8 +134,8 @@ unacceptable behavior to corexlsx@desiatov.com.
 
 ## Maintainers
 
-[Max Desiatov](https://desiatov.com)
-[Matvii Hodovaniuk](https://matvii.hodovani.uk)
+[Max Desiatov](https://desiatov.com), [Matvii
+Hodovaniuk](https://matvii.hodovani.uk)
 
 ## License
 
