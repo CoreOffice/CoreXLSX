@@ -24,7 +24,7 @@ public struct Relationship: Codable, Equatable {
     case styles = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"
     case theme = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme"
     case pivotCache = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition"
-    case metdataThumbnail = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail"
+    case metadataThumbnail = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail"
   }
 
   public let id: String
