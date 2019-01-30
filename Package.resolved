@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/maxdesiatov/XMLCoder.git",
         "state": {
           "branch": null,
-          "revision": "81d07bb58a38080d91241df920fdd00108f1c2b5",
-          "version": "0.2.1"
+          "revision": "6495dcb188faecbbf4e31a7a5b95f6885e353c60",
+          "version": "0.3.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/weichsel/ZIPFoundation.git",
         "state": {
           "branch": null,
-          "revision": "b5c53bef2deb7b20659b03b1223f0942599e5c41",
-          "version": "0.9.6"
+          "revision": "d9bb1c47984baa035e3960338551d9b0b7128e79",
+          "version": "0.9.8"
         }
       }
     ]
