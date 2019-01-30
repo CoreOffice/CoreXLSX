@@ -60,7 +60,7 @@ here](https://desiatov.com/swift-codable-xlsx/).
 
 - Xcode 10
 - Swift 4.2
-- iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11
+- iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later
 
 ## Installation
 
