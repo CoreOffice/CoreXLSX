@@ -11,12 +11,17 @@ before_install:
 - pod repo update
 # - pod install --project-directory=Example
 script:
-- pod lib lint
+- pod lib lint --verbose
 - carthage update
 - xcodebuild -scheme CoreXLSXiOS
 - xcodebuild -scheme CoreXLSXwatchOS
 - xcodebuild -scheme CoreXLSXtvOS
 - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/
 - xcodebuild test -enableCodeCoverage YES -scheme CoreXLSXmacOS
+# this runs the tests the second time, but it's the only way to make sure
+# that `Package.swift` is in a good state and `swift test` can only generate
+# coverage reports in Swift 5.0, see this issue for more details:
+# https://github.com/apple/swift-package-manager/pull/1787
+- swift test
 after_success:
 - bash <(curl -s https://codecov.io/bash)
