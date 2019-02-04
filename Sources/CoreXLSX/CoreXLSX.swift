@@ -21,9 +21,26 @@ public struct XLSXFile {
   public let filepath: String
   private let archive: Archive
   private let decoder: XMLDecoder
+
+  /// Buffer size passed to `archive.extract` call
   private let bufferSize: UInt32
 
-  public init?(filepath: String, bufferSize: UInt32 = 10 * 1024 * 1024) {
+  /// - Parameters:
+  ///   - filepath: path to the `.xlsx` file to be processed.
+  ///   - bufferSize: ZIP archive buffer size, the default is 10KB. You may
+  /// need to set a bigger buffer size for bigger files.
+  ///   - errorContextLength: The error context length. The default is `0`.
+  /// Non-zero length makes an error thrown from
+  /// the XML parser with line/column location repackaged with a context
+  /// around that location of specified length. For example, if an error was
+  /// thrown indicating that there's an unexpected character at line 3, column
+  /// 15 with `errorContextLength` set to 10, a new error type is rethrown
+  /// containing 5 characters before column 15 and 5 characters after, all on
+  /// line 3. Line wrapping should be handled correctly too as the context can
+  /// span more than a few lines.
+  public init?(filepath: String,
+               bufferSize: UInt32 = 10 * 1024 * 1024,
+               errorContextLength: UInt = 0) {
     let archiveURL = URL(fileURLWithPath: filepath)
 
     guard let archive = Archive(url: archiveURL, accessMode: .read) else {
@@ -34,7 +51,9 @@ public struct XLSXFile {
     self.filepath = filepath
     self.bufferSize = bufferSize
 
-    decoder = XMLDecoder()
+    let decoder = XMLDecoder()
+    decoder.errorContextLength = errorContextLength
+    self.decoder = decoder
   }
 
   /// Parse a file within `archive` at `path`. Parsing result is
