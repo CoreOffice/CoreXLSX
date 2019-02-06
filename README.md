@@ -25,7 +25,7 @@ guard let file = XLSXFile(filepath: "./categories.xlsx") else {
 
 for path in try file.parseWorksheetPaths() {
   let ws = try file.parseWorksheet(at: path)
-  for row in ws.data.rows {
+  for row in ws.data?.rows ?? [] {
     for c in row.cells {
       print(c)
     }
