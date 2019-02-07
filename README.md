@@ -77,14 +77,14 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 ```swift
 dependencies: [
   .package(url: "https://github.com/MaxDesiatov/CoreXLSX.git",
-           .upToNextMajor(from: "0.3.0"))
+           .upToNextMajor(from: "0.4.0"))
 ]
 ```
 
 ### CocoaPods
 
 CoreXLSX is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add `pod 'CoreXLSX', '~> 0.3.0'` to your `Podfile` like shown here:
+it, simply add `pod 'CoreXLSX', '~> 0.4.0'` to your `Podfile` like shown here:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -92,7 +92,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 # platform :ios, '9.0'
 use_frameworks!
 target '<Your Target Name>' do
-  pod 'CoreXLSX', '~> 0.3.0'
+  pod 'CoreXLSX', '~> 0.4.0'
 end
 ```
 
