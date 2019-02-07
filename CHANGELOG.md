@@ -1,13 +1,13 @@
 #  0.4.0 (February 7, 2018)
 
 This is a release with API improvements and bug fixes. A big thank you to everyone
-who provided the bug reports and contributions that made this release possible!
+who provided bug reports and contributions that made this release possible!
 
 ## Breaking changes
 
-* A few properties on the model type were added with cleaner names and better
-fitting types. Most of the old versions of those properties were left as they
-were and deprecated, but you might get some breakage with optionality, where we
+* A few properties on the model types were added with cleaner names and better
+fitting types. Most of the old versions of those properties were kept as
+deprecated, but you might get some breakage with optionality, where we
 couldn't find a good deprecation path.
 
 ## Additions
