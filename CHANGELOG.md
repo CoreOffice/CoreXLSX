@@ -1,6 +1,6 @@
 #  0.4.0 (February 7, 2018)
 
-This a release with API improvements and bug fixes. A big thank you to everyone
+This is a release with API improvements and bug fixes. A big thank you to everyone
 who provided the bug reports and contributions that made this release possible!
 
 ## Breaking changes
