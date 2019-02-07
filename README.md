@@ -38,6 +38,8 @@ to the [`Worksheet`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
+## Reporting compatibility issues
+
 If you stumble upon a file that can't be parsed, please [file an
 issue](https://github.com/MaxDesiatov/CoreXLSX/issues) posting the exact error
 message. Thanks to use of standard Swift `Codable` protocol, detailed errors are
@@ -46,6 +48,12 @@ enabling broader format support. Attaching a file that can't be parsed would
 also greatly help in diagnosing issues. If these files contain any sensitive
 data, we suggest obfuscating or generating fake data with same tools that
 generated original files, assuming the issue can still be reproduced this way.
+
+If the whole file can't be attached, try passing a sufficiently large value
+(between 10 and 20 usually works well) to `errorContextLength` argument of
+`XLSXFile` initializer. This will bundle the failing XML snippet with the debug
+description of thrown errors. Please also attach that full debug description if
+possible when reporting issues.
 
 ## How does it work?
 
