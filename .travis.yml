@@ -37,3 +37,12 @@ after_success:
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: yRKneqLvOwJO290lLrvET/BEW+46h9LjKbJYTNsszdMIVfkpm8Ts59vIQMnojs71dJ+b7A6ZiWtHFjKD9/pz7+LIKWLM+dWmaL0VJiZ3S2+XD6Oh9UOC+L+ePIFItVFQOrDpP3FaN8mo339TeFwFNIc+coirYM7ouD9eMg6alpHoqP7Yt9cHMv9OwpxeGW2ZThwVTXQWlAAXG5SAXCsdUFlwJuKzjsr0ePx9V9f5r7Md6fwjQnL9Cc61z7qpEg+UFa+Q4r5P5prgW4OvAD1rVmAMdGbg0Lj8G/hv035pkf0NVFxTzHMYx4qeJREx4AqAAThpzsn/47ZDSVhu9zXnrspLXKbgT7OHwMjOqhvGT9j9yYo9KiwsEa+LnJi67Hi2Vad6FeuIJ/pFnJ0A3DFYMFj0kg6KdkYIhuwur6ZQCuq7vIg8tqjyGyxqWYINLeRccrewGLgmDoI4JT5oNhYXDiLwzn7vOIPTzMZZbteVmy/hXprdJY8Jh/Wn6UTXB82zGfNKl2C8a6I47oHgT2G4Le/BG0MYUBjyfGXAvjZo09l7EAceL9C6NuAbyNLth6cdL7NoeD3PHxv5+1g6xVLaF+cx4ORGC7sa4Rs7PJf3xrWT0KfNTIjtksu8SVtzNZz6wTGxYu/R3qxKIAHRAUtM9DrXS1H4m6qW1At3g1Cw0oI=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: MaxDesiatov/CoreXLSX
+    tags: true
