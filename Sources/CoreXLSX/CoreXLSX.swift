@@ -27,8 +27,8 @@ public struct XLSXFile {
 
   /// - Parameters:
   ///   - filepath: path to the `.xlsx` file to be processed.
-  ///   - bufferSize: ZIP archive buffer size, the default is 10KB. You may
-  /// need to set a bigger buffer size for bigger files.
+  ///   - bufferSize: ZIP archive buffer size in bytes. The default is 10KB. You 
+  /// may need to set a bigger buffer size for bigger files.
   ///   - errorContextLength: The error context length. The default is `0`.
   /// Non-zero length makes an error thrown from
   /// the XML parser with line/column location repackaged with a context
