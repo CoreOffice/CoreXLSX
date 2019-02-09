@@ -38,6 +38,12 @@ to the [`Worksheet`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
+Some cells (usually with strings) have their values shared in a separate model
+type, which you can get by evaluating `try file.parseSharedString()`. You can
+refer to the [`SharedStrings`
+model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/SharedStrings.swift)
+for the full list of its properties.
+
 ## Reporting compatibility issues
 
 If you stumble upon a file that can't be parsed, please [file an
