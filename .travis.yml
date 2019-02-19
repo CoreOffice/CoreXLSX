@@ -16,12 +16,11 @@ before_install:
 - brew install swiftformat
 - brew outdated carthage || brew upgrade carthage
 # - pod install --project-directory=Example
-before_script:
-# bootstrap the dependencies for the project
-- carthage bootstrap
 script:
 - swiftformat --lint --verbose .
 - pod lib lint --verbose
+# bootstrap the dependencies for the project
+- carthage bootstrap
 - xcodebuild -scheme CoreXLSXiOS
 - xcodebuild -scheme CoreXLSXwatchOS
 - xcodebuild -scheme CoreXLSXtvOS
