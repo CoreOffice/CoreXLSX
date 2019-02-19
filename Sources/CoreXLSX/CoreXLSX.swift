@@ -58,7 +58,10 @@ public struct XLSXFile {
 
   /// Parse a file within `archive` at `path`. Parsing result is
   /// an instance of `type`.
-  func parseEntry<T: Decodable>(_ pathString: String, _ type: T.Type) throws -> T {
+  func parseEntry<T: Decodable>(
+    _ pathString: String,
+    _ type: T.Type
+  ) throws -> T {
     let path = Path(pathString)
     let entryPath = path.isRoot ?
       path.components.joined(separator: "/") :
