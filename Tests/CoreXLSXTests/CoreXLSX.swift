@@ -5,8 +5,8 @@
 //  Created by Max Desiatov on 27/10/2018.
 //
 
-import XCTest
 @testable import CoreXLSX
+import XCTest
 
 let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
 
@@ -17,8 +17,8 @@ final class CoreXLSXTests: XCTestCase {
     do {
       guard let file =
         XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-          XCTAssert(false, "failed to open the file")
-          return
+        XCTAssert(false, "failed to open the file")
+        return
       }
 
       XCTAssertEqual(try file.parseDocumentPaths(), ["xl/workbook.xml"])
@@ -64,7 +64,7 @@ final class CoreXLSXTests: XCTestCase {
   func testLegacyPublicAPI() {
     do {
       guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+        XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
         XCTAssert(false, "failed to open the file")
         return
       }
@@ -76,8 +76,14 @@ final class CoreXLSXTests: XCTestCase {
       XCTAssertEqual(ws.cols, ws.columns)
       XCTAssertEqual(ws.sheetPr, ws.properties)
       XCTAssertEqual(ws.sheetFormatPr, ws.formatProperties)
-      XCTAssertEqual(ws.sheetFormatPr.defaultColWidth, ws.formatProperties.defaultColumnWidth)
-      XCTAssertEqual(ws.sheetFormatPr.outlineLevelCol, ws.formatProperties.outlineLevelColumn)
+      XCTAssertEqual(
+        ws.sheetFormatPr.defaultColWidth,
+        ws.formatProperties?.defaultColumnWidth
+      )
+      XCTAssertEqual(
+        ws.sheetFormatPr.outlineLevelCol,
+        ws.formatProperties?.outlineLevelColumn
+      )
       XCTAssertEqual(ws.dimension?.ref, ws.dimension?.reference)
 
       guard let mcs = ws.mergeCells else {

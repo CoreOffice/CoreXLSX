@@ -5,9 +5,9 @@
 //  Created by Max Desiatov on 15/11/2018.
 //
 
+@testable import CoreXLSX
 import XCTest
 import XMLCoder
-@testable import CoreXLSX
 
 private let exampleXML1 = """
 <Cell r="A7" />
@@ -21,7 +21,6 @@ private let exampleXML3 = """
 <Cell r="kljsndfkvljdsfnjkvl" />
 """.data(using: .utf8)!
 
-
 final class CellReferenceTests: XCTestCase {
   private let decoder = XMLDecoder()
   private let encoder = XMLEncoder()
@@ -31,10 +30,14 @@ final class CellReferenceTests: XCTestCase {
       let c1 = try decoder.decode(Cell.self, from: exampleXML1)
       let cr1 = CellReference(ColumnReference("A")!, 7)
       XCTAssertEqual(cr1.description, "A7")
-      XCTAssertEqual(c1,
-                     Cell(reference: cr1,
-                          type: nil, s: nil, inlineString: nil, formula: nil,
-                          value: nil))
+      XCTAssertEqual(
+        c1,
+        Cell(
+          reference: cr1,
+          type: nil, s: nil, inlineString: nil, formula: nil,
+          value: nil
+        )
+      )
 
       let c2 = try decoder.decode(Cell.self, from: exampleXML2)
       let cr2 = CellReference(ColumnReference("ZA")!, 47)
@@ -42,10 +45,14 @@ final class CellReferenceTests: XCTestCase {
       XCTAssertThrowsError(try decoder.decode(Cell.self, from: exampleXML3))
 
       XCTAssertEqual(cr2.description, "ZA47")
-      XCTAssertEqual(c2,
-                     Cell(reference: cr2,
-                     type: nil, s: nil, inlineString: nil, formula: nil,
-                     value: nil))
+      XCTAssertEqual(
+        c2,
+        Cell(
+          reference: cr2,
+          type: nil, s: nil, inlineString: nil, formula: nil,
+          value: nil
+        )
+      )
 
       let c1Encoded = try encoder.encode(c1, withRootKey: "Cell")
       XCTAssertEqual(c1, try decoder.decode(Cell.self, from: c1Encoded))
@@ -77,8 +84,8 @@ final class CellReferenceTests: XCTestCase {
 
   func testColumnReferenceDistance() {
     guard let a = ColumnReference("A"), let z = ColumnReference("z"),
-    let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
-    let ba = ColumnReference("ba"), let bz = ColumnReference("bz") else {
+      let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
+      let ba = ColumnReference("ba"), let bz = ColumnReference("bz") else {
       XCTAssert(false, "failed to create simple column references")
       return
     }
@@ -102,8 +109,8 @@ final class CellReferenceTests: XCTestCase {
       let ba = ColumnReference("ba"), let bz = ColumnReference("bz"),
       let abc = ColumnReference("abc"), let azz = ColumnReference("azz"),
       let zz = ColumnReference("zz"), let azza = ColumnReference("azza") else {
-        XCTAssert(false, "failed to create simple column references")
-        return
+      XCTAssert(false, "failed to create simple column references")
+      return
     }
 
     XCTAssertEqual(ColumnReference(a.intValue), a)
@@ -120,7 +127,7 @@ final class CellReferenceTests: XCTestCase {
 
   func testColumnReferenceStringInitializerPerformance() {
     measure {
-      for _ in 0..<10_000 {
+      for _ in 0..<10000 {
         _ = ColumnReference("kjhbjhblkjn")
       }
     }
@@ -128,7 +135,7 @@ final class CellReferenceTests: XCTestCase {
 
   func testColumnReferenceIntInitializerPerformance() {
     measure {
-      for _ in 0..<10_000 {
+      for _ in 0..<10000 {
         _ = ColumnReference(Int.max / 10)
       }
     }
@@ -148,6 +155,6 @@ final class CellReferenceTests: XCTestCase {
     ("testCellReference", testCellReference),
     ("testColumnReferenceDistance", testColumnReferenceDistance),
     ("testColumnReferenceStringInitializerPerformance",
-       testColumnReferenceStringInitializerPerformance)
+     testColumnReferenceStringInitializerPerformance),
   ]
 }

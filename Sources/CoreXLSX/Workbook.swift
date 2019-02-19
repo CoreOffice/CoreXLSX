@@ -37,7 +37,7 @@ public struct Workbook: Codable, Equatable {
     public let relationship: String
 
     enum CodingKeys: String, CodingKey {
-      case name = "name"
+      case name
       case id = "sheetId"
       case relationship = "r:id"
     }
