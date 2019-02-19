@@ -135,18 +135,18 @@ private let parsed = [
 ]
 
 class WorksheetTests: XCTestCase {
-  func testExample() {
+  func testExample() throws {
     let decoder = XMLDecoder()
 
-    do {
-      let ws1 = try decoder.decode(Worksheet.self, from: xml1)
-      XCTAssertEqual(ws1.columns?.items, parsed)
-      XCTAssertEqual(ws1.cells(atRows: 1...80).count, 6)
+    let ws1 = try decoder.decode(Worksheet.self, from: xml1)
+    XCTAssertEqual(
+      ws1.formatProperties,
+      Worksheet.FormatProperties(defaultRowHeight: "15")
+    )
+    XCTAssertEqual(ws1.columns?.items, parsed)
+    XCTAssertEqual(ws1.cells(atRows: 1...80).count, 6)
 
-      let ws2 = try decoder.decode(Worksheet.self, from: xml2)
-      XCTAssertEqual(ws2.cells(atRows: 1...80).count, 5)
-    } catch {
-      XCTAssert(false, "unexpected error \(error)")
-    }
+    let ws2 = try decoder.decode(Worksheet.self, from: xml2)
+    XCTAssertEqual(ws2.cells(atRows: 1...80).count, 5)
   }
 }

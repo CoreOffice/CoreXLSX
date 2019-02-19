@@ -54,24 +54,20 @@ final class RelationshipsTests: XCTestCase {
     decoder.keyDecodingStrategy = .convertFromCapitalized
   }
 
-  func testRelationships() {
-    do {
-      let relationships = try decoder.decode(Relationships.self,
-                                             from: exampleXML)
-      XCTAssertEqual(relationships.items, parsed)
+  func testRelationships() throws {
+    let relationships = try decoder.decode(Relationships.self,
+                                           from: exampleXML)
+    XCTAssertEqual(relationships.items, parsed)
 
-      guard let file =
-        XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-        XCTAssert(false, "failed to open the file")
-        return
-      }
-
-      let relationshipsFromFile = try file.parseRelationships()
-
-      XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
-    } catch {
-      XCTAssert(false, "unexpected error \(error)")
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
     }
+
+    let relationshipsFromFile = try file.parseRelationships()
+
+    XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
   }
 
   static let allTests = [

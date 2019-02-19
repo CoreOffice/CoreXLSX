@@ -31,27 +31,23 @@ private let parsed = SharedStrings(uniqueCount: 18, items: [
 ])
 
 final class SharedStringsTests: XCTestCase {
-  func testSharedStrings() {
-    do {
-      guard let file =
-        XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-        XCTAssert(false, "failed to open the file")
-        return
-      }
-
-      let sharedStrings = try file.parseSharedStrings()
-
-      // check each individual item so that it's easier to debug when something
-      // goes wrong
-      for (i, item) in sharedStrings.items.enumerated() {
-        XCTAssertEqual(item, parsed.items[i])
-      }
-
-      // check the complete value anyway to make sure all properties are equal
-      XCTAssertEqual(sharedStrings, parsed)
-    } catch {
-      XCTAssert(false, "unexpected error \(error)")
+  func testSharedStrings() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
     }
+
+    let sharedStrings = try file.parseSharedStrings()
+
+    // check each individual item so that it's easier to debug when something
+    // goes wrong
+    for (i, item) in sharedStrings.items.enumerated() {
+      XCTAssertEqual(item, parsed.items[i])
+    }
+
+    // check the complete value anyway to make sure all properties are equal
+    XCTAssertEqual(sharedStrings, parsed)
   }
 
   static let allTests = [
