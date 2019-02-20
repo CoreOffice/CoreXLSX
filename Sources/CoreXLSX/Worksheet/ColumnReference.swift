@@ -19,7 +19,7 @@ public struct ColumnReference {
 
     // log(1) == 0, working around that
     let symbolsCount = value == 1 ? 1 : Int(ceil(log(Double(value)) /
-      log(Double(ColumnReference.alphabetLength))))
+        log(Double(ColumnReference.alphabetLength))))
 
     var power = 1
     var value = value
@@ -40,7 +40,9 @@ public struct ColumnReference {
     }
 
     func reducer(acc: String, i: Int) -> String {
-      return String(Character(UnicodeScalar(ColumnReference.firstAllowedCharacter.value - 1 + UInt32(i))!)) + acc
+      return String(Character(UnicodeScalar(
+        ColumnReference.firstAllowedCharacter.value - 1 + UInt32(i)
+      )!)) + acc
     }
 
     let result = (0..<symbolsCount).compactMap(symbolValue).reduce("", reducer)
@@ -74,7 +76,7 @@ public struct ColumnReference {
     // from a previous iteration
     var power = 1
 
-    self.intValue = (0..<count).map {
+    intValue = (0..<count).map {
       // integer value for a symbol at a given position
       let symbolValue = Int(scalars[count - $0 - 1].value -
         ColumnReference.firstAllowedCharacter.value + 1)
@@ -105,11 +107,11 @@ extension ColumnReference: CustomStringConvertible {
 }
 
 extension ColumnReference: Comparable {
-  public static func < (lhs: ColumnReference, rhs: ColumnReference) -> Bool {
+  public static func <(lhs: ColumnReference, rhs: ColumnReference) -> Bool {
     return lhs.value < rhs.value
   }
 
-  public static func == (lhs: ColumnReference, rhs: ColumnReference) -> Bool {
+  public static func ==(lhs: ColumnReference, rhs: ColumnReference) -> Bool {
     return lhs.value == rhs.value
   }
 }

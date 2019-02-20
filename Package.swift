@@ -11,7 +11,8 @@ let package = Package(
     // and make them visible to other packages.
     .library(
       name: "CoreXLSX",
-      targets: ["CoreXLSX"]),
+      targets: ["CoreXLSX"]
+    ),
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
@@ -28,9 +29,11 @@ let package = Package(
     // packages which this package depends on.
     .target(
       name: "CoreXLSX",
-      dependencies: ["XMLCoder", "ZIPFoundation"]),
+      dependencies: ["XMLCoder", "ZIPFoundation"]
+    ),
     .testTarget(
       name: "CoreXLSXTests",
-      dependencies: ["CoreXLSX"]),
+      dependencies: ["CoreXLSX"]
+    ),
   ]
 )

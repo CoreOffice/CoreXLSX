@@ -18,7 +18,7 @@ public struct CellReference {
 }
 
 extension CellReference: Equatable {
-  public static func == (lhs: CellReference, rhs: CellReference) -> Bool {
+  public static func ==(lhs: CellReference, rhs: CellReference) -> Bool {
     return lhs.column == rhs.column && lhs.row == rhs.row
   }
 }
@@ -37,7 +37,6 @@ extension CellReference: Decodable {
     guard let lastLetterIndex = reference.lastIndex(where: {
       $0.unicodeScalars.allSatisfy {
         ColumnReference.allowedCharacters.contains($0)
-
       }
     }) else {
       throw CoreXLSXError.invalidCellReference
@@ -46,7 +45,7 @@ extension CellReference: Decodable {
     let separatorIndex = reference.index(after: lastLetterIndex)
 
     guard let column =
-    ColumnReference(reference.prefix(upTo: separatorIndex)) else {
+      ColumnReference(reference.prefix(upTo: separatorIndex)) else {
       throw CoreXLSXError.invalidCellReference
     }
 

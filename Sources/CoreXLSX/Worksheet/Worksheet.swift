@@ -42,7 +42,7 @@ public struct Worksheet: Codable {
 
     public let defaultColumnWidth: String?
 
-    public let defaultRowHeight: String
+    public let defaultRowHeight: String?
     public let customHeight: String?
     public let outlineLevelRow: String?
 
@@ -59,6 +59,20 @@ public struct Worksheet: Codable {
       case customHeight
       case outlineLevelRow
       case outlineLevelColumn = "outlineLevelCol"
+    }
+
+    init(
+      defaultColumnWidth: String? = nil,
+      defaultRowHeight: String? = nil,
+      customHeight: String? = nil,
+      outlineLevelRow: String? = nil,
+      outlineLevelColumn: String? = nil
+    ) {
+      self.defaultColumnWidth = defaultColumnWidth
+      self.defaultRowHeight = defaultRowHeight
+      self.customHeight = customHeight
+      self.outlineLevelRow = outlineLevelRow
+      self.outlineLevelColumn = outlineLevelColumn
     }
   }
 
@@ -82,17 +96,18 @@ public struct Worksheet: Codable {
     }
   }
 
+  // swiftlint:disable next line_length
   /// https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheetdimension?view=openxml-2.8.1
   public let dimension: Dimension?
 
-  public let sheetViews: SheetViews
+  public let sheetViews: SheetViews?
 
   @available(*, deprecated, renamed: "formatProperties")
   public var sheetFormatPr: SheetFormatPr {
-    return formatProperties
+    return formatProperties ?? FormatProperties()
   }
 
-  public let formatProperties: FormatProperties
+  public let formatProperties: FormatProperties?
   public let columns: Columns?
 
   @available(*, deprecated, renamed: "columns")

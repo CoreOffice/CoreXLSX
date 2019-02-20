@@ -5,26 +5,29 @@
 //  Created by Max Desiatov on 15/11/2018.
 //
 
+@testable import CoreXLSX
 import XCTest
 import XMLCoder
-@testable import CoreXLSX
 
 private let exampleXML = """
 <Relationships
 xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
 <Relationship
 Id="rId1"
-Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties"
+Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/\
+core-properties"
 Target="docProps/core.xml"/>
 
 <Relationship
 Id="rId2"
-Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties"
+Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+extended-properties"
 Target="docProps/app.xml"/>
 
 <Relationship
 Id="rId3"
-Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
+Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+officeDocument"
 Target="xl/workbook.xml"/>
 
 </Relationships>
@@ -51,24 +54,20 @@ final class RelationshipsTests: XCTestCase {
     decoder.keyDecodingStrategy = .convertFromCapitalized
   }
 
-  func testRelationships() {
-    do {
-      let relationships = try decoder.decode(Relationships.self,
-                                             from: exampleXML)
-      XCTAssertEqual(relationships.items, parsed)
+  func testRelationships() throws {
+    let relationships = try decoder.decode(Relationships.self,
+                                           from: exampleXML)
+    XCTAssertEqual(relationships.items, parsed)
 
-      guard let file =
-        XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-          XCTAssert(false, "failed to open the file")
-          return
-      }
-
-      let relationshipsFromFile = try file.parseRelationships()
-
-      XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
-    } catch {
-      XCTAssert(false, "unexpected error \(error)")
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
     }
+
+    let relationshipsFromFile = try file.parseRelationships()
+
+    XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
   }
 
   static let allTests = [
