@@ -149,7 +149,8 @@ set up, but you can also build any other scheme (e.g. `CoreXLSXiOS`) to make
 sure it builds on other platforms.
 
 If you prefer not to work with Xcode, the project fully supports SwiftPM and the
-usual workflow with `swift build` and `swift test` should work for you as usual.
+usual workflow with `swift build` and `swift test` should work, otherwise please
+[report this as a bug](https://github.com/MaxDesiatov/CoreXLSX/issues/new).
 
 ### Code of Conduct
 
