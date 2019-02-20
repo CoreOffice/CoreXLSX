@@ -28,7 +28,7 @@ private let parsed = SharedStrings(uniqueCount: 18, items: [
   SharedStrings.Item(text: "Item 8", richText: nil),
   SharedStrings.Item(text: "Item 9", richText: nil),
   SharedStrings.Item(text: "Item 10", richText: nil),
-  ])
+])
 
 private let columnC = ["Name", "Andy", "Andy", "Andy", "Andy", "Andy",
                        "Chloe", "Chloe", "Chloe", "Chloe", "Chloe"]
@@ -37,33 +37,33 @@ final class SharedStringsTests: XCTestCase {
   func testSharedStrings() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-        XCTAssert(false, "failed to open the file")
-        return
+      XCTAssert(false, "failed to open the file")
+      return
     }
-    
+
     let sharedStrings = try file.parseSharedStrings()
-    
+
     // check each individual item so that it's easier to debug when something
     // goes wrong
     for (i, item) in sharedStrings.items.enumerated() {
       XCTAssertEqual(item, parsed.items[i])
     }
-    
+
     // check the complete value anyway to make sure all properties are equal
     XCTAssertEqual(sharedStrings, parsed)
   }
-  
+
   func testSharedStringsOrder() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-        XCTAssert(false, "failed to open the file")
-        return
+      XCTAssert(false, "failed to open the file")
+      return
     }
-    
+
     let sharedStrings = try file.parseSharedStrings()
-    
+
     var columnCStrings: [String] = []
-    
+
     for path in try file.parseWorksheetPaths() {
       let ws = try file.parseWorksheet(at: path)
       for row in ws.data?.rows ?? [] {
@@ -76,12 +76,12 @@ final class SharedStringsTests: XCTestCase {
         }
       }
     }
-    
+
     XCTAssertEqual(columnC, columnCStrings)
   }
-  
+
   static let allTests = [
     ("testSharedStrings", testSharedStrings),
     ("testSharedStringsOrder", testSharedStringsOrder),
-    ]
+  ]
 }
