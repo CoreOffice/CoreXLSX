@@ -66,15 +66,11 @@ final class SharedStringsTests: XCTestCase {
 
     for path in try file.parseWorksheetPaths() {
       let ws = try file.parseWorksheet(at: path)
-      for row in ws.data?.rows ?? [] {
-        for c in row.cells {
-          if c.type == "s" && c.reference.column.intValue == 3,
-            let value = c.value.flatMap({ Int($0) }),
-            let string = sharedStrings.items[value].text.flatMap({ String($0) }) {
-            columnCStrings.append(string)
-          }
-        }
-      }
+      columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
+        .filter { $0.type == "s" }
+        .compactMap { $0.value }
+        .compactMap { Int($0) }
+        .compactMap { sharedStrings.items[$0].text }
     }
 
     XCTAssertEqual(columnC, columnCStrings)
