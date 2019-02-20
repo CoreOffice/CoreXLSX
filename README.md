@@ -38,11 +38,24 @@ to the [`Worksheet`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
+ ### Shared strings
+
 Some cells (usually with strings) have their values shared in a separate model
 type, which you can get by evaluating `try file.parseSharedString()`. You can
 refer to the [`SharedStrings`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/SharedStrings.swift)
 for the full list of its properties.
+
+Here's how you can get all shared strings in column "C" for example:
+
+```swift
+let sharedStrings = try file.parseSharedStrings()
+let columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
+        .filter { $0.type == "s" }
+        .compactMap { $0.value }
+        .compactMap { Int($0) }
+        .compactMap { sharedStrings.items[$0].text }
+```
 
 ## Reporting compatibility issues
 
