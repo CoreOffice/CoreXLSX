@@ -141,6 +141,18 @@ Drag the built frameworks (including the subdependencies `XMLCoder` and
 
 ## Contributing
 
+For development work and for running the tests in Xcode you need to run 
+`carthage bootstrap` in the root directory of the cloned repository first.
+Then you can open the `CoreXLSX.xcodeproj` from the same directory and select 
+the `CoreXLSXmacOS` scheme. This is the only scheme that has the tests
+set up, but you can also build any other scheme (e.g. `CoreXLSXiOS`) to make
+sure it builds on other platforms.
+
+If you prefer not to work with Xcode, the project fully supports SwiftPM and the
+usual workflow with `swift build` and `swift test` should work for you as usual.
+
+### Code of Conduct
+
 This project adheres to the [Contributor Covenant Code of
 Conduct](https://github.com/MaxDesiatov/CoreXLSX/blob/master/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
