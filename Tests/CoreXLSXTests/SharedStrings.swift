@@ -30,6 +30,9 @@ private let parsed = SharedStrings(uniqueCount: 18, items: [
   SharedStrings.Item(text: "Item 10", richText: nil),
 ])
 
+private let columnC = ["Name", "Andy", "Andy", "Andy", "Andy", "Andy",
+                       "Chloe", "Chloe", "Chloe", "Chloe", "Chloe"]
+
 final class SharedStringsTests: XCTestCase {
   func testSharedStrings() throws {
     guard let file =
@@ -50,7 +53,31 @@ final class SharedStringsTests: XCTestCase {
     XCTAssertEqual(sharedStrings, parsed)
   }
 
+  func testSharedStringsOrder() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let sharedStrings = try file.parseSharedStrings()
+
+    var columnCStrings: [String] = []
+
+    for path in try file.parseWorksheetPaths() {
+      let ws = try file.parseWorksheet(at: path)
+      columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
+        .filter { $0.type == "s" }
+        .compactMap { $0.value }
+        .compactMap { Int($0) }
+        .compactMap { sharedStrings.items[$0].text }
+    }
+
+    XCTAssertEqual(columnC, columnCStrings)
+  }
+
   static let allTests = [
     ("testSharedStrings", testSharedStrings),
+    ("testSharedStringsOrder", testSharedStringsOrder),
   ]
 }
