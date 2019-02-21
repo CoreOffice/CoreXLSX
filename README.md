@@ -51,10 +51,10 @@ Here's how you can get all shared strings in column "C" for example:
 ```swift
 let sharedStrings = try file.parseSharedStrings()
 let columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
-        .filter { $0.type == "s" }
-        .compactMap { $0.value }
-        .compactMap { Int($0) }
-        .compactMap { sharedStrings.items[$0].text }
+  .filter { $0.type == "s" }
+  .compactMap { $0.value }
+  .compactMap { Int($0) }
+  .compactMap { sharedStrings.items[$0].text }
 ```
 
 ## Reporting compatibility issues
