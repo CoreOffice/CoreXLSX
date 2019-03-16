@@ -84,7 +84,6 @@ final class StylesTests: XCTestCase {
     XCTAssertEqual(styles.differentialFormats!.count, 0)
     XCTAssertEqual(styles.tableStyles!.count, 0)
     XCTAssertEqual(styles.colors!.indexed.rgbColors.count, 14)
-
   }
 
   static let allTests = [
