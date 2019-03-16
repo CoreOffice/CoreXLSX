@@ -30,7 +30,7 @@ final class CoreXLSXTests: XCTestCase {
     }
     let allCells = sd.rows
       .map { $0.cells }
-      .reduce([], { $0 + $1 })
+      .reduce([]) { $0 + $1 }
     XCTAssertEqual(allCells.count, 90)
 
     let rowReferences = sd.rows.map { $0.reference }
@@ -94,7 +94,7 @@ final class CoreXLSXTests: XCTestCase {
 
     let allCells = ws.sheetData.rows
       .map { $0.cells }
-      .reduce([], { $0 + $1 })
+      .reduce([]) { $0 + $1 }
     XCTAssertEqual(allCells.count, 90)
 
     for r in ws.sheetData.rows {

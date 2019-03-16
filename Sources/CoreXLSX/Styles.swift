@@ -5,9 +5,7 @@
 //  Created by Max Desiatov on 16/03/2019.
 //
 
-struct Style {
-  
-}
+struct Style {}
 
 public struct Color: Codable {
   public let indexed: Int?
