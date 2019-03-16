@@ -51,6 +51,7 @@
 		D1BBD9C7223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
 		D1BBD9C8223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
 		D1BBD9C9223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
+		D1BBD9D8223D3E0E00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9D3223D3D5C00B28C7B /* Styles.swift */; };
 		D1C96B8021A806A500303975 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
 		D1C96B8321A80EC000303975 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B8121A80E5900303975 /* Workbook.swift */; };
 		D1EB1B3421B151440043CD1E /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EB1B3321B151440043CD1E /* SharedStrings.swift */; };
@@ -121,6 +122,7 @@
 		D1A8191021A9D4ED004FCA33 /* CellQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellQueries.swift; sourceTree = "<group>"; };
 		D1B4F8DF221C10AC00C53C42 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		D1BBD9C5223D0E2F00B28C7B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		D1BBD9D3223D3D5C00B28C7B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D1C96B7F21A806A500303975 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
 		D1C96B8121A80E5900303975 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
 		D1EB1B3321B151440043CD1E /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				D1C96B8121A80E5900303975 /* Workbook.swift */,
 				D1A8190821A9CB89004FCA33 /* Worksheet.swift */,
 				D1EB1B3321B151440043CD1E /* SharedStrings.swift */,
+				D1BBD9D3223D3D5C00B28C7B /* Styles.swift */,
 			);
 			name = CoreXLSXTests;
 			path = Tests/CoreXLSXTests;
@@ -712,6 +715,7 @@
 				D1C96B8321A80EC000303975 /* Workbook.swift in Sources */,
 				OBJ_90 /* CellReference.swift in Sources */,
 				D1EB1B3421B151440043CD1E /* SharedStrings.swift in Sources */,
+				D1BBD9D8223D3E0E00B28C7B /* Styles.swift in Sources */,
 				D1A8190921A9CB89004FCA33 /* Worksheet.swift in Sources */,
 				OBJ_91 /* CoreXLSX.swift in Sources */,
 				OBJ_92 /* Relationships.swift in Sources */,
