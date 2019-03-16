@@ -13,8 +13,10 @@ private let numberFormats = NumberFormats(
   items: [
     NumberFormat(
       id: 0,
-      formatCode: "General")
-  ], count: 1)
+      formatCode: "General"
+    ),
+  ], count: 1
+)
 
 private let fonts = Fonts(
   items: [
@@ -24,45 +26,54 @@ private let fonts = Fonts(
       name: Font.Name(value: "Helvetica Neue"),
       bold: nil,
       italic: nil,
-      strike: nil),
+      strike: nil
+    ),
     Font(
       size: Font.Size(value: 12),
       color: Color(indexed: 8, auto: nil, rgb: nil),
       name: Font.Name(value: "Helvetica Neue"),
       bold: nil,
       italic: nil,
-      strike: nil),
+      strike: nil
+    ),
     Font(
       size: Font.Size(value: 10),
       color: Color(indexed: 8, auto: nil, rgb: nil),
       name: Font.Name(value: "Helvetica Neue"),
       bold: Font.Bold(value: true),
       italic: nil,
-      strike: nil),
-    ], count: 3)
+      strike: nil
+    ),
+  ], count: 3
+)
 
 private let fills = Fills(items: [
   Fill(patternFill: PatternFill(
     patternType: "none",
     foregroundColor: nil,
-    backgroundColor: nil)),
+    backgroundColor: nil
+  )),
   Fill(patternFill: PatternFill(
     patternType: "gray125",
     foregroundColor: nil,
-    backgroundColor: nil)),
+    backgroundColor: nil
+  )),
   Fill(patternFill: PatternFill(
     patternType: "solid",
     foregroundColor: Color(indexed: 9, auto: nil, rgb: nil),
-    backgroundColor: Color(indexed: nil, auto: 1, rgb: nil))),
+    backgroundColor: Color(indexed: nil, auto: 1, rgb: nil)
+  )),
   Fill(patternFill: PatternFill(
     patternType: "solid",
     foregroundColor: Color(indexed: 11, auto: nil, rgb: nil),
-    backgroundColor: Color(indexed: nil, auto: 1, rgb: nil))),
+    backgroundColor: Color(indexed: nil, auto: 1, rgb: nil)
+  )),
   Fill(patternFill: PatternFill(
     patternType: "solid",
     foregroundColor: Color(indexed: 13, auto: nil, rgb: nil),
-    backgroundColor: Color(indexed: nil, auto: 1, rgb: nil))),
-  ], count: 5)
+    backgroundColor: Color(indexed: nil, auto: 1, rgb: nil)
+  )),
+], count: 5)
 
 final class StylesTests: XCTestCase {
   func testStyles() throws {
