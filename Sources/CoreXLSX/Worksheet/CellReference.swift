@@ -5,8 +5,6 @@
 //  Created by Max Desiatov on 14/11/2018.
 //
 
-import Foundation
-
 public struct CellReference {
   public let column: ColumnReference
   public let row: UInt

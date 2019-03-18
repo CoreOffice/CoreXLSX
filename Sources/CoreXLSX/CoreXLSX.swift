@@ -93,6 +93,12 @@ public struct XLSXFile {
       .map { $0.target }
   }
 
+  public func parseStyles() throws -> Styles {
+    decoder.keyDecodingStrategy = .useDefaultKeys
+
+    return try parseEntry("xl/styles.xml", Styles.self)
+  }
+
   public func parseSharedStrings() throws -> SharedStrings {
     decoder.keyDecodingStrategy = .useDefaultKeys
 
