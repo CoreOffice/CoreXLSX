@@ -35,7 +35,7 @@ Target="xl/workbook.xml"/>
 
 private let parsed = [
   Relationship(id: "rId1",
-               type: .coreProperties,
+               type: .packageCoreProperties,
                target: "docProps/core.xml"),
   Relationship(id: "rId2",
                type: .extendedProperties,
