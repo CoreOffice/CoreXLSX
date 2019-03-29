@@ -30,9 +30,13 @@ public struct Relationship: Codable, Equatable {
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
       extended-properties
       """
-    case coreProperties = """
+    case packageCoreProperties = """
     http://schemas.openxmlformats.org/package/2006/relationships/metadata/\
     core-properties
+    """
+    case coreProperties = """
+    http://schemas.openxmlformats.org/officedocument/2006/relationships/\
+    metadata/core-properties
     """
     case worksheet = """
     http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
