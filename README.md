@@ -8,6 +8,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![Coverage](https://img.shields.io/codecov/c/github/MaxDesiatov/CoreXLSX/master.svg?style=flat)](https://codecov.io/gh/maxdesiatov/CoreXLSX)
 
+CoreXLSX is a library focused on representing the low-level structure
+of XML-based XLSX spreadsheet format. It allows you to open a spreadsheet 
+archive and maps its XML structure into model types that you can read directly
+from Swift.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the
