@@ -39,7 +39,7 @@ jobs:
         xcodebuild test -scheme $SCHEME
         -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
       - >
-        xcodebuild test -enableCodeCoverage YES -scheme $SCHEME
+        xcodebuild test -scheme $SCHEME
         -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
       - >
         xcodebuild test -enableCodeCoverage YES -scheme $SCHEME 
