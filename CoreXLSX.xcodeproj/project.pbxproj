@@ -1,1201 +1,1764 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXAggregateTarget section */
-		"CoreXLSX::CoreXLSXPackageTests::ProductTarget" /* CoreXLSXPackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_140 /* Build configuration list for PBXAggregateTarget "CoreXLSXPackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_143 /* PBXTargetDependency */,
-			);
-			name = CoreXLSXPackageTests;
-			productName = CoreXLSXPackageTests;
-		};
-/* End PBXAggregateTarget section */
-
-/* Begin PBXBuildFile section */
-		OBJ_115 /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CoreXLSX.swift */; };
-		OBJ_116 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Path.swift */; };
-		OBJ_117 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Relationships.swift */; };
-		OBJ_118 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SharedStrings.swift */; };
-		OBJ_119 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Styles.swift */; };
-		OBJ_120 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Workbook.swift */; };
-		OBJ_121 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Cell.swift */; };
-		OBJ_122 /* CellQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* CellQueries.swift */; };
-		OBJ_123 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CellReference.swift */; };
-		OBJ_124 /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ColumnReference.swift */; };
-		OBJ_125 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Worksheet.swift */; };
-		OBJ_127 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
-		OBJ_128 /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
-		OBJ_138 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_149 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* CellReference.swift */; };
-		OBJ_150 /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CoreXLSX.swift */; };
-		OBJ_151 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Relationships.swift */; };
-		OBJ_152 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* SharedStrings.swift */; };
-		OBJ_153 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Styles.swift */; };
-		OBJ_154 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Workbook.swift */; };
-		OBJ_155 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Worksheet.swift */; };
-		OBJ_156 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
-		OBJ_158 /* CoreXLSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */; };
-		OBJ_159 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
-		OBJ_160 /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
-		OBJ_168 /* BoolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* BoolBox.swift */; };
-		OBJ_169 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Box.swift */; };
-		OBJ_170 /* DataBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* DataBox.swift */; };
-		OBJ_171 /* DateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* DateBox.swift */; };
-		OBJ_172 /* DecimalBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* DecimalBox.swift */; };
-		OBJ_173 /* FloatBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* FloatBox.swift */; };
-		OBJ_174 /* IntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* IntBox.swift */; };
-		OBJ_175 /* KeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* KeyedBox.swift */; };
-		OBJ_176 /* NullBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* NullBox.swift */; };
-		OBJ_177 /* SharedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* SharedBox.swift */; };
-		OBJ_178 /* StringBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* StringBox.swift */; };
-		OBJ_179 /* UIntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* UIntBox.swift */; };
-		OBJ_180 /* URLBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* URLBox.swift */; };
-		OBJ_181 /* UnkeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* UnkeyedBox.swift */; };
-		OBJ_182 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ISO8601DateFormatter.swift */; };
-		OBJ_183 /* KeyedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* KeyedStorage.swift */; };
-		OBJ_184 /* Metatypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Metatypes.swift */; };
-		OBJ_185 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* String+Extensions.swift */; };
-		OBJ_186 /* XMLCoderElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* XMLCoderElement.swift */; };
-		OBJ_187 /* XMLHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* XMLHeader.swift */; };
-		OBJ_188 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* XMLKey.swift */; };
-		OBJ_189 /* XMLStackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* XMLStackParser.swift */; };
-		OBJ_190 /* DecodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* DecodingErrorExtension.swift */; };
-		OBJ_191 /* DynamicNodeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* DynamicNodeDecoding.swift */; };
-		OBJ_192 /* SingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* SingleValueDecodingContainer.swift */; };
-		OBJ_193 /* XMLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* XMLDecoder.swift */; };
-		OBJ_194 /* XMLDecoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* XMLDecoderImplementation.swift */; };
-		OBJ_195 /* XMLDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* XMLDecodingStorage.swift */; };
-		OBJ_196 /* XMLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* XMLKeyedDecodingContainer.swift */; };
-		OBJ_197 /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* XMLUnkeyedDecodingContainer.swift */; };
-		OBJ_198 /* DynamicNodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* DynamicNodeEncoding.swift */; };
-		OBJ_199 /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* EncodingErrorExtension.swift */; };
-		OBJ_200 /* SingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* SingleValueEncodingContainer.swift */; };
-		OBJ_201 /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* XMLEncoder.swift */; };
-		OBJ_202 /* XMLEncoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* XMLEncoderImplementation.swift */; };
-		OBJ_203 /* XMLEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* XMLEncodingStorage.swift */; };
-		OBJ_204 /* XMLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* XMLKeyedEncodingContainer.swift */; };
-		OBJ_205 /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* XMLReferencingEncoder.swift */; };
-		OBJ_206 /* XMLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* XMLUnkeyedEncodingContainer.swift */; };
-		OBJ_213 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* Package.swift */; };
-		OBJ_218 /* Archive+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Archive+Reading.swift */; };
-		OBJ_219 /* Archive+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Archive+Writing.swift */; };
-		OBJ_220 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Archive.swift */; };
-		OBJ_221 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Data+Compression.swift */; };
-		OBJ_222 /* Data+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Data+Serialization.swift */; };
-		OBJ_223 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Entry.swift */; };
-		OBJ_224 /* FileManager+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* FileManager+ZIP.swift */; };
-		OBJ_231 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Package.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D1965524225C7AA80004065B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "ZIPFoundation::ZIPFoundation";
-			remoteInfo = ZIPFoundation;
-		};
-		D1965525225C7AA80004065B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "XMLCoder::XMLCoder";
-			remoteInfo = XMLCoder;
-		};
-		D1965526225C7AA80004065B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "CoreXLSX::CoreXLSX";
-			remoteInfo = CoreXLSX;
-		};
-		D1965527225C7AA80004065B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "ZIPFoundation::ZIPFoundation";
-			remoteInfo = ZIPFoundation;
-		};
-		D1965528225C7AA80004065B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "XMLCoder::XMLCoder";
-			remoteInfo = XMLCoder;
-		};
-		D1965529225C7AA90004065B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "CoreXLSX::CoreXLSXTests";
-			remoteInfo = CoreXLSXTests;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_100 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
-		OBJ_101 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		OBJ_102 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
-		OBJ_103 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		OBJ_104 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
-		OBJ_105 /* Package.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Package.xcconfig; sourceTree = "<group>"; };
-		OBJ_106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		OBJ_107 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		OBJ_108 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_109 /* CoreXLSX.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CoreXLSX.podspec; sourceTree = "<group>"; };
-		OBJ_11 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
-		OBJ_14 /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
-		OBJ_15 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		OBJ_16 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		OBJ_19 /* CellQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellQueries.swift; sourceTree = "<group>"; };
-		OBJ_20 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
-		OBJ_21 /* ColumnReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnReference.swift; sourceTree = "<group>"; };
-		OBJ_22 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
-		OBJ_28 /* categories.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = categories.xlsx; sourceTree = "<group>"; };
-		OBJ_29 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
-		OBJ_30 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
-		OBJ_31 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
-		OBJ_32 /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
-		OBJ_33 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		OBJ_34 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
-		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_40 /* Archive+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Reading.swift"; sourceTree = "<group>"; };
-		OBJ_41 /* Archive+Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Writing.swift"; sourceTree = "<group>"; };
-		OBJ_42 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
-		OBJ_44 /* Data+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Serialization.swift"; sourceTree = "<group>"; };
-		OBJ_45 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		OBJ_46 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIP.swift"; sourceTree = "<group>"; };
-		OBJ_47 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/ZIPFoundation.git-3044753073686914172/Package.swift"; sourceTree = "<group>"; };
-		OBJ_52 /* BoolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolBox.swift; sourceTree = "<group>"; };
-		OBJ_53 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		OBJ_54 /* DataBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBox.swift; sourceTree = "<group>"; };
-		OBJ_55 /* DateBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBox.swift; sourceTree = "<group>"; };
-		OBJ_56 /* DecimalBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalBox.swift; sourceTree = "<group>"; };
-		OBJ_57 /* FloatBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatBox.swift; sourceTree = "<group>"; };
-		OBJ_58 /* IntBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntBox.swift; sourceTree = "<group>"; };
-		OBJ_59 /* KeyedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedBox.swift; sourceTree = "<group>"; };
-		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* NullBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullBox.swift; sourceTree = "<group>"; };
-		OBJ_61 /* SharedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedBox.swift; sourceTree = "<group>"; };
-		OBJ_62 /* StringBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBox.swift; sourceTree = "<group>"; };
-		OBJ_63 /* UIntBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIntBox.swift; sourceTree = "<group>"; };
-		OBJ_64 /* URLBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBox.swift; sourceTree = "<group>"; };
-		OBJ_65 /* UnkeyedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnkeyedBox.swift; sourceTree = "<group>"; };
-		OBJ_66 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
-		OBJ_67 /* KeyedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedStorage.swift; sourceTree = "<group>"; };
-		OBJ_68 /* Metatypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metatypes.swift; sourceTree = "<group>"; };
-		OBJ_69 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_70 /* XMLCoderElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLCoderElement.swift; sourceTree = "<group>"; };
-		OBJ_71 /* XMLHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLHeader.swift; sourceTree = "<group>"; };
-		OBJ_72 /* XMLKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKey.swift; sourceTree = "<group>"; };
-		OBJ_73 /* XMLStackParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStackParser.swift; sourceTree = "<group>"; };
-		OBJ_75 /* DecodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingErrorExtension.swift; sourceTree = "<group>"; };
-		OBJ_76 /* DynamicNodeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicNodeDecoding.swift; sourceTree = "<group>"; };
-		OBJ_77 /* SingleValueDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_78 /* XMLDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecoder.swift; sourceTree = "<group>"; };
-		OBJ_79 /* XMLDecoderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecoderImplementation.swift; sourceTree = "<group>"; };
-		OBJ_8 /* Package.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Package.xcconfig; sourceTree = "<group>"; };
-		OBJ_80 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecodingStorage.swift; sourceTree = "<group>"; };
-		OBJ_81 /* XMLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_82 /* XMLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_84 /* DynamicNodeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicNodeEncoding.swift; sourceTree = "<group>"; };
-		OBJ_85 /* EncodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingErrorExtension.swift; sourceTree = "<group>"; };
-		OBJ_86 /* SingleValueEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueEncodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_87 /* XMLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncoder.swift; sourceTree = "<group>"; };
-		OBJ_88 /* XMLEncoderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncoderImplementation.swift; sourceTree = "<group>"; };
-		OBJ_89 /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncodingStorage.swift; sourceTree = "<group>"; };
-		OBJ_90 /* XMLKeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_91 /* XMLReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLReferencingEncoder.swift; sourceTree = "<group>"; };
-		OBJ_92 /* XMLUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_93 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/XMLCoder.git--2436542756418196327/Package.swift"; sourceTree = "<group>"; };
-		OBJ_99 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
-		"XMLCoder::XMLCoder::Product" /* XMLCoder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		OBJ_126 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_127 /* ZIPFoundation.framework in Frameworks */,
-				OBJ_128 /* XMLCoder.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_157 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_158 /* CoreXLSX.framework in Frameworks */,
-				OBJ_159 /* ZIPFoundation.framework in Frameworks */,
-				OBJ_160 /* XMLCoder.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_207 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_225 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		OBJ_10 /* CoreXLSX */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_11 /* CoreXLSX.swift */,
-				OBJ_12 /* Path.swift */,
-				OBJ_13 /* Relationships.swift */,
-				OBJ_14 /* SharedStrings.swift */,
-				OBJ_15 /* Styles.swift */,
-				OBJ_16 /* Workbook.swift */,
-				OBJ_17 /* Worksheet */,
-			);
-			name = CoreXLSX;
-			path = Sources/CoreXLSX;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_17 /* Worksheet */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_18 /* Cell.swift */,
-				OBJ_19 /* CellQueries.swift */,
-				OBJ_20 /* CellReference.swift */,
-				OBJ_21 /* ColumnReference.swift */,
-				OBJ_22 /* Worksheet.swift */,
-			);
-			path = Worksheet;
-			sourceTree = "<group>";
-		};
-		OBJ_23 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_24 /* CoreXLSXTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_24 /* CoreXLSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_28 /* categories.xlsx */,
-				OBJ_29 /* CellReference.swift */,
-				OBJ_30 /* CoreXLSX.swift */,
-				OBJ_31 /* Relationships.swift */,
-				OBJ_32 /* SharedStrings.swift */,
-				OBJ_33 /* Styles.swift */,
-				OBJ_34 /* Workbook.swift */,
-				OBJ_35 /* Worksheet.swift */,
-				OBJ_36 /* XCTestManifests.swift */,
-			);
-			name = CoreXLSXTests;
-			path = Tests/CoreXLSXTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_37 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_38 /* ZIPFoundation 0.9.8 */,
-				OBJ_48 /* XMLCoder 0.4.0 */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		OBJ_38 /* ZIPFoundation 0.9.8 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_39 /* ZIPFoundation */,
-				OBJ_47 /* Package.swift */,
-			);
-			name = "ZIPFoundation 0.9.8";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_39 /* ZIPFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_40 /* Archive+Reading.swift */,
-				OBJ_41 /* Archive+Writing.swift */,
-				OBJ_42 /* Archive.swift */,
-				OBJ_43 /* Data+Compression.swift */,
-				OBJ_44 /* Data+Serialization.swift */,
-				OBJ_45 /* Entry.swift */,
-				OBJ_46 /* FileManager+ZIP.swift */,
-			);
-			name = ZIPFoundation;
-			path = ".build/checkouts/ZIPFoundation.git-3044753073686914172/Sources/ZIPFoundation";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_48 /* XMLCoder 0.4.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_49 /* XMLCoder */,
-				OBJ_93 /* Package.swift */,
-			);
-			name = "XMLCoder 0.4.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_49 /* XMLCoder */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_50 /* Auxiliaries */,
-				OBJ_74 /* Decoder */,
-				OBJ_83 /* Encoder */,
-			);
-			name = XMLCoder;
-			path = ".build/checkouts/XMLCoder.git--2436542756418196327/Sources/XMLCoder";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_5 /*  */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Configs */,
-				OBJ_9 /* Sources */,
-				OBJ_23 /* Tests */,
-				OBJ_37 /* Dependencies */,
-				OBJ_94 /* Products */,
-				OBJ_99 /* Example */,
-				OBJ_100 /* Carthage */,
-				OBJ_101 /* Cartfile.resolved */,
-				OBJ_102 /* CODE_OF_CONDUCT.md */,
-				OBJ_103 /* LICENSE.md */,
-				OBJ_104 /* codecov.yml */,
-				OBJ_105 /* Package.xcconfig */,
-				OBJ_106 /* CHANGELOG.md */,
-				OBJ_107 /* Cartfile */,
-				OBJ_108 /* README.md */,
-				OBJ_109 /* CoreXLSX.podspec */,
-			);
-			name = "";
-			sourceTree = "<group>";
-		};
-		OBJ_50 /* Auxiliaries */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_51 /* Box */,
-				OBJ_66 /* ISO8601DateFormatter.swift */,
-				OBJ_67 /* KeyedStorage.swift */,
-				OBJ_68 /* Metatypes.swift */,
-				OBJ_69 /* String+Extensions.swift */,
-				OBJ_70 /* XMLCoderElement.swift */,
-				OBJ_71 /* XMLHeader.swift */,
-				OBJ_72 /* XMLKey.swift */,
-				OBJ_73 /* XMLStackParser.swift */,
-			);
-			path = Auxiliaries;
-			sourceTree = "<group>";
-		};
-		OBJ_51 /* Box */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_52 /* BoolBox.swift */,
-				OBJ_53 /* Box.swift */,
-				OBJ_54 /* DataBox.swift */,
-				OBJ_55 /* DateBox.swift */,
-				OBJ_56 /* DecimalBox.swift */,
-				OBJ_57 /* FloatBox.swift */,
-				OBJ_58 /* IntBox.swift */,
-				OBJ_59 /* KeyedBox.swift */,
-				OBJ_60 /* NullBox.swift */,
-				OBJ_61 /* SharedBox.swift */,
-				OBJ_62 /* StringBox.swift */,
-				OBJ_63 /* UIntBox.swift */,
-				OBJ_64 /* URLBox.swift */,
-				OBJ_65 /* UnkeyedBox.swift */,
-			);
-			path = Box;
-			sourceTree = "<group>";
-		};
-		OBJ_7 /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_8 /* Package.xcconfig */,
-			);
-			name = Configs;
-			sourceTree = "<group>";
-		};
-		OBJ_74 /* Decoder */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_75 /* DecodingErrorExtension.swift */,
-				OBJ_76 /* DynamicNodeDecoding.swift */,
-				OBJ_77 /* SingleValueDecodingContainer.swift */,
-				OBJ_78 /* XMLDecoder.swift */,
-				OBJ_79 /* XMLDecoderImplementation.swift */,
-				OBJ_80 /* XMLDecodingStorage.swift */,
-				OBJ_81 /* XMLKeyedDecodingContainer.swift */,
-				OBJ_82 /* XMLUnkeyedDecodingContainer.swift */,
-			);
-			path = Decoder;
-			sourceTree = "<group>";
-		};
-		OBJ_83 /* Encoder */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_84 /* DynamicNodeEncoding.swift */,
-				OBJ_85 /* EncodingErrorExtension.swift */,
-				OBJ_86 /* SingleValueEncodingContainer.swift */,
-				OBJ_87 /* XMLEncoder.swift */,
-				OBJ_88 /* XMLEncoderImplementation.swift */,
-				OBJ_89 /* XMLEncodingStorage.swift */,
-				OBJ_90 /* XMLKeyedEncodingContainer.swift */,
-				OBJ_91 /* XMLReferencingEncoder.swift */,
-				OBJ_92 /* XMLUnkeyedEncodingContainer.swift */,
-			);
-			path = Encoder;
-			sourceTree = "<group>";
-		};
-		OBJ_9 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* CoreXLSX */,
-			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_94 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */,
-				"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */,
-				"ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */,
-				"XMLCoder::XMLCoder::Product" /* XMLCoder.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		"CoreXLSX::CoreXLSX" /* CoreXLSX */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_111 /* Build configuration list for PBXNativeTarget "CoreXLSX" */;
-			buildPhases = (
-				OBJ_114 /* Sources */,
-				OBJ_126 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_129 /* PBXTargetDependency */,
-				OBJ_131 /* PBXTargetDependency */,
-			);
-			name = CoreXLSX;
-			productName = CoreXLSX;
-			productReference = "CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"CoreXLSX::CoreXLSXTests" /* CoreXLSXTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_145 /* Build configuration list for PBXNativeTarget "CoreXLSXTests" */;
-			buildPhases = (
-				OBJ_148 /* Sources */,
-				OBJ_157 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_161 /* PBXTargetDependency */,
-				OBJ_162 /* PBXTargetDependency */,
-				OBJ_163 /* PBXTargetDependency */,
-			);
-			name = CoreXLSXTests;
-			productName = CoreXLSXTests;
-			productReference = "CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"CoreXLSX::SwiftPMPackageDescription" /* CoreXLSXPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_134 /* Build configuration list for PBXNativeTarget "CoreXLSXPackageDescription" */;
-			buildPhases = (
-				OBJ_137 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CoreXLSXPackageDescription;
-			productName = CoreXLSXPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"XMLCoder::SwiftPMPackageDescription" /* XMLCoderPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_209 /* Build configuration list for PBXNativeTarget "XMLCoderPackageDescription" */;
-			buildPhases = (
-				OBJ_212 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = XMLCoderPackageDescription;
-			productName = XMLCoderPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"XMLCoder::XMLCoder" /* XMLCoder */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_164 /* Build configuration list for PBXNativeTarget "XMLCoder" */;
-			buildPhases = (
-				OBJ_167 /* Sources */,
-				OBJ_207 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = XMLCoder;
-			productName = XMLCoder;
-			productReference = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"ZIPFoundation::SwiftPMPackageDescription" /* ZIPFoundationPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_227 /* Build configuration list for PBXNativeTarget "ZIPFoundationPackageDescription" */;
-			buildPhases = (
-				OBJ_230 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ZIPFoundationPackageDescription;
-			productName = ZIPFoundationPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"ZIPFoundation::ZIPFoundation" /* ZIPFoundation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_214 /* Build configuration list for PBXNativeTarget "ZIPFoundation" */;
-			buildPhases = (
-				OBJ_217 /* Sources */,
-				OBJ_225 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ZIPFoundation;
-			productName = ZIPFoundation;
-			productReference = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		OBJ_1 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftMigration = 9999;
-				LastUpgradeCheck = 9999;
-			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "CoreXLSX" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				English,
-				en,
-			);
-			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_94 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				"CoreXLSX::CoreXLSX" /* CoreXLSX */,
-				"CoreXLSX::SwiftPMPackageDescription" /* CoreXLSXPackageDescription */,
-				"CoreXLSX::CoreXLSXPackageTests::ProductTarget" /* CoreXLSXPackageTests */,
-				"CoreXLSX::CoreXLSXTests" /* CoreXLSXTests */,
-				"XMLCoder::XMLCoder" /* XMLCoder */,
-				"XMLCoder::SwiftPMPackageDescription" /* XMLCoderPackageDescription */,
-				"ZIPFoundation::ZIPFoundation" /* ZIPFoundation */,
-				"ZIPFoundation::SwiftPMPackageDescription" /* ZIPFoundationPackageDescription */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		OBJ_114 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_115 /* CoreXLSX.swift in Sources */,
-				OBJ_116 /* Path.swift in Sources */,
-				OBJ_117 /* Relationships.swift in Sources */,
-				OBJ_118 /* SharedStrings.swift in Sources */,
-				OBJ_119 /* Styles.swift in Sources */,
-				OBJ_120 /* Workbook.swift in Sources */,
-				OBJ_121 /* Cell.swift in Sources */,
-				OBJ_122 /* CellQueries.swift in Sources */,
-				OBJ_123 /* CellReference.swift in Sources */,
-				OBJ_124 /* ColumnReference.swift in Sources */,
-				OBJ_125 /* Worksheet.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_137 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_138 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_148 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_149 /* CellReference.swift in Sources */,
-				OBJ_150 /* CoreXLSX.swift in Sources */,
-				OBJ_151 /* Relationships.swift in Sources */,
-				OBJ_152 /* SharedStrings.swift in Sources */,
-				OBJ_153 /* Styles.swift in Sources */,
-				OBJ_154 /* Workbook.swift in Sources */,
-				OBJ_155 /* Worksheet.swift in Sources */,
-				OBJ_156 /* XCTestManifests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_167 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_168 /* BoolBox.swift in Sources */,
-				OBJ_169 /* Box.swift in Sources */,
-				OBJ_170 /* DataBox.swift in Sources */,
-				OBJ_171 /* DateBox.swift in Sources */,
-				OBJ_172 /* DecimalBox.swift in Sources */,
-				OBJ_173 /* FloatBox.swift in Sources */,
-				OBJ_174 /* IntBox.swift in Sources */,
-				OBJ_175 /* KeyedBox.swift in Sources */,
-				OBJ_176 /* NullBox.swift in Sources */,
-				OBJ_177 /* SharedBox.swift in Sources */,
-				OBJ_178 /* StringBox.swift in Sources */,
-				OBJ_179 /* UIntBox.swift in Sources */,
-				OBJ_180 /* URLBox.swift in Sources */,
-				OBJ_181 /* UnkeyedBox.swift in Sources */,
-				OBJ_182 /* ISO8601DateFormatter.swift in Sources */,
-				OBJ_183 /* KeyedStorage.swift in Sources */,
-				OBJ_184 /* Metatypes.swift in Sources */,
-				OBJ_185 /* String+Extensions.swift in Sources */,
-				OBJ_186 /* XMLCoderElement.swift in Sources */,
-				OBJ_187 /* XMLHeader.swift in Sources */,
-				OBJ_188 /* XMLKey.swift in Sources */,
-				OBJ_189 /* XMLStackParser.swift in Sources */,
-				OBJ_190 /* DecodingErrorExtension.swift in Sources */,
-				OBJ_191 /* DynamicNodeDecoding.swift in Sources */,
-				OBJ_192 /* SingleValueDecodingContainer.swift in Sources */,
-				OBJ_193 /* XMLDecoder.swift in Sources */,
-				OBJ_194 /* XMLDecoderImplementation.swift in Sources */,
-				OBJ_195 /* XMLDecodingStorage.swift in Sources */,
-				OBJ_196 /* XMLKeyedDecodingContainer.swift in Sources */,
-				OBJ_197 /* XMLUnkeyedDecodingContainer.swift in Sources */,
-				OBJ_198 /* DynamicNodeEncoding.swift in Sources */,
-				OBJ_199 /* EncodingErrorExtension.swift in Sources */,
-				OBJ_200 /* SingleValueEncodingContainer.swift in Sources */,
-				OBJ_201 /* XMLEncoder.swift in Sources */,
-				OBJ_202 /* XMLEncoderImplementation.swift in Sources */,
-				OBJ_203 /* XMLEncodingStorage.swift in Sources */,
-				OBJ_204 /* XMLKeyedEncodingContainer.swift in Sources */,
-				OBJ_205 /* XMLReferencingEncoder.swift in Sources */,
-				OBJ_206 /* XMLUnkeyedEncodingContainer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_212 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_213 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_217 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_218 /* Archive+Reading.swift in Sources */,
-				OBJ_219 /* Archive+Writing.swift in Sources */,
-				OBJ_220 /* Archive.swift in Sources */,
-				OBJ_221 /* Data+Compression.swift in Sources */,
-				OBJ_222 /* Data+Serialization.swift in Sources */,
-				OBJ_223 /* Entry.swift in Sources */,
-				OBJ_224 /* FileManager+ZIP.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_230 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_231 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		OBJ_129 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "ZIPFoundation::ZIPFoundation" /* ZIPFoundation */;
-			targetProxy = D1965524225C7AA80004065B /* PBXContainerItemProxy */;
-		};
-		OBJ_131 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "XMLCoder::XMLCoder" /* XMLCoder */;
-			targetProxy = D1965525225C7AA80004065B /* PBXContainerItemProxy */;
-		};
-		OBJ_143 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CoreXLSX::CoreXLSXTests" /* CoreXLSXTests */;
-			targetProxy = D1965529225C7AA90004065B /* PBXContainerItemProxy */;
-		};
-		OBJ_161 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CoreXLSX::CoreXLSX" /* CoreXLSX */;
-			targetProxy = D1965526225C7AA80004065B /* PBXContainerItemProxy */;
-		};
-		OBJ_162 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "ZIPFoundation::ZIPFoundation" /* ZIPFoundation */;
-			targetProxy = D1965527225C7AA80004065B /* PBXContainerItemProxy */;
-		};
-		OBJ_163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "XMLCoder::XMLCoder" /* XMLCoder */;
-			targetProxy = D1965528225C7AA80004065B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		OBJ_112 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSX_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CoreXLSX;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = CoreXLSX;
-			};
-			name = Debug;
-		};
-		OBJ_113 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSX_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CoreXLSX;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = CoreXLSX;
-			};
-			name = Release;
-		};
-		OBJ_135 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		OBJ_136 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		OBJ_141 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_142 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_146 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSXTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = CoreXLSXTests;
-			};
-			name = Debug;
-		};
-		OBJ_147 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/CoreXLSXTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = CoreXLSXTests;
-			};
-			name = Release;
-		};
-		OBJ_165 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/XMLCoder_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = XMLCoder;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = XMLCoder;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_166 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/XMLCoder_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = XMLCoder;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = XMLCoder;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_210 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_211 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_215 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/ZIPFoundation_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ZIPFoundation;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = ZIPFoundation;
-			};
-			name = Debug;
-		};
-		OBJ_216 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CoreXLSX.xcodeproj/ZIPFoundation_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ZIPFoundation;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = ZIPFoundation;
-			};
-			name = Release;
-		};
-		OBJ_228 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_229 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"SWIFT_PACKAGE=1",
-					"DEBUG=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USE_HEADERMAP = NO;
-			};
-			name = Debug;
-		};
-		OBJ_4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"SWIFT_PACKAGE=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_SWIFT_FLAGS = "-DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		OBJ_111 /* Build configuration list for PBXNativeTarget "CoreXLSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_112 /* Debug */,
-				OBJ_113 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_134 /* Build configuration list for PBXNativeTarget "CoreXLSXPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_135 /* Debug */,
-				OBJ_136 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_140 /* Build configuration list for PBXAggregateTarget "CoreXLSXPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_141 /* Debug */,
-				OBJ_142 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_145 /* Build configuration list for PBXNativeTarget "CoreXLSXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_146 /* Debug */,
-				OBJ_147 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_164 /* Build configuration list for PBXNativeTarget "XMLCoder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_165 /* Debug */,
-				OBJ_166 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_2 /* Build configuration list for PBXProject "CoreXLSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_3 /* Debug */,
-				OBJ_4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_209 /* Build configuration list for PBXNativeTarget "XMLCoderPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_210 /* Debug */,
-				OBJ_211 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_214 /* Build configuration list for PBXNativeTarget "ZIPFoundation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_215 /* Debug */,
-				OBJ_216 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_227 /* Build configuration list for PBXNativeTarget "ZIPFoundationPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_228 /* Debug */,
-				OBJ_229 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = OBJ_1 /* Project object */;
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "CoreXLSX::CoreXLSX" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_98";
+         buildPhases = (
+            "OBJ_101",
+            "OBJ_113"
+         );
+         dependencies = (
+            "OBJ_116",
+            "OBJ_118"
+         );
+         name = "CoreXLSX";
+         productName = "CoreXLSX";
+         productReference = "CoreXLSX::CoreXLSX::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "CoreXLSX::CoreXLSX::Product" = {
+         isa = "PBXFileReference";
+         path = "CoreXLSX.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "CoreXLSX::CoreXLSXPackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_127";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_130"
+         );
+         name = "CoreXLSXPackageTests";
+         productName = "CoreXLSXPackageTests";
+      };
+      "CoreXLSX::CoreXLSXTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_132";
+         buildPhases = (
+            "OBJ_135",
+            "OBJ_144"
+         );
+         dependencies = (
+            "OBJ_148",
+            "OBJ_149",
+            "OBJ_150"
+         );
+         name = "CoreXLSXTests";
+         productName = "CoreXLSXTests";
+         productReference = "CoreXLSX::CoreXLSXTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "CoreXLSX::CoreXLSXTests::Product" = {
+         isa = "PBXFileReference";
+         path = "CoreXLSXTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "CoreXLSX::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_121";
+         buildPhases = (
+            "OBJ_124"
+         );
+         dependencies = (
+         );
+         name = "CoreXLSXPackageDescription";
+         productName = "CoreXLSXPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "English";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_92";
+         projectDirPath = ".";
+         targets = (
+            "CoreXLSX::CoreXLSX",
+            "CoreXLSX::SwiftPMPackageDescription",
+            "CoreXLSX::CoreXLSXPackageTests::ProductTarget",
+            "CoreXLSX::CoreXLSXTests",
+            "XMLCoder::XMLCoder",
+            "XMLCoder::SwiftPMPackageDescription",
+            "ZIPFoundation::ZIPFoundation",
+            "ZIPFoundation::SwiftPMPackageDescription"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_11",
+            "OBJ_12",
+            "OBJ_13",
+            "OBJ_14",
+            "OBJ_15",
+            "OBJ_16",
+            "OBJ_17"
+         );
+         name = "CoreXLSX";
+         path = "Sources/CoreXLSX";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_100" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/CoreXLSX_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "CoreXLSX";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "CoreXLSX";
+         };
+         name = "Release";
+      };
+      "OBJ_101" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_102",
+            "OBJ_103",
+            "OBJ_104",
+            "OBJ_105",
+            "OBJ_106",
+            "OBJ_107",
+            "OBJ_108",
+            "OBJ_109",
+            "OBJ_110",
+            "OBJ_111",
+            "OBJ_112"
+         );
+      };
+      "OBJ_102" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_11";
+      };
+      "OBJ_103" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_104" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_13";
+      };
+      "OBJ_105" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_106" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_15";
+      };
+      "OBJ_107" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_16";
+      };
+      "OBJ_108" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
+      };
+      "OBJ_109" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_11" = {
+         isa = "PBXFileReference";
+         path = "CoreXLSX.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_110" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
+      };
+      "OBJ_111" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_112" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_113" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_114",
+            "OBJ_115"
+         );
+      };
+      "OBJ_114" = {
+         isa = "PBXBuildFile";
+         fileRef = "ZIPFoundation::ZIPFoundation::Product";
+      };
+      "OBJ_115" = {
+         isa = "PBXBuildFile";
+         fileRef = "XMLCoder::XMLCoder::Product";
+      };
+      "OBJ_116" = {
+         isa = "PBXTargetDependency";
+         target = "ZIPFoundation::ZIPFoundation";
+      };
+      "OBJ_118" = {
+         isa = "PBXTargetDependency";
+         target = "XMLCoder::XMLCoder";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "Path.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_121" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_122",
+            "OBJ_123"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_122" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Debug";
+      };
+      "OBJ_123" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Release";
+      };
+      "OBJ_124" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_125"
+         );
+      };
+      "OBJ_125" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_127" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_128",
+            "OBJ_129"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_128" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_129" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_13" = {
+         isa = "PBXFileReference";
+         path = "Relationships.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_130" = {
+         isa = "PBXTargetDependency";
+         target = "CoreXLSX::CoreXLSXTests";
+      };
+      "OBJ_132" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_133",
+            "OBJ_134"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_133" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/CoreXLSXTests_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "CoreXLSXTests";
+         };
+         name = "Debug";
+      };
+      "OBJ_134" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/CoreXLSXTests_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "CoreXLSXTests";
+         };
+         name = "Release";
+      };
+      "OBJ_135" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_136",
+            "OBJ_137",
+            "OBJ_138",
+            "OBJ_139",
+            "OBJ_140",
+            "OBJ_141",
+            "OBJ_142",
+            "OBJ_143"
+         );
+      };
+      "OBJ_136" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_137" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_26";
+      };
+      "OBJ_138" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_27";
+      };
+      "OBJ_139" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_28";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "SharedStrings.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_140" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_141" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_30";
+      };
+      "OBJ_142" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_31";
+      };
+      "OBJ_143" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_32";
+      };
+      "OBJ_144" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_145",
+            "OBJ_146",
+            "OBJ_147"
+         );
+      };
+      "OBJ_145" = {
+         isa = "PBXBuildFile";
+         fileRef = "CoreXLSX::CoreXLSX::Product";
+      };
+      "OBJ_146" = {
+         isa = "PBXBuildFile";
+         fileRef = "ZIPFoundation::ZIPFoundation::Product";
+      };
+      "OBJ_147" = {
+         isa = "PBXBuildFile";
+         fileRef = "XMLCoder::XMLCoder::Product";
+      };
+      "OBJ_148" = {
+         isa = "PBXTargetDependency";
+         target = "CoreXLSX::CoreXLSX";
+      };
+      "OBJ_149" = {
+         isa = "PBXTargetDependency";
+         target = "ZIPFoundation::ZIPFoundation";
+      };
+      "OBJ_15" = {
+         isa = "PBXFileReference";
+         path = "Styles.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_150" = {
+         isa = "PBXTargetDependency";
+         target = "XMLCoder::XMLCoder";
+      };
+      "OBJ_151" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_152",
+            "OBJ_153"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_152" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/XMLCoder_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "XMLCoder";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "XMLCoder";
+         };
+         name = "Debug";
+      };
+      "OBJ_153" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/XMLCoder_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "XMLCoder";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "XMLCoder";
+         };
+         name = "Release";
+      };
+      "OBJ_154" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_155",
+            "OBJ_156",
+            "OBJ_157",
+            "OBJ_158",
+            "OBJ_159",
+            "OBJ_160",
+            "OBJ_161",
+            "OBJ_162",
+            "OBJ_163",
+            "OBJ_164",
+            "OBJ_165",
+            "OBJ_166",
+            "OBJ_167",
+            "OBJ_168",
+            "OBJ_169",
+            "OBJ_170",
+            "OBJ_171",
+            "OBJ_172",
+            "OBJ_173",
+            "OBJ_174",
+            "OBJ_175",
+            "OBJ_176",
+            "OBJ_177",
+            "OBJ_178",
+            "OBJ_179",
+            "OBJ_180",
+            "OBJ_181",
+            "OBJ_182",
+            "OBJ_183",
+            "OBJ_184",
+            "OBJ_185",
+            "OBJ_186",
+            "OBJ_187",
+            "OBJ_188",
+            "OBJ_189",
+            "OBJ_190",
+            "OBJ_191",
+            "OBJ_192",
+            "OBJ_193"
+         );
+      };
+      "OBJ_155" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_50";
+      };
+      "OBJ_156" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_51";
+      };
+      "OBJ_157" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_52";
+      };
+      "OBJ_158" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_53";
+      };
+      "OBJ_159" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_54";
+      };
+      "OBJ_16" = {
+         isa = "PBXFileReference";
+         path = "Workbook.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_160" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_55";
+      };
+      "OBJ_161" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_56";
+      };
+      "OBJ_162" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_57";
+      };
+      "OBJ_163" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_58";
+      };
+      "OBJ_164" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_59";
+      };
+      "OBJ_165" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_60";
+      };
+      "OBJ_166" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_61";
+      };
+      "OBJ_167" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_62";
+      };
+      "OBJ_168" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_63";
+      };
+      "OBJ_169" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_64";
+      };
+      "OBJ_17" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_18",
+            "OBJ_19",
+            "OBJ_20",
+            "OBJ_21",
+            "OBJ_22"
+         );
+         name = "Worksheet";
+         path = "Worksheet";
+         sourceTree = "<group>";
+      };
+      "OBJ_170" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_65";
+      };
+      "OBJ_171" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_66";
+      };
+      "OBJ_172" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_67";
+      };
+      "OBJ_173" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_68";
+      };
+      "OBJ_174" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_69";
+      };
+      "OBJ_175" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_70";
+      };
+      "OBJ_176" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_71";
+      };
+      "OBJ_177" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_73";
+      };
+      "OBJ_178" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_74";
+      };
+      "OBJ_179" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_75";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "Cell.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_180" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_76";
+      };
+      "OBJ_181" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_77";
+      };
+      "OBJ_182" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_78";
+      };
+      "OBJ_183" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_79";
+      };
+      "OBJ_184" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_80";
+      };
+      "OBJ_185" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_82";
+      };
+      "OBJ_186" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_83";
+      };
+      "OBJ_187" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_84";
+      };
+      "OBJ_188" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_85";
+      };
+      "OBJ_189" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_86";
+      };
+      "OBJ_19" = {
+         isa = "PBXFileReference";
+         path = "CellQueries.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_190" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_87";
+      };
+      "OBJ_191" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_88";
+      };
+      "OBJ_192" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_89";
+      };
+      "OBJ_193" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_90";
+      };
+      "OBJ_194" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_196" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_197",
+            "OBJ_198"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_197" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Debug";
+      };
+      "OBJ_198" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Release";
+      };
+      "OBJ_199" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_200"
+         );
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXFileReference";
+         path = "CellReference.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_200" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_91";
+      };
+      "OBJ_201" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_202",
+            "OBJ_203"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_202" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/ZIPFoundation_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "ZIPFoundation";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "ZIPFoundation";
+         };
+         name = "Debug";
+      };
+      "OBJ_203" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/ZIPFoundation_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "ZIPFoundation";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "ZIPFoundation";
+         };
+         name = "Release";
+      };
+      "OBJ_204" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_205",
+            "OBJ_206",
+            "OBJ_207",
+            "OBJ_208",
+            "OBJ_209",
+            "OBJ_210",
+            "OBJ_211"
+         );
+      };
+      "OBJ_205" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_38";
+      };
+      "OBJ_206" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_39";
+      };
+      "OBJ_207" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_40";
+      };
+      "OBJ_208" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_41";
+      };
+      "OBJ_209" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_42";
+      };
+      "OBJ_21" = {
+         isa = "PBXFileReference";
+         path = "ColumnReference.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_210" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_43";
+      };
+      "OBJ_211" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_44";
+      };
+      "OBJ_212" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_214" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_215",
+            "OBJ_216"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_215" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+            );
+            SWIFT_VERSION = "4.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_216" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+            );
+            SWIFT_VERSION = "4.0";
+         };
+         name = "Release";
+      };
+      "OBJ_217" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_218"
+         );
+      };
+      "OBJ_218" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_45";
+      };
+      "OBJ_22" = {
+         isa = "PBXFileReference";
+         path = "Worksheet.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_23" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_24"
+         );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_24" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_25",
+            "OBJ_26",
+            "OBJ_27",
+            "OBJ_28",
+            "OBJ_29",
+            "OBJ_30",
+            "OBJ_31",
+            "OBJ_32"
+         );
+         name = "CoreXLSXTests";
+         path = "Tests/CoreXLSXTests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "CellReference.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_26" = {
+         isa = "PBXFileReference";
+         path = "CoreXLSX.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_27" = {
+         isa = "PBXFileReference";
+         path = "Relationships.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_28" = {
+         isa = "PBXFileReference";
+         path = "SharedStrings.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "Styles.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "DEBUG=1",
+               "$(inherited)"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXFileReference";
+         path = "Workbook.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_31" = {
+         isa = "PBXFileReference";
+         path = "Worksheet.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_32" = {
+         isa = "PBXFileReference";
+         path = "XCTestManifests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_33" = {
+         isa = "PBXFileReference";
+         path = "Example";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_34" = {
+         isa = "PBXFileReference";
+         path = "Carthage";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_35" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_36",
+            "OBJ_46"
+         );
+         name = "Dependencies";
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_36" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_37",
+            "OBJ_45"
+         );
+         name = "ZIPFoundation 0.9.8";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_37" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_38",
+            "OBJ_39",
+            "OBJ_40",
+            "OBJ_41",
+            "OBJ_42",
+            "OBJ_43",
+            "OBJ_44"
+         );
+         name = "ZIPFoundation";
+         path = ".build/checkouts/ZIPFoundation.git-3044753073686914172/Sources/ZIPFoundation";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "Archive+Reading.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "Archive+Writing.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_40" = {
+         isa = "PBXFileReference";
+         path = "Archive.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_41" = {
+         isa = "PBXFileReference";
+         path = "Data+Compression.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_42" = {
+         isa = "PBXFileReference";
+         path = "Data+Serialization.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_43" = {
+         isa = "PBXFileReference";
+         path = "Entry.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_44" = {
+         isa = "PBXFileReference";
+         path = "FileManager+ZIP.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_45" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/ZIPFoundation.git-3044753073686914172/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_46" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_47",
+            "OBJ_91"
+         );
+         name = "XMLCoder 0.4.0";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_47" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_48",
+            "OBJ_72",
+            "OBJ_81"
+         );
+         name = "XMLCoder";
+         path = ".build/checkouts/XMLCoder.git--2436542756418196327/Sources/XMLCoder";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_48" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_49",
+            "OBJ_64",
+            "OBJ_65",
+            "OBJ_66",
+            "OBJ_67",
+            "OBJ_68",
+            "OBJ_69",
+            "OBJ_70",
+            "OBJ_71"
+         );
+         name = "Auxiliaries";
+         path = "Auxiliaries";
+         sourceTree = "<group>";
+      };
+      "OBJ_49" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_50",
+            "OBJ_51",
+            "OBJ_52",
+            "OBJ_53",
+            "OBJ_54",
+            "OBJ_55",
+            "OBJ_56",
+            "OBJ_57",
+            "OBJ_58",
+            "OBJ_59",
+            "OBJ_60",
+            "OBJ_61",
+            "OBJ_62",
+            "OBJ_63"
+         );
+         name = "Box";
+         path = "Box";
+         sourceTree = "<group>";
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_9",
+            "OBJ_23",
+            "OBJ_33",
+            "OBJ_34",
+            "OBJ_35",
+            "OBJ_92"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXFileReference";
+         path = "BoolBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_51" = {
+         isa = "PBXFileReference";
+         path = "Box.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_52" = {
+         isa = "PBXFileReference";
+         path = "DataBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_53" = {
+         isa = "PBXFileReference";
+         path = "DateBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_54" = {
+         isa = "PBXFileReference";
+         path = "DecimalBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_55" = {
+         isa = "PBXFileReference";
+         path = "FloatBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_56" = {
+         isa = "PBXFileReference";
+         path = "IntBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_57" = {
+         isa = "PBXFileReference";
+         path = "KeyedBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_58" = {
+         isa = "PBXFileReference";
+         path = "NullBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_59" = {
+         isa = "PBXFileReference";
+         path = "SharedBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
+         isa = "PBXFileReference";
+         path = "StringBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_61" = {
+         isa = "PBXFileReference";
+         path = "UIntBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_62" = {
+         isa = "PBXFileReference";
+         path = "URLBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_63" = {
+         isa = "PBXFileReference";
+         path = "UnkeyedBox.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_64" = {
+         isa = "PBXFileReference";
+         path = "ISO8601DateFormatter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_65" = {
+         isa = "PBXFileReference";
+         path = "KeyedStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_66" = {
+         isa = "PBXFileReference";
+         path = "Metatypes.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_67" = {
+         isa = "PBXFileReference";
+         path = "String+Extensions.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_68" = {
+         isa = "PBXFileReference";
+         path = "XMLCoderElement.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_69" = {
+         isa = "PBXFileReference";
+         path = "XMLHeader.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8"
+         );
+         name = "Configs";
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_70" = {
+         isa = "PBXFileReference";
+         path = "XMLKey.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_71" = {
+         isa = "PBXFileReference";
+         path = "XMLStackParser.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_72" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_73",
+            "OBJ_74",
+            "OBJ_75",
+            "OBJ_76",
+            "OBJ_77",
+            "OBJ_78",
+            "OBJ_79",
+            "OBJ_80"
+         );
+         name = "Decoder";
+         path = "Decoder";
+         sourceTree = "<group>";
+      };
+      "OBJ_73" = {
+         isa = "PBXFileReference";
+         path = "DecodingErrorExtension.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_74" = {
+         isa = "PBXFileReference";
+         path = "DynamicNodeDecoding.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_75" = {
+         isa = "PBXFileReference";
+         path = "SingleValueDecodingContainer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_76" = {
+         isa = "PBXFileReference";
+         path = "XMLDecoder.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_77" = {
+         isa = "PBXFileReference";
+         path = "XMLDecoderImplementation.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_78" = {
+         isa = "PBXFileReference";
+         path = "XMLDecodingStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_79" = {
+         isa = "PBXFileReference";
+         path = "XMLKeyedDecodingContainer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_8" = {
+         isa = "PBXFileReference";
+         path = "Package.xcconfig";
+         sourceTree = "<group>";
+      };
+      "OBJ_80" = {
+         isa = "PBXFileReference";
+         path = "XMLUnkeyedDecodingContainer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_81" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_82",
+            "OBJ_83",
+            "OBJ_84",
+            "OBJ_85",
+            "OBJ_86",
+            "OBJ_87",
+            "OBJ_88",
+            "OBJ_89",
+            "OBJ_90"
+         );
+         name = "Encoder";
+         path = "Encoder";
+         sourceTree = "<group>";
+      };
+      "OBJ_82" = {
+         isa = "PBXFileReference";
+         path = "DynamicNodeEncoding.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_83" = {
+         isa = "PBXFileReference";
+         path = "EncodingErrorExtension.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_84" = {
+         isa = "PBXFileReference";
+         path = "SingleValueEncodingContainer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_85" = {
+         isa = "PBXFileReference";
+         path = "XMLEncoder.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_86" = {
+         isa = "PBXFileReference";
+         path = "XMLEncoderImplementation.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_87" = {
+         isa = "PBXFileReference";
+         path = "XMLEncodingStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_88" = {
+         isa = "PBXFileReference";
+         path = "XMLKeyedEncodingContainer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_89" = {
+         isa = "PBXFileReference";
+         path = "XMLReferencingEncoder.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_9" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_10"
+         );
+         name = "Sources";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_90" = {
+         isa = "PBXFileReference";
+         path = "XMLUnkeyedEncodingContainer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_91" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/XMLCoder.git--2436542756418196327/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_92" = {
+         isa = "PBXGroup";
+         children = (
+            "ZIPFoundation::ZIPFoundation::Product",
+            "XMLCoder::XMLCoder::Product",
+            "CoreXLSX::CoreXLSXTests::Product",
+            "CoreXLSX::CoreXLSX::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_98" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_99",
+            "OBJ_100"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_99" = {
+         isa = "XCBuildConfiguration";
+         baseConfigurationReference = "OBJ_8";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "CoreXLSX.xcodeproj/CoreXLSX_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "CoreXLSX";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "CoreXLSX";
+         };
+         name = "Debug";
+      };
+      "XMLCoder::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_196";
+         buildPhases = (
+            "OBJ_199"
+         );
+         dependencies = (
+         );
+         name = "XMLCoderPackageDescription";
+         productName = "XMLCoderPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "XMLCoder::XMLCoder" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_151";
+         buildPhases = (
+            "OBJ_154",
+            "OBJ_194"
+         );
+         dependencies = (
+         );
+         name = "XMLCoder";
+         productName = "XMLCoder";
+         productReference = "XMLCoder::XMLCoder::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "XMLCoder::XMLCoder::Product" = {
+         isa = "PBXFileReference";
+         path = "XMLCoder.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "ZIPFoundation::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_214";
+         buildPhases = (
+            "OBJ_217"
+         );
+         dependencies = (
+         );
+         name = "ZIPFoundationPackageDescription";
+         productName = "ZIPFoundationPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "ZIPFoundation::ZIPFoundation" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_201";
+         buildPhases = (
+            "OBJ_204",
+            "OBJ_212"
+         );
+         dependencies = (
+         );
+         name = "ZIPFoundation";
+         productName = "ZIPFoundation";
+         productReference = "ZIPFoundation::ZIPFoundation::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "ZIPFoundation::ZIPFoundation::Product" = {
+         isa = "PBXFileReference";
+         path = "ZIPFoundation.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+   };
+   rootObject = "OBJ_1";
 }

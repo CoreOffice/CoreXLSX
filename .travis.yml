@@ -34,7 +34,7 @@ jobs:
       - IOS_DEVICE='platform=iOS Simulator,OS=12.0,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
     script:
-      - carthage bootstrap
+      - swift test
       - >
         xcodebuild test -scheme $SCHEME
         -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
@@ -44,11 +44,6 @@ jobs:
       - >
         xcodebuild test -enableCodeCoverage YES -scheme $SCHEME 
         -sdk macosx | xcpretty
-      # this runs the tests the second time, but it's the only way to make sure
-      # that `Package.swift` is in a good state and `swift test` can only generate
-      # coverage reports in Swift 5.0, see this issue for more details:
-      # https://github.com/apple/swift-package-manager/pull/1787
-      - swift test
   - <<: *test
     osx_image: xcode10.1
     env: 
