@@ -2,49 +2,76 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode10.1
+osx_image: xcode10.2
 language: swift
+
 env:
   global:
   - FRAMEWORK_NAME=CoreXLSX
-# cache: cocoapods
-# podfile: Example/Podfile
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod repo update
-- brew update
-- brew install swiftformat
-- brew outdated carthage || brew upgrade carthage
-# - pod install --project-directory=Example
+  - SCHEME=CoreXLSX
+
+jobs:
+  include:
+  - stage: lint
+    osx_image: xcode10.2
+    language: swift
+    before_install:
+      - brew update
+      - brew install swiftformat
+      - brew outdated swiftlint || brew upgrade swiftlint
+    script:
+      - swiftformat --lint --verbose .
+      - swiftlint
+      - pod lib lint --verbose
+  - &test
+    stage: test
+    osx_image: xcode10
+    language: swift
+    install: skip
+    env: 
+      IOS_DEVICE: 'platform=iOS Simulator,OS=12.0,name=iPhone SE'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
+    script:
+      - carthage bootstrap
+      - >
+        xcodebuild test -scheme $SCHEME
+        -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
+      - >
+        xcodebuild test -enableCodeCoverage YES -scheme $SCHEME
+        -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
+      - >
+        xcodebuild test -enableCodeCoverage YES -scheme $SCHEME 
+        -sdk macosx | xcpretty
+      # this runs the tests the second time, but it's the only way to make sure
+      # that `Package.swift` is in a good state and `swift test` can only generate
+      # coverage reports in Swift 5.0, see this issue for more details:
+      # https://github.com/apple/swift-package-manager/pull/1787
+      - swift test
+  - <<: *test
+    osx_image: xcode10.1
+    env: 
+      IOS_DEVICE: 'platform=iOS Simulator,OS=12.1,name=iPhone SE'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
+  - <<: *test
+    osx_image: xcode10.2
+    env: 
+      IOS_DEVICE: 'platform=iOS Simulator,OS=12.2,name=iPhone SE'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
+    after_success:
+    - bash <(curl -s https://codecov.io/bash)
+    before_deploy:
+    - brew outdated carthage || brew upgrade carthage
+    - carthage build --no-skip-current
+    - carthage archive $FRAMEWORK_NAME
+    deploy:
+      provider: releases
+      api_key:
+        secure: yRKneqLvOwJO290lLrvET/BEW+46h9LjKbJYTNsszdMIVfkpm8Ts59vIQMnojs71dJ+b7A6ZiWtHFjKD9/pz7+LIKWLM+dWmaL0VJiZ3S2+XD6Oh9UOC+L+ePIFItVFQOrDpP3FaN8mo339TeFwFNIc+coirYM7ouD9eMg6alpHoqP7Yt9cHMv9OwpxeGW2ZThwVTXQWlAAXG5SAXCsdUFlwJuKzjsr0ePx9V9f5r7Md6fwjQnL9Cc61z7qpEg+UFa+Q4r5P5prgW4OvAD1rVmAMdGbg0Lj8G/hv035pkf0NVFxTzHMYx4qeJREx4AqAAThpzsn/47ZDSVhu9zXnrspLXKbgT7OHwMjOqhvGT9j9yYo9KiwsEa+LnJi67Hi2Vad6FeuIJ/pFnJ0A3DFYMFj0kg6KdkYIhuwur6ZQCuq7vIg8tqjyGyxqWYINLeRccrewGLgmDoI4JT5oNhYXDiLwzn7vOIPTzMZZbteVmy/hXprdJY8Jh/Wn6UTXB82zGfNKl2C8a6I47oHgT2G4Le/BG0MYUBjyfGXAvjZo09l7EAceL9C6NuAbyNLth6cdL7NoeD3PHxv5+1g6xVLaF+cx4ORGC7sa4Rs7PJf3xrWT0KfNTIjtksu8SVtzNZz6wTGxYu/R3qxKIAHRAUtM9DrXS1H4m6qW1At3g1Cw0oI=
+      file: "$FRAMEWORK_NAME.framework.zip"
+      skip_cleanup: true
+      on:
+        repo: MaxDesiatov/CoreXLSX
+        tags: true
+
 script:
-- swiftformat --lint --verbose .
-- pod lib lint --verbose
-# bootstrap the dependencies for the project
-- carthage bootstrap
-- xcodebuild -scheme CoreXLSXiOS
-- xcodebuild -scheme CoreXLSXwatchOS
-- xcodebuild -scheme CoreXLSXtvOS
-- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/
-- xcodebuild test -enableCodeCoverage YES -scheme CoreXLSXmacOS
-# this runs the tests the second time, but it's the only way to make sure
-# that `Package.swift` is in a good state and `swift test` can only generate
-# coverage reports in Swift 5.0, see this issue for more details:
-# https://github.com/apple/swift-package-manager/pull/1787
-# FIXME: this will fail until we can restrict deployment target for SwiftPM to 
-# macOS 10.11, which is probably possible with Swift 5.0 after this change
-# https://github.com/apple/swift-evolution/blob/master/proposals/0236-package-manager-platform-deployment-settings.md
-# - swift test
-after_success:
-- bash <(curl -s https://codecov.io/bash)
-before_deploy:
-- carthage build --no-skip-current
-- carthage archive $FRAMEWORK_NAME
-deploy:
-  provider: releases
-  api_key:
-    secure: yRKneqLvOwJO290lLrvET/BEW+46h9LjKbJYTNsszdMIVfkpm8Ts59vIQMnojs71dJ+b7A6ZiWtHFjKD9/pz7+LIKWLM+dWmaL0VJiZ3S2+XD6Oh9UOC+L+ePIFItVFQOrDpP3FaN8mo339TeFwFNIc+coirYM7ouD9eMg6alpHoqP7Yt9cHMv9OwpxeGW2ZThwVTXQWlAAXG5SAXCsdUFlwJuKzjsr0ePx9V9f5r7Md6fwjQnL9Cc61z7qpEg+UFa+Q4r5P5prgW4OvAD1rVmAMdGbg0Lj8G/hv035pkf0NVFxTzHMYx4qeJREx4AqAAThpzsn/47ZDSVhu9zXnrspLXKbgT7OHwMjOqhvGT9j9yYo9KiwsEa+LnJi67Hi2Vad6FeuIJ/pFnJ0A3DFYMFj0kg6KdkYIhuwur6ZQCuq7vIg8tqjyGyxqWYINLeRccrewGLgmDoI4JT5oNhYXDiLwzn7vOIPTzMZZbteVmy/hXprdJY8Jh/Wn6UTXB82zGfNKl2C8a6I47oHgT2G4Le/BG0MYUBjyfGXAvjZo09l7EAceL9C6NuAbyNLth6cdL7NoeD3PHxv5+1g6xVLaF+cx4ORGC7sa4Rs7PJf3xrWT0KfNTIjtksu8SVtzNZz6wTGxYu/R3qxKIAHRAUtM9DrXS1H4m6qW1At3g1Cw0oI=
-  file: "$FRAMEWORK_NAME.framework.zip"
-  skip_cleanup: true
-  on:
-    repo: MaxDesiatov/CoreXLSX
-    tags: true
+# - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/
