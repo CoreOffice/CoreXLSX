@@ -5,9 +5,11 @@
 //  Created by Max Desiatov on 18/11/2018.
 //
 
-/// Attributes and nodes are documented at this url:
-/// https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table
+// swiftlint:disable line_length
+/// Attributes and nodes are documented in [Microsoft
+/// docs](https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table)
 public struct SharedStrings: Codable, Equatable {
+// swiftlint:enable line_length
   public struct Item: Codable, Equatable {
     public let text: String?
     public let richText: RichText?

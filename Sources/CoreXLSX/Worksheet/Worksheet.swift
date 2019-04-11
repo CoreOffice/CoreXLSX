@@ -97,7 +97,7 @@ public struct Worksheet: Codable {
   }
 
   // swiftlint:disable:next line_length
-  /// https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheetdimension?view=openxml-2.8.1
+  /// [Microsoft docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheetdimension?view=openxml-2.8.1)
   public let dimension: Dimension?
 
   public let sheetViews: SheetViews?
@@ -180,9 +180,11 @@ public struct Columns: Codable, Equatable {
 @available(*, deprecated, renamed: "Column")
 public typealias Col = Column
 
-// swiftlint:disable:next line_length
-/// https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1
+// swiftlint:disable line_length
+/// [Microsoft
+/// docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1)
 public struct Column: Codable, Equatable {
+// swiftlint:enable line_length
   public let min: UInt32
   public let max: UInt32
   public let width: Double
