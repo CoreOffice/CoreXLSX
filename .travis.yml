@@ -34,7 +34,7 @@ jobs:
       - IOS_DEVICE='platform=iOS Simulator,OS=12.0,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
     script:
-      - swift package update
+      - carthage bootstrap
       - >
         xcodebuild test -scheme $SCHEME
         -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
@@ -54,6 +54,19 @@ jobs:
     env: 
       - IOS_DEVICE='platform=iOS Simulator,OS=12.2,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
+    script:
+      # SwiftPM test run works only with Xcode 10.2 and Swift 5.0
+      - TESTS_PATH=$PWD/Tests/CoreXLSXTests swift test
+      - carthage bootstrap
+      - >
+        xcodebuild test -scheme $SCHEME
+        -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
+      - >
+        xcodebuild test -scheme $SCHEME
+        -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
+      - >
+        xcodebuild test -enableCodeCoverage YES -scheme $SCHEME 
+        -sdk macosx | xcpretty
     after_success:
     - bash <(curl -s https://codecov.io/bash)
     before_deploy:

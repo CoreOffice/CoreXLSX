@@ -53,6 +53,7 @@ public struct XLSXFile {
 
     let decoder = XMLDecoder()
     decoder.errorContextLength = errorContextLength
+    decoder.shouldProcessNamespaces = true
     self.decoder = decoder
   }
 
@@ -71,13 +72,12 @@ public struct XLSXFile {
       throw CoreXLSXError.archiveEntryNotFound
     }
 
-    var result: T?
-
+    var data = Data()
     _ = try archive.extract(entry, bufferSize: bufferSize) {
-      result = try decoder.decode(type, from: $0)
+      data += $0
     }
 
-    return result!
+    return try decoder.decode(type, from: data)
   }
 
   public func parseRelationships() throws -> Relationships {

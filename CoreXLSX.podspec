@@ -42,6 +42,6 @@ Excel spreadsheet (XLSX) format support in pure Swift.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ZIPFoundation', '~> 0.9.8'
+  s.dependency 'ZIPFoundation', '~> 0.9.9'
   s.dependency 'XMLCoder', '~> 0.4.0'
 end

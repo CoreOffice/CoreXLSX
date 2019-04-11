@@ -26,7 +26,7 @@ let package = Package(
     .package(url: "https://github.com/maxdesiatov/XMLCoder.git",
              .upToNextMajor(from: "0.4.0")),
     .package(url: "https://github.com/weichsel/ZIPFoundation.git",
-             .upToNextMajor(from: "0.9.8")),
+             .upToNextMajor(from: "0.9.9")),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define
