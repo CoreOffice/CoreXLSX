@@ -38,8 +38,8 @@ zip file extraction](https://github.com/MaxDesiatov/CoreXLSX/issues/26). The
 default value is 10 MiB, which seems to be enough in most cases, but you can
 still try passing a larger value for bigger files if you see that an XML file
 stops abruptly in the middle of the file. Unfortunately, we haven't found a good
-way to adjust this value dynamically based on the file size, but please let us
-know if you did.
+way to adjust this value dynamically based on the file size, but a sufficiently
+large value should work for all files, which is the default.
 
 * Support for Carthage was added as well as support for tvOS and watchOS.
 
