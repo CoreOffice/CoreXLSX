@@ -40,6 +40,11 @@ public struct Relationship: Codable, Equatable {
       http://schemas.openxmlformats.org/officedocument/2006/relationships/\
       metadata/core-properties
       """
+    case connections =
+      """
+      http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+      connections
+      """
     case worksheet =
       """
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
