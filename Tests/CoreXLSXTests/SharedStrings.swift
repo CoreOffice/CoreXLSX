@@ -33,6 +33,22 @@ private let parsed = SharedStrings(uniqueCount: 18, items: [
 private let columnC = ["Name", "Andy", "Andy", "Andy", "Andy", "Andy",
                        "Chloe", "Chloe", "Chloe", "Chloe", "Chloe"]
 
+private let spacePreserveXML =
+"""
+<sst uniqueCount="1">
+  <si>
+    <r>
+      <rPr>
+        <sz val="10"/>
+        <color indexed="8"/>
+        <rFont val="Helvetica Neue"/>
+      </rPr>
+      <t xml:space="preserve"> the </t>
+    </r>
+  </si>
+</sst>
+""".data(using: .utf8)!
+
 final class SharedStringsTests: XCTestCase {
   func testSharedStrings() throws {
     guard let file =
@@ -74,6 +90,12 @@ final class SharedStringsTests: XCTestCase {
     }
 
     XCTAssertEqual(columnC, columnCStrings)
+  }
+
+  func testSpacePreserve() throws {
+    let decoder = XMLDecoder()
+    let strings = try decoder.decode(SharedStrings.self, from: spacePreserveXML)
+    XCTAssertEqual(strings.items.count, 1)
   }
 
   static let allTests = [

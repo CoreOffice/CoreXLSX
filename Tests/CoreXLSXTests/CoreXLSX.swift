@@ -55,6 +55,9 @@ final class CoreXLSXTests: XCTestCase {
     let rowsRange: ClosedRange<UInt> = 3...10
     let cellsInRange = ws.cells(atColumns: closedRange2, rows: rowsRange)
     XCTAssertEqual(cellsInRange.count, closedRange2.count * rowsRange.count)
+
+    let strings = try file.parseSharedStrings()
+    XCTAssertEqual(strings.items.count, 18)
   }
 
   func testLegacyPublicAPI() throws {
