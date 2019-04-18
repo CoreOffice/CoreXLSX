@@ -22,7 +22,7 @@ tools.
 Now you can parse style information from the archive with the new
 `parseStyles()` function. Please refer to the [`Styles`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
-for more details. You should also note that not all XLSX files contain style
+for more details. Please note that not all XLSX files contain style
 information, so you should be prepared to handle the errors thrown from
 `parseStyles()` function in that case. 
 
