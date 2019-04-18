@@ -62,6 +62,23 @@ let columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
   .compactMap { sharedStrings.items[$0].text }
 ```
 
+### Styles
+
+Since version 0.5.0 you can parse style information from the archive with the
+new `parseStyles()` function. Please refer to the [`Styles`
+model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
+for more details. You should also note that not all XLSX files contain style
+information, so you should be prepared to handle the errors thrown from
+`parseStyles()` function in that case. 
+
+
+Here's a short example that fetches a list of fonts used:
+
+```swift
+let styles = try file.parseStyles()
+let fonts = styles.fonts?.items.compactMap { $0.name?.value }
+```
+
 ## Reporting compatibility issues
 
 If you stumble upon a file that can't be parsed, please [file an
