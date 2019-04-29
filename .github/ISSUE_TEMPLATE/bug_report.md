@@ -7,6 +7,9 @@ assignees: MaxDesiatov
 
 ---
 
+**Version**
+Version of the library, please paste it directly from your `Podfile` or `Cartfile`.
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
