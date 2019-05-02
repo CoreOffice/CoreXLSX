@@ -237,7 +237,7 @@ public struct MergeCell: Codable {
 }
 
 public struct InlineString: Codable, Equatable {
-  let text: String?
+  public let text: String?
 
   enum CodingKeys: String, CodingKey {
     case text = "t"

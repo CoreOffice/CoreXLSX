@@ -9,7 +9,7 @@
 import XCTest
 import XMLCoder
 
-let namespaceXML = """
+private let namespaceXML = """
 <?xml version="1.0" encoding="utf-8"?>
 <x:worksheet \
 xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main">

@@ -69,7 +69,7 @@ public struct RichText: Codable, Equatable {
 
   public struct Properties: Codable, Equatable {
     public let size: Size
-    public let color: Color
+    public let color: Color?
     public let font: Font
     public let family: Family?
     public let scheme: Scheme?
@@ -83,7 +83,7 @@ public struct RichText: Codable, Equatable {
     }
   }
 
-  public let properties: Properties
+  public let properties: Properties?
 
   enum CodingKeys: String, CodingKey {
     case properties = "rPr"
