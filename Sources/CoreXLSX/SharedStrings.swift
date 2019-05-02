@@ -12,7 +12,7 @@ public struct SharedStrings: Codable, Equatable {
   // swiftlint:enable line_length
   public struct Item: Codable, Equatable {
     public let text: String?
-    public let richText: RichText?
+    public let richText: [RichText]
 
     enum CodingKeys: String, CodingKey {
       case text = "t"
