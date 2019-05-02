@@ -1,3 +1,37 @@
+# 0.6.0 (April 18, 2019)
+
+This is a bugfix release with changes to the model API that improve
+compatibility with files containing formulas and varied shared string formats.
+
+Specifically:
+
+* new `struct Formula` added with a corresponding property on `struct Cell`
+* property `color` on `struct Properties` became optional
+* `properties` on `struct RichText` became optional
+* new `chartsheet` case added to `enum Relationship`
+* `richText` on `struct SharedStrings` became an array, not optional
+
+## Closed issues
+
+- Error Domain=NSCocoaErrorDomain Code=4865 "Expected String but found null
+  instead." [\#59](https://github.com/MaxDesiatov/CoreXLSX/issues/59)
+- Importing XLSX file [\#56](https://github.com/MaxDesiatov/CoreXLSX/issues/56)
+- Error ParseCellContent
+  [\#51](https://github.com/MaxDesiatov/CoreXLSX/issues/51)
+- error `parseWorksheet`
+  [\#50](https://github.com/MaxDesiatov/CoreXLSX/issues/50)
+- Couldn't find end of Start Tag c
+  [\#37](https://github.com/MaxDesiatov/CoreXLSX/issues/37)
+
+## Merged pull requests
+
+- Add `Formula` struct, fix other model types
+  [\#61](https://github.com/MaxDesiatov/CoreXLSX/pull/61)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+- Bump `XMLCoder` dependency to 0.5, fix `SharedStrings`
+  [\#60](https://github.com/MaxDesiatov/CoreXLSX/pull/60)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+
 # 0.5.0 (April 18, 2019)
 
 This is a release with API additions and bug fixes. 
