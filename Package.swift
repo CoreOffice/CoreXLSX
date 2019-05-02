@@ -10,7 +10,7 @@ let package = Package(
     .macOS(.v10_11),
     .iOS(.v9),
     .tvOS(.v9),
-    .watchOS(.v2)
+    .watchOS(.v2),
   ],
   products: [
     // Products define the executables and libraries produced by a package,
@@ -24,7 +24,7 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
     .package(url: "https://github.com/maxdesiatov/XMLCoder.git",
-             .upToNextMajor(from: "0.4.1")),
+             .upToNextMajor(from: "0.5.1")),
     .package(url: "https://github.com/weichsel/ZIPFoundation.git",
              .upToNextMajor(from: "0.9.9")),
   ],

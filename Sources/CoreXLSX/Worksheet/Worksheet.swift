@@ -184,7 +184,7 @@ public typealias Col = Column
 /// [Microsoft
 /// docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1)
 public struct Column: Codable, Equatable {
-// swiftlint:enable line_length
+  // swiftlint:enable line_length
   public let min: UInt32
   public let max: UInt32
   public let width: Double

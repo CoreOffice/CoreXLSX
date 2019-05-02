@@ -10,31 +10,30 @@ import XCTest
 import XMLCoder
 
 private let parsed = SharedStrings(uniqueCount: 18, items: [
-  SharedStrings.Item(text: "Table 1", richText: nil),
-  SharedStrings.Item(text: "Item", richText: nil),
-  SharedStrings.Item(text: "Name", richText: nil),
-  SharedStrings.Item(text: "Amount", richText: nil),
-  SharedStrings.Item(text: "Name:", richText: nil),
-  SharedStrings.Item(text: "Subtotal:", richText: nil),
-  SharedStrings.Item(text: "Andy", richText: nil),
-  SharedStrings.Item(text: "Item 1", richText: nil),
-  SharedStrings.Item(text: "Item 2", richText: nil),
-  SharedStrings.Item(text: "Item 3", richText: nil),
-  SharedStrings.Item(text: "Item 4", richText: nil),
-  SharedStrings.Item(text: "Item 5", richText: nil),
-  SharedStrings.Item(text: "Chloe", richText: nil),
-  SharedStrings.Item(text: "Item 6", richText: nil),
-  SharedStrings.Item(text: "Item 7", richText: nil),
-  SharedStrings.Item(text: "Item 8", richText: nil),
-  SharedStrings.Item(text: "Item 9", richText: nil),
-  SharedStrings.Item(text: "Item 10", richText: nil),
+  SharedStrings.Item(text: "Table 1", richText: []),
+  SharedStrings.Item(text: "Item", richText: []),
+  SharedStrings.Item(text: "Name", richText: []),
+  SharedStrings.Item(text: "Amount", richText: []),
+  SharedStrings.Item(text: "Name:", richText: []),
+  SharedStrings.Item(text: "Subtotal:", richText: []),
+  SharedStrings.Item(text: "Andy", richText: []),
+  SharedStrings.Item(text: "Item 1", richText: []),
+  SharedStrings.Item(text: "Item 2", richText: []),
+  SharedStrings.Item(text: "Item 3", richText: []),
+  SharedStrings.Item(text: "Item 4", richText: []),
+  SharedStrings.Item(text: "Item 5", richText: []),
+  SharedStrings.Item(text: "Chloe", richText: []),
+  SharedStrings.Item(text: "Item 6", richText: []),
+  SharedStrings.Item(text: "Item 7", richText: []),
+  SharedStrings.Item(text: "Item 8", richText: []),
+  SharedStrings.Item(text: "Item 9", richText: []),
+  SharedStrings.Item(text: "Item 10", richText: []),
 ])
 
 private let columnC = ["Name", "Andy", "Andy", "Andy", "Andy", "Andy",
                        "Chloe", "Chloe", "Chloe", "Chloe", "Chloe"]
 
-private let spacePreserveXML =
-"""
+private let spacePreserveXML = """
 <sst uniqueCount="1">
   <si>
     <r>

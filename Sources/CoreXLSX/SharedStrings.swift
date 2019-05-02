@@ -9,10 +9,10 @@
 /// Attributes and nodes are documented in [Microsoft
 /// docs](https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table)
 public struct SharedStrings: Codable, Equatable {
-// swiftlint:enable line_length
+  // swiftlint:enable line_length
   public struct Item: Codable, Equatable {
     public let text: String?
-    public let richText: RichText?
+    public let richText: [RichText]
 
     enum CodingKeys: String, CodingKey {
       case text = "t"
