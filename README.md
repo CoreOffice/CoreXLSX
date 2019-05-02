@@ -93,7 +93,7 @@ generated original files, assuming the issue can still be reproduced this way.
 If the whole file can't be attached, try passing a sufficiently large value
 (between 10 and 20 usually works well) to `errorContextLength` argument of
 `XLSXFile` initializer. This will bundle the failing XML snippet with the debug
-description of thrown errors. Please also attach that full debug description if
+description of thrown errors. Please also attach the full debug description if
 possible when reporting issues.
 
 ## How does it work?
