@@ -50,6 +50,11 @@ public struct Relationship: Codable, Equatable {
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
       worksheet
       """
+    case chartsheet =
+      """
+      http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+      chartsheet
+      """
     case sharedStrings =
       """
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\

@@ -6,11 +6,10 @@
 //
 
 @testable import CoreXLSX
-import XMLCoder
 import XCTest
+import XMLCoder
 
-let namespaceXML =
-"""
+private let namespaceXML = """
 <?xml version="1.0" encoding="utf-8"?>
 <x:worksheet \
 xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
@@ -132,12 +131,12 @@ xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
 """.data(using: .utf8)!
 
 final class NamespacesTests: XCTestCase {
-    private let decoder = XMLDecoder()
+  private let decoder = XMLDecoder()
 
-    func testNamespaces() throws {
-      decoder.shouldProcessNamespaces = true
+  func testNamespaces() throws {
+    decoder.shouldProcessNamespaces = true
 
-      let worksheet = try decoder.decode(Worksheet.self, from: namespaceXML)
-      XCTAssertEqual(worksheet.data?.rows[0].cells.count, 36)
-    }
+    let worksheet = try decoder.decode(Worksheet.self, from: namespaceXML)
+    XCTAssertEqual(worksheet.data?.rows[0].cells.count, 36)
+  }
 }

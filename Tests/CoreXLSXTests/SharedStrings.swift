@@ -33,8 +33,7 @@ private let parsed = SharedStrings(uniqueCount: 18, items: [
 private let columnC = ["Name", "Andy", "Andy", "Andy", "Andy", "Andy",
                        "Chloe", "Chloe", "Chloe", "Chloe", "Chloe"]
 
-private let spacePreserveXML =
-"""
+private let spacePreserveXML = """
 <sst uniqueCount="1">
   <si>
     <r>
