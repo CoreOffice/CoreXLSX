@@ -158,11 +158,10 @@ $ brew update
 $ brew install carthage
 ```
 
-Inside of your `Cartfile`, add GitHub path to `CoreXLSX` `master` branch
-(Carthage support is not available in a stable release yet):
+Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
 
 ```ogdl
-github "MaxDesiatov/CoreXLSX" "master"
+github "MaxDesiatov/CoreXLSX" ~> 0.5
 ```
 
 Then, run the following command to build the framework:
@@ -172,7 +171,7 @@ $ carthage update
 ```
 
 Drag the built frameworks (including the subdependencies `XMLCoder` and
-`ZIPFoundation` into your Xcode project.
+`ZIPFoundation`) into your Xcode project.
 
 ## Contributing
 
