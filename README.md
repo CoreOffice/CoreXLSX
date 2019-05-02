@@ -162,7 +162,7 @@ Inside of your `Cartfile`, add GitHub path to `CoreXLSX` `master` branch
 (Carthage support is not available in a stable release yet):
 
 ```ogdl
-github "MaxDesiatov/CoreXLSX" "master"
+github "MaxDesiatov/CoreXLSX" ~> 0.5
 ```
 
 Then, run the following command to build the framework:
