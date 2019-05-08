@@ -1,8 +1,8 @@
 PODS:
-  - CoreXLSX (0.4.0):
-    - XMLCoder (~> 0.4.0)
+  - CoreXLSX (0.6.0):
+    - XMLCoder (~> 0.5.1)
     - ZIPFoundation (~> 0.9.9)
-  - XMLCoder (0.4.0)
+  - XMLCoder (0.5.1)
   - ZIPFoundation (0.9.9)
 
 DEPENDENCIES:
@@ -18,8 +18,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CoreXLSX: cce9234d85dcc6c36bdef8cf105d885cf14ac09f
-  XMLCoder: 7ab885954df4ccf4097ea90fa6a3abd08389ad8f
+  CoreXLSX: 4e7f3bc9ec1f22c8c59e2fc04111d9680ebe8d96
+  XMLCoder: 1b7ac2b8be0a2cb66ea2b62dbe6e03811c9f773e
   ZIPFoundation: 89df685c971926b0323087952320bdfee9f0b6ef
 
 PODFILE CHECKSUM: 4b59cda9563eaa9d39027ba3749963cf8b4676e7

@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		72F32EB9CBAEB64081D35612 /* Pods_CoreXLSXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */; };
 		8BE8494931C11C209B2F3944 /* Pods_CoreXLSXExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */; };
+		D17C48C12282CC4C003F30B5 /* categories.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D198296D2197595F00C6A761 /* categories.xlsx */; };
 		D1C96B7E21A7F46D00303975 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198296C2197595F00C6A761 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
@@ -241,6 +242,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -262,6 +264,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				D17C48C12282CC4C003F30B5 /* categories.xlsx in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
