@@ -1,4 +1,9 @@
-# 0.6.0 (April 18, 2019)
+# 0.6.1 (May 9, 2019)
+
+Bugfix release that adds `case externalLink` to `Relationship.SchemaType`
+improving .xlsx compatibility.
+
+# 0.6.0 (May 2, 2019)
 
 This is a bugfix release with changes to the model API that improve
 compatibility with files containing formulas and varied shared string formats.
