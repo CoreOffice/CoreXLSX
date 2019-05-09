@@ -16,7 +16,7 @@
 		D15021CB21A1C3DF00BFA4FC /* ZIPFoundation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D15021DF21A1CB0500BFA4FC /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CellReference.swift */; };
 		D15021E021A1CB0500BFA4FC /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ColumnReference.swift */; };
-		D15021E121A1CB0500BFA4FC /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
+		D15021E121A1CB0500BFA4FC /* XLSXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XLSXFile.swift */; };
 		D15021E221A1CB0500BFA4FC /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Relationships.swift */; };
 		D15021E321A1CB0500BFA4FC /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Worksheet.swift */; };
 		D15021E621A1CB5000BFA4FC /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021E421A1CB5000BFA4FC /* ZIPFoundation.framework */; };
@@ -25,14 +25,14 @@
 		D15021FA21A1D1A500BFA4FC /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021F821A1D1A500BFA4FC /* ZIPFoundation.framework */; };
 		D15021FB21A1D1DB00BFA4FC /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CellReference.swift */; };
 		D15021FC21A1D1DB00BFA4FC /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ColumnReference.swift */; };
-		D15021FD21A1D1DB00BFA4FC /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
+		D15021FD21A1D1DB00BFA4FC /* XLSXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XLSXFile.swift */; };
 		D15021FE21A1D1DB00BFA4FC /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Relationships.swift */; };
 		D15021FF21A1D1DB00BFA4FC /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Worksheet.swift */; };
 		D150220F21A1D95400BFA4FC /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D150220D21A1D95400BFA4FC /* XMLCoder.framework */; };
 		D150221021A1D95400BFA4FC /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D150220E21A1D95400BFA4FC /* ZIPFoundation.framework */; };
 		D150221121A1D97E00BFA4FC /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CellReference.swift */; };
 		D150221221A1D97E00BFA4FC /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ColumnReference.swift */; };
-		D150221321A1D97E00BFA4FC /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
+		D150221321A1D97E00BFA4FC /* XLSXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XLSXFile.swift */; };
 		D150221421A1D97E00BFA4FC /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Relationships.swift */; };
 		D150221521A1D97E00BFA4FC /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Worksheet.swift */; };
 		D1769CCC225F456A00521A47 /* Namespaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1769CCA225F456300521A47 /* Namespaces.swift */; };
@@ -56,6 +56,16 @@
 		D1BBD9D8223D3E0E00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9D3223D3D5C00B28C7B /* Styles.swift */; };
 		D1C96B8021A806A500303975 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
 		D1C96B8321A80EC000303975 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B8121A80E5900303975 /* Workbook.swift */; };
+		D1E3AC2322843B3800A3968E /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; };
+		D1E3AC2422843B3800A3968E /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; };
+		D1E3AC2622843B3800A3968E /* XMLCoder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1E3AC2722843B3800A3968E /* ZIPFoundation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1E3AC6322843B9500A3968E /* CorePPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3AC2E22843B8200A3968E /* CorePPTTests.swift */; };
+		D1E3AC6522843D1200A3968E /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3AC6422843D1200A3968E /* Presentation.swift */; };
+		D1E3AC6622843D2500A3968E /* PPTXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F83F5C2284327000BE75E2 /* PPTXFile.swift */; };
+		D1E3AC6A22844AF600A3968E /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; };
+		D1E3AC6B22844AF600A3968E /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; };
+		D1E3AC6C22844BAE00A3968E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
 		D1EB1B3421B151440043CD1E /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EB1B3321B151440043CD1E /* SharedStrings.swift */; };
 		D1EB9C6C21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
 		D1EB9C6D21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
@@ -66,7 +76,7 @@
 		D1FD864121A1F09E00B7F8D6 /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */; };
 		OBJ_62 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CellReference.swift */; };
 		OBJ_63 /* ColumnReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ColumnReference.swift */; };
-		OBJ_64 /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
+		OBJ_64 /* XLSXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XLSXFile.swift */; };
 		OBJ_65 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Relationships.swift */; };
 		OBJ_66 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Worksheet.swift */; };
 		OBJ_90 /* CellReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* CellReference.swift */; };
@@ -77,6 +87,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		D15021BE21A1C23700BFA4FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CoreXLSX::CoreXLSX";
+			remoteInfo = CoreXLSX;
+		};
+		D1E3AC1622843B3800A3968E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -94,6 +111,17 @@
 			files = (
 				D15021CA21A1C3DF00BFA4FC /* XMLCoder.framework in CopyFiles */,
 				D15021CB21A1C3DF00BFA4FC /* ZIPFoundation.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E3AC2522843B3800A3968E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1E3AC2622843B3800A3968E /* XMLCoder.framework in CopyFiles */,
+				D1E3AC2722843B3800A3968E /* ZIPFoundation.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,11 +157,18 @@
 		D1BBD9D3223D3D5C00B28C7B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D1C96B7F21A806A500303975 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
 		D1C96B8121A80E5900303975 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
+		D1E3ABFD22843A3400A3968E /* CorePPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CorePPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E3AC2B22843B3800A3968E /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E3AC2C22843B3800A3968E /* CoreXLSXTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoreXLSXTests copy-Info.plist"; path = "/Users/maxd/Documents/CoreXLSX/CoreXLSXTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		D1E3AC2E22843B8200A3968E /* CorePPTTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorePPTTests.swift; sourceTree = "<group>"; };
+		D1E3AC6422843D1200A3968E /* Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		D1E3AC6722844AE100A3968E /* CoreXLSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CoreXLSX.xcodeproj; sourceTree = "<group>"; };
 		D1EB1B3321B151440043CD1E /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
+		D1F83F5C2284327000BE75E2 /* PPTXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTXFile.swift; sourceTree = "<group>"; };
 		D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
 		OBJ_11 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
 		OBJ_12 /* ColumnReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnReference.swift; sourceTree = "<group>"; };
-		OBJ_13 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
+		OBJ_13 /* XLSXFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLSXFile.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		OBJ_18 /* CellReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReference.swift; sourceTree = "<group>"; };
@@ -193,6 +228,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1E3ABFA22843A3400A3968E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E3AC6A22844AF600A3968E /* XMLCoder.framework in Frameworks */,
+				D1E3AC6B22844AF600A3968E /* ZIPFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E3AC2222843B3800A3968E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				D1E3AC2322843B3800A3968E /* ZIPFoundation.framework in Frameworks */,
+				D1E3AC2422843B3800A3968E /* XMLCoder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -217,6 +270,7 @@
 		D15021C221A1C31800BFA4FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1E3AC6722844AE100A3968E /* CoreXLSX.xcodeproj */,
 				D15BA1B921A1EC6A00CB3C7B /* iOS */,
 				D15BA1BA21A1EC7C00CB3C7B /* watchOS */,
 				D15021E921A1CB7700BFA4FC /* macOS */,
@@ -273,11 +327,35 @@
 			path = Worksheet;
 			sourceTree = "<group>";
 		};
+		D1E3AC2D22843B8200A3968E /* CorePPTTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3AC2E22843B8200A3968E /* CorePPTTests.swift */,
+			);
+			name = CorePPTTests;
+			path = Tests/CorePPTTests;
+			sourceTree = "<group>";
+		};
+		D1E3AC6822844AE100A3968E /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1F83F5B2284327000BE75E2 /* CorePPT */ = {
+			isa = PBXGroup;
+			children = (
+				D1F83F5C2284327000BE75E2 /* PPTXFile.swift */,
+				D1E3AC6422843D1200A3968E /* Presentation.swift */,
+			);
+			name = CorePPT;
+			path = Sources/CorePPT;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* CoreXLSX */ = {
 			isa = PBXGroup;
 			children = (
 				D1A8190C21A9D107004FCA33 /* Worksheet */,
-				OBJ_13 /* CoreXLSX.swift */,
+				OBJ_13 /* XLSXFile.swift */,
 				OBJ_14 /* Relationships.swift */,
 				D1C96B7F21A806A500303975 /* Workbook.swift */,
 				D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */,
@@ -291,6 +369,7 @@
 		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D1E3AC2D22843B8200A3968E /* CorePPTTests */,
 				OBJ_17 /* CoreXLSXTests */,
 			);
 			name = Tests;
@@ -408,6 +487,7 @@
 				OBJ_24 /* Dependencies */,
 				OBJ_52 /* Products */,
 				D15021C221A1C31800BFA4FC /* Frameworks */,
+				D1E3AC2C22843B3800A3968E /* CoreXLSXTests copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -421,6 +501,8 @@
 				D15021D121A1CA7D00BFA4FC /* CoreXLSX.framework */,
 				D15021EF21A1D11900BFA4FC /* CoreXLSX.framework */,
 				D150220521A1D8DC00BFA4FC /* CoreXLSX.framework */,
+				D1E3ABFD22843A3400A3968E /* CorePPT.framework */,
+				D1E3AC2B22843B3800A3968E /* CoreXLSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -436,6 +518,7 @@
 		OBJ_9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D1F83F5B2284327000BE75E2 /* CorePPT */,
 				OBJ_10 /* CoreXLSX */,
 			);
 			name = Sources;
@@ -459,6 +542,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D150220021A1D8DC00BFA4FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E3ABF822843A3400A3968E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -557,12 +647,49 @@
 			productReference = D150220521A1D8DC00BFA4FC /* CoreXLSX.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D1E3ABFC22843A3400A3968E /* CorePPTmacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E3AC1222843A3400A3968E /* Build configuration list for PBXNativeTarget "CorePPTmacOS" */;
+			buildPhases = (
+				D1E3ABF822843A3400A3968E /* Headers */,
+				D1E3ABF922843A3400A3968E /* Sources */,
+				D1E3ABFA22843A3400A3968E /* Frameworks */,
+				D1E3ABFB22843A3400A3968E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CorePPTmacOS;
+			productName = CorePPT;
+			productReference = D1E3ABFD22843A3400A3968E /* CorePPT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D1E3AC1422843B3800A3968E /* CorePPTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E3AC2822843B3800A3968E /* Build configuration list for PBXNativeTarget "CorePPTTests" */;
+			buildPhases = (
+				D1E3AC1722843B3800A3968E /* Sources */,
+				D1E3AC2222843B3800A3968E /* Frameworks */,
+				D1E3AC2522843B3800A3968E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1E3AC1522843B3800A3968E /* PBXTargetDependency */,
+			);
+			name = CorePPTTests;
+			productName = CoreXLSXTests;
+			productReference = D1E3AC2B22843B3800A3968E /* CoreXLSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
 					D15021D021A1CA7D00BFA4FC = {
@@ -573,6 +700,10 @@
 					};
 					D150220421A1D8DC00BFA4FC = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					D1E3ABFC22843A3400A3968E = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -587,6 +718,12 @@
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_52 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D1E3AC6822844AE100A3968E /* Products */;
+					ProjectRef = D1E3AC6722844AE100A3968E /* CoreXLSX.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				"CoreXLSX::CoreXLSX" /* CoreXLSXmacOS */,
@@ -594,6 +731,8 @@
 				D15021D021A1CA7D00BFA4FC /* CoreXLSXtvOS */,
 				D15021EE21A1D11900BFA4FC /* CoreXLSXiOS */,
 				D150220421A1D8DC00BFA4FC /* CoreXLSXwatchOS */,
+				D1E3ABFC22843A3400A3968E /* CorePPTmacOS */,
+				D1E3AC1422843B3800A3968E /* CorePPTTests */,
 			);
 		};
 /* End PBXProject section */
@@ -614,6 +753,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D150220321A1D8DC00BFA4FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E3ABFB22843A3400A3968E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -648,7 +794,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBD9C7223D0E2F00B28C7B /* Styles.swift in Sources */,
-				D15021E121A1CB0500BFA4FC /* CoreXLSX.swift in Sources */,
+				D15021E121A1CB0500BFA4FC /* XLSXFile.swift in Sources */,
 				D1FD863F21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D15021DF21A1CB0500BFA4FC /* CellReference.swift in Sources */,
 				D1A8191221A9D4F7004FCA33 /* CellQueries.swift in Sources */,
@@ -666,7 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBD9C8223D0E2F00B28C7B /* Styles.swift in Sources */,
-				D15021FD21A1D1DB00BFA4FC /* CoreXLSX.swift in Sources */,
+				D15021FD21A1D1DB00BFA4FC /* XLSXFile.swift in Sources */,
 				D1FD864021A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D15021FB21A1D1DB00BFA4FC /* CellReference.swift in Sources */,
 				D1A8191321A9D4F8004FCA33 /* CellQueries.swift in Sources */,
@@ -684,7 +830,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBD9C9223D0E2F00B28C7B /* Styles.swift in Sources */,
-				D150221321A1D97E00BFA4FC /* CoreXLSX.swift in Sources */,
+				D150221321A1D97E00BFA4FC /* XLSXFile.swift in Sources */,
 				D1FD864121A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D150221121A1D97E00BFA4FC /* CellReference.swift in Sources */,
 				D1A8191421A9D4F8004FCA33 /* CellQueries.swift in Sources */,
@@ -694,6 +840,24 @@
 				D150221421A1D97E00BFA4FC /* Relationships.swift in Sources */,
 				D150221521A1D97E00BFA4FC /* Worksheet.swift in Sources */,
 				D1EB9C6E21A98FFE002F2254 /* Workbook.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E3ABF922843A3400A3968E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E3AC6522843D1200A3968E /* Presentation.swift in Sources */,
+				D1E3AC6C22844BAE00A3968E /* Path.swift in Sources */,
+				D1E3AC6622843D2500A3968E /* PPTXFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E3AC1722843B3800A3968E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				D1E3AC6322843B9500A3968E /* CorePPTTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,7 +872,7 @@
 				D1A8191121A9D4ED004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190B21A9D0EF004FCA33 /* Cell.swift in Sources */,
 				D1B4F8E0221C10AC00C53C42 /* Path.swift in Sources */,
-				OBJ_64 /* CoreXLSX.swift in Sources */,
+				OBJ_64 /* XLSXFile.swift in Sources */,
 				OBJ_65 /* Relationships.swift in Sources */,
 				OBJ_66 /* Worksheet.swift in Sources */,
 				D1C96B8021A806A500303975 /* Workbook.swift in Sources */,
@@ -735,6 +899,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D1E3AC1522843B3800A3968E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CoreXLSX::CoreXLSX" /* CoreXLSXmacOS */;
+			targetProxy = D1E3AC1622843B3800A3968E /* PBXContainerItemProxy */;
+		};
 		OBJ_98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CoreXLSX::CoreXLSX" /* CoreXLSXmacOS */;
@@ -1201,6 +1370,217 @@
 			};
 			name = Release;
 		};
+		D1E3AC0E22843A3400A3968E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CoreXLSX.xcodeproj/CorePPT_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreOffice.CorePPTmacOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = CorePPT;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1E3AC0F22843A3400A3968E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CoreXLSX.xcodeproj/CorePPT_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreOffice.CorePPTmacOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = CorePPT;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D1E3AC2922843B3800A3968E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoreXLSX.xcodeproj/CorePPTTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CoreXLSXTests;
+			};
+			name = Debug;
+		};
+		D1E3AC2A22843B3800A3968E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Package.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoreXLSX.xcodeproj/CorePPTTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CoreXLSXTests;
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1388,6 +1768,24 @@
 			buildConfigurations = (
 				D150220B21A1D8DC00BFA4FC /* Debug */,
 				D150220C21A1D8DC00BFA4FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E3AC1222843A3400A3968E /* Build configuration list for PBXNativeTarget "CorePPTmacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E3AC0E22843A3400A3968E /* Debug */,
+				D1E3AC0F22843A3400A3968E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E3AC2822843B3800A3968E /* Build configuration list for PBXNativeTarget "CorePPTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E3AC2922843B3800A3968E /* Debug */,
+				D1E3AC2A22843B3800A3968E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

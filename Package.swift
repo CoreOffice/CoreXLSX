@@ -19,6 +19,10 @@ let package = Package(
       name: "CoreXLSX",
       targets: ["CoreXLSX"]
     ),
+    .library(
+      name: "CorePPT",
+      targets: ["CorePPT"]
+    ),
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
@@ -37,9 +41,17 @@ let package = Package(
       name: "CoreXLSX",
       dependencies: ["XMLCoder", "ZIPFoundation"]
     ),
+    .target(
+      name: "CorePPT",
+      dependencies: ["XMLCoder", "ZIPFoundation"]
+    ),
     .testTarget(
       name: "CoreXLSXTests",
       dependencies: ["CoreXLSX"]
+    ),
+    .testTarget(
+      name: "CorePPTTests",
+      dependencies: ["CorePPT"]
     ),
   ]
 )

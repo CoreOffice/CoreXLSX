@@ -1,5 +1,5 @@
 //
-//  CoreXLSX.swift
+//  XLSXFile.swift
 //  CoreXLSX
 //
 //  Created by Max Desiatov on 27/10/2018.
