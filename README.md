@@ -161,7 +161,7 @@ $ brew install carthage
 Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
 
 ```ogdl
-github "MaxDesiatov/CoreXLSX" ~> 0.5
+github "MaxDesiatov/CoreXLSX" ~> 0.6.1
 ```
 
 Then, run the following command to build the framework:
