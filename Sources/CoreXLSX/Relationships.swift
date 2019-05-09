@@ -85,6 +85,11 @@ public struct Relationship: Codable, Equatable {
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
       custom-properties
       """
+    case externalLink =
+      """
+      http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+      externalLink
+      """
   }
 
   public let id: String
