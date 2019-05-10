@@ -8,7 +8,7 @@
 @testable import CoreXLSX
 import XCTest
 
-let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
+let currentWorkingPath = ProcessInfo.processInfo.environment["XL_TESTS_PATH"]!
 
 final class CoreXLSXTests: XCTestCase {
   private let sheetPath = "xl/worksheets/sheet1.xml"
