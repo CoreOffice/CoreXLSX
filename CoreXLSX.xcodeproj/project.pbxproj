@@ -45,10 +45,6 @@
 		D1A8191221A9D4F7004FCA33 /* CellQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8191021A9D4ED004FCA33 /* CellQueries.swift */; };
 		D1A8191321A9D4F8004FCA33 /* CellQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8191021A9D4ED004FCA33 /* CellQueries.swift */; };
 		D1A8191421A9D4F8004FCA33 /* CellQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8191021A9D4ED004FCA33 /* CellQueries.swift */; };
-		D1B4F8E0221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
-		D1B4F8E1221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
-		D1B4F8E2221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
-		D1B4F8E3221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
 		D1BBD9C6223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
 		D1BBD9C7223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
 		D1BBD9C8223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
@@ -66,6 +62,10 @@
 		D1E3AC6A22844AF600A3968E /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; };
 		D1E3AC6B22844AF600A3968E /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; };
 		D1E3AC6C22844BAE00A3968E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
+		D1E3AC6F22845B2C00A3968E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3AC6E22845B1800A3968E /* Path.swift */; };
+		D1E3AC7022845B2D00A3968E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3AC6E22845B1800A3968E /* Path.swift */; };
+		D1E3AC7122845B2E00A3968E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3AC6E22845B1800A3968E /* Path.swift */; };
+		D1E3AC7222845B2E00A3968E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3AC6E22845B1800A3968E /* Path.swift */; };
 		D1EB1B3421B151440043CD1E /* SharedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EB1B3321B151440043CD1E /* SharedStrings.swift */; };
 		D1EB9C6C21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
 		D1EB9C6D21A98FFE002F2254 /* Workbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C96B7F21A806A500303975 /* Workbook.swift */; };
@@ -163,6 +163,7 @@
 		D1E3AC2E22843B8200A3968E /* CorePPTTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorePPTTests.swift; sourceTree = "<group>"; };
 		D1E3AC6422843D1200A3968E /* Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
 		D1E3AC6722844AE100A3968E /* CoreXLSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CoreXLSX.xcodeproj; sourceTree = "<group>"; };
+		D1E3AC6E22845B1800A3968E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		D1EB1B3321B151440043CD1E /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
 		D1F83F5C2284327000BE75E2 /* PPTXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTXFile.swift; sourceTree = "<group>"; };
 		D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStrings.swift; sourceTree = "<group>"; };
@@ -344,6 +345,7 @@
 		D1F83F5B2284327000BE75E2 /* CorePPT */ = {
 			isa = PBXGroup;
 			children = (
+				D1B4F8DF221C10AC00C53C42 /* Path.swift */,
 				D1F83F5C2284327000BE75E2 /* PPTXFile.swift */,
 				D1E3AC6422843D1200A3968E /* Presentation.swift */,
 			);
@@ -355,12 +357,12 @@
 			isa = PBXGroup;
 			children = (
 				D1A8190C21A9D107004FCA33 /* Worksheet */,
-				OBJ_13 /* XLSXFile.swift */,
+				D1E3AC6E22845B1800A3968E /* Path.swift */,
 				OBJ_14 /* Relationships.swift */,
-				D1C96B7F21A806A500303975 /* Workbook.swift */,
 				D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */,
-				D1B4F8DF221C10AC00C53C42 /* Path.swift */,
 				D1BBD9C5223D0E2F00B28C7B /* Styles.swift */,
+				D1C96B7F21A806A500303975 /* Workbook.swift */,
+				OBJ_13 /* XLSXFile.swift */,
 			);
 			name = CoreXLSX;
 			path = Sources/CoreXLSX;
@@ -794,12 +796,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBD9C7223D0E2F00B28C7B /* Styles.swift in Sources */,
+				D1E3AC7022845B2D00A3968E /* Path.swift in Sources */,
 				D15021E121A1CB0500BFA4FC /* XLSXFile.swift in Sources */,
 				D1FD863F21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D15021DF21A1CB0500BFA4FC /* CellReference.swift in Sources */,
 				D1A8191221A9D4F7004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190D21A9D139004FCA33 /* Cell.swift in Sources */,
-				D1B4F8E1221C10AC00C53C42 /* Path.swift in Sources */,
 				D15021E021A1CB0500BFA4FC /* ColumnReference.swift in Sources */,
 				D15021E221A1CB0500BFA4FC /* Relationships.swift in Sources */,
 				D15021E321A1CB0500BFA4FC /* Worksheet.swift in Sources */,
@@ -812,12 +814,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBD9C8223D0E2F00B28C7B /* Styles.swift in Sources */,
+				D1E3AC7122845B2E00A3968E /* Path.swift in Sources */,
 				D15021FD21A1D1DB00BFA4FC /* XLSXFile.swift in Sources */,
 				D1FD864021A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D15021FB21A1D1DB00BFA4FC /* CellReference.swift in Sources */,
 				D1A8191321A9D4F8004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190E21A9D13B004FCA33 /* Cell.swift in Sources */,
-				D1B4F8E2221C10AC00C53C42 /* Path.swift in Sources */,
 				D15021FC21A1D1DB00BFA4FC /* ColumnReference.swift in Sources */,
 				D15021FE21A1D1DB00BFA4FC /* Relationships.swift in Sources */,
 				D15021FF21A1D1DB00BFA4FC /* Worksheet.swift in Sources */,
@@ -830,12 +832,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBD9C9223D0E2F00B28C7B /* Styles.swift in Sources */,
+				D1E3AC7222845B2E00A3968E /* Path.swift in Sources */,
 				D150221321A1D97E00BFA4FC /* XLSXFile.swift in Sources */,
 				D1FD864121A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				D150221121A1D97E00BFA4FC /* CellReference.swift in Sources */,
 				D1A8191421A9D4F8004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190F21A9D13B004FCA33 /* Cell.swift in Sources */,
-				D1B4F8E3221C10AC00C53C42 /* Path.swift in Sources */,
 				D150221221A1D97E00BFA4FC /* ColumnReference.swift in Sources */,
 				D150221421A1D97E00BFA4FC /* Relationships.swift in Sources */,
 				D150221521A1D97E00BFA4FC /* Worksheet.swift in Sources */,
@@ -866,12 +868,12 @@
 			buildActionMask = 0;
 			files = (
 				D1BBD9C6223D0E2F00B28C7B /* Styles.swift in Sources */,
+				D1E3AC6F22845B2C00A3968E /* Path.swift in Sources */,
 				OBJ_62 /* CellReference.swift in Sources */,
 				D1FD863E21A1F09E00B7F8D6 /* SharedStrings.swift in Sources */,
 				OBJ_63 /* ColumnReference.swift in Sources */,
 				D1A8191121A9D4ED004FCA33 /* CellQueries.swift in Sources */,
 				D1A8190B21A9D0EF004FCA33 /* Cell.swift in Sources */,
-				D1B4F8E0221C10AC00C53C42 /* Path.swift in Sources */,
 				OBJ_64 /* XLSXFile.swift in Sources */,
 				OBJ_65 /* Relationships.swift in Sources */,
 				OBJ_66 /* Worksheet.swift in Sources */,
