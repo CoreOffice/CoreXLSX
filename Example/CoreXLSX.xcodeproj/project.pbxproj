@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* ExcelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ExcelController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		72F32EB9CBAEB64081D35612 /* Pods_CoreXLSXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC8ED5DD7847E4B3DA64752 /* Pods_CoreXLSXTests.framework */; };
 		8BE8494931C11C209B2F3944 /* Pods_CoreXLSXExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */; };
+		D13A65E6228587CE002241E7 /* sample.pptx in Resources */ = {isa = PBXBuildFile; fileRef = D13A65E5228587CE002241E7 /* sample.pptx */; };
 		D17C48C12282CC4C003F30B5 /* categories.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D198296D2197595F00C6A761 /* categories.xlsx */; };
+		D1A2A12A2285854000E71D23 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2A1272285854000E71D23 /* Presentation.swift */; };
+		D1A2A12B2285854000E71D23 /* PPTXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2A1282285854000E71D23 /* PPTXFile.swift */; };
+		D1A2A12C2285854000E71D23 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2A1292285854000E71D23 /* Path.swift */; };
+		D1A2A130228585C700E71D23 /* PowerPointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2A12F228585C700E71D23 /* PowerPointController.swift */; };
 		D1C96B7E21A7F46D00303975 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198296C2197595F00C6A761 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +39,7 @@
 		607FACD01AFB9204008FA782 /* CoreXLSXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreXLSXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ExcelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -45,8 +50,13 @@
 		999E62C771CA59BF3E1DF2A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CA005AF46AE2EF05BA10BB0B /* Pods-CoreXLSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXTests/Pods-CoreXLSXTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA820D499A2925968F8F779B /* Pods-CoreXLSXExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreXLSXExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreXLSXExample/Pods-CoreXLSXExample.release.xcconfig"; sourceTree = "<group>"; };
+		D13A65E5228587CE002241E7 /* sample.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample.pptx; path = ../../Tests/CorePPTTests/sample.pptx; sourceTree = "<group>"; };
 		D198296C2197595F00C6A761 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		D198296D2197595F00C6A761 /* categories.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = categories.xlsx; sourceTree = "<group>"; };
+		D1A2A1272285854000E71D23 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		D1A2A1282285854000E71D23 /* PPTXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTXFile.swift; sourceTree = "<group>"; };
+		D1A2A1292285854000E71D23 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		D1A2A12F228585C700E71D23 /* PowerPointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerPointController.swift; sourceTree = "<group>"; };
 		D1BCEBD521944FA6000B550F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSXExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE826BAD89D91945EB1EAE81 /* CoreXLSX.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CoreXLSX.podspec; path = ../CoreXLSX.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -109,8 +119,10 @@
 		607FACD21AFB9204008FA782 /* Example for CoreXLSX */ = {
 			isa = PBXGroup;
 			children = (
+				D1A2A12E2285854E00E71D23 /* CorePPT */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD71AFB9204008FA782 /* ExcelController.swift */,
+				D1A2A12F228585C700E71D23 /* PowerPointController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -173,6 +185,17 @@
 			);
 			name = CoreXLSXTests;
 			path = ../../Tests/CoreXLSXTests;
+			sourceTree = "<group>";
+		};
+		D1A2A12E2285854E00E71D23 /* CorePPT */ = {
+			isa = PBXGroup;
+			children = (
+				D13A65E5228587CE002241E7 /* sample.pptx */,
+				D1A2A1292285854000E71D23 /* Path.swift */,
+				D1A2A1282285854000E71D23 /* PPTXFile.swift */,
+				D1A2A1272285854000E71D23 /* Presentation.swift */,
+			);
+			name = CorePPT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +288,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				D17C48C12282CC4C003F30B5 /* categories.xlsx in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				D13A65E6228587CE002241E7 /* sample.pptx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +367,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ExcelController.swift in Sources */,
+				D1A2A12B2285854000E71D23 /* PPTXFile.swift in Sources */,
+				D1A2A130228585C700E71D23 /* PowerPointController.swift in Sources */,
+				D1A2A12A2285854000E71D23 /* Presentation.swift in Sources */,
+				D1A2A12C2285854000E71D23 /* Path.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

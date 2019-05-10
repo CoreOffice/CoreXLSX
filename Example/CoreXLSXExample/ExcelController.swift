@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ExcelController.swift
 //  CoreXLSX
 //
 //  Created by Max Desiatov on 11/07/2018.
@@ -9,7 +9,7 @@
 import CoreXLSX
 import UIKit
 
-class ViewController: UIViewController {
+class ExcelController: UIViewController {
   @IBOutlet var label: UILabel!
 
   override func viewDidLoad() {
