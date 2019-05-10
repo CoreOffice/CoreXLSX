@@ -53,9 +53,9 @@
 		D13A65E5228587CE002241E7 /* sample.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample.pptx; path = ../../Tests/CorePPTTests/sample.pptx; sourceTree = "<group>"; };
 		D198296C2197595F00C6A761 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		D198296D2197595F00C6A761 /* categories.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = categories.xlsx; sourceTree = "<group>"; };
-		D1A2A1272285854000E71D23 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
-		D1A2A1282285854000E71D23 /* PPTXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTXFile.swift; sourceTree = "<group>"; };
-		D1A2A1292285854000E71D23 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		D1A2A1272285854000E71D23 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presentation.swift; path = ../../Sources/CorePPT/Presentation.swift; sourceTree = "<group>"; };
+		D1A2A1282285854000E71D23 /* PPTXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPTXFile.swift; path = ../../Sources/CorePPT/PPTXFile.swift; sourceTree = "<group>"; };
+		D1A2A1292285854000E71D23 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Path.swift; path = ../../Sources/CorePPT/Path.swift; sourceTree = "<group>"; };
 		D1A2A12F228585C700E71D23 /* PowerPointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerPointController.swift; sourceTree = "<group>"; };
 		D1BCEBD521944FA6000B550F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		DA10B2D7BF73384FAC211C14 /* Pods_CoreXLSXExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreXLSXExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
