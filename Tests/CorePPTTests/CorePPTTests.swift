@@ -8,7 +8,7 @@
 @testable import CorePPT
 import XCTest
 
-let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
+let currentWorkingPath = ProcessInfo.processInfo.environment["PPT_TESTS_PATH"]!
 
 class CorePPTTests: XCTestCase {
   func testPublicAPI() throws {

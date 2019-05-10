@@ -57,7 +57,9 @@ jobs:
       # SwiftPM test run works only with Xcode 10.2 and Swift 5.0
       # due to SwiftPM 4.2 not supporting deployment targets, which are required
       # by ZIPFoundation dependency
-      - TESTS_PATH=$PWD/Tests/CoreXLSXTests swift test
+      - >
+        PPT_TESTS_PATH=$PWD/Tests/CorePPTTests 
+        XL_TESTS_PATH=$PWD/Tests/CoreXLSXTests swift test
       - carthage bootstrap
       - >
         xcodebuild build -scheme CoreXLSXiOS

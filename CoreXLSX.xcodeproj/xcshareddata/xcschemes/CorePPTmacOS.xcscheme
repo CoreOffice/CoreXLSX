@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D1E3ABFC22843A3400A3968E"
-               BuildableName = "CorePPTmacOS.framework"
+               BuildableName = "CorePPT.framework"
                BlueprintName = "CorePPTmacOS"
                ReferencedContainer = "container:CoreXLSX.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1E3ABFC22843A3400A3968E"
-            BuildableName = "CorePPTmacOS.framework"
+            BuildableName = "CorePPT.framework"
             BlueprintName = "CorePPTmacOS"
             ReferencedContainer = "container:CoreXLSX.xcodeproj">
          </BuildableReference>
@@ -65,14 +65,14 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1E3ABFC22843A3400A3968E"
-            BuildableName = "CorePPTmacOS.framework"
+            BuildableName = "CorePPT.framework"
             BlueprintName = "CorePPTmacOS"
             ReferencedContainer = "container:CoreXLSX.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "TESTS_PATH"
+            key = "PPT_TESTS_PATH"
             value = "${SRCROOT}/Tests/CorePPTTests"
             isEnabled = "YES">
          </EnvironmentVariable>
@@ -90,7 +90,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1E3ABFC22843A3400A3968E"
-            BuildableName = "CorePPTmacOS.framework"
+            BuildableName = "CorePPT.framework"
             BlueprintName = "CorePPTmacOS"
             ReferencedContainer = "container:CoreXLSX.xcodeproj">
          </BuildableReference>
