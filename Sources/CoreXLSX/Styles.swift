@@ -204,6 +204,8 @@ public struct Format: Codable, Equatable {
   }
 
   public let numberFormatId: Int
+  public let borderId: Int?
+  public let fillId: Int?
   public let fontId: Int
   public let applyNumberFormat: Bool
   public let applyFont: Bool
@@ -215,6 +217,8 @@ public struct Format: Codable, Equatable {
 
   enum CodingKeys: String, CodingKey {
     case numberFormatId = "numFmtId"
+    case borderId
+    case fillId
     case fontId
     case applyNumberFormat
     case applyFont
