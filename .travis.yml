@@ -39,7 +39,6 @@ jobs:
     env: 
       - IOS_DEVICE='platform=iOS Simulator,OS=12.2,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
-      - TESTS_PATH=$PWD/Tests/CoreXLSXTests
       - CODECOV_JOB=true
     script:
       - ./test_xcodebuild.sh

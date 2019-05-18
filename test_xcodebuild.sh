@@ -3,12 +3,12 @@
 carthage bootstrap
 set -o pipefail && xcodebuild build -scheme CoreXLSXiOS \
   -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
-set -o pipefail && xcodebuild build -scheme CoreXSLXtvOS \
+set -o pipefail && xcodebuild build -scheme CoreXLSXtvOS \
   -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
 
 if [ -n "$CODECOV_JOB" ]; then
   set -o pipefail && xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX \
-    -sdk macosx | xcpretty && \
+    -sdk macosx | xcpretty
   bash <(curl -s https://codecov.io/bash)
 else 
   set -o pipefail && xcodebuild test -scheme CoreXLSX \
