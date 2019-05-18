@@ -32,16 +32,7 @@ jobs:
       - IOS_DEVICE='platform=iOS Simulator,OS=12.0,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
     script:
-      - carthage bootstrap
-      - >
-        xcodebuild build -scheme CoreXLSXiOS \
-        -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
-      - >
-        xcodebuild build -scheme CoreXSLXtvOS
-        -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
-      - >
-        xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX
-        -sdk macosx | xcpretty
+      - ./ci.sh
   - <<: *test
     osx_image: xcode10.1
     env: 
@@ -52,19 +43,8 @@ jobs:
     env: 
       - IOS_DEVICE='platform=iOS Simulator,OS=12.2,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
-    script:
-      # SwiftPM test run works only with Xcode 10.2 and Swift 5.0
-      - TESTS_PATH=$PWD/Tests/CoreXLSXTests swift test
-      - carthage bootstrap
-      - >
-        xcodebuild build -scheme CoreXLSXiOS
-        -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
-      - >
-        xcodebuild build -scheme CoreXSLXtvOS
-        -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
-      - >
-        xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX
-        -sdk macosx | xcpretty
+      - TESTS_PATH=$PWD/Tests/CoreXLSXTests
+      - CODECOV_JOB=true
     after_success:
     - bash <(curl -s https://codecov.io/bash)
     before_deploy:
@@ -80,6 +60,3 @@ jobs:
       on:
         repo: MaxDesiatov/CoreXLSX
         tags: true
-
-script:
-# - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/
