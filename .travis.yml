@@ -14,25 +14,17 @@ jobs:
   - stage: lint
     osx_image: xcode10.2
     language: swift
-    before_install:
-      - brew update
-      - brew install swiftformat
-      - brew outdated swiftlint || brew upgrade swiftlint
-      - pod repo update
     script:
-      - swiftformat --lint --verbose .
-      - swiftlint
-      - pod lib lint --verbose
+      - ./lint.sh
   - &test
     stage: test
     osx_image: xcode10
     language: swift
-    install: skip
     env: 
       - IOS_DEVICE='platform=iOS Simulator,OS=12.0,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
     script:
-      - ./ci.sh
+      - ./test_xcodebuild.sh
   - <<: *test
     osx_image: xcode10.1
     env: 
@@ -40,13 +32,17 @@ jobs:
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
   - <<: *test
     osx_image: xcode10.2
+    script:
+      - ./test_swiftpm.sh
+  - <<: *test
+    osx_image: xcode10.2
     env: 
       - IOS_DEVICE='platform=iOS Simulator,OS=12.2,name=iPhone SE'
       - TVOS_DEVICE='platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
       - TESTS_PATH=$PWD/Tests/CoreXLSXTests
       - CODECOV_JOB=true
-    after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    script:
+      - ./test_xcodebuild.sh
     before_deploy:
     - brew outdated carthage || brew upgrade carthage
     - carthage build --no-skip-current
