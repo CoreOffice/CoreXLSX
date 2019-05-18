@@ -33,22 +33,6 @@ jobs:
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
       CODECOV_JOB: 'true'
       CODECOV_TOKEN: $(codecovToken)
-#   - task: Xcode@5
-#     inputs:
-#       actions: test
-#       scheme: CoreXLSXiOS
-#       sdk: iphonesimulator
-#       destinationSimulators: 'iPhone SE,OS=12.0'
-#       xcodeVersion: 'specifyPath'
-#       xcodeDeveloperDir: /Applications/Xcode_10.app/Contents/Developer
-#   - task: Xcode@5
-#     inputs:
-#       actions: test
-#       scheme: CoreXLSXtvOS
-#       sdk: appletvsimulator
-#       destinationSimulators: 'Apple TV 4K,OS=12.0'
-#       xcodeVersion: 'specifyPath'
-#       xcodeDeveloperDir: /Applications/Xcode_10.app/Contents/Developer
 - job: test_swiftpm
   pool:
     vmImage: 'macos-latest'
