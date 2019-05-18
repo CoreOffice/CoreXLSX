@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
      
 carthage bootstrap
 set -o pipefail && xcodebuild build -scheme CoreXLSXiOS \
