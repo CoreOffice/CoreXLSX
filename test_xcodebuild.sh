@@ -2,6 +2,7 @@
 
 sudo xcode-select --switch /Applications/$1.app/Contents/Developer
 
+xcodebuild -version
 carthage bootstrap
 set -o pipefail && xcodebuild build -scheme CoreXLSXiOS \
   -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
