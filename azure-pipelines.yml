@@ -1,14 +1,15 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'macos-latest'
-
 jobs:
 - job: lint
+  pool:
+    vmImage: 'macos-latest'
   steps:
   - bash: ./lint.sh
 - job: test_xcodebuild_10.0
+  pool:
+    vmImage: 'macos-latest'
   steps:
   - bash: ./test_xcodebuild.sh Xcode_10
     env:
