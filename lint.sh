@@ -1,8 +1,7 @@
 #!/bin/bash
 
 brew update
-brew install swiftformat
-brew outdated swiftlint || brew upgrade swiftlint
+brew install swiftformat swiftlint
 pod repo update
 
 swiftformat --lint --verbose .
