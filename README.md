@@ -109,7 +109,7 @@ here](https://desiatov.com/swift-codable-xlsx/).
 
 - Xcode 10.0 or later
 - Swift 4.2 or later
-- iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later
+- iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later deployment targets
 
 ## Installation
 
