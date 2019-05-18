@@ -2,7 +2,7 @@
 
 ## Excel spreadsheet (XLSX) format parser written in pure Swift
 
-[![CI Status](https://img.shields.io/travis/MaxDesiatov/CoreXLSX/master.svg?style=flat)](https://travis-ci.org/MaxDesiatov/CoreXLSX)
+[![Build Status](https://dev.azure.com/max0484/max/_apis/build/status/MaxDesiatov.CoreXLSX?branchName=master)](https://dev.azure.com/max0484/max/_build/latest?definitionId=2&branchName=master)
 [![Version](https://img.shields.io/cocoapods/v/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![License](https://img.shields.io/cocoapods/l/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![Platform](https://img.shields.io/cocoapods/p/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
