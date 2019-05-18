@@ -32,6 +32,7 @@ jobs:
       IOS_DEVICE: 'platform=iOS Simulator,OS=12.2,name=iPhone SE'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
       CODECOV_JOB: 'true'
+      CODECOV_TOKEN: $(codecovToken)
 #   - task: Xcode@5
 #     inputs:
 #       actions: test
