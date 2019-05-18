@@ -7,6 +7,11 @@ jobs:
     vmImage: 'macos-latest'
   steps:
   - bash: ./lint.sh
+- job: pod
+  pool:
+    vmImage: 'macos-latest'
+  steps:
+  - bash: ./pod.sh
 - job: test_xcodebuild_10_0
   pool:
     vmImage: 'macos-latest'
