@@ -38,5 +38,3 @@ jobs:
     vmImage: 'macos-latest'
   steps:
   - script: ./test_swiftpm.sh
-
-
