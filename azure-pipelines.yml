@@ -27,7 +27,7 @@ jobs:
   pool:
     vmImage: 'macos-latest'
   steps:
-  - bash: ./test_xcodebuild.sh Xcode_10.1
+  - bash: ./test_xcodebuild.sh Xcode_10.2.1
     env:
       IOS_DEVICE: 'platform=iOS Simulator,OS=12.2,name=iPhone SE'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
