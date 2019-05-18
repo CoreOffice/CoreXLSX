@@ -1,0 +1,50 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'macos-latest'
+
+jobs:
+- job: lint
+  steps:
+  - bash: ./lint.sh
+- job: test_xcodebuild_10.0
+  steps:
+  - bash: ./test_xcodebuild.sh Xcode_10
+    env:
+      IOS_DEVICE: 'platform=iOS Simulator,OS=12.0,name=iPhone SE'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
+- job: test_xcodebuild_10.1
+  steps:
+  - bash: ./test_xcodebuild.sh Xcode_10.1
+    env:
+      IOS_DEVICE: 'platform=iOS Simulator,OS=12.1,name=iPhone SE'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
+- job: test_xcodebuild_10.2
+  steps:
+  - bash: ./test_xcodebuild.sh Xcode_10.1
+    env:
+      IOS_DEVICE: 'platform=iOS Simulator,OS=12.2,name=iPhone SE'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
+      CODECOV_JOB: 'true'
+#   - task: Xcode@5
+#     inputs:
+#       actions: test
+#       scheme: CoreXLSXiOS
+#       sdk: iphonesimulator
+#       destinationSimulators: 'iPhone SE,OS=12.0'
+#       xcodeVersion: 'specifyPath'
+#       xcodeDeveloperDir: /Applications/Xcode_10.app/Contents/Developer
+#   - task: Xcode@5
+#     inputs:
+#       actions: test
+#       scheme: CoreXLSXtvOS
+#       sdk: appletvsimulator
+#       destinationSimulators: 'Apple TV 4K,OS=12.0'
+#       xcodeVersion: 'specifyPath'
+#       xcodeDeveloperDir: /Applications/Xcode_10.app/Contents/Developer
+- job: test_swiftpm
+  steps:
+  - script: ./test_swiftpm.sh
+
+
