@@ -7,7 +7,7 @@ jobs:
     vmImage: 'macos-latest'
   steps:
   - bash: ./lint.sh
-- job: test_xcodebuild_10.0
+- job: test_xcodebuild_10_0
   pool:
     vmImage: 'macos-latest'
   steps:
@@ -15,13 +15,13 @@ jobs:
     env:
       IOS_DEVICE: 'platform=iOS Simulator,OS=12.0,name=iPhone SE'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
-- job: test_xcodebuild_10.1
+- job: test_xcodebuild_10_1
   steps:
   - bash: ./test_xcodebuild.sh Xcode_10.1
     env:
       IOS_DEVICE: 'platform=iOS Simulator,OS=12.1,name=iPhone SE'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
-- job: test_xcodebuild_10.2
+- job: test_xcodebuild_10_2
   steps:
   - bash: ./test_xcodebuild.sh Xcode_10.1
     env:
