@@ -301,17 +301,17 @@
 		OBJ_17 /* CoreXLSXTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1769CCA225F456300521A47 /* Namespaces.swift */,
+				D1B6A2C32297F0F3005B8A6E /* Border.swift */,
 				OBJ_18 /* CellReference.swift */,
 				OBJ_19 /* CoreXLSX.swift */,
+				D12211DB227B555600888BCB /* Formula.swift */,
+				D1769CCA225F456300521A47 /* Namespaces.swift */,
 				OBJ_20 /* Relationships.swift */,
-				OBJ_21 /* XCTestManifests.swift */,
-				D1C96B8121A80E5900303975 /* Workbook.swift */,
-				D1A8190821A9CB89004FCA33 /* Worksheet.swift */,
 				D1EB1B3321B151440043CD1E /* SharedStrings.swift */,
 				D1BBD9D3223D3D5C00B28C7B /* Styles.swift */,
-				D12211DB227B555600888BCB /* Formula.swift */,
-				D1B6A2C32297F0F3005B8A6E /* Border.swift */,
+				D1C96B8121A80E5900303975 /* Workbook.swift */,
+				D1A8190821A9CB89004FCA33 /* Worksheet.swift */,
+				OBJ_21 /* XCTestManifests.swift */,
 			);
 			name = CoreXLSXTests;
 			path = Tests/CoreXLSXTests;
