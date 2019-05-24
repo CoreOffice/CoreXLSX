@@ -5,7 +5,7 @@
 //  Created by Max Desiatov on 24/05/2019.
 //
 
-import CoreXLSX
+@testable import CoreXLSX
 import XCTest
 @testable import XMLCoder
 
@@ -19,6 +19,6 @@ final class BorderTest: XCTestCase {
   func testSingleEmpty() throws {
     let result = try XMLDecoder().decode(Borders.self, from: xml)
     XCTAssertEqual(result.count, 1)
-    XCTAssertEqual(result.items[0], nil)
+    XCTAssertEqual(result.items[0], Border())
   }
 }
