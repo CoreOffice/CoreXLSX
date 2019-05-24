@@ -152,7 +152,7 @@ public struct PatternFill: Codable, Equatable {
 }
 
 public struct Borders: Codable, Equatable {
-  public let items: [Border]
+  public let items: [Border?]
   public let count: Int
 
   enum CodingKeys: String, CodingKey {

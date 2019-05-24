@@ -49,6 +49,7 @@
 		D1B4F8E1221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
 		D1B4F8E2221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
 		D1B4F8E3221C10AC00C53C42 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4F8DF221C10AC00C53C42 /* Path.swift */; };
+		D1B6A2C42297F0F3005B8A6E /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6A2C32297F0F3005B8A6E /* Border.swift */; };
 		D1BBD9C6223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
 		D1BBD9C7223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
 		D1BBD9C8223D0E2F00B28C7B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBD9C5223D0E2F00B28C7B /* Styles.swift */; };
@@ -125,6 +126,7 @@
 		D1A8190A21A9D0EF004FCA33 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		D1A8191021A9D4ED004FCA33 /* CellQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellQueries.swift; sourceTree = "<group>"; };
 		D1B4F8DF221C10AC00C53C42 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		D1B6A2C32297F0F3005B8A6E /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		D1BBD9C5223D0E2F00B28C7B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D1BBD9D3223D3D5C00B28C7B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D1C96B7F21A806A500303975 /* Workbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workbook.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				D1EB1B3321B151440043CD1E /* SharedStrings.swift */,
 				D1BBD9D3223D3D5C00B28C7B /* Styles.swift */,
 				D12211DB227B555600888BCB /* Formula.swift */,
+				D1B6A2C32297F0F3005B8A6E /* Border.swift */,
 			);
 			name = CoreXLSXTests;
 			path = Tests/CoreXLSXTests;
@@ -720,6 +723,7 @@
 			buildActionMask = 0;
 			files = (
 				D1C96B8321A80EC000303975 /* Workbook.swift in Sources */,
+				D1B6A2C42297F0F3005B8A6E /* Border.swift in Sources */,
 				D1769CCC225F456A00521A47 /* Namespaces.swift in Sources */,
 				OBJ_90 /* CellReference.swift in Sources */,
 				D1EB1B3421B151440043CD1E /* SharedStrings.swift in Sources */,
