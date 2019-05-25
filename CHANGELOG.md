@@ -1,3 +1,32 @@
+# 0.7.0 (May 25, 2019)
+
+Bugfix release that improves compatibility with different spreadsheet types.
+
+Thanks to [@grin](https://github.com/grin) for reporting and fixing issues in 
+this release.
+
+## Breaking changes
+
+All properties on `struct Format` except `fontId` and `numberFormatId` are
+now optional.
+
+## Additions
+
+New `borderId` and `fillId` properties on `struct Format`.
+
+## Fixed bugs
+
+- Can't get cell string [\#58](https://github.com/MaxDesiatov/CoreXLSX/issues/58)
+- Can't load basic spreadsheets created in Google Docs [\#64](https://github.com/MaxDesiatov/CoreXLSX/issues/64)
+- `fillId` and `borderId` attributes missing from CoreXLSX.Format [\#65](https://github.com/MaxDesiatov/CoreXLSX/issues/65)
+
+## Merged pull requests
+
+- Fix decoding of Borders model type [\#69](https://github.com/MaxDesiatov/CoreXLSX/pull/69) ([MaxDesiatov](https://github.com/MaxDesiatov))
+- Add fail flag to scripts [\#68](https://github.com/MaxDesiatov/CoreXLSX/pull/68) ([hodovani](https://github.com/hodovani))
+- Move from Travis to Azure Pipelines [\#67](https://github.com/MaxDesiatov/CoreXLSX/pull/67) ([MaxDesiatov](https://github.com/MaxDesiatov))
+- Add missing attributes [\#66](https://github.com/MaxDesiatov/CoreXLSX/pull/66) ([grin](https://github.com/grin))
+
 # 0.6.1 (May 9, 2019)
 
 Bugfix release that adds `case externalLink` to `Relationship.SchemaType`
@@ -93,7 +122,6 @@ couldn't find a good deprecation path.
 cells with shared string value. Quite frequently those strings are
 unavailable and are only referenced in the original model types you get with
 `parseWorksheet`.
-
 
 * Previously when addressing cells and columns you had to use a stringly-typed
 API. It was also not very convenient for specifying a range of columns. This

@@ -241,6 +241,7 @@ public struct CellFormats: Codable, Equatable {
   }
 }
 
+/// [docs](http://www.datypic.com/sc/ooxml/t-ssml_CT_Xf.html)
 public struct Format: Codable, Equatable {
   public struct Alignment: Codable, Equatable {
     public let vertical: String?
