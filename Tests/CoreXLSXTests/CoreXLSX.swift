@@ -13,6 +13,38 @@ let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
 final class CoreXLSXTests: XCTestCase {
   private let sheetPath = "xl/worksheets/sheet1.xml"
 
+  func testBlank() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/Blank.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let styles = try file.parseStyles()
+
+    XCTAssertEqual(styles.borders?.count, 1)
+    XCTAssertEqual(styles.borders?.items.count, 1)
+
+    let ws = try file.parseWorksheet(at: "xl/worksheets/sheet1.xml")
+    XCTAssertNil(ws.data)
+  }
+
+  func testHelloWorld() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/HelloWorld.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let styles = try file.parseStyles()
+
+    XCTAssertEqual(styles.borders?.count, 1)
+    XCTAssertEqual(styles.borders?.items.count, 1)
+
+    let ws = try file.parseWorksheet(at: "xl/worksheets/sheet1.xml")
+    XCTAssertEqual(ws.data?.rows.count, 1)
+  }
+
   func testPublicAPI() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {

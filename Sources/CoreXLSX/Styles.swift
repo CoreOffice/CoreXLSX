@@ -65,6 +65,18 @@ public struct Fonts: Codable, Equatable {
     case items = "font"
     case count
   }
+
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    count = try container.decode(Int.self, forKey: .count)
+    items = try container.decode([Font?].self, forKey: .items)
+      .map { $0 ?? Font() }
+  }
+
+  init(items: [Font], count: Int) {
+    self.items = items
+    self.count = count
+  }
 }
 
 public struct Font: Codable, Equatable {
@@ -122,6 +134,22 @@ public struct Font: Codable, Equatable {
     case bold = "b"
     case italic = "i"
     case strike
+  }
+
+  init(
+    size: Size? = nil,
+    color: Color? = nil,
+    name: Name? = nil,
+    bold: Bold? = nil,
+    italic: Italic? = nil,
+    strike: Strike? = nil
+  ) {
+    self.size = size
+    self.color = color
+    self.name = name
+    self.bold = bold
+    self.italic = italic
+    self.strike = strike
   }
 }
 
@@ -224,13 +252,13 @@ public struct Format: Codable, Equatable {
   public let borderId: Int?
   public let fillId: Int?
   public let fontId: Int
-  public let applyNumberFormat: Bool
-  public let applyFont: Bool
-  public let applyFill: Bool
-  public let applyBorder: Bool
-  public let applyAlignment: Bool
-  public let applyProtection: Bool
-  public let alignment: Alignment
+  public let applyNumberFormat: Bool?
+  public let applyFont: Bool?
+  public let applyFill: Bool?
+  public let applyBorder: Bool?
+  public let applyAlignment: Bool?
+  public let applyProtection: Bool?
+  public let alignment: Alignment?
 
   enum CodingKeys: String, CodingKey {
     case numberFormatId = "numFmtId"
