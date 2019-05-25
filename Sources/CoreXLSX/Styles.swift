@@ -159,6 +159,13 @@ public struct Borders: Codable, Equatable {
     case items = "border"
     case count
   }
+
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    count = try container.decode(Int.self, forKey: .count)
+    items = try container.decode([Border?].self, forKey: .items)
+      .map { $0 ?? Border() }
+  }
 }
 
 public struct Border: Codable, Equatable {
@@ -174,6 +181,16 @@ public struct Border: Codable, Equatable {
   public let diagonal: Value?
   public let horizontal: Value?
   public let vertical: Value?
+
+  init() {
+    left = nil
+    right = nil
+    top = nil
+    bottom = nil
+    diagonal = nil
+    horizontal = nil
+    vertical = nil
+  }
 }
 
 public struct CellStyleFormats: Codable, Equatable {
