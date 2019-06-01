@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82AAB1C822A154A800C30F99 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AAB1C722A154A800C30F99 /* Comments.swift */; };
+		82AAB1CB22A1A16400C30F99 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AAB1C922A19EA700C30F99 /* Comments.swift */; };
 		D12211DC227B555600888BCB /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12211DB227B555600888BCB /* Formula.swift */; };
 		D15021C521A1C31800BFA4FC /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C321A1C31800BFA4FC /* ZIPFoundation.framework */; };
 		D15021C621A1C31800BFA4FC /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15021C421A1C31800BFA4FC /* XMLCoder.framework */; };
@@ -101,6 +103,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		82AAB1C722A154A800C30F99 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		82AAB1C922A19EA700C30F99 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		"CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreXLSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoreXLSX::CoreXLSXTests::Product" /* CoreXLSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CoreXLSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12211DB227B555600888BCB /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 				D1FD863D21A1F09E00B7F8D6 /* SharedStrings.swift */,
 				D1B4F8DF221C10AC00C53C42 /* Path.swift */,
 				D1BBD9C5223D0E2F00B28C7B /* Styles.swift */,
+				82AAB1C722A154A800C30F99 /* Comments.swift */,
 			);
 			name = CoreXLSX;
 			path = Sources/CoreXLSX;
@@ -312,6 +317,7 @@
 				D1C96B8121A80E5900303975 /* Workbook.swift */,
 				D1A8190821A9CB89004FCA33 /* Worksheet.swift */,
 				OBJ_21 /* XCTestManifests.swift */,
+				82AAB1C922A19EA700C30F99 /* Comments.swift */,
 			);
 			name = CoreXLSXTests;
 			path = Tests/CoreXLSXTests;
@@ -715,6 +721,7 @@
 				OBJ_65 /* Relationships.swift in Sources */,
 				OBJ_66 /* Worksheet.swift in Sources */,
 				D1C96B8021A806A500303975 /* Workbook.swift in Sources */,
+				82AAB1C822A154A800C30F99 /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +740,7 @@
 				OBJ_92 /* Relationships.swift in Sources */,
 				D12211DC227B555600888BCB /* Formula.swift in Sources */,
 				OBJ_93 /* XCTestManifests.swift in Sources */,
+				82AAB1CB22A1A16400C30F99 /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

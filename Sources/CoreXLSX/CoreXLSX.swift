@@ -15,6 +15,7 @@ public typealias XLSXReaderError = CoreXLSXError
 public enum CoreXLSXError: Error {
   case archiveEntryNotFound
   case invalidCellReference
+  case unsupportedWorksheetPath
 }
 
 public struct XLSXFile {
@@ -103,6 +104,28 @@ public struct XLSXFile {
     decoder.keyDecodingStrategy = .useDefaultKeys
 
     return try parseEntry("xl/sharedStrings.xml", SharedStrings.self)
+  }
+
+  private func buildCommentsPath(forWorksheet path: String) throws -> String {
+    let pattern = "xl\\/worksheets\\/sheet(\\d+)[.]xml"
+    let regex = try NSRegularExpression(pattern: pattern, options: [])
+    let range = NSRange(location: 0, length: path.utf16.count)
+
+    if let match = regex.firstMatch(in: path, options: [], range: range),
+      let worksheetIdRange = Range(match.range(at: 1), in: path) {
+      let worksheetId = path[worksheetIdRange]
+      return "xl/comments\(worksheetId).xml"
+    }
+
+    throw CoreXLSXError.unsupportedWorksheetPath
+  }
+
+  public func parseComments(forWorksheet path: String) throws -> Comments {
+    let commentsPath = try buildCommentsPath(forWorksheet: path)
+
+    decoder.keyDecodingStrategy = .useDefaultKeys
+
+    return try parseEntry(commentsPath, Comments.self)
   }
 
   public func parseWorkbooks() throws -> [Workbook] {
