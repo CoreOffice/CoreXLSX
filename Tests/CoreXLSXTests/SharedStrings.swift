@@ -48,7 +48,6 @@ private let spacePreserveXML = """
 </sst>
 """.data(using: .utf8)!
 
-
 private let richTextXML = """
 <sst uniqueCount="2">
   <si>
@@ -128,7 +127,7 @@ final class SharedStringsTests: XCTestCase {
     let strings = try decoder.decode(SharedStrings.self, from: spacePreserveXML)
     XCTAssertEqual(strings.items.count, 1)
   }
-  
+
   func testRichTextXML() throws {
     let decoder = XMLDecoder()
     let strings = try decoder.decode(SharedStrings.self, from: richTextXML)
