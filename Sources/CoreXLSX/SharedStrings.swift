@@ -84,8 +84,10 @@ public struct RichText: Codable, Equatable {
   }
 
   public let properties: Properties?
+  public let text: String?
 
   enum CodingKeys: String, CodingKey {
     case properties = "rPr"
+    case text = "t"
   }
 }

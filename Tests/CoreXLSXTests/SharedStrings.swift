@@ -48,6 +48,37 @@ private let spacePreserveXML = """
 </sst>
 """.data(using: .utf8)!
 
+private let richTextXML = """
+<sst uniqueCount="2">
+  <si>
+    <t>My Cell</t>
+  </si>
+  <si>
+    <r>
+      <rPr>
+        <sz val="11"/>
+        <color rgb="FFFF0000"/>
+        <rFont val="Calibri"/>
+        <family val="2"/>
+        <scheme val="minor"/>
+      </rPr>
+      <t>Cell</t>
+    </r>
+    <r>
+      <rPr>
+        <b/>
+        <sz val="11"/>
+        <color theme="1"/>
+        <rFont val="Calibri"/>
+        <family val="2"/>
+        <scheme val="minor"/>
+      </rPr>
+      <t>A2</t>
+    </r>
+  </si>
+</sst>
+""".data(using: .utf8)!
+
 final class SharedStringsTests: XCTestCase {
   func testSharedStrings() throws {
     guard let file =
@@ -97,8 +128,18 @@ final class SharedStringsTests: XCTestCase {
     XCTAssertEqual(strings.items.count, 1)
   }
 
+  func testRichTextXML() throws {
+    let decoder = XMLDecoder()
+    let strings = try decoder.decode(SharedStrings.self, from: richTextXML)
+    let text = strings.items[1].richText.reduce("") { (t, rt) -> String in
+      t + (rt.text ?? "")
+    }
+    XCTAssertEqual(text, "CellA2")
+  }
+
   static let allTests = [
     ("testSharedStrings", testSharedStrings),
     ("testSharedStringsOrder", testSharedStringsOrder),
+    ("testSharedStringsRichText", testRichTextXML),
   ]
 }
