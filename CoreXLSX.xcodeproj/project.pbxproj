@@ -37,6 +37,9 @@
 		D150221321A1D97E00BFA4FC /* CoreXLSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CoreXLSX.swift */; };
 		D150221421A1D97E00BFA4FC /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Relationships.swift */; };
 		D150221521A1D97E00BFA4FC /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Worksheet.swift */; };
+		D15C747322CB459C0041320B /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AAB1C722A154A800C30F99 /* Comments.swift */; };
+		D15C747422CB459C0041320B /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AAB1C722A154A800C30F99 /* Comments.swift */; };
+		D15C747522CB459D0041320B /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AAB1C722A154A800C30F99 /* Comments.swift */; };
 		D1769CCC225F456A00521A47 /* Namespaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1769CCA225F456300521A47 /* Namespaces.swift */; };
 		D1A8190921A9CB89004FCA33 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8190821A9CB89004FCA33 /* Worksheet.swift */; };
 		D1A8190B21A9D0EF004FCA33 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8190A21A9D0EF004FCA33 /* Cell.swift */; };
@@ -667,6 +670,7 @@
 				D15021E221A1CB0500BFA4FC /* Relationships.swift in Sources */,
 				D15021E321A1CB0500BFA4FC /* Worksheet.swift in Sources */,
 				D1EB9C6C21A98FFE002F2254 /* Workbook.swift in Sources */,
+				D15C747322CB459C0041320B /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +689,7 @@
 				D15021FE21A1D1DB00BFA4FC /* Relationships.swift in Sources */,
 				D15021FF21A1D1DB00BFA4FC /* Worksheet.swift in Sources */,
 				D1EB9C6D21A98FFE002F2254 /* Workbook.swift in Sources */,
+				D15C747422CB459C0041320B /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +708,7 @@
 				D150221421A1D97E00BFA4FC /* Relationships.swift in Sources */,
 				D150221521A1D97E00BFA4FC /* Worksheet.swift in Sources */,
 				D1EB9C6E21A98FFE002F2254 /* Workbook.swift in Sources */,
+				D15C747522CB459D0041320B /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
