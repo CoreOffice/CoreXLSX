@@ -88,7 +88,7 @@ public struct XLSXFile {
   }
 
   /// Return an array of paths to relationships of type `officeDocument`
-  func parseDocumentPaths() throws -> [String] {
+  public func parseDocumentPaths() throws -> [String] {
     return try parseRelationships().items
       .filter { $0.type == .officeDocument }
       .map { $0.target }
