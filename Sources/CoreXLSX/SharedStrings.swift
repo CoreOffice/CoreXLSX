@@ -20,7 +20,7 @@ public struct SharedStrings: Codable, Equatable {
     }
   }
 
-  public let uniqueCount: UInt
+  public let uniqueCount: UInt?
   public let items: [Item]
 
   enum CodingKeys: String, CodingKey {
