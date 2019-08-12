@@ -27,7 +27,6 @@ Excel spreadsheet (XLSX) format support in pure Swift.
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE.md' }
   s.author           = { 'Max Desiatov' => 'max@desiatov.com' }
   s.source           = { :git => 'https://github.com/MaxDesiatov/CoreXLSX.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/MaxDesiatov'
 
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
@@ -43,5 +42,5 @@ Excel spreadsheet (XLSX) format support in pure Swift.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ZIPFoundation', '~> 0.9.9'
-  s.dependency 'XMLCoder', '~> 0.7.0'
+  s.dependency 'XMLCoder', '~> 0.8.0'
 end
