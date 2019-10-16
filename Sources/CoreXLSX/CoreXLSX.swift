@@ -53,6 +53,7 @@ public struct XLSXFile {
     self.bufferSize = bufferSize
 
     let decoder = XMLDecoder()
+    decoder.trimValueWhitespaces = false
     decoder.errorContextLength = errorContextLength
     decoder.shouldProcessNamespaces = true
     self.decoder = decoder

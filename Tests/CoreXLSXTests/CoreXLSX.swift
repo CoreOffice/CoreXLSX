@@ -45,6 +45,28 @@ final class CoreXLSXTests: XCTestCase {
     XCTAssertEqual(ws.data?.rows.count, 1)
   }
 
+  func testMultiline() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/multi-line.text.in.cell.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let strings = try file.parseSharedStrings()
+    XCTAssertEqual(strings.uniqueCount, 2)
+    XCTAssertEqual(strings.items, [
+      .init(text: "just a single line", richText: []),
+      .init(
+        text: """
+        first line
+        second line (separated by CTRL+ALT+ENTER on macOS)
+        third line
+        """,
+        richText: []
+      ),
+    ])
+  }
+
   func testPublicAPI() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
