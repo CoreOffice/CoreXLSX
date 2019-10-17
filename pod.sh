@@ -3,5 +3,5 @@
 set -e 
 set -o pipefail
 
-pod repo update
+cd Example && pod install --repo-update && cd ..
 pod lib lint --verbose
