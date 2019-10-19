@@ -43,3 +43,15 @@ jobs:
     vmImage: 'macos-latest'
   steps:
   - script: ./test_swiftpm.sh
+- job: test_linux_5_0
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  container: norionomura/swift:503
+  steps:
+  - script: ./test_swiftpm.sh
+- job: test_linux_5_1
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  container: norionomura/swift:51
+  steps:
+  - script: ./test_swiftpm.sh
