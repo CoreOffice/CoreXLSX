@@ -1,4 +1,44 @@
-# 0.8.0 (July 12, 2019)
+# 0.9.0 (19 October 2019)
+
+This release adds Linux support and improves compatibility with `.xlsx` files
+that contain shared strings. Thanks to
+[@CloseServer](https://github.com/CloseServer),
+[@funnel20](https://github.com/funnel20) and
+[@LiewLi](https://github.com/LiewLi) for bug reports and contributions!
+
+**Implemented enhancements:**
+
+- Bump XMLCoder to 0.9.0, add CI jobs for Linux, Xcode 11
+  [\#86](https://github.com/MaxDesiatov/CoreXLSX/pull/86)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+
+**Fixed bugs:**
+
+- Multi-line text in an Excel cell is parsed into single line in the
+  SharedStrings property `text`
+  [\#83](https://github.com/MaxDesiatov/CoreXLSX/issues/83)
+
+**Closed issues:**
+
+- I crashed while calling try file.parsesharedstrings \(\) with an error
+  [\#79](https://github.com/MaxDesiatov/CoreXLSX/issues/79)
+
+**Merged pull requests:**
+
+- Bump line length limit in .swiftlint.yml
+  [\#85](https://github.com/MaxDesiatov/CoreXLSX/pull/85)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+- Make decoder.trimValueWhitespaces false, add test
+  [\#84](https://github.com/MaxDesiatov/CoreXLSX/pull/84)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+- Bump XMLCoder dependency to 0.8.0
+  [\#80](https://github.com/MaxDesiatov/CoreXLSX/pull/80)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+- SharedString uniqueCount property can be nil
+  [\#78](https://github.com/MaxDesiatov/CoreXLSX/pull/78)
+  ([LiewLi](https://github.com/LiewLi))
+
+# 0.8.0 (12 July 2019)
 
 Feature and bugfix release that makes the library compatible with more
 spreadsheet types. It also adds support for [`Comments`
@@ -33,7 +73,7 @@ release.
 - Add comment support [\#70](https://github.com/MaxDesiatov/CoreXLSX/pull/70)
   ([grin](https://github.com/grin))
 
-# 0.7.0 (May 25, 2019)
+# 0.7.0 (25 May 2019)
 
 Bugfix release that improves compatibility with different spreadsheet types.
 
@@ -62,12 +102,12 @@ New `borderId` and `fillId` properties on `struct Format`.
 - Move from Travis to Azure Pipelines [\#67](https://github.com/MaxDesiatov/CoreXLSX/pull/67) ([MaxDesiatov](https://github.com/MaxDesiatov))
 - Add missing attributes [\#66](https://github.com/MaxDesiatov/CoreXLSX/pull/66) ([grin](https://github.com/grin))
 
-# 0.6.1 (May 9, 2019)
+# 0.6.1 (9 May 2019)
 
 Bugfix release that adds `case externalLink` to `Relationship.SchemaType`
 improving .xlsx compatibility.
 
-# 0.6.0 (May 2, 2019)
+# 0.6.0 (2 May 2019)
 
 This is a bugfix release with changes to the model API that improve
 compatibility with files containing formulas and varied shared string formats.
@@ -101,7 +141,7 @@ Specifically:
   [\#60](https://github.com/MaxDesiatov/CoreXLSX/pull/60)
   ([MaxDesiatov](https://github.com/MaxDesiatov))
 
-# 0.5.0 (April 18, 2019)
+# 0.5.0 (18 April 2019)
 
 This is a release with API additions and bug fixes. 
 
@@ -139,7 +179,7 @@ information, so you should be prepared to handle the errors thrown from
 - Add test to check sharedStrings order [\#44](https://github.com/MaxDesiatov/CoreXLSX/pull/44) ([hodovani](https://github.com/hodovani))
 - Fix root paths in CoreXLSX, fix formatter & linter [\#43](https://github.com/MaxDesiatov/CoreXLSX/pull/43) ([MaxDesiatov](https://github.com/MaxDesiatov))
 
-# 0.4.0 (February 7, 2019)
+# 0.4.0 (7 February 2019)
 
 This is a release with API improvements and bug fixes. A big thank you to everyone
 who provided bug reports and contributions that made this release possible!
@@ -258,38 +298,38 @@ thanks to fixes in optionality and more properties added to the model types.
 ([MaxDesiatov](https://github.com/MaxDesiatov))
 
 
-# 0.3.0 (November 13, 2018)
+# 0.3.0 (13 November 2018)
 
 * Improve `Worksheet` model property naming ([#2](https://github.com/MaxDesiatov/CoreXLSX/pull/2)).
 Some properties on `Worksheet` and its descendants had obscure names, most of that is
 fixed now with old names marked as deprecated.
 
-# 0.2.3 (November 12, 2018)
+# 0.2.3 (12 November 2018)
 
 * Refine README.md to include implementation details.
 
-# 0.2.2 (November 11, 2018)
+# 0.2.2 (11 November 2018)
 
 * Refine code comments and links in README.md
 
-# 0.2.1 (November 11, 2018)
+# 0.2.1 (11 November 2018)
 
 * Update README.md with instructions for Swift Package Manager.
 
-# 0.2.0 (November 11, 2018)
+# 0.2.0 (11 November 2018)
 
 * Cell by row/column filtering API with `worksheetCache` ([#1](https://github.com/MaxDesiatov/CoreXLSX/pull/1))
 This new API allows users to filter all cells by a row or column reference. To avoid
 re-parsing of worksheets, a new private `worksheetCache` property is added on `XLSXFile`.
 
-# 0.1.2 (November 10, 2018)
+# 0.1.2 (10 November 2018)
 
 * Added macOS 10.11 deployment target to the podspec
 
-# 0.1.1 (November 10, 2018)
+# 0.1.1 (10 November 2018)
 
 * Improved README, fixed podspec
 
-# 0.1.0 (November 10, 2018)
+# 0.1.0 (10 November 2018)
 
 * First release with reading support for basic .xlsx files
