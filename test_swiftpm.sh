@@ -3,4 +3,4 @@
 set -e 
 set -o pipefail
 
-TESTS_PATH=$PWD/Tests/CoreXLSXTests swift test
+TESTS_PATH=$PWD/Tests/CoreXLSXTests swift test --parallel
