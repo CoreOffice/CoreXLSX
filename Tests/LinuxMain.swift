@@ -1,7 +1,8 @@
 import XCTest
 
-import CoreXLSX
+import CoreXLSXTests
 
 var tests = [XCTestCaseEntry]()
-tests += CoreXLSX.allTests()
+tests += CoreXLSXTests.__allTests()
+
 XCTMain(tests)
