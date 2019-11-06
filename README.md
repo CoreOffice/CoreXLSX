@@ -124,7 +124,7 @@ here](https://desiatov.com/swift-codable-xlsx/).
 [Swift Package Manager](https://swift.org/package-manager/) is a tool for
 managing the distribution of Swift code. It’s integrated with the Swift build
 system to automate the process of downloading, compiling, and linking
-dependencies.
+dependencies on all platforms.
 
 Once you have your Swift package set up, adding `CoreXLSX` as a dependency is as
 easy as adding it to the `dependencies` value of your `Package.swift`.
@@ -138,8 +138,9 @@ dependencies: [
 
 ### CocoaPods
 
-CoreXLSX is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add `pod 'CoreXLSX', '~> 0.9.0'` to your `Podfile` like shown here:
+CoreXLSX is available through [CocoaPods](https://cocoapods.org) on Apple's
+platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.9.0'` to your
+`Podfile` like shown here:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -154,7 +155,8 @@ end
 ### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a dependency manager that
-builds your dependencies and provides you with binary frameworks.
+builds your dependencies and provides you with binary frameworks on Apple's
+platforms.
 
 Carthage can be installed with [Homebrew](https://brew.sh/) using the following
 command:
