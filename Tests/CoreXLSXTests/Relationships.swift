@@ -70,6 +70,28 @@ final class RelationshipsTests: XCTestCase {
     XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
   }
 
+  func testCustomXmlSchemaType() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/jewelershealthcare.com-census.1.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let relationshipsFromFile = try file.parseRelationships()
+
+    let expected = Relationships(items: [
+      Relationship(id: "rId3", type: .extendedProperties, target: "docProps/app.xml"),
+      Relationship(id: "rId2", type: .packageCoreProperties, target: "docProps/core.xml"),
+      Relationship(id: "rId1", type: .officeDocument, target: "xl/workbook.xml"),
+      Relationship(id: "rId4", type: .customProperties, target: "docProps/custom.xml"),
+    ])
+
+    XCTAssertEqual(relationshipsFromFile, expected)
+
+    let paths = try file.parseWorksheetPaths()
+    XCTAssertEqual(paths, ["xl/worksheets/sheet1.xml"])
+  }
+
   static let allTests = [
     ("testRelationships", testRelationships),
   ]
