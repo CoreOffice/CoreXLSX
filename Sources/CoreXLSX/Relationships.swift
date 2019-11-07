@@ -90,6 +90,11 @@ public struct Relationship: Codable, Equatable {
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
       externalLink
       """
+    case customXml =
+      """
+      http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+      customXml
+      """
   }
 
   public let id: String
