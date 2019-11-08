@@ -4,7 +4,7 @@ trigger:
 jobs:
 - job: lint
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.14'
   steps:
   - bash: ./lint.sh
 - job: pod
@@ -14,7 +14,7 @@ jobs:
   - bash: ./pod.sh
 - job: test_xcodebuild_10_0
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.14'
   steps:
   - bash: ./test_xcodebuild.sh Xcode_10
     env:
@@ -22,7 +22,7 @@ jobs:
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.0,name=Apple TV 4K'
 - job: test_xcodebuild_10_1
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.14'
   steps:
   - bash: ./test_xcodebuild.sh Xcode_10.1
     env:
@@ -30,7 +30,7 @@ jobs:
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
 - job: test_xcodebuild_10_2
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.14'
   steps:
   - bash: ./test_xcodebuild.sh Xcode_10.2.1
     env:
@@ -38,7 +38,7 @@ jobs:
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K'
 - job: test_xcodebuild_11_0
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.14'
   steps:
   - bash: ./test_xcodebuild.sh Xcode_11
     env:
@@ -46,12 +46,22 @@ jobs:
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=13.0,name=Apple TV 4K'
 - job: test_xcodebuild_11_1
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.14'
   steps:
   - bash: ./test_xcodebuild.sh Xcode_11.1
     env:
       IOS_DEVICE: 'platform=iOS Simulator,OS=13.1,name=iPhone 8'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=13.0,name=Apple TV 4K'
+      CODECOV_JOB: 'true'
+      CODECOV_TOKEN: $(codecovToken)
+- job: test_xcodebuild_11_2
+  pool:
+    vmImage: 'macOS-10.14'
+  steps:
+  - bash: ./test_xcodebuild.sh Xcode_11.2
+    env:
+      IOS_DEVICE: 'platform=iOS Simulator,OS=13.2,name=iPhone 8'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=13.2,name=Apple TV 4K'
       CODECOV_JOB: 'true'
       CODECOV_TOKEN: $(codecovToken)
 - job: test_swiftpm
