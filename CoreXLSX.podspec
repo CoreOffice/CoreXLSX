@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CoreXLSX'
-  s.version          = '0.9.0'
+  s.version          = '0.9.1'
   s.summary          = 'Excel spreadsheet (XLSX) format support in pure Swift'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.swift_versions    = ['4.2', '5.0']
+  s.swift_versions    = ['4.2', '5.0', '5.1']
   s.description      = <<-DESC
 Excel spreadsheet (XLSX) format support in pure Swift.
                        DESC

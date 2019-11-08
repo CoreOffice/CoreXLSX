@@ -1,3 +1,20 @@
+# 0.9.1 (8 November 2019)
+
+This release adds a new value to the `Relationship.SchemaType` enum, which fixes
+compatibility with some spreadsheet files. Thanks to
+[@mxcl](https://github.com/mxcl) for the bug report!
+
+**Fixed bugs:**
+
+- Cannot initialize SchemaType from invalid String value 
+[\#87](https://github.com/MaxDesiatov/CoreXLSX/issues/87)
+
+**Merged pull requests:**
+
+- Add `case customXml` to Relationship.SchemaType
+  [\#88](https://github.com/MaxDesiatov/CoreXLSX/pull/88)
+  ([MaxDesiatov](https://github.com/MaxDesiatov))
+
 # 0.9.0 (19 October 2019)
 
 This release adds Linux support and improves compatibility with `.xlsx` files
