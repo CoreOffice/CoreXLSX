@@ -129,6 +129,8 @@ public struct XLSXFile {
     return try parseEntry(commentsPath, Comments.self)
   }
 
+  /// Parse and return an array of workbooks in this file.
+  /// Worksheet names can be read as properties on the `Workbook` model type.
   public func parseWorkbooks() throws -> [Workbook] {
     let paths = try parseDocumentPaths()
 
