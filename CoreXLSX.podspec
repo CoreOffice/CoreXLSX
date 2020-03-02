@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.swift_versions    = ['4.2', '5.0', '5.1']
+  s.swift_versions    = ['4.2', '5.0', '5.1', '5.2']
   s.description      = <<-DESC
 Excel spreadsheet (XLSX) format support in pure Swift.
                        DESC
@@ -41,6 +41,6 @@ Excel spreadsheet (XLSX) format support in pure Swift.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ZIPFoundation', '~> 0.9.9'
+  s.dependency 'ZIPFoundation', '~> 0.9.10'
   s.dependency 'XMLCoder', '~> 0.9.0'
 end
