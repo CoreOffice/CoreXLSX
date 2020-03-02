@@ -34,9 +34,8 @@ private let formulaXML = """
 """.data(using: .utf8)!
 
 final class FormulaTests: XCTestCase {
-  private let decoder = XMLDecoder()
-
   func testFormulas() throws {
+    let decoder = XMLDecoder()
     decoder.shouldProcessNamespaces = true
 
     let row = try decoder.decode(Row.self, from: formulaXML)

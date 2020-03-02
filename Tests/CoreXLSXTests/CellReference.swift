@@ -22,10 +22,10 @@ private let exampleXML3 = """
 """.data(using: .utf8)!
 
 final class CellReferenceTests: XCTestCase {
-  private let decoder = XMLDecoder()
-  private let encoder = XMLEncoder()
-
   func testCellReference() throws {
+    let decoder = XMLDecoder()
+    let encoder = XMLEncoder()
+
     let c1 = try decoder.decode(Cell.self, from: exampleXML1)
     let cr1 = CellReference(ColumnReference("A")!, 7)
     XCTAssertEqual(cr1.description, "A7")
@@ -144,12 +144,4 @@ final class CellReferenceTests: XCTestCase {
 
     XCTAssertEqual((a...bz).reversed().reversed(), Array(a...bz))
   }
-
-  static let allTests = [
-    ("testColumnReference", testColumnReference),
-    ("testCellReference", testCellReference),
-    ("testColumnReferenceDistance", testColumnReferenceDistance),
-    ("testColumnReferenceStringInitializerPerformance",
-     testColumnReferenceStringInitializerPerformance),
-  ]
 }

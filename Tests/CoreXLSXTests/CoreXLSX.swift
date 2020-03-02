@@ -174,9 +174,4 @@ final class CoreXLSXTests: XCTestCase {
       try file.cellsInWorksheet(at: sheetPath, columns: columnReferences)
     XCTAssertEqual(allCells, cellsFromAllColumns)
   }
-
-  static let allTests = [
-    ("testPublicAPI", testPublicAPI),
-    ("testLegacyPublicAPI", testLegacyPublicAPI),
-  ]
 }
