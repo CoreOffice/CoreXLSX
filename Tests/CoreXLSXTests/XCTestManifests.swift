@@ -70,6 +70,7 @@ extension RelationshipsTests {
   //   `swift test --generate-linuxmain`
   // to regenerate.
   static let __allTests__RelationshipsTests = [
+    ("testCustomXmlSchemaType", testCustomXmlSchemaType),
     ("testRelationships", testRelationships),
   ]
 }
@@ -101,6 +102,7 @@ extension WorkbookTests {
   // to regenerate.
   static let __allTests__WorkbookTests = [
     ("testWorkbook", testWorkbook),
+    ("testWorkbookNoViews", testWorkbookNoViews),
   ]
 }
 

@@ -131,9 +131,8 @@ xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
 """.data(using: .utf8)!
 
 final class NamespacesTests: XCTestCase {
-  private let decoder = XMLDecoder()
-
   func testNamespaces() throws {
+    let decoder = XMLDecoder()
     decoder.shouldProcessNamespaces = true
 
     let worksheet = try decoder.decode(Worksheet.self, from: namespaceXML)

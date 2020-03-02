@@ -21,7 +21,7 @@ public struct Workbook: Codable, Equatable {
     public let windowHeight: UInt
   }
 
-  public let views: Views
+  public let views: Views?
 
   public struct Sheets: Codable, Equatable {
     public let items: [Sheet]

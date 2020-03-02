@@ -46,15 +46,9 @@ private let parsed = [
 ]
 
 final class RelationshipsTests: XCTestCase {
-  private let decoder = XMLDecoder()
-
-  override func setUp() {
-    super.setUp()
-
-    decoder.keyDecodingStrategy = .convertFromCapitalized
-  }
-
   func testRelationships() throws {
+    let decoder = XMLDecoder()
+    decoder.keyDecodingStrategy = .convertFromCapitalized
     let relationships = try decoder.decode(Relationships.self,
                                            from: exampleXML)
     XCTAssertEqual(relationships.items, parsed)
@@ -91,8 +85,4 @@ final class RelationshipsTests: XCTestCase {
     let paths = try file.parseWorksheetPaths()
     XCTAssertEqual(paths, ["xl/worksheets/sheet1.xml"])
   }
-
-  static let allTests = [
-    ("testRelationships", testRelationships),
-  ]
 }
