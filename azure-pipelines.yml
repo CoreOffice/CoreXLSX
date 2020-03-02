@@ -52,8 +52,6 @@ jobs:
     env:
       IOS_DEVICE: 'platform=iOS Simulator,OS=13.1,name=iPhone 8'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=13.0,name=Apple TV 4K'
-      CODECOV_JOB: 'true'
-      CODECOV_TOKEN: $(codecovToken)
 - job: test_xcodebuild_11_2
   pool:
     vmImage: 'macOS-10.14'
@@ -62,11 +60,19 @@ jobs:
     env:
       IOS_DEVICE: 'platform=iOS Simulator,OS=13.2,name=iPhone 8'
       TVOS_DEVICE: 'platform=tvOS Simulator,OS=13.2,name=Apple TV 4K'
+- job: test_xcodebuild_11_3
+  pool:
+    vmImage: 'macOS-10.15'
+  steps:
+  - bash: ./test_xcodebuild.sh Xcode_11.3
+    env:
+      IOS_DEVICE: 'platform=iOS Simulator,OS=13.3,name=iPhone 8'
+      TVOS_DEVICE: 'platform=tvOS Simulator,OS=13.3,name=Apple TV 4K'
       CODECOV_JOB: 'true'
       CODECOV_TOKEN: $(codecovToken)
 - job: test_swiftpm
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-10.15'
   steps:
   - script: ./test_swiftpm.sh
 - job: test_linux_5_0
@@ -78,6 +84,6 @@ jobs:
 - job: test_linux_5_1
   pool:
     vmImage: 'Ubuntu 16.04'
-  container: norionomura/swift:51
+  container: norionomura/swift:513
   steps:
   - script: ./test_swiftpm.sh
