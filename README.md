@@ -56,10 +56,14 @@ Here's how you can get all shared strings in column "C" for example:
 ```swift
 let sharedStrings = try file.parseSharedStrings()
 let columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
-  // in format internals "s" stands for "shared"
+  // in format internals "s" stands for "shared",
+  // if it is used, it means the value is an index of a shared string
   .filter { $0.type == "s" }
+  // get the value of the cell
   .compactMap { $0.value }
+  // convert the value to a number
   .compactMap { Int($0) }
+  // use the number as an index in the array of shared strings
   .compactMap { sharedStrings.items[$0].text }
 ```
 
