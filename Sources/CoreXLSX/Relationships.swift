@@ -37,7 +37,7 @@ public struct Relationship: Codable, Equatable {
       """
     case coreProperties =
       """
-      http://schemas.openxmlformats.org/officedocument/2006/relationships/\
+      http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
       metadata/core-properties
       """
     case connections =
