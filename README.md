@@ -9,7 +9,7 @@
 [![Coverage](https://img.shields.io/codecov/c/github/MaxDesiatov/CoreXLSX/master.svg?style=flat)](https://codecov.io/gh/maxdesiatov/CoreXLSX)
 
 CoreXLSX is a library focused on representing the low-level structure
-of [XML-based XLSX spreadsheet
+of [the XML-based XLSX spreadsheet
 format](https://en.wikipedia.org/wiki/Office_Open_XML). It allows you to open a
 spreadsheet archive with `.xlsx` extension and map its internal structure into
 model types expressed directly in Swift.
