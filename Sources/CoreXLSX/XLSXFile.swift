@@ -18,7 +18,10 @@ public enum CoreXLSXError: Error {
   case unsupportedWorksheetPath
 }
 
-public struct XLSXFile {
+/** The entry point class that represents an open file handle to an existing `.xlsx` file on the
+ user's filesystem.
+ */
+public class XLSXFile {
   public let filepath: String
   private let archive: Archive
   private let decoder: XMLDecoder
