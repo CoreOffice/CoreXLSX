@@ -187,8 +187,16 @@ Drag the built frameworks (including the subdependencies `XMLCoder` and
 
 ## Contributing
 
-For development work and for running the tests in Xcode you need to run
+On macOS the easiest way to start working on the project is to open the
+`Package.swift` file in Xcode 11. There is an extensive test suite that both
+tests files end-to-end and isolated snippets against their corresponding model
+values.
+
+If Xcode 11 is not available for you and you'd like to develop the library
+or to run the test suite in Xcode 10, you need to run
 `carthage bootstrap` in the root directory of the cloned repository first.
+Please refer to [the Carthage installation instructions](#carthage) described
+in the section above if you don't have Carthage installed.
 Then you can open the `CoreXLSX.xcodeproj` from the same directory and select
 the `CoreXLSXmacOS` scheme. This is the only scheme that has the tests
 set up, but you can also build any other scheme (e.g. `CoreXLSXiOS`) to make
