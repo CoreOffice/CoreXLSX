@@ -26,7 +26,7 @@ public struct Cell: Codable, Equatable {
 
     enum CodingKeys: String, CodingKey {
       case calculationIndex = "ca"
-      case value
+      case value = ""
     }
   }
 

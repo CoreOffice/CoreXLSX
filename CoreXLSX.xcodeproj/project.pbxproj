@@ -149,27 +149,6 @@
 		OBJ_19 /* CoreXLSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreXLSX.swift; sourceTree = "<group>"; };
 		OBJ_20 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		OBJ_21 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_27 /* Archive+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Reading.swift"; sourceTree = "<group>"; };
-		OBJ_28 /* Archive+Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Writing.swift"; sourceTree = "<group>"; };
-		OBJ_29 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
-		OBJ_30 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
-		OBJ_31 /* Data+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Serialization.swift"; sourceTree = "<group>"; };
-		OBJ_32 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		OBJ_33 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIP.swift"; sourceTree = "<group>"; };
-		OBJ_34 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/ZIPFoundation.git-1553630773966528904/Package.swift"; sourceTree = "<group>"; };
-		OBJ_38 /* DecodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingErrorExtension.swift; sourceTree = "<group>"; };
-		OBJ_39 /* XMLDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecoder.swift; sourceTree = "<group>"; };
-		OBJ_40 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecodingStorage.swift; sourceTree = "<group>"; };
-		OBJ_41 /* XMLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_42 /* XMLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		OBJ_44 /* EncodingErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingErrorExtension.swift; sourceTree = "<group>"; };
-		OBJ_45 /* XMLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncoder.swift; sourceTree = "<group>"; };
-		OBJ_46 /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncodingStorage.swift; sourceTree = "<group>"; };
-		OBJ_47 /* XMLReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLReferencingEncoder.swift; sourceTree = "<group>"; };
-		OBJ_48 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
-		OBJ_49 /* XMLKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLKey.swift; sourceTree = "<group>"; };
-		OBJ_50 /* XMLStackParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStackParser.swift; sourceTree = "<group>"; };
-		OBJ_51 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maxd/Documents/CoreXLSX/.build/checkouts/XMLCoder.git--8189013463900790701/Package.swift"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* Package.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Package.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -326,84 +305,6 @@
 			path = Tests/CoreXLSXTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_24 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_25 /* ZIPFoundation 0.9.6 */,
-				OBJ_35 /* XMLCoder 0.1.0 */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		OBJ_25 /* ZIPFoundation 0.9.6 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_26 /* ZIPFoundation */,
-				OBJ_34 /* Package.swift */,
-			);
-			name = "ZIPFoundation 0.9.6";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_26 /* ZIPFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_27 /* Archive+Reading.swift */,
-				OBJ_28 /* Archive+Writing.swift */,
-				OBJ_29 /* Archive.swift */,
-				OBJ_30 /* Data+Compression.swift */,
-				OBJ_31 /* Data+Serialization.swift */,
-				OBJ_32 /* Entry.swift */,
-				OBJ_33 /* FileManager+ZIP.swift */,
-			);
-			name = ZIPFoundation;
-			path = ".build/checkouts/ZIPFoundation.git-1553630773966528904/Sources/ZIPFoundation";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_35 /* XMLCoder 0.1.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_36 /* XMLCoder */,
-				OBJ_51 /* Package.swift */,
-			);
-			name = "XMLCoder 0.1.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_36 /* XMLCoder */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_37 /* Decoder */,
-				OBJ_43 /* Encoder */,
-				OBJ_48 /* ISO8601DateFormatter.swift */,
-				OBJ_49 /* XMLKey.swift */,
-				OBJ_50 /* XMLStackParser.swift */,
-			);
-			name = XMLCoder;
-			path = ".build/checkouts/XMLCoder.git--8189013463900790701/Sources/XMLCoder";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_37 /* Decoder */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_38 /* DecodingErrorExtension.swift */,
-				OBJ_39 /* XMLDecoder.swift */,
-				OBJ_40 /* XMLDecodingStorage.swift */,
-				OBJ_41 /* XMLKeyedDecodingContainer.swift */,
-				OBJ_42 /* XMLUnkeyedDecodingContainer.swift */,
-			);
-			path = Decoder;
-			sourceTree = "<group>";
-		};
-		OBJ_43 /* Encoder */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_44 /* EncodingErrorExtension.swift */,
-				OBJ_45 /* XMLEncoder.swift */,
-				OBJ_46 /* XMLEncodingStorage.swift */,
-				OBJ_47 /* XMLReferencingEncoder.swift */,
-			);
-			path = Encoder;
-			sourceTree = "<group>";
-		};
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
@@ -417,7 +318,6 @@
 				OBJ_7 /* Configs */,
 				OBJ_9 /* Sources */,
 				OBJ_16 /* Tests */,
-				OBJ_24 /* Dependencies */,
 				OBJ_52 /* Products */,
 				D15021C221A1C31800BFA4FC /* Frameworks */,
 			);
