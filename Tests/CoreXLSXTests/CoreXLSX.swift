@@ -97,17 +97,17 @@ final class CoreXLSXTests: XCTestCase {
 
     let firstColumn = ("A" as UnicodeScalar).value
     let lastColumn = ("F" as UnicodeScalar).value
-    let columnReferences = (firstColumn...lastColumn)
+    let columnReferences = (firstColumn ... lastColumn)
       .compactMap { UnicodeScalar($0) }
       .compactMap { ColumnReference(String($0)) }
 
     XCTAssertEqual(allCells, ws.cells(atColumns: columnReferences))
 
-    let closedRange1 = ColumnReference("A")!...ColumnReference("F")!
+    let closedRange1 = ColumnReference("A")! ... ColumnReference("F")!
     XCTAssertEqual(allCells, ws.cells(atColumns: closedRange1))
 
-    let closedRange2 = ColumnReference("A")!...ColumnReference("C")!
-    let rowsRange: ClosedRange<UInt> = 3...10
+    let closedRange2 = ColumnReference("A")! ... ColumnReference("C")!
+    let rowsRange: ClosedRange<UInt> = 3 ... 10
     let cellsInRange = ws.cells(atColumns: closedRange2, rows: rowsRange)
     XCTAssertEqual(cellsInRange.count, closedRange2.count * rowsRange.count)
 
@@ -169,7 +169,7 @@ final class CoreXLSXTests: XCTestCase {
 
     let firstColumn = ("A" as UnicodeScalar).value
     let lastColumn = ("F" as UnicodeScalar).value
-    let columnReferences = (firstColumn...lastColumn)
+    let columnReferences = (firstColumn ... lastColumn)
       .compactMap { UnicodeScalar($0) }.map { String($0) }
     let cellsFromAllColumns =
       try file.cellsInWorksheet(at: sheetPath, columns: columnReferences)

@@ -1,9 +1,11 @@
 --indent 2
 --indentcase false
 --trimwhitespace always
---ranges nospace
+--nospaceoperators
 --empty tuple
 --operatorfunc nospace
 --ifdef noindent
 --stripunusedargs closure-only
 --disable andOperator
+--swiftversion 4.2
+--exclude Carthage
