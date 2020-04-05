@@ -6,9 +6,10 @@
 //
 
 @testable import CoreXLSX
+import Foundation
 import XCTest
 
-let currentWorkingPath = ProcessInfo.processInfo.environment["TESTS_PATH"]!
+let currentWorkingPath = URL(fileURLWithPath: #file).deletingLastPathComponent().path
 
 final class CoreXLSXTests: XCTestCase {
   private let sheetPath = "xl/worksheets/sheet1.xml"
@@ -26,7 +27,7 @@ final class CoreXLSXTests: XCTestCase {
     XCTAssertEqual(styles.borders?.items.count, 1)
 
     let ws = try file.parseWorksheet(at: "xl/worksheets/sheet1.xml")
-    XCTAssertNil(ws.data)
+    XCTAssertEqual(ws.data?.rows.count, 0)
   }
 
   func testHelloWorld() throws {
