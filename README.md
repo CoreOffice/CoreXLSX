@@ -9,7 +9,7 @@
 [![Coverage](https://img.shields.io/codecov/c/github/MaxDesiatov/CoreXLSX/master.svg?style=flat)](https://codecov.io/gh/maxdesiatov/CoreXLSX)
 
 CoreXLSX is a library focused on representing the low-level structure
-of XML-based XLSX spreadsheet format. It allows you to open a spreadsheet 
+of XML-based XLSX spreadsheet format. It allows you to open a spreadsheet
 archive and map its XML structure into model types expressed directly
 in Swift.
 
@@ -74,7 +74,7 @@ new `parseStyles()` function. Please refer to the [`Styles`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
 for more details. You should also note that not all XLSX files contain style
 information, so you should be prepared to handle the errors thrown from
-`parseStyles()` function in that case. 
+`parseStyles()` function in that case.
 
 
 Here's a short example that fetches a list of fonts used:
@@ -187,9 +187,9 @@ Drag the built frameworks (including the subdependencies `XMLCoder` and
 
 ## Contributing
 
-For development work and for running the tests in Xcode you need to run 
+For development work and for running the tests in Xcode you need to run
 `carthage bootstrap` in the root directory of the cloned repository first.
-Then you can open the `CoreXLSX.xcodeproj` from the same directory and select 
+Then you can open the `CoreXLSX.xcodeproj` from the same directory and select
 the `CoreXLSXmacOS` scheme. This is the only scheme that has the tests
 set up, but you can also build any other scheme (e.g. `CoreXLSXiOS`) to make
 sure it builds on other platforms.
@@ -197,6 +197,33 @@ sure it builds on other platforms.
 If you prefer not to work with Xcode, the project fully supports SwiftPM and the
 usual workflow with `swift build` and `swift test` should work, otherwise please
 [report this as a bug](https://github.com/MaxDesiatov/CoreXLSX/issues/new).
+
+### Coding Style
+
+This project uses [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
+and [SwiftLint](https://github.com/realm/SwiftLint) to
+enforce formatting and coding style. We encourage you to run SwiftFormat within
+a local clone of the repository in whatever way works best for you either
+manually or automatically via an [Xcode
+extension](https://github.com/nicklockwood/SwiftFormat#xcode-source-editor-extension),
+[build phase](https://github.com/nicklockwood/SwiftFormat#xcode-build-phase) or
+[git pre-commit
+hook](https://github.com/nicklockwood/SwiftFormat#git-pre-commit-hook) etc.
+
+To guarantee that these tools run before you commit your changes on macOS, you're encouraged
+to run this once to set up the [pre-commit](https://pre-commit.com/) hook:
+
+```
+brew bundle # installs SwiftLint, SwiftFormat and pre-commit
+pre-commit install # installs pre-commit hook to run checks before you commit
+```
+
+Refer to [the pre-commit documentation page](https://pre-commit.com/) for more details
+and installation instructions for other platforms.
+
+SwiftFormat and SwiftLint also run on CI for every PR and thus a CI build can
+fail with incosistent formatting or style. We require CI builds to pass for all
+PRs before merging.
 
 ### Code of Conduct
 

@@ -91,11 +91,11 @@ final class CellReferenceTests: XCTestCase {
     XCTAssertEqual(aa.intValue, alphabetLength + 1)
     XCTAssertEqual(az.intValue, alphabetLength * 2)
     XCTAssertEqual(ba.intValue, alphabetLength * 2 + 1)
-    XCTAssertEqual((a...z).count, alphabetLength)
-    XCTAssertEqual((a...az).count, alphabetLength * 2)
-    XCTAssertEqual((a...ba).count, alphabetLength * 2 + 1)
-    XCTAssertEqual((az...ba).count, 2)
-    XCTAssertEqual((az...bz).count, alphabetLength + 1)
+    XCTAssertEqual((a ... z).count, alphabetLength)
+    XCTAssertEqual((a ... az).count, alphabetLength * 2)
+    XCTAssertEqual((a ... ba).count, alphabetLength * 2 + 1)
+    XCTAssertEqual((az ... ba).count, 2)
+    XCTAssertEqual((az ... bz).count, alphabetLength + 1)
   }
 
   func testColumnReferenceIntInitializer() {
@@ -122,7 +122,7 @@ final class CellReferenceTests: XCTestCase {
 
   func testColumnReferenceStringInitializerPerformance() {
     measure {
-      for _ in 0..<10000 {
+      for _ in 0 ..< 10000 {
         _ = ColumnReference("kjhbjhblkjn")
       }
     }
@@ -130,7 +130,7 @@ final class CellReferenceTests: XCTestCase {
 
   func testColumnReferenceIntInitializerPerformance() {
     measure {
-      for _ in 0..<10000 {
+      for _ in 0 ..< 10000 {
         _ = ColumnReference(Int.max / 10)
       }
     }
@@ -142,6 +142,6 @@ final class CellReferenceTests: XCTestCase {
       return
     }
 
-    XCTAssertEqual((a...bz).reversed().reversed(), Array(a...bz))
+    XCTAssertEqual((a ... bz).reversed().reversed(), Array(a ... bz))
   }
 }
