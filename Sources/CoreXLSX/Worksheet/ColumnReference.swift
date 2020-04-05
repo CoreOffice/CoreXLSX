@@ -45,7 +45,7 @@ public struct ColumnReference {
       )!)) + acc
     }
 
-    let result = (0..<symbolsCount).compactMap(symbolValue).reduce("", reducer)
+    let result = (0 ..< symbolsCount).compactMap(symbolValue).reduce("", reducer)
 
     self.value = result
   }
@@ -76,7 +76,7 @@ public struct ColumnReference {
     // from a previous iteration
     var power = 1
 
-    intValue = (0..<count).map {
+    intValue = (0 ..< count).map {
       // integer value for a symbol at a given position
       let symbolValue = Int(scalars[count - $0 - 1].value -
         ColumnReference.firstAllowedCharacter.value + 1)
@@ -97,7 +97,7 @@ public struct ColumnReference {
     Int(lastAllowedCharacter.value - firstAllowedCharacter.value + 1)
 
   static let allowedCharacters =
-    CharacterSet(charactersIn: firstAllowedCharacter...lastAllowedCharacter)
+    CharacterSet(charactersIn: firstAllowedCharacter ... lastAllowedCharacter)
 }
 
 extension ColumnReference: CustomStringConvertible {

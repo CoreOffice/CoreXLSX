@@ -144,9 +144,9 @@ class WorksheetTests: XCTestCase {
       Worksheet.FormatProperties(defaultRowHeight: "15")
     )
     XCTAssertEqual(ws1.columns?.items, parsed)
-    XCTAssertEqual(ws1.cells(atRows: 1...80).count, 6)
+    XCTAssertEqual(ws1.cells(atRows: 1 ... 80).count, 6)
 
     let ws2 = try decoder.decode(Worksheet.self, from: xml2)
-    XCTAssertEqual(ws2.cells(atRows: 1...80).count, 5)
+    XCTAssertEqual(ws2.cells(atRows: 1 ... 80).count, 5)
   }
 }
