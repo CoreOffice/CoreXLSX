@@ -86,18 +86,18 @@ jobs:
 - job: test_linux_5_0
   pool:
     vmImage: 'Ubuntu 18.04'
-  container: swift:5.0.3
+  container: norionomura/swift:503
   steps:
   - script: ./test_swiftpm.sh
 - job: test_linux_5_1
   pool:
     vmImage: 'Ubuntu 18.04'
-  container: swift:5.1.3
+  container: norionomura/swift:513
   steps:
   - script: ./test_swiftpm.sh
 - job: test_linux_5_2
   pool:
     vmImage: 'Ubuntu 18.04'
-  container: swift:5.2.1
+  container: norionomura/swift:521
   steps:
   - script: ./test_swiftpm.sh
