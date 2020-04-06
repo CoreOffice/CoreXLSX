@@ -192,6 +192,15 @@ Drag the built frameworks (including the subdependencies `XMLCoder` and
 
 ## Contributing
 
+### Sponsorship
+
+If this library saved you any amount of time or money, please consider [sponsoring
+the work of its maintainer](https://github.com/sponsors/MaxDesiatov). While some of the
+sponsorship tiers give you priority support or even consulting time, any amount is
+appreciated and helps in maintaining the project.
+
+### Development Workflow
+
 On macOS the easiest way to start working on the project is to open the
 `Package.swift` file in Xcode 11. There is an extensive test suite that both
 tests files end-to-end and isolated snippets against their corresponding model
