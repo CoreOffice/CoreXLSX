@@ -52,10 +52,10 @@ to the [`Worksheet`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
-Strings in spreadsheet internals are frequently represented as shared strings,
-thus to parse a string value from a cell use of `stringValue(_: SharedStrings)`
-function is recommended, together with `try file.parseSharedString()` to get
-the list of shared strings first:
+Strings in spreadsheet internals are frequently represented as strings
+shared between multiple worksheets, thus to parse a string value from a cell
+use of `stringValue(_: SharedStrings)` function is recommended together with
+`try file.parseSharedString()`.
 
 Here's how you can get all strings in column "C" for example:
 
