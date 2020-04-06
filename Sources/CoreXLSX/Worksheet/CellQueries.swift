@@ -62,11 +62,13 @@ public extension Cell {
     return sharedStrings.items[index].text
   }
 
+  // swiftlint:disable line_length
   /// Returns a date value parsed from the cell in the [OLE Automation
   /// Date](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tooadate?view=netframework-4.8)
   /// format. As this format doesn't encode time zones, current user's time zone is used, which is
   /// taken from `TimeZone.autoupdatingCurrent`.
   var dateValue: Date? {
+    // swiftlint:enable line_length
     guard
       type != .sharedString,
       let intervalSinceReference = value.flatMap(Double.init),
