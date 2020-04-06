@@ -68,6 +68,36 @@ final class CoreXLSXTests: XCTestCase {
     ])
   }
 
+  func testDates() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/Dates.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let dates = try file.parseWorksheetPaths()
+      .flatMap { try file.parseWorksheet(at: $0).data?.rows ?? [] }
+      .flatMap { $0.cells }
+      .compactMap { $0.dateValue }
+
+    XCTAssertEqual(dates, [
+      DateComponents(
+        calendar: referenceCalendar,
+        timeZone: referenceTimeZone,
+        year: 2019,
+        month: 09,
+        day: 10
+      ).date,
+      DateComponents(
+        calendar: referenceCalendar,
+        timeZone: referenceTimeZone,
+        year: 2019,
+        month: 10,
+        day: 11
+      ).date,
+    ])
+  }
+
   func testPublicAPI() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {

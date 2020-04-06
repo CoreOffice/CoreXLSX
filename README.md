@@ -38,8 +38,8 @@ guard let file = XLSXFile(filepath: "./categories.xlsx") else {
 }
 
 for path in try file.parseWorksheetPaths() {
-  let ws = try file.parseWorksheet(at: path)
-  for row in ws.data?.rows ?? [] {
+  let worksheet = try file.parseWorksheet(at: path)
+  for row in worksheet.data?.rows ?? [] {
     for c in row.cells {
       print(c)
     }
@@ -47,33 +47,29 @@ for path in try file.parseWorksheetPaths() {
 }
 ```
 
-This prints every cell from every worksheet in the given XLSX file. Please refer
+This prints raw cell data from every worksheet in the given XLSX file. Please refer
 to the [`Worksheet`
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
- ### Shared strings
-
-Some cells (usually with strings) have their values shared in a separate model
-type, which you can get by evaluating `try file.parseSharedString()`. You can
-refer to the [`SharedStrings`
-model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/SharedStrings.swift)
-for the full list of its properties.
+Strings in spreadsheet internals are frequently represented as shared strings,
+thus to parse a string value from a cell use of `stringValue(_: SharedStrings)`
+function is recommended, together with `try file.parseSharedString()` to get
+the list of shared strings first:
 
 Here's how you can get all shared strings in column "C" for example:
 
 ```swift
 let sharedStrings = try file.parseSharedStrings()
-let columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
-  // in format internals "s" stands for "shared",
-  // if it is used, it means the value is an index of a shared string
-  .filter { $0.type == "s" }
-  // get the value of the cell
-  .compactMap { $0.value }
-  // convert the value to a number
-  .compactMap { Int($0) }
-  // use the number as an index in the array of shared strings
-  .compactMap { sharedStrings.items[$0].text }
+let columnCStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
+  .compactMap { $0.stringValue(sharedStrings) }
+```
+
+To parse a date value from a cell, use `dateValue` property on the `Cell` type:
+
+```swift
+let columnCDates = worksheet.cells(atColumns: [ColumnReference("C")!])
+  .compactMap { $0.dateValue }
 ```
 
 ### Styles

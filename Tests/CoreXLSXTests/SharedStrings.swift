@@ -113,10 +113,7 @@ final class SharedStringsTests: XCTestCase {
     for path in try file.parseWorksheetPaths() {
       let ws = try file.parseWorksheet(at: path)
       columnCStrings = ws.cells(atColumns: [ColumnReference("C")!])
-        .filter { $0.type == "s" }
-        .compactMap { $0.value }
-        .compactMap { Int($0) }
-        .compactMap { sharedStrings.items[$0].text }
+        .compactMap { $0.stringValue(sharedStrings) }
     }
 
     XCTAssertEqual(columnC, columnCStrings)
