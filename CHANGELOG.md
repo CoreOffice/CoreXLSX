@@ -1,3 +1,59 @@
+# 0.10.0 (6 April 2020)
+
+This is a release with bugfixes and a few improvements to usability of
+the spreadsheet cell values API.
+
+**New API:**
+
+The library now provides a simplified API to fetch string
+and date values from cells, which is much easier to use than the previous
+version (which is still available).
+
+Here's how you can get all strings (including shared strings) in column "C"
+for example:
+
+```swift
+let sharedStrings = try file.parseSharedStrings()
+let columnCStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
+  .compactMap { $0.stringValue(sharedStrings) }
+```
+
+To parse a date value from a cell, use `dateValue` property on the `Cell` type:
+
+```swift
+let columnCDates = worksheet.cells(atColumns: [ColumnReference("C")!])
+  .compactMap { $0.dateValue }
+```
+
+**Breaking change:**
+
+The `type` property on `Cell` is no longer of `String` type. It was previously
+used to check if cell's type is equal to `"s"`, which denoted a shared string.
+You should use enum values for that since this release, which for shared strings
+now is (unsurprisingly) `.sharedString`.
+
+**Closed issues:**
+
+- Xcode 11 installation and build ([#90](https://github.com/MaxDesiatov/CoreXLSX/issues/90))
+- Reading Date values from cell ([#89](https://github.com/MaxDesiatov/CoreXLSX/issues/89))
+- Can't open xml ([#82](https://github.com/MaxDesiatov/CoreXLSX/issues/82))
+- Not able to read Numeric data from Sheet ([#81](https://github.com/MaxDesiatov/CoreXLSX/issues/81))
+- Getting the value of a cell with number format? ([#71](https://github.com/MaxDesiatov/CoreXLSX/issues/71))
+- Opening xlsx file Document Directory, Crashes ([#52](https://github.com/MaxDesiatov/CoreXLSX/issues/52))
+
+**Merged pull requests:**
+
+- officeDocument is misspelled in corePropreties Relationship ([#95](https://github.com/MaxDesiatov/CoreXLSX/pull/95)) via [@mrkammoun](https://github.com/mrkammoun)
+- Add cell type enum, date/sharedStrings helpers ([#102](https://github.com/MaxDesiatov/CoreXLSX/pull/102)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Make XLSXFile a class, not a struct ([#100](https://github.com/MaxDesiatov/CoreXLSX/pull/100)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Clarify lack of support for .xls files in README ([#99](https://github.com/MaxDesiatov/CoreXLSX/pull/99)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Clarify Xcode 11 and Xcode 10 project details ([#98](https://github.com/MaxDesiatov/CoreXLSX/pull/98)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Update dependencies to their latest versions ([#96](https://github.com/MaxDesiatov/CoreXLSX/pull/96)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Update SwiftFormat settings, add pre-commit ([#97](https://github.com/MaxDesiatov/CoreXLSX/pull/97)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Fix workbooks with no views, cleanup tests ([#93](https://github.com/MaxDesiatov/CoreXLSX/pull/93)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Test on Xcode 11.3 with macOS 10.15 ([#92](https://github.com/MaxDesiatov/CoreXLSX/pull/92)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Update ZIPFoundation to 0.9.10 ([#91](https://github.com/MaxDesiatov/CoreXLSX/pull/91)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+
 # 0.9.1 (8 November 2019)
 
 This release adds a new value to the `Relationship.SchemaType` enum, which fixes
@@ -6,7 +62,7 @@ compatibility with some spreadsheet files. Thanks to
 
 **Fixed bugs:**
 
-- Cannot initialize SchemaType from invalid String value 
+- Cannot initialize SchemaType from invalid String value
 [\#87](https://github.com/MaxDesiatov/CoreXLSX/issues/87)
 
 **Merged pull requests:**
@@ -66,7 +122,7 @@ API](https://github.com/MaxDesiatov/CoreXLSX/blob/b7b802afeff0da438ffa7750176769
 Many thanks to [@grin](https://github.com/grin),
 [@GoldenJoe](https://github.com/GoldenJoe) and
 [@LiewLi](https://github.com/LiewLi) for reporting and fixing issues in this
-release. 
+release.
 
 **Closed issues:**
 
@@ -94,7 +150,7 @@ release.
 
 Bugfix release that improves compatibility with different spreadsheet types.
 
-Thanks to [@grin](https://github.com/grin) for reporting and fixing issues in 
+Thanks to [@grin](https://github.com/grin) for reporting and fixing issues in
 this release.
 
 **Breaking changes:**
@@ -160,11 +216,11 @@ Specifically:
 
 # 0.5.0 (18 April 2019)
 
-This is a release with API additions and bug fixes. 
+This is a release with API additions and bug fixes.
 
 This release of CoreXLSX can be integrated as a Swift 5 module if you're using
 Xcode 10.2, but support for Swift 4.2 and earlier Xcode 10 versions is also
-maintained. 
+maintained.
 
 Compatibility is improved for big files and files that internally contain
 namespaced XML. A few other previously reported compatibility issues are now
@@ -174,7 +230,7 @@ release wouldn't be possible without your contribution!
 **Breaking changes:**
 
 Several properties on the model types became optional when there's no
-guarantee they are always available in files generated by different apps and 
+guarantee they are always available in files generated by different apps and
 tools.
 
 **Additions:**
@@ -184,7 +240,7 @@ Now you can parse style information from the archive with the new
 model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
 for more details. Please note that not all XLSX files contain style
 information, so you should be prepared to handle the errors thrown from
-`parseStyles()` function in that case. 
+`parseStyles()` function in that case.
 
 **Merged pull requests:**
 

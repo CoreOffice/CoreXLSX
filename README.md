@@ -57,7 +57,7 @@ thus to parse a string value from a cell use of `stringValue(_: SharedStrings)`
 function is recommended, together with `try file.parseSharedString()` to get
 the list of shared strings first:
 
-Here's how you can get all shared strings in column "C" for example:
+Here's how you can get all strings in column "C" for example:
 
 ```swift
 let sharedStrings = try file.parseSharedStrings()
@@ -141,14 +141,14 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 ```swift
 dependencies: [
   .package(url: "https://github.com/MaxDesiatov/CoreXLSX.git",
-           .upToNextMajor(from: "0.9.1"))
+           .upToNextMajor(from: "0.10.0"))
 ]
 ```
 
 ### CocoaPods
 
 CoreXLSX is available through [CocoaPods](https://cocoapods.org) on Apple's
-platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.9.1'` to your
+platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.10.0'` to your
 `Podfile` like shown here:
 
 ```ruby
@@ -157,7 +157,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 # platform :ios, '9.0'
 use_frameworks!
 target '<Your Target Name>' do
-  pod 'CoreXLSX', '~> 0.9.1'
+  pod 'CoreXLSX', '~> 0.10.0'
 end
 ```
 
@@ -178,7 +178,7 @@ $ brew install carthage
 Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
 
 ```ogdl
-github "MaxDesiatov/CoreXLSX" ~> 0.9.1
+github "MaxDesiatov/CoreXLSX" ~> 0.10.0
 ```
 
 Then, run the following command to build the framework:
@@ -191,6 +191,15 @@ Drag the built frameworks (including the subdependencies `XMLCoder` and
 `ZIPFoundation`) into your Xcode project.
 
 ## Contributing
+
+### Sponsorship
+
+If this library saved you any amount of time or money, please consider [sponsoring
+the work of its maintainer](https://github.com/sponsors/MaxDesiatov). While some of the
+sponsorship tiers give you priority support or even consulting time, any amount is
+appreciated and helps in maintaining the project.
+
+### Development Workflow
 
 On macOS the easiest way to start working on the project is to open the
 `Package.swift` file in Xcode 11. There is an extensive test suite that both
