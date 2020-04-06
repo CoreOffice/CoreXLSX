@@ -1,7 +1,8 @@
 # 0.10.0 (6 April 2020)
 
 This is a release with bugfixes and a few improvements to usability of
-the spreadsheet cell values API.
+the spreadsheet cell values API. Thanks to all contributors and users, you
+provide an invaluable amount of feedback and help!
 
 **New API:**
 
