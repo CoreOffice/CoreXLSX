@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CoreXLSX'
-  s.version          = '0.9.1'
+  s.version          = '0.10.0'
   s.summary          = 'Excel spreadsheet (XLSX) format support in pure Swift'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ Excel spreadsheet (XLSX) format support in pure Swift.
   s.osx.deployment_target = '10.11'
 
   s.source_files = 'Sources/CoreXLSX/**/*.swift'
-  
+
   # s.resource_bundles = {
   #   'CoreXLSX.pod' => ['CoreXLSX.pod/Assets/*.png']
   # }
