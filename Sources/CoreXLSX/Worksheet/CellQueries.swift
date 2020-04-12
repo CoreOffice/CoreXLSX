@@ -62,8 +62,7 @@ public extension Cell {
     return sharedStrings.items[index].text
   }
 
-  /// Returns the value of the cell as a RichText,
-  /// given `sharedStrings` argument.
+  /// Returns the value of the cell as a RichText, from a given `sharedStrings` argument.
   func richStringValue(_ sharedStrings: SharedStrings) -> RichText? {
     guard type == .sharedString, let index = value.flatMap(Int.init) else { return nil }
 
