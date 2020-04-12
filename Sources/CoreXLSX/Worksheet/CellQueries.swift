@@ -63,10 +63,10 @@ public extension Cell {
   }
 
   /// Returns the value of the cell as a RichText, from a given `sharedStrings` argument.
-  func richStringValue(_ sharedStrings: SharedStrings) -> RichText? {
-    guard type == .sharedString, let index = value.flatMap(Int.init) else { return nil }
+  func richStringValue(_ sharedStrings: SharedStrings) -> [RichText] {
+    guard type == .sharedString, let index = value.flatMap(Int.init) else { return [] }
 
-    return sharedStrings.items[index].richText.first
+    return sharedStrings.items[index].richText
   }
 
   // swiftlint:disable line_length
