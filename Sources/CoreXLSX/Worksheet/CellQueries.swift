@@ -62,6 +62,13 @@ public extension Cell {
     return sharedStrings.items[index].text
   }
 
+  /// Returns the value of the cell as a RichText, from a given `sharedStrings` argument.
+  func richStringValue(_ sharedStrings: SharedStrings) -> [RichText] {
+    guard type == .sharedString, let index = value.flatMap(Int.init) else { return [] }
+
+    return sharedStrings.items[index].richText
+  }
+
   // swiftlint:disable line_length
   /// Returns a date value parsed from the cell in the [OLE Automation
   /// Date](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tooadate?view=netframework-4.8)
