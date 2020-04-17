@@ -145,6 +145,10 @@ dependencies: [
 ]
 ```
 
+If you're using CoreXLSX in an app built with Xcode, you can also add it as a direct
+dependency [using Xcode's 
+GUI](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
+
 ### CocoaPods
 
 CoreXLSX is available through [CocoaPods](https://cocoapods.org) on Apple's
