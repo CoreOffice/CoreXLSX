@@ -14,7 +14,7 @@ format](https://en.wikipedia.org/wiki/Office_Open_XML). It allows you to open a
 spreadsheet archive with `.xlsx` extension and map its internal structure into
 model types expressed directly in Swift.
 
-Important to note that this library only supports [the `.xlsx`
+Important to note that this library provides read-only support only for [the `.xlsx`
 format](https://en.wikipedia.org/wiki/Office_Open_XML). As the older
 [legacy `.xls` spreadsheet
 format](https://en.wikipedia.org/wiki/Microsoft_Excel#File_formats)
