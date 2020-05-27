@@ -195,6 +195,29 @@ public class XLSXFile {
     return (originalPath, relationships)
   }
 
+  /// Parse and return an array of worksheets in this XLSX file with their corresponding names.
+  public func parseWorksheetPathsAndNames(
+    workbook: Workbook
+  ) throws -> [(name: String?, path: String)] {
+    return try parseDocumentPaths().map {
+      try parseDocumentRelationships(path: $0)
+    }.flatMap { (path, relationships) -> [(name: String?, path: String)] in
+      let worksheets = relationships.items.filter { $0.type == .worksheet }
+
+      guard !path.isRoot else { return worksheets.map { (name: nil, path: $0.target) } }
+
+      // .rels file has paths relative to its directory,
+      // storing that path in `pathPrefix`
+      let pathPrefix = path.components.dropLast().joined(separator: "/")
+
+      let sheetIDs = Dictionary(uniqueKeysWithValues: workbook.sheets.items.compactMap { sheet in
+        sheet.name.flatMap { (sheet.relationship, $0) }
+      })
+
+      return worksheets.map { (name: sheetIDs[$0.id], path: "\(pathPrefix)/\($0.target)") }
+    }
+  }
+
   /// Parse and return an array of worksheets in this XLSX file.
   public func parseWorksheetPaths() throws -> [String] {
     return try parseDocumentPaths().map {
