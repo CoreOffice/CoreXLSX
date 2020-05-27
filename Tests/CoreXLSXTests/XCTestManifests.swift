@@ -40,6 +40,7 @@ extension CoreXLSXTests {
   // to regenerate.
   static let __allTests__CoreXLSXTests = [
     ("testBlank", testBlank),
+    ("testDates", testDates),
     ("testHelloWorld", testHelloWorld),
     ("testLegacyPublicAPI", testLegacyPublicAPI),
     ("testMultiline", testMultiline),
@@ -103,6 +104,7 @@ extension WorkbookTests {
   static let __allTests__WorkbookTests = [
     ("testWorkbook", testWorkbook),
     ("testWorkbookNoViews", testWorkbookNoViews),
+    ("testWorksheetPathsAndNames", testWorksheetPathsAndNames),
   ]
 }
 

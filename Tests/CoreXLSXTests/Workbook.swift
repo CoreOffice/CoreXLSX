@@ -58,7 +58,7 @@ final class WorkbookTests: XCTestCase {
 
     let wbs = try file.parseWorkbooks()
     let sheets = try file.parseWorksheetPathsAndNames(workbook: wbs[0])
-    XCTAssertEqual(wbs[0].sheets.items, parsedSheet)
+    XCTAssertEqual(sheets.map { $0.name }, ["Sheet 1"])
   }
 
   func testWorkbookNoViews() throws {
