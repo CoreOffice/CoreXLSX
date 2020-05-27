@@ -49,6 +49,18 @@ final class WorkbookTests: XCTestCase {
     XCTAssertEqual(wbs[0].sheets.items, parsedSheet)
   }
 
+  func testWorksheetPathsAndNames() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XCTAssert(false, "failed to open the file")
+      return
+    }
+
+    let wbs = try file.parseWorkbooks()
+    let sheets = try file.parseWorksheetPathsAndNames(workbook: wbs[0])
+    XCTAssertEqual(wbs[0].sheets.items, parsedSheet)
+  }
+
   func testWorkbookNoViews() throws {
     let decoder = XMLDecoder()
     decoder.shouldProcessNamespaces = true
