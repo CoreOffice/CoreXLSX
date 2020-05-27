@@ -79,10 +79,10 @@ jobs:
       CODECOV_JOB: 'true'
       CODECOV_TOKEN: $(codecovToken)
 - job: test_swiftpm
-   pool:
-     vmImage: 'macOS-10.15'
-   steps:
-   - script: ./test_swiftpm.sh
+  pool:
+    vmImage: 'macOS-10.15'
+  steps:
+  - script: ./test_swiftpm.sh
 
 - job: test_linux_5_1
   pool:
