@@ -123,8 +123,8 @@ here](https://desiatov.com/swift-codable-xlsx/).
 - iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later deployment targets
 
 **Linux**
-- Ubuntu 14.04 or later
-- Swift 5.0.1 or later
+- Ubuntu 16.04 or later
+- Swift 5.1 or later
 
 ## Installation
 
@@ -146,7 +146,7 @@ dependencies: [
 ```
 
 If you're using CoreXLSX in an app built with Xcode, you can also add it as a direct
-dependency [using Xcode's 
+dependency [using Xcode's
 GUI](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
 
 ### CocoaPods
