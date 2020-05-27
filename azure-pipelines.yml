@@ -83,21 +83,16 @@ jobs:
     vmImage: 'macOS-10.15'
   steps:
   - script: ./test_swiftpm.sh
-- job: test_linux_5_0
-  pool:
-    vmImage: 'Ubuntu 18.04'
-  container: norionomura/swift:503
-  steps:
-  - script: ./test_swiftpm.sh
+
 - job: test_linux_5_1
   pool:
     vmImage: 'Ubuntu 18.04'
-  container: norionomura/swift:513
+  container: norionomura/swift:515
   steps:
   - script: ./test_swiftpm.sh
 - job: test_linux_5_2
   pool:
     vmImage: 'Ubuntu 18.04'
-  container: norionomura/swift:521
+  container: norionomura/swift:522
   steps:
   - script: ./test_swiftpm.sh
