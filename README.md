@@ -49,7 +49,7 @@ for path in try file.parseWorksheetPaths() {
 
 This prints raw cell data from every worksheet in the given XLSX file. Please refer
 to the [`Worksheet`
-model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet/Worksheet.swift)
+model](https://github.com/CoreOffice/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
 Strings in spreadsheet internals are frequently represented as strings
@@ -76,7 +76,7 @@ let columnCDates = worksheet.cells(atColumns: [ColumnReference("C")!])
 
 Since version 0.5.0 you can parse style information from the archive with the
 new `parseStyles()` function. Please refer to the [`Styles`
-model](https://github.com/MaxDesiatov/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
+model](https://github.com/CoreOffice/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
 for more details. You should also note that not all XLSX files contain style
 information, so you should be prepared to handle the errors thrown from
 `parseStyles()` function in that case.
@@ -92,7 +92,7 @@ let fonts = styles.fonts?.items.compactMap { $0.name?.value }
 ## Reporting compatibility issues
 
 If you stumble upon a file that can't be parsed, please [file an
-issue](https://github.com/MaxDesiatov/CoreXLSX/issues) posting the exact error
+issue](https://github.com/CoreOffice/CoreXLSX/issues) posting the exact error
 message. Thanks to use of standard Swift `Codable` protocol, detailed errors are
 generated listing a missing attribute, so it can be easily added to the model
 enabling broader format support. Attaching a file that can't be parsed would
@@ -140,7 +140,7 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/MaxDesiatov/CoreXLSX.git",
+  .package(url: "https://github.com/CoreOffice/CoreXLSX.git",
            .upToNextMajor(from: "0.10.0"))
 ]
 ```
@@ -182,7 +182,7 @@ $ brew install carthage
 Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
 
 ```ogdl
-github "MaxDesiatov/CoreXLSX" ~> 0.10.0
+github "CoreOffice/CoreXLSX" ~> 0.10.0
 ```
 
 Then, run the following command to build the framework:
@@ -222,7 +222,7 @@ sure it builds on other platforms.
 
 If you prefer not to work with Xcode, the project fully supports SwiftPM and the
 usual workflow with `swift build` and `swift test` should work, otherwise please
-[report this as a bug](https://github.com/MaxDesiatov/CoreXLSX/issues/new).
+[report this as a bug](https://github.com/CoreOffice/CoreXLSX/issues/new).
 
 ### Coding Style
 
@@ -254,7 +254,7 @@ PRs before merging.
 ### Code of Conduct
 
 This project adheres to the [Contributor Covenant Code of
-Conduct](https://github.com/MaxDesiatov/CoreXLSX/blob/master/CODE_OF_CONDUCT.md).
+Conduct](https://github.com/CoreOffice/CoreXLSX/blob/master/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
 unacceptable behavior to corexlsx@desiatov.com.
 
@@ -266,5 +266,5 @@ Hodovaniuk](https://matvii.hodovani.uk)
 ## License
 
 CoreXLSX is available under the Apache 2.0 license. See the
-[LICENSE](https://github.com/MaxDesiatov/CoreXLSX/blob/master/LICENSE.md) file
+[LICENSE](https://github.com/CoreOffice/CoreXLSX/blob/master/LICENSE.md) file
 for more info.
