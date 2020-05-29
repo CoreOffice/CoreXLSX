@@ -1,6 +1,16 @@
+// Copyright 2020 CoreOffice contributors
 //
-//  CoreXLSX.swift
-//  CoreXLSX
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 //
 //  Created by Max Desiatov on 27/10/2018.
 //
@@ -13,6 +23,7 @@ import ZIPFoundation
 public typealias XLSXReaderError = CoreXLSXError
 
 public enum CoreXLSXError: Error {
+  case dataIsNotAnArchive
   case archiveEntryNotFound
   case invalidCellReference
   case unsupportedWorksheetPath
@@ -22,9 +33,13 @@ public enum CoreXLSXError: Error {
  user's filesystem.
  */
 public class XLSXFile {
-  public let filepath: String
   private let archive: Archive
-  private let decoder: XMLDecoder
+  private let decoder: XMLDecoder = {
+    let result = XMLDecoder()
+    result.trimValueWhitespaces = false
+    result.shouldProcessNamespaces = true
+    return result
+  }()
 
   /// Buffer size passed to `archive.extract` call
   private let bufferSize: UInt32
@@ -42,9 +57,11 @@ public class XLSXFile {
   /// containing 5 characters before column 15 and 5 characters after, all on
   /// line 3. Line wrapping should be handled correctly too as the context can
   /// span more than a few lines.
-  public init?(filepath: String,
-               bufferSize: UInt32 = 10 * 1024 * 1024,
-               errorContextLength: UInt = 0) {
+  public init?(
+    filepath: String,
+    bufferSize: UInt32 = 10 * 1024 * 1024,
+    errorContextLength: UInt = 0
+  ) {
     let archiveURL = URL(fileURLWithPath: filepath)
 
     guard let archive = Archive(url: archiveURL, accessMode: .read) else {
@@ -52,15 +69,32 @@ public class XLSXFile {
     }
 
     self.archive = archive
-    self.filepath = filepath
     self.bufferSize = bufferSize
-
-    let decoder = XMLDecoder()
-    decoder.trimValueWhitespaces = false
     decoder.errorContextLength = errorContextLength
-    decoder.shouldProcessNamespaces = true
-    self.decoder = decoder
   }
+
+  #if swift(>=5.0)
+  /// - Parameters:
+  ///   - data: content of the `.xlsx` file to be processed.
+  ///   - bufferSize: ZIP archive buffer size in bytes. The default is 10KB.
+  /// You may need to set a bigger buffer size for bigger files.
+  ///   - errorContextLength: The error context length. The default is `0`.
+  /// Non-zero length makes an error thrown from
+  /// the XML parser with line/column location repackaged with a context
+  /// around that location of specified length.
+  public init(
+    data: Data,
+    bufferSize: UInt32 = 10 * 1024 * 1024,
+    errorContextLength: UInt = 0
+  ) throws {
+    guard let archive = Archive(data: data, accessMode: .read)
+    else { throw CoreXLSXError.dataIsNotAnArchive }
+
+    self.archive = archive
+    self.bufferSize = bufferSize
+    decoder.errorContextLength = errorContextLength
+  }
+  #endif
 
   /// Parse a file within `archive` at `path`. Parsing result is
   /// an instance of `type`.
