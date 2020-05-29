@@ -12,10 +12,7 @@ CoreXLSX is a library focused on representing the low-level structure
 of [the XML-based XLSX spreadsheet
 format](https://en.wikipedia.org/wiki/Office_Open_XML). It allows you to open a
 spreadsheet archive with `.xlsx` extension and map its internal structure into
-model types expressed directly in Swift. If your `.xlsx` file is encrypted, you
-should have a look at the [CryptoOffice](https://github.com/CoreOffice/CryptoOffice)
-library, which gives read-only access to files that utilize 
-[ECMA-376 agile encryption](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/cab78f5c-9c17-495e-bea9-032c63f02ad8).
+model types expressed directly in Swift.
 
 Important to note that this library provides read-only support only for [the `.xlsx`
 format](https://en.wikipedia.org/wiki/Office_Open_XML). As the older
@@ -24,6 +21,10 @@ format](https://en.wikipedia.org/wiki/Microsoft_Excel#File_formats)
 has completely different internals, please refer to [other
 libraries](https://github.com/libxls/libxls) if you need to work with files of
 that type.
+
+If your `.xlsx` files use [ECMA-376 agile 
+encryption](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/cab78f5c-9c17-495e-bea9-032c63f02ad8) (which seems to be the most popular variety), have a look the 
+[CryptoOffice](https://github.com/CoreOffice/CryptoOffice) library.
 
 ## Example
 
