@@ -6,7 +6,5 @@ target 'CoreXLSXExample' do
 
   target 'CoreXLSXTests' do
     inherit! :search_paths
-
-    
   end
 end

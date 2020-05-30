@@ -22,8 +22,8 @@ has completely different internals, please refer to [other
 libraries](https://github.com/libxls/libxls) if you need to work with files of
 that type.
 
-If your `.xlsx` files use [ECMA-376 agile 
-encryption](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/cab78f5c-9c17-495e-bea9-032c63f02ad8) (which seems to be the most popular variety), have a look the 
+If your `.xlsx` files use [ECMA-376 agile
+encryption](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/cab78f5c-9c17-495e-bea9-032c63f02ad8) (which seems to be the most popular variety), have a look the
 [CryptoOffice](https://github.com/CoreOffice/CryptoOffice) library.
 
 ## Example
@@ -41,7 +41,11 @@ guard let file = XLSXFile(filepath: "./categories.xlsx") else {
   fatalError("XLSX file corrupted or does not exist")
 }
 
-for path in try file.parseWorksheetPaths() {
+for (worksheetName, path) in try file.parseWorksheetPathsAndNames() {
+  if let worksheetName = worksheetName {
+    print("this worksheet has a name: \(worksheetName)")
+  }
+
   let worksheet = try file.parseWorksheet(at: path)
   for row in worksheet.data?.rows ?? [] {
     for c in row.cells {
@@ -76,6 +80,14 @@ let columnCDates = worksheet.cells(atColumns: [ColumnReference("C")!])
   .compactMap { $0.dateValue }
 ```
 
+Similarly, to parse rich strings, use the `richStringValue` function:
+
+```swift
+let richStrings = try file.parseSharedStrings()
+let columnCRichStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
+  .compactMap { $0.richStringValue(sharedStrings) }
+```
+
 ### Styles
 
 Since version 0.5.0 you can parse style information from the archive with the
@@ -84,7 +96,6 @@ model](https://github.com/CoreOffice/CoreXLSX/blob/master/Sources/CoreXLSX/Style
 for more details. You should also note that not all XLSX files contain style
 information, so you should be prepared to handle the errors thrown from
 `parseStyles()` function in that case.
-
 
 Here's a short example that fetches a list of fonts used:
 
@@ -122,11 +133,13 @@ here](https://desiatov.com/swift-codable-xlsx/).
 ## Requirements
 
 **Apple Platforms**
+
 - Xcode 10.0 or later
 - Swift 4.2 or later
 - iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later deployment targets
 
 **Linux**
+
 - Ubuntu 16.04 or later
 - Swift 5.1 or later
 
@@ -145,7 +158,7 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 ```swift
 dependencies: [
   .package(url: "https://github.com/CoreOffice/CoreXLSX.git",
-           .upToNextMajor(from: "0.10.0"))
+           .upToNextMajor(from: "0.11.0"))
 ]
 ```
 
@@ -156,7 +169,7 @@ GUI](https://developer.apple.com/documentation/xcode/adding_package_dependencies
 ### CocoaPods
 
 CoreXLSX is available through [CocoaPods](https://cocoapods.org) on Apple's
-platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.10.0'` to your
+platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.11.0'` to your
 `Podfile` like shown here:
 
 ```ruby
@@ -165,7 +178,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 # platform :ios, '9.0'
 use_frameworks!
 target '<Your Target Name>' do
-  pod 'CoreXLSX', '~> 0.10.0'
+  pod 'CoreXLSX', '~> 0.11.0'
 end
 ```
 
@@ -186,7 +199,7 @@ $ brew install carthage
 Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
 
 ```ogdl
-github "CoreOffice/CoreXLSX" ~> 0.10.0
+github "CoreOffice/CoreXLSX" ~> 0.11.0
 ```
 
 Then, run the following command to build the framework:
@@ -260,7 +273,7 @@ PRs before merging.
 This project adheres to the [Contributor Covenant Code of
 Conduct](https://github.com/CoreOffice/CoreXLSX/blob/master/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
-unacceptable behavior to corexlsx@desiatov.com.
+unacceptable behavior to conduct@coreoffice.org.
 
 ## Maintainers
 

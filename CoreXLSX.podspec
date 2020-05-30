@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.swift_versions    = ['4.2', '5.0', '5.1', '5.2']
   s.description      = <<-DESC
 Excel spreadsheet (XLSX) format support in pure Swift.
-                       DESC
+DESC
 
   s.homepage         = 'https://github.com/CoreOffice/CoreXLSX'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -35,12 +35,6 @@ Excel spreadsheet (XLSX) format support in pure Swift.
 
   s.source_files = 'Sources/CoreXLSX/**/*.swift'
 
-  # s.resource_bundles = {
-  #   'CoreXLSX.pod' => ['CoreXLSX.pod/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ZIPFoundation', '~> 0.9.11'
   s.dependency 'XMLCoder', '~> 0.11.1'
 end
