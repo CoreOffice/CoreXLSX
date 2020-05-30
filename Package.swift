@@ -24,7 +24,7 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
     .package(url: "https://github.com/maxdesiatov/XMLCoder.git",
-             .upToNextMinor(from: "0.10.0")),
+             .upToNextMinor(from: "0.11.1")),
     .package(url: "https://github.com/weichsel/ZIPFoundation.git",
              .upToNextMinor(from: "0.9.11")),
   ],
