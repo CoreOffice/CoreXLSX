@@ -37,13 +37,14 @@ more sensible naming applied to a few attributes. The API is pretty simple:
 ```swift
 import CoreXLSX
 
-guard let file = XLSXFile(filepath: "./categories.xlsx") else {
-  fatalError("XLSX file corrupted or does not exist")
+let filepath = "./categories.xlsx"
+guard let file = XLSXFile(filepath: filepath) else {
+  fatalError("XLSX file at \(filepath) is corrupted or does not exist")
 }
 
 for (worksheetName, path) in try file.parseWorksheetPathsAndNames() {
   if let worksheetName = worksheetName {
-    print("this worksheet has a name: \(worksheetName)")
+    print("This worksheet has a name: \(worksheetName)")
   }
 
   let worksheet = try file.parseWorksheet(at: path)
