@@ -27,8 +27,4 @@ final class CommentsTests: XCTestCase {
     XCTAssertEqual(comments.commentList.itemsByReference["A1"]?.text.plain,
                    "my note")
   }
-
-  static let allTests = [
-    ("testComments", testComments),
-  ]
 }

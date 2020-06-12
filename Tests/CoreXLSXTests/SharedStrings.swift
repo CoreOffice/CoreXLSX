@@ -143,10 +143,4 @@ final class SharedStringsTests: XCTestCase {
     }
     XCTAssertEqual(text, "CellA2")
   }
-
-  static let allTests = [
-    ("testSharedStrings", testSharedStrings),
-    ("testSharedStringsOrder", testSharedStringsOrder),
-    ("testSharedStringsRichText", testRichTextXML),
-  ]
 }
