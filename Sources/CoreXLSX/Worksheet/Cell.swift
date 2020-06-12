@@ -18,6 +18,7 @@
 /// [docs](http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html)
 public enum CellType: String, Codable {
   case bool = "b"
+  case date = "d"
   case number = "n"
   case error = "e"
   case sharedString = "s"

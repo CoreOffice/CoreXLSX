@@ -61,7 +61,7 @@ private let referenceDate = DateComponents(
   second: 0,
   nanosecond: 0
 ).date
-private let secondsInADay: Double = 86_400_000
+private let secondsInADay: Double = 86400
 
 public extension Cell {
   /// Returns a string value for this cell, potentially loading a shared string value from a
@@ -94,7 +94,7 @@ public extension Cell {
 
     let days = Int(floor(intervalSinceReference))
     let seconds = Int(
-      floor(intervalSinceReference.truncatingRemainder(dividingBy: 1) * secondsInADay)
+      round(intervalSinceReference.truncatingRemainder(dividingBy: 1) * secondsInADay)
     )
 
     guard let addedDays = referenceCalendar.date(byAdding: .day, value: days, to: referenceDate)
