@@ -15,7 +15,7 @@ Version of the library, please paste it directly from your `Package.swift`, Xcod
 
 A clear and concise description of what the bug is.
 
-**Steps To Reproduce**
+**Steps to reproduce**
 
 Steps to reproduce the behavior, for example:
 1. Go to '...'
