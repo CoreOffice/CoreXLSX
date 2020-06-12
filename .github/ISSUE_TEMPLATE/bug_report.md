@@ -11,7 +11,7 @@ assignees: MaxDesiatov
 
 Version of the library, please paste it directly from your `Package.swift`, Xcode packages list, `Podfile` or `Cartfile`.
 
-**Describe the bug**
+**Description of the bug**
 
 A clear and concise description of what the bug is.
 
