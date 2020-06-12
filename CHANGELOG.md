@@ -1,3 +1,18 @@
+# 0.11.1 (12 June 2020)
+
+This is a bugfix release that resolves an issue with parsing cells that contain time
+values. Thanks to [@mb812](https://github.com/mb812) for reporting it!
+
+**Closed issues:**
+
+- Error parsing cells with Time value ([#114](https://github.com/CoreOffice/CoreXLSX/issues/114))
+- `file.parseWorksheetPathsAndNames()` wanna `workbook: <#Workbook#>` ([#113](https://github.com/CoreOffice/CoreXLSX/issues/113))
+- XLSXFile not initialising when passing document directory path ([#108](https://github.com/CoreOffice/CoreXLSX/issues/108))
+
+**Merged pull requests:**
+
+- Fix time values returned by Cell.dateValue ([#115](https://github.com/CoreOffice/CoreXLSX/pull/115)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+
 # 0.11.0 (30 May 2020)
 
 This is a feature release that enables compatibility with [CryptoOffice](https://github.com/CoreOffice/CryptoOffice) for decrypting spreadsheets. Additionally, with 0.11.0 you can easily get worksheet names with a new `parseWorksheetPathsAndNames` function on `XLSXFile` and get rich text values from cells with a new `richStringValue` function on `Cell`.
