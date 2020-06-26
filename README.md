@@ -2,11 +2,11 @@
 
 ## Excel spreadsheet (XLSX) format parser written in pure Swift
 
-[![Build Status](https://dev.azure.com/CoreOffice/CoreOffice/_apis/build/status/CoreOffice.CoreXLSX?branchName=master)](https://dev.azure.com/CoreOffice/CoreOffice/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/CoreOffice/CoreOffice/_apis/build/status/CoreOffice.CoreXLSX?branchName=main)](https://dev.azure.com/CoreOffice/CoreOffice/_build/latest?definitionId=1&branchName=main)
 [![Version](https://img.shields.io/cocoapods/v/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 [![License](https://img.shields.io/cocoapods/l/CoreXLSX.svg?style=flat)](https://cocoapods.org/pods/CoreXLSX)
 ![Platform](https://img.shields.io/badge/platform-watchos%20%7C%20ios%20%7C%20tvos%20%7C%20macos%20%7C%20linux-lightgrey.svg?style=flat)
-[![Coverage](https://img.shields.io/codecov/c/github/CoreOffice/CoreXLSX/master.svg?style=flat)](https://codecov.io/gh/CoreOffice/CoreXLSX)
+[![Coverage](https://img.shields.io/codecov/c/github/CoreOffice/CoreXLSX/main.svg?style=flat)](https://codecov.io/gh/CoreOffice/CoreXLSX)
 
 CoreXLSX is a library focused on representing the low-level structure
 of [the XML-based XLSX spreadsheet
@@ -60,7 +60,7 @@ for wbk in try file.parseWorkbooks() {
 
 This prints raw cell data from every worksheet in the given XLSX file. Please refer
 to the [`Worksheet`
-model](https://github.com/CoreOffice/CoreXLSX/blob/master/Sources/CoreXLSX/Worksheet/Worksheet.swift)
+model](https://github.com/CoreOffice/CoreXLSX/blob/main/Sources/CoreXLSX/Worksheet/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
 Strings in spreadsheet internals are frequently represented as strings
@@ -95,7 +95,7 @@ let columnCRichStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
 
 Since version 0.5.0 you can parse style information from the archive with the
 new `parseStyles()` function. Please refer to the [`Styles`
-model](https://github.com/CoreOffice/CoreXLSX/blob/master/Sources/CoreXLSX/Styles.swift)
+model](https://github.com/CoreOffice/CoreXLSX/blob/main/Sources/CoreXLSX/Styles.swift)
 for more details. You should also note that not all XLSX files contain style
 information, so you should be prepared to handle the errors thrown from
 `parseStyles()` function in that case.
@@ -268,23 +268,22 @@ Refer to [the pre-commit documentation page](https://pre-commit.com/) for more d
 and installation instructions for other platforms.
 
 SwiftFormat and SwiftLint also run on CI for every PR and thus a CI build can
-fail with incosistent formatting or style. We require CI builds to pass for all
+fail with inconsistent formatting or style. We require CI builds to pass for all
 PRs before merging.
 
 ### Code of Conduct
 
 This project adheres to the [Contributor Covenant Code of
-Conduct](https://github.com/CoreOffice/CoreXLSX/blob/master/CODE_OF_CONDUCT.md).
+Conduct](https://github.com/CoreOffice/CoreXLSX/blob/main/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
 unacceptable behavior to conduct@coreoffice.org.
 
 ## Maintainers
 
-[Max Desiatov](https://desiatov.com), [Matvii
-Hodovaniuk](https://matvii.hodovani.uk)
+[Max Desiatov](https://desiatov.com), [Matvii Hodovaniuk](https://matvii.hodovani.uk).
 
 ## License
 
 CoreXLSX is available under the Apache 2.0 license. See the
-[LICENSE](https://github.com/CoreOffice/CoreXLSX/blob/master/LICENSE.md) file
+[LICENSE](https://github.com/CoreOffice/CoreXLSX/blob/main/LICENSE.md) file
 for more info.
