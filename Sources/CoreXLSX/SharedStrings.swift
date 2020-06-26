@@ -77,9 +77,9 @@ public struct RichText: Codable, Equatable {
   }
 
   public struct Properties: Codable, Equatable {
-    public let size: Size
+    public let size: Size?
     public let color: Color?
-    public let font: Font
+    public let font: Font?
     public let family: Family?
     public let scheme: Scheme?
 
