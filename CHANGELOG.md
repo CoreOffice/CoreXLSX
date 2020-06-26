@@ -1,3 +1,10 @@
+# 0.12.0 (26 June 2020)
+
+The is a bugfix release with a breaking change, it makes `size` and `font` properties
+optional on the `RichText.Properties` type to improve compatibility with certain spreadsheets.
+Thanks to [@Ethan-Chew](https://github.com/Ethan-Chew) for reporting this in
+[#116](https://github.com/CoreOffice/CoreXLSX/issues/116).
+
 # 0.11.1 (12 June 2020)
 
 This is a bugfix release that resolves an issue with parsing cells that contain time
