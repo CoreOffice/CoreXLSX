@@ -25,10 +25,10 @@ public struct Workbook: Codable, Equatable {
   }
 
   public struct View: Codable, Equatable {
-    public let xWindow: Int
-    public let yWindow: Int
-    public let windowWidth: UInt
-    public let windowHeight: UInt
+    public let xWindow: Int?
+    public let yWindow: Int?
+    public let windowWidth: UInt?
+    public let windowHeight: UInt?
   }
 
   public let views: Views?
