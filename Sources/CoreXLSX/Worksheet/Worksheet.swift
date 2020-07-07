@@ -223,7 +223,7 @@ public struct Row: Codable {
 }
 
 public struct MergeCells: Codable {
-  public let count: Int
+  public let count: Int?
   public let items: [MergeCell]
 
   enum CodingKeys: String, CodingKey {
