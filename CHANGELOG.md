@@ -1,3 +1,22 @@
+# 0.13.0 (8 July 2020)
+
+This is a bugfix release with breaking changes that make `count` property on `MergeCells` and all
+properties on `Workbook.View` optional. Many thanks to
+[@Ethan-Chew](https://github.com/Ethan-Chew) and
+[@robgtsoftware](https://github.com/robgtsoftware) for reporting these issues!
+
+**Closed issues:**
+
+- Printing Strings in a Column ([#116](https://github.com/CoreOffice/CoreXLSX/issues/116))
+- File.parseWorksheet(at: path) dies ([#94](https://github.com/CoreOffice/CoreXLSX/issues/94))
+
+**Merged pull requests:**
+
+- Make Workbook.View properties optional ([#120](https://github.com/CoreOffice/CoreXLSX/pull/120))
+  via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Make count optional in MergeCells ([#119](https://github.com/CoreOffice/CoreXLSX/pull/119)) via
+  [@MaxDesiatov](https://github.com/MaxDesiatov)
+
 # 0.12.0 (26 June 2020)
 
 The is a bugfix release with a breaking change, it makes `size` and `font` properties

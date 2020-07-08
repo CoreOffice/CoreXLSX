@@ -1,5 +1,5 @@
 PODS:
-  - CoreXLSX (0.12.0):
+  - CoreXLSX (0.13.0):
     - XMLCoder (~> 0.11.1)
     - ZIPFoundation (~> 0.9.11)
   - XMLCoder (0.11.1)
