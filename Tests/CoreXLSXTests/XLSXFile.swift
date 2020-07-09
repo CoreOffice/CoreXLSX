@@ -147,7 +147,7 @@ final class CoreXLSXTests: XCTestCase {
 
   func testLegacyPublicAPI() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XLSXFile(filepath: "\(currentWorkingPath)/Test2.xlsx") else {
       XCTAssert(false, "failed to open the file")
       return
     }
@@ -204,5 +204,16 @@ final class CoreXLSXTests: XCTestCase {
     let cellsFromAllColumns =
       try file.cellsInWorksheet(at: sheetPath, columns: columnReferences)
     XCTAssertEqual(allCells, cellsFromAllColumns)
+  }
+
+  func testRootRelationships() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/root_relationships.xlsx") else {
+      XCTFail("failed to open the file")
+      return
+    }
+
+    XCTAssertEqual(try file.parseDocumentPaths(), ["xl/workbook.xml"])
+    XCTAssertEqual(try file.parseWorksheetPaths(), ["/\(sheetPath)"])
   }
 }
