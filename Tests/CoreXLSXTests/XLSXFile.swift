@@ -147,7 +147,7 @@ final class CoreXLSXTests: XCTestCase {
 
   func testLegacyPublicAPI() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/Test2.xlsx") else {
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
       XCTAssert(false, "failed to open the file")
       return
     }
