@@ -89,7 +89,7 @@ final class StylesTests: XCTestCase {
   func testStyles() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+      XCTFail("failed to open the file")
       return
     }
 

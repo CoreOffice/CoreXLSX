@@ -78,7 +78,7 @@ final class CellReferenceTests: XCTestCase {
     XCTAssertNotEqual(ColumnReference("A"), ColumnReference("B"))
 
     guard let a = ColumnReference("A"), let b = ColumnReference("B") else {
-      XCTAssert(false, "failed to create simple column references")
+      XCTFail("failed to create simple column references")
       return
     }
 
@@ -91,7 +91,7 @@ final class CellReferenceTests: XCTestCase {
     guard let a = ColumnReference("A"), let z = ColumnReference("z"),
       let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
       let ba = ColumnReference("ba"), let bz = ColumnReference("bz") else {
-      XCTAssert(false, "failed to create simple column references")
+      XCTFail("failed to create simple column references")
       return
     }
     let alphabetLength = 26
@@ -114,7 +114,7 @@ final class CellReferenceTests: XCTestCase {
       let ba = ColumnReference("ba"), let bz = ColumnReference("bz"),
       let abc = ColumnReference("abc"), let azz = ColumnReference("azz"),
       let zz = ColumnReference("zz"), let azza = ColumnReference("azza") else {
-      XCTAssert(false, "failed to create simple column references")
+      XCTFail("failed to create simple column references")
       return
     }
 
@@ -148,7 +148,7 @@ final class CellReferenceTests: XCTestCase {
 
   func testColumnReferenceAdvancedBy() {
     guard let a = ColumnReference("A"), let bz = ColumnReference("bz") else {
-      XCTAssert(false, "failed to create simple column references")
+      XCTFail("failed to create simple column references")
       return
     }
 
