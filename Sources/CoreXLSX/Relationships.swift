@@ -110,4 +110,8 @@ public struct Relationship: Codable, Equatable {
   public let id: String
   public let type: SchemaType
   public let target: String
+
+  func path(from root: String) -> String {
+    return Path(target).isRoot ? target : "\(root)/\(target)"
+  }
 }

@@ -248,7 +248,7 @@ public class XLSXFile {
         sheet.name.flatMap { (sheet.relationship, $0) }
       })
 
-      return worksheets.map { (name: sheetIDs[$0.id], path: "\(pathPrefix)/\($0.target)") }
+      return worksheets.map { (name: sheetIDs[$0.id], path: $0.path(from: pathPrefix)) }
     }
   }
 
@@ -265,7 +265,7 @@ public class XLSXFile {
       // storing that path in `pathPrefix`
       let pathPrefix = path.components.dropLast().joined(separator: "/")
 
-      return worksheets.map { "\(pathPrefix)/\($0.target)" }
+      return worksheets.map { $0.path(from: pathPrefix) }
     }
   }
 

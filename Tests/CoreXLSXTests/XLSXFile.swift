@@ -205,4 +205,15 @@ final class CoreXLSXTests: XCTestCase {
       try file.cellsInWorksheet(at: sheetPath, columns: columnReferences)
     XCTAssertEqual(allCells, cellsFromAllColumns)
   }
+
+  func testRootRelationships() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/root_relationships.xlsx") else {
+      XCTFail("failed to open the file")
+      return
+    }
+
+    XCTAssertEqual(try file.parseDocumentPaths(), ["xl/workbook.xml"])
+    XCTAssertEqual(try file.parseWorksheetPaths(), ["/\(sheetPath)"])
+  }
 }
