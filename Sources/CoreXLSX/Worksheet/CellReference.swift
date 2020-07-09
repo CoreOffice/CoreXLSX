@@ -15,19 +15,13 @@
 //  Created by Max Desiatov on 14/11/2018.
 //
 
-public struct CellReference {
+public struct CellReference: Hashable {
   public let column: ColumnReference
   public let row: UInt
 
   public init(_ column: ColumnReference, _ row: UInt) {
     self.column = column
     self.row = row
-  }
-}
-
-extension CellReference: Equatable {
-  public static func ==(lhs: CellReference, rhs: CellReference) -> Bool {
-    return lhs.column == rhs.column && lhs.row == rhs.row
   }
 }
 

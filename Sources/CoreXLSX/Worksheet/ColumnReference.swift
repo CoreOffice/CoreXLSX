@@ -110,6 +110,12 @@ public struct ColumnReference {
     CharacterSet(charactersIn: firstAllowedCharacter ... lastAllowedCharacter)
 }
 
+extension ColumnReference: Hashable {
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(intValue)
+  }
+}
+
 extension ColumnReference: CustomStringConvertible {
   public var description: String {
     return "\(value)"

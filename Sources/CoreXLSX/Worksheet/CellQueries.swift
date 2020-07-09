@@ -18,6 +18,12 @@
 import Foundation
 
 public extension Worksheet {
+  struct Index {
+    private let cells: [CellReference: Int]
+    private let rows: [UInt: [Int]]
+    private let columns: [ColumnReference: [Int]]
+  }
+
   /// Return all cells that are contained in a given worksheet and collection of
   /// columns.
   func cells<T>(atColumns columns: T) -> [Cell]
