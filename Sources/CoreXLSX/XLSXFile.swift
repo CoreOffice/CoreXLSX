@@ -154,7 +154,8 @@ public class XLSXFile {
     let range = NSRange(location: 0, length: path.utf16.count)
 
     if let match = regex.firstMatch(in: path, options: [], range: range),
-      let worksheetIdRange = Range(match.range(at: 1), in: path) {
+      let worksheetIdRange = Range(match.range(at: 1), in: path)
+    {
       let worksheetId = path[worksheetIdRange]
       return "xl/comments\(worksheetId).xml"
     }
@@ -190,7 +191,8 @@ public class XLSXFile {
    */
   @available(*, deprecated, renamed: "parseDocumentRelationships(path:)")
   public func parseDocumentRelationships() throws
-    -> [([Substring], Relationships)] {
+    -> [([Substring], Relationships)]
+  {
     decoder.keyDecodingStrategy = .convertFromCapitalized
 
     return try parseDocumentPaths()
@@ -215,7 +217,8 @@ public class XLSXFile {
   /// given path. Use `parseDocumentPaths` first to get a string path to pass
   /// as an argument to this function.
   public func parseDocumentRelationships(path: String) throws
-    -> (Path, Relationships) {
+    -> (Path, Relationships)
+  {
     decoder.keyDecodingStrategy = .convertFromCapitalized
 
     let originalPath = Path(path)
@@ -283,7 +286,8 @@ public class XLSXFile {
   /// Return all cells that are contained in a given worksheet and set of rows.
   @available(*, deprecated, renamed: "Worksheet.cells(atRows:)")
   public func cellsInWorksheet(at path: String, rows: [Int]) throws
-    -> [Cell] {
+    -> [Cell]
+  {
     let ws = try parseWorksheet(at: path)
 
     return ws.data?.rows.filter { rows.contains(Int($0.reference)) }
@@ -296,7 +300,8 @@ public class XLSXFile {
   /// of `String`s.
   @available(*, deprecated, renamed: "Worksheet.cells(atColumns:)")
   public func cellsInWorksheet(at path: String, columns: [String]) throws
-    -> [Cell] {
+    -> [Cell]
+  {
     let ws = try parseWorksheet(at: path)
 
     return ws.data?.rows.map {

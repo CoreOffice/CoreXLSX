@@ -90,7 +90,8 @@ final class CellReferenceTests: XCTestCase {
   func testColumnReferenceDistance() {
     guard let a = ColumnReference("A"), let z = ColumnReference("z"),
       let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
-      let ba = ColumnReference("ba"), let bz = ColumnReference("bz") else {
+      let ba = ColumnReference("ba"), let bz = ColumnReference("bz")
+    else {
       XCTFail("failed to create simple column references")
       return
     }
@@ -113,7 +114,8 @@ final class CellReferenceTests: XCTestCase {
       let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
       let ba = ColumnReference("ba"), let bz = ColumnReference("bz"),
       let abc = ColumnReference("abc"), let azz = ColumnReference("azz"),
-      let zz = ColumnReference("zz"), let azza = ColumnReference("azza") else {
+      let zz = ColumnReference("zz"), let azza = ColumnReference("azza")
+    else {
       XCTFail("failed to create simple column references")
       return
     }

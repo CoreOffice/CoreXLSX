@@ -209,7 +209,8 @@ final class CoreXLSXTests: XCTestCase {
 
   func testRootRelationships() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/root_relationships.xlsx") else {
+      XLSXFile(filepath: "\(currentWorkingPath)/root_relationships.xlsx")
+    else {
       XCTFail("failed to open the file")
       return
     }

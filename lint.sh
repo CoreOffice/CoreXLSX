@@ -1,10 +1,10 @@
 #!/bin/bash
 
-set -e 
+set -ex
 set -o pipefail
 
-brew update
-brew install swiftformat
+brew upgrade
+brew install swiftformat swiftlint
 
 swiftformat --lint --verbose .
 swiftlint

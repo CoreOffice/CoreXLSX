@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e 
+set -ex
 set -o pipefail
 
 sudo xcode-select --switch /Applications/$1.app/Contents/Developer
@@ -16,7 +16,7 @@ if [ -n "$CODECOV_JOB" ]; then
   xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX \
     -sdk macosx | xcpretty
   bash <(curl -s https://codecov.io/bash)
-else 
+else
   xcodebuild test -scheme CoreXLSX \
     -sdk macosx | xcpretty
 fi

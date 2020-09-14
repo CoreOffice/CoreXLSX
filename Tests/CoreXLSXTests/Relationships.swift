@@ -65,13 +65,13 @@ private let parsed = [
                target: "docProps/app.xml"),
   Relationship(id: "rId3",
                type: .officeDocument,
-               target: "xl/workbook.xml")
+               target: "xl/workbook.xml"),
 ]
 
 private let person =
-    Relationship(id: "rId4",
-             type: .person,
-             target: "xl/workbook.xml")
+  Relationship(id: "rId4",
+               type: .person,
+               target: "xl/workbook.xml")
 
 final class RelationshipsTests: XCTestCase {
   func testRelationships() throws {
@@ -82,7 +82,8 @@ final class RelationshipsTests: XCTestCase {
     XCTAssertEqual(relationships.items, parsed)
 
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
+    else {
       XCTFail("failed to open the file")
       return
     }
@@ -91,7 +92,7 @@ final class RelationshipsTests: XCTestCase {
 
     XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
   }
-    
+
   func testPersonRelationship() throws {
     let decoder = XMLDecoder()
     decoder.keyDecodingStrategy = .convertFromCapitalized
@@ -102,7 +103,8 @@ final class RelationshipsTests: XCTestCase {
 
   func testCustomXmlSchemaType() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/jewelershealthcare.com-census.1.xlsx") else {
+      XLSXFile(filepath: "\(currentWorkingPath)/jewelershealthcare.com-census.1.xlsx")
+    else {
       XCTFail("failed to open the file")
       return
     }

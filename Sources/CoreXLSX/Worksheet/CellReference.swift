@@ -53,7 +53,8 @@ extension CellReference: Decodable {
     let separatorIndex = reference.index(after: lastLetterIndex)
 
     guard let column =
-      ColumnReference(reference.prefix(upTo: separatorIndex)) else {
+      ColumnReference(reference.prefix(upTo: separatorIndex))
+    else {
       throw CoreXLSXError.invalidCellReference
     }
 

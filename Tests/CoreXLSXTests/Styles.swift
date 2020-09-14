@@ -88,7 +88,8 @@ private let fills = Fills(items: [
 final class StylesTests: XCTestCase {
   func testStyles() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
+      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
+    else {
       XCTFail("failed to open the file")
       return
     }
