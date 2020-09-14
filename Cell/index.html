@@ -39,7 +39,9 @@
 
 <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Cell</span>: <span class="type">Codable</span>, <span class="type">Equatable</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
-    <p><a href="https://wiki.ucl.ac.uk/display/%7Eucftpw2/2013/10/22/Using+git+for+version+control+of+Excel+spreadsheets+-+part+2+of+3">docs</a></p>
+    <p>The representation of a spreadsheet cell.
+More details of how cells are encoded in <code>.xlsx</code> internals are available at
+<a href="https://wiki.ucl.ac.uk/display/%7Eucftpw2/2013/10/22/Using+git+for+version+control+of+Excel+spreadsheets+-+part+2+of+3">wiki.ucl.ac.uk</a>.</p>
 
 </div>
 <section id="relationships">
@@ -138,6 +140,13 @@
         <code>inline​String</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">inlineString</span>: <a href="/CoreXLSX/InlineString"><span class="type">InlineString</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Not every string in a cell is an inline string. You should use <code>stringValue(_: SharedStrings)</code>
+on the <code>Cell</code> type, supplying it the result of <code>parseSharedStrings()</code> called on your <code>XLSXFile</code>
+instance first. If any of those calls return <code>nil</code>, you can then attempt to look for the value in
+<code>inlineString</code> or <code>value</code> properties.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="cell.formula">
     <h3>
@@ -198,7 +207,7 @@ given <code>sharedStrings</code> argument.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-14T19:26:14+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-09-14T20:19:07+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>
