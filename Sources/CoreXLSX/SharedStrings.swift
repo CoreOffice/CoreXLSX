@@ -19,7 +19,7 @@
   Strings in spreadsheet internals are frequently represented as strings
   shared between multiple worksheets. To parse a string value from a cell
   you should use `stringValue(_: SharedStrings)` function on `Cell` together with
-  `parseSharedString()` on `XLSXFile`.
+  `parseSharedString()` on your `XLSXFile` instance.
 
   Here's how you can get all strings in column "C" for example:
 
