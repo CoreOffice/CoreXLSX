@@ -179,6 +179,9 @@ public struct Pane: Codable {
 @available(*, deprecated, renamed: "Columns")
 public typealias Cols = Columns
 
+/** An array of `Column` values. This type directly maps the internal XML structure of the
+ `.xlsx` format.
+ */
 public struct Columns: Codable, Equatable {
   public let items: [Column]
 
@@ -190,9 +193,8 @@ public struct Columns: Codable, Equatable {
 @available(*, deprecated, renamed: "Column")
 public typealias Col = Column
 
-// swiftlint:disable line_length
-/// [Microsoft
-/// docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1)
+/// The styling information for a given column. More details are available in [Microsoft
+/// docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1).
 public struct Column: Codable, Equatable {
   // swiftlint:enable line_length
   public let min: UInt32
@@ -202,6 +204,8 @@ public struct Column: Codable, Equatable {
   public let customWidth: Bool?
 }
 
+/** The primary storage for spreadsheet cells.
+ */
 public struct Row: Codable {
   public let reference: UInt
 

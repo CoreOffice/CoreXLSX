@@ -1,21 +1,20 @@
 disabled_rules:
-- trailing_comma
-- identifier_name
-- void_return
-- operator_whitespace
-- nesting
-- cyclomatic_complexity
+  - trailing_comma
+  - identifier_name
+  - void_return
+  - operator_whitespace
+  - nesting
+  - cyclomatic_complexity
 
 line_length:
-- 100
-- 120
+  - 100
+  - 140
 
 function_body_length:
-- 50
+  - 50
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - .build
   - Example/Pods
   - Tests/CoreXLSXTests/XCTestManifests.swift
-  

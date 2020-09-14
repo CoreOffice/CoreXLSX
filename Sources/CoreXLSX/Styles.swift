@@ -251,7 +251,9 @@ public struct CellFormats: Codable, Equatable {
   }
 }
 
-/// [docs](http://www.datypic.com/sc/ooxml/t-ssml_CT_Xf.html)
+/** Properties of this format describe cell formatting. More details are available at
+ [datypic.com](http://www.datypic.com/sc/ooxml/t-ssml_CT_Xf.html)
+ */
 public struct Format: Codable, Equatable {
   public struct Alignment: Codable, Equatable {
     public let vertical: String?
@@ -308,12 +310,9 @@ public struct CellStyle: Codable, Equatable {
   }
 }
 
-/// Described at http://officeopenxml.com/SSstyles.php
-public struct DifferentialFormat: Codable, Equatable {
-  public let font: Font?
-  public let border: Border?
-}
-
+/** This type allows specifying a subset of formatting instead of applying formatting globally.
+ More details are available at [officeopenxml.com](http://officeopenxml.com/SSstyles.php).
+ */
 public struct DifferentialFormats: Codable, Equatable {
   public let items: [Format]
   public let count: Int
