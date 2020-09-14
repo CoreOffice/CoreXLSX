@@ -26,6 +26,8 @@ If your `.xlsx` files use [ECMA-376 agile
 encryption](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/cab78f5c-9c17-495e-bea9-032c63f02ad8) (which seems to be the most popular variety), have a look at the
 [CryptoOffice](https://github.com/CoreOffice/CryptoOffice) library.
 
+Automatically generated documentation is available on [our GitHub Pages](https://coreoffice.github.io/CoreXLSX/).
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the
