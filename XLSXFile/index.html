@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreXLSX - XLSXFile</title>
-    <link rel="stylesheet" type="text/css" href="/CoreXLSX/all.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="/CoreXLSX">
+        <a href="./">
             <strong>
                 CoreXLSX
             </strong>
@@ -129,7 +129,7 @@ user's filesystem.</p>
     <h3>
         <code>parse​Relationships()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseRelationships</span>() <span class="keyword">throws</span> -&gt; <a href="/CoreXLSX/Relationships"><span class="type">Relationships</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseRelationships</span>() <span class="keyword">throws</span> -&gt; <a href="./Relationships"><span class="type">Relationships</span></a></code></pre></body></html>
 </div>
 <div role="article" class="function" id="xlsxfile.parsedocumentpaths()">
     <h3>
@@ -145,25 +145,25 @@ user's filesystem.</p>
     <h3>
         <code>parse​Styles()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseStyles</span>() <span class="keyword">throws</span> -&gt; <a href="/CoreXLSX/Styles"><span class="type">Styles</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseStyles</span>() <span class="keyword">throws</span> -&gt; <a href="./Styles"><span class="type">Styles</span></a></code></pre></body></html>
 </div>
 <div role="article" class="function" id="xlsxfile.parsesharedstrings()">
     <h3>
         <code>parse​Shared​Strings()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseSharedStrings</span>() <span class="keyword">throws</span> -&gt; <a href="/CoreXLSX/SharedStrings"><span class="type">SharedStrings</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseSharedStrings</span>() <span class="keyword">throws</span> -&gt; <a href="./SharedStrings"><span class="type">SharedStrings</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="xlsxfile.parsecomments(forworksheet:)">
     <h3>
         <code>parse​Comments(for​Worksheet:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseComments</span>(<span class="variable">forWorksheet</span> <span class="variable">path</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; <a href="/CoreXLSX/Comments"><span class="type">Comments</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseComments</span>(<span class="variable">forWorksheet</span> <span class="variable">path</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; <a href="./Comments"><span class="type">Comments</span></a></code></pre></body></html>
 </div>
 <div role="article" class="function" id="xlsxfile.parseworkbooks()">
     <h3>
         <code>parse​Workbooks()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseWorkbooks</span>() <span class="keyword">throws</span> -&gt; [<a href="/CoreXLSX/Workbook"><span class="type">Workbook</span></a>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseWorkbooks</span>() <span class="keyword">throws</span> -&gt; [<a href="./Workbook"><span class="type">Workbook</span></a>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Parse and return an array of workbooks in this file.
 Worksheet names can be read as properties on the <code>Workbook</code> model type.</p>
@@ -174,7 +174,7 @@ Worksheet names can be read as properties on the <code>Workbook</code> model typ
     <h3>
         <code>parse​Document​Relationships()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"parseDocumentRelationships(path:)"</span>) <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseDocumentRelationships</span>() <span class="keyword">throws</span> -&gt; [([<span class="type">Substring</span>], <a href="/CoreXLSX/Relationships"><span class="type">Relationships</span></a>)]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"parseDocumentRelationships(path:)"</span>) <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseDocumentRelationships</span>() <span class="keyword">throws</span> -&gt; [([<span class="type">Substring</span>], <a href="./Relationships"><span class="type">Relationships</span></a>)]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Return pairs of parsed document paths with corresponding relationships.</p>
 
@@ -190,7 +190,7 @@ paths. Use <code>parseDocumentRelationships(path:)</code> instead.</p>
     <h3>
         <code>parse​Document​Relationships(path:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseDocumentRelationships</span>(<span class="variable">path</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; (<a href="/CoreXLSX/Path"><span class="type">Path</span></a>, <a href="/CoreXLSX/Relationships"><span class="type">Relationships</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseDocumentRelationships</span>(<span class="variable">path</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; (<a href="./Path"><span class="type">Path</span></a>, <a href="./Relationships"><span class="type">Relationships</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Return parsed path with a parsed relationships model for a document at
 given path. Use <code>parseDocumentPaths</code> first to get a string path to pass
@@ -202,7 +202,7 @@ as an argument to this function.</p>
     <h3>
         <code>parse​Worksheet​Paths​And​Names(workbook:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseWorksheetPathsAndNames</span>(<span class="variable">workbook</span>: <a href="/CoreXLSX/Workbook"><span class="type">Workbook</span></a>) <span class="keyword">throws</span> -&gt; [(<span class="variable">name</span>: <span class="type">String</span>?, <span class="variable">path</span>: <span class="type">String</span>)]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseWorksheetPathsAndNames</span>(<span class="variable">workbook</span>: <a href="./Workbook"><span class="type">Workbook</span></a>) <span class="keyword">throws</span> -&gt; [(<span class="variable">name</span>: <span class="type">String</span>?, <span class="variable">path</span>: <span class="type">String</span>)]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Parse and return an array of worksheets in this XLSX file with their corresponding names.</p>
 
@@ -222,7 +222,7 @@ as an argument to this function.</p>
     <h3>
         <code>parse​Worksheet(at:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseWorksheet</span>(<span class="variable">at</span> <span class="variable">path</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; <a href="/CoreXLSX/Worksheet"><span class="type">Worksheet</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">parseWorksheet</span>(<span class="variable">at</span> <span class="variable">path</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; <a href="./Worksheet"><span class="type">Worksheet</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Parse a worksheet at a given path contained in this XLSX file.</p>
 
@@ -232,7 +232,7 @@ as an argument to this function.</p>
     <h3>
         <code>cells​InWorksheet(at:​rows:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"Worksheet.cells(atRows:)"</span>) <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">cellsInWorksheet</span>(<span class="variable">at</span> <span class="variable">path</span>: <span class="type">String</span>, <span class="variable">rows</span>: [<span class="type">Int</span>]) <span class="keyword">throws</span> -&gt; [<a href="/CoreXLSX/Cell"><span class="type">Cell</span></a>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"Worksheet.cells(atRows:)"</span>) <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">cellsInWorksheet</span>(<span class="variable">at</span> <span class="variable">path</span>: <span class="type">String</span>, <span class="variable">rows</span>: [<span class="type">Int</span>]) <span class="keyword">throws</span> -&gt; [<a href="./Cell"><span class="type">Cell</span></a>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Return all cells that are contained in a given worksheet and set of rows.</p>
 
@@ -242,7 +242,7 @@ as an argument to this function.</p>
     <h3>
         <code>cells​InWorksheet(at:​columns:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"Worksheet.cells(atColumns:)"</span>) <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">cellsInWorksheet</span>(<span class="variable">at</span> <span class="variable">path</span>: <span class="type">String</span>, <span class="variable">columns</span>: [<span class="type">String</span>]) <span class="keyword">throws</span> -&gt; [<a href="/CoreXLSX/Cell"><span class="type">Cell</span></a>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"Worksheet.cells(atColumns:)"</span>) <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">cellsInWorksheet</span>(<span class="variable">at</span> <span class="variable">path</span>: <span class="type">String</span>, <span class="variable">columns</span>: [<span class="type">String</span>]) <span class="keyword">throws</span> -&gt; [<a href="./Cell"><span class="type">Cell</span></a>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Return all cells that are contained in a given worksheet and set of
 columns. This overloaded version is deprecated, you should pass
@@ -260,7 +260,7 @@ of <code>String</code>s.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-14T15:51:37+0100">14 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+    Generated on <time datetime="2020-09-14T18:22:17+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>
