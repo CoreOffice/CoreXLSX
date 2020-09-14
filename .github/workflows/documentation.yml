@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Generate Documentation
-        uses: MaxDesiatov/swift-doc@patch-2
+        uses: MaxDesiatov/swift-doc@prebuilt-image
         with:
           inputs: "Sources"
           module-name: CoreXLSX
