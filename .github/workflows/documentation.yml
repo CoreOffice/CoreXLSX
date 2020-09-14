@@ -18,7 +18,9 @@ jobs:
           format: html
           output: ./.build/documentation
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./.build/documentation
+          target_branch: gh-pages
+          build_dir: .build/documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
