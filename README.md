@@ -189,6 +189,13 @@ end
 
 ### Carthage
 
+**WARNING: Carthage support is deprecated and will be removed in a future
+version of CoreXLSX. You're encouraged to use Swift Package Manager support
+in Xcode or CocoaPods instead. If neither of those options are suitable for
+you, and you still need to use Carthage for some reason, please [open a new
+issue](https://github.com/CoreOffice/CoreXLSX/issues/new/choose) with
+a detailed description of your use case.**
+
 [Carthage](https://github.com/Carthage/Carthage) is a dependency manager that
 builds your dependencies and provides you with binary frameworks on Apple's
 platforms.
