@@ -43,6 +43,19 @@ Target="xl/workbook.xml"/>
 </Relationships>
 """.data(using: .utf8)!
 
+let personXML = """
+<Relationships
+xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+
+<Relationship
+Id="rId4"
+Type="http://schemas.microsoft.com/office/2017/10/relationships/\
+person"
+Target="xl/workbook.xml"/>
+
+</Relationships>
+""".data(using: .utf8)!
+
 private let parsed = [
   Relationship(id: "rId1",
                type: .packageCoreProperties,
@@ -52,8 +65,13 @@ private let parsed = [
                target: "docProps/app.xml"),
   Relationship(id: "rId3",
                type: .officeDocument,
-               target: "xl/workbook.xml"),
+               target: "xl/workbook.xml")
 ]
+
+private let person =
+    Relationship(id: "rId4",
+             type: .person,
+             target: "xl/workbook.xml")
 
 final class RelationshipsTests: XCTestCase {
   func testRelationships() throws {
@@ -72,6 +90,14 @@ final class RelationshipsTests: XCTestCase {
     let relationshipsFromFile = try file.parseRelationships()
 
     XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
+  }
+    
+  func testPersonRelationship() throws {
+    let decoder = XMLDecoder()
+    decoder.keyDecodingStrategy = .convertFromCapitalized
+    let relationships = try decoder.decode(Relationships.self,
+                                           from: personXML)
+    XCTAssertEqual(relationships.items, [person])
   }
 
   func testCustomXmlSchemaType() throws {

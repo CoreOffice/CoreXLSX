@@ -63,6 +63,8 @@ to the [`Worksheet`
 model](https://github.com/CoreOffice/CoreXLSX/blob/main/Sources/CoreXLSX/Worksheet/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
+### Shared strings
+
 Strings in spreadsheet internals are frequently represented as strings
 shared between multiple worksheets, thus to parse a string value from a cell
 use of `stringValue(_: SharedStrings)` function is recommended together with
