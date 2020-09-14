@@ -3,7 +3,7 @@ name: Documentation
 on: [push]
 
 jobs:
-  build:
+  swift-doc:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,6 +14,7 @@ jobs:
           inputs: "Sources"
           module-name: CoreXLSX
           format: html
+          base-url: "/CoreXLSX"
           output: ./.build/documentation
       - run: sudo chmod o+r -R ./.build/documentation
       - name: Deploy
