@@ -19,7 +19,7 @@ final class CommentsTests: XCTestCase {
   func testComments() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/comments.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+      XCTFail("failed to open the file")
       return
     }
     let paths = try file.parseWorksheetPaths()

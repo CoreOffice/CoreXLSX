@@ -83,7 +83,7 @@ final class RelationshipsTests: XCTestCase {
 
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+      XCTFail("failed to open the file")
       return
     }
 
@@ -103,7 +103,7 @@ final class RelationshipsTests: XCTestCase {
   func testCustomXmlSchemaType() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/jewelershealthcare.com-census.1.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+      XCTFail("failed to open the file")
       return
     }
 

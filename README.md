@@ -73,9 +73,10 @@ use of `stringValue(_: SharedStrings)` function is recommended together with
 Here's how you can get all strings in column "C" for example:
 
 ```swift
-let sharedStrings = try file.parseSharedStrings()
-let columnCStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
-  .compactMap { $0.stringValue(sharedStrings) }
+if let sharedStrings = try file.parseSharedStrings() {
+  let columnCStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
+    .compactMap { $0.stringValue(sharedStrings) }
+}
 ```
 
 To parse a date value from a cell, use `dateValue` property on the `Cell` type:
@@ -88,9 +89,10 @@ let columnCDates = worksheet.cells(atColumns: [ColumnReference("C")!])
 Similarly, to parse rich strings, use the `richStringValue` function:
 
 ```swift
-let richStrings = try file.parseSharedStrings()
-let columnCRichStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
-  .compactMap { $0.richStringValue(sharedStrings) }
+if let richStrings = try file.parseSharedStrings() {
+  let columnCRichStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
+    .compactMap { $0.richStringValue(sharedStrings) }
+}
 ```
 
 ### Styles

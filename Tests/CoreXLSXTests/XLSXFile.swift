@@ -15,9 +15,9 @@ final class CoreXLSXTests: XCTestCase {
   private let sheetPath = "xl/worksheets/sheet1.xml"
 
   func testBlank() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/Blank.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/Blank.xlsx")
+    else {
+      XCTFail("failed to open the file")
       return
     }
 
@@ -31,9 +31,9 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testHelloWorld() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/HelloWorld.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/HelloWorld.xlsx")
+    else {
+      XCTFail("failed to open the file")
       return
     }
 
@@ -47,13 +47,14 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testMultiline() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/multi-line.text.in.cell.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard
+      let file = XLSXFile(filepath: "\(currentWorkingPath)/multi-line.text.in.cell.xlsx"),
+      let strings = try file.parseSharedStrings()
+    else {
+      XCTFail("failed to open the file and get access to its shared strings")
       return
     }
 
-    let strings = try file.parseSharedStrings()
     XCTAssertEqual(strings.uniqueCount, 2)
     XCTAssertEqual(strings.items, [
       .init(text: "just a single line", richText: []),
@@ -69,9 +70,8 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testDates() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/Dates.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/Dates.xlsx") else {
+      XCTFail("failed to open the file")
       return
     }
 
@@ -99,9 +99,11 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testPublicAPI() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard
+      let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx"),
+      let strings = try file.parseSharedStrings()
+    else {
+      XCTFail("failed to open the file and get access to its shared strings")
       return
     }
 
@@ -110,7 +112,7 @@ final class CoreXLSXTests: XCTestCase {
 
     let ws = try file.parseWorksheet(at: sheetPath)
     guard let sd = ws.data else {
-      XCTAssert(false, "no sheet data available")
+      XCTFail("no sheet data available")
       return
     }
     let allCells = sd.rows
@@ -141,14 +143,13 @@ final class CoreXLSXTests: XCTestCase {
     let cellsInRange = ws.cells(atColumns: closedRange2, rows: rowsRange)
     XCTAssertEqual(cellsInRange.count, closedRange2.count * rowsRange.count)
 
-    let strings = try file.parseSharedStrings()
     XCTAssertEqual(strings.items.count, 18)
   }
 
   func testLegacyPublicAPI() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
+    else {
+      XCTFail("failed to open the file")
       return
     }
 
@@ -173,7 +174,7 @@ final class CoreXLSXTests: XCTestCase {
     XCTAssertEqual(ws.dimension?.ref, ws.dimension?.reference)
 
     guard let mcs = ws.mergeCells else {
-      XCTAssert(false, "expected to parse merge cells from categories.xlsx")
+      XCTFail("expected to parse merge cells from categories.xlsx")
       return
     }
     for mc in mcs.items {

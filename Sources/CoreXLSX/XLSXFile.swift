@@ -138,10 +138,14 @@ public class XLSXFile {
     return try parseEntry("xl/styles.xml", Styles.self)
   }
 
-  public func parseSharedStrings() throws -> SharedStrings {
+  public func parseSharedStrings() throws -> SharedStrings? {
     decoder.keyDecodingStrategy = .useDefaultKeys
 
-    return try parseEntry("xl/sharedStrings.xml", SharedStrings.self)
+    do {
+      return try parseEntry("xl/sharedStrings.xml", SharedStrings.self)
+    } catch CoreXLSXError.archiveEntryNotFound {
+      return nil
+    }
   }
 
   private func buildCommentsPath(forWorksheet path: String) throws -> String {

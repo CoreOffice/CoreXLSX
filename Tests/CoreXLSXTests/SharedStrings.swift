@@ -91,13 +91,13 @@ private let richTextXML = """
 
 final class SharedStringsTests: XCTestCase {
   func testSharedStrings() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard
+      let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx"),
+      let sharedStrings = try file.parseSharedStrings()
+    else {
+      XCTFail("failed to open the file and get access to its shared strings")
       return
     }
-
-    let sharedStrings = try file.parseSharedStrings()
 
     // check each individual item so that it's easier to debug when something
     // goes wrong
@@ -110,13 +110,13 @@ final class SharedStringsTests: XCTestCase {
   }
 
   func testSharedStringsOrder() throws {
-    guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx") else {
-      XCTAssert(false, "failed to open the file")
+    guard
+      let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx"),
+      let sharedStrings = try file.parseSharedStrings()
+    else {
+      XCTFail("failed to open the file and get access to its shared strings")
       return
     }
-
-    let sharedStrings = try file.parseSharedStrings()
 
     var columnCStrings: [String] = []
 
