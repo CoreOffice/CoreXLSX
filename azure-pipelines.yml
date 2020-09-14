@@ -82,7 +82,7 @@ jobs:
     steps:
       - bash: ./test_xcodebuild.sh Xcode_11.5
         env:
-          IOS_DEVICE: "platform=iOS Simulator,OS=13.4,name=iPhone 8"
+          IOS_DEVICE: "platform=iOS Simulator,OS=13.5,name=iPhone 8"
           TVOS_DEVICE: "platform=tvOS Simulator,OS=13.4,name=Apple TV 4K"
   - job: test_xcodebuild_11_6
     pool:
@@ -90,7 +90,7 @@ jobs:
     steps:
       - bash: ./test_xcodebuild.sh Xcode_11.6
         env:
-          IOS_DEVICE: "platform=iOS Simulator,OS=13.4,name=iPhone 8"
+          IOS_DEVICE: "platform=iOS Simulator,OS=13.6,name=iPhone 8"
           TVOS_DEVICE: "platform=tvOS Simulator,OS=13.4,name=Apple TV 4K"
   - job: test_xcodebuild_11_7
     pool:
@@ -98,7 +98,7 @@ jobs:
     steps:
       - bash: ./test_xcodebuild.sh Xcode_11.7
         env:
-          IOS_DEVICE: "platform=iOS Simulator,OS=13.4,name=iPhone 8"
+          IOS_DEVICE: "platform=iOS Simulator,OS=13.7,name=iPhone 8"
           TVOS_DEVICE: "platform=tvOS Simulator,OS=13.4,name=Apple TV 4K"
           CODECOV_JOB: "true"
           CODECOV_TOKEN: $(codecovToken)
