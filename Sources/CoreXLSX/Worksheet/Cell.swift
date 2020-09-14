@@ -15,7 +15,9 @@
 //  Created by Max Desiatov on 24/11/2018.
 //
 
-/// [docs](http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html)
+/** The type of the value stored in a spreadsheet cell. The specification for the internals is
+ available at [datypic.com](http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html).
+ */
 public enum CellType: String, Codable {
   case bool = "b"
   case date = "d"
@@ -26,8 +28,11 @@ public enum CellType: String, Codable {
   case inlineStr
 }
 
-// swiftlint:disable:next line_length
-/// [docs](https://wiki.ucl.ac.uk/display/~ucftpw2/2013/10/22/Using+git+for+version+control+of+Excel+spreadsheets+-+part+2+of+3)
+/**
+ The representation of a spreadsheet cell.
+ More details of how cells are encoded in `.xlsx` internals are available at
+ [wiki.ucl.ac.uk](https://wiki.ucl.ac.uk/display/~ucftpw2/2013/10/22/Using+git+for+version+control+of+Excel+spreadsheets+-+part+2+of+3).
+ */
 public struct Cell: Codable, Equatable {
   public let reference: CellReference
   public let type: CellType?
@@ -37,6 +42,12 @@ public struct Cell: Codable, Equatable {
   // Can XMLCoder distinguish between an attribute and an
   // element having the same name?
   public let s: String?
+
+  /** Not every string in a cell is an inline string. You should use `stringValue(_: SharedStrings)`
+   on the `Cell` type, supplying it the result of `parseSharedStrings()` called on your `XLSXFile`
+   instance first. If any of those calls return `nil`, you can then attempt to look for the value in
+   `inlineString` or `value` properties.
+   */
   public let inlineString: InlineString?
   public let formula: Formula?
   public let value: String?

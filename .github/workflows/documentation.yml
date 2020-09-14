@@ -5,22 +5,22 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  swift-doc:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
       - name: Generate Documentation
-        uses: SwiftDocOrg/swift-doc@master
+        uses: MaxDesiatov/swift-doc@prebuilt-image
         with:
           inputs: "Sources"
           module-name: CoreXLSX
           format: html
+          base-url: "/CoreXLSX"
           output: ./.build/documentation
+      - run: sudo chmod o+r -R ./.build/documentation
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: .build/documentation
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.build/documentation

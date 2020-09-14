@@ -15,8 +15,25 @@
 //  Created by Max Desiatov on 18/11/2018.
 //
 
-/// Attributes and nodes are documented in [Microsoft
-/// docs](https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table)
+/**
+  Strings in spreadsheet internals are frequently represented as strings
+  shared between multiple worksheets. To parse a string value from a cell
+  you should use `stringValue(_: SharedStrings)` function on `Cell` together with
+  `parseSharedString()` on `XLSXFile`.
+
+  Here's how you can get all strings in column "C" for example:
+
+  ```swift
+  if let sharedStrings = try file.parseSharedStrings() {
+    let columnCStrings = worksheet.cells(atColumns: [ColumnReference("C")!])
+      .compactMap { $0.stringValue(sharedStrings) }
+  }
+  ```
+
+ Corresponding attributes and nodes that map to the properties of `SharedStrings` are documented in
+ [Microsoft
+ docs](https://docs.microsoft.com/en-us/office/open-xml/working-with-the-shared-string-table).
+ */
 public struct SharedStrings: Codable, Equatable {
   // swiftlint:enable line_length
   public struct Item: Codable, Equatable {

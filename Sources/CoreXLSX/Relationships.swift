@@ -15,6 +15,9 @@
 //  Created by Max Desiatov on 27/10/2018.
 //
 
+/** An array of `Relationship` values. This type directly maps the internal XML structure of the
+ `.xlsx` format.
+ */
 public struct Relationships: Codable, Equatable {
   public let items: [Relationship]
 
@@ -23,6 +26,10 @@ public struct Relationships: Codable, Equatable {
   }
 }
 
+/** Relationship to an entity stored in a given `.xlsx` archive. These can be worksheets,
+ chartsheets, thumbnails and a few other internal entities. Most of the time users of CoreXLSX
+ wouldn't need to handle relationships directly.
+ */
 public struct Relationship: Codable, Equatable {
   public enum SchemaType: String, Codable {
     case calcChain =
@@ -112,8 +119,13 @@ public struct Relationship: Codable, Equatable {
       """
   }
 
+  /// The identifier for this entity.
   public let id: String
+
+  /// The type of this entity.
   public let type: SchemaType
+
+  /// The path to this entity in the `.xlsx` archive.
   public let target: String
 
   func path(from root: String) -> String {
