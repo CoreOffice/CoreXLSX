@@ -251,7 +251,7 @@ public struct CellFormats: Codable, Equatable {
   }
 }
 
-/** Properties of this format describe cell formatting. More details are available at
+/** Storage for cell formatting properties. More details are available at
  [datypic.com](http://www.datypic.com/sc/ooxml/t-ssml_CT_Xf.html)
  */
 public struct Format: Codable, Equatable {
@@ -310,7 +310,7 @@ public struct CellStyle: Codable, Equatable {
   }
 }
 
-/** This type allows specifying a subset of formatting instead of applying formatting globally.
+/** Specifies a subset of formatting instead of applying formatting globally.
  More details are available at [officeopenxml.com](http://officeopenxml.com/SSstyles.php).
  */
 public struct DifferentialFormats: Codable, Equatable {

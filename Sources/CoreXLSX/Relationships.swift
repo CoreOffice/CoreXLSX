@@ -27,7 +27,8 @@ public struct Relationships: Codable, Equatable {
 }
 
 /** Relationship to an entity stored in a given `.xlsx` archive. These can be worksheets,
- chartsheets, thumbnails and others.
+ chartsheets, thumbnails and a few other internal entities. Most of the time users of CoreXLSX
+ wouldn't need to handle relationships directly.
  */
 public struct Relationship: Codable, Equatable {
   public enum SchemaType: String, Codable {

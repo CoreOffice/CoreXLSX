@@ -193,14 +193,24 @@ public struct Columns: Codable, Equatable {
 @available(*, deprecated, renamed: "Column")
 public typealias Col = Column
 
-/// The styling information for a given column. More details are available in [Microsoft
-/// docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1).
+/** The styling information for a given column. Full specification for the internals of this type
+ is available in [Microsoft
+ docs](https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1).
+ */
 public struct Column: Codable, Equatable {
-  // swiftlint:enable line_length
-  public let min: UInt32
-  public let max: UInt32
+  /// The first column where this formatting information applies.
+  public let min: Int
+
+  /// The last column where this formatting information applies.
+  public let max: Int
+
+  /// Width of a column in width values of widest digist in normal font style.
   public let width: Double
+
+  /// Default style for related columns.
   public let style: UInt32?
+
+  /// Set to `true` when width for related columns differs from the default.
   public let customWidth: Bool?
 }
 

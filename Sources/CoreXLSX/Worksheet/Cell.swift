@@ -15,8 +15,8 @@
 //  Created by Max Desiatov on 24/11/2018.
 //
 
-/** The type of the value stored in a spreadsheet cell. More details are available at
- [datypic.com](http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html).
+/** The type of the value stored in a spreadsheet cell. The specification for the internals is
+ available at [datypic.com](http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html).
  */
 public enum CellType: String, Codable {
   case bool = "b"
