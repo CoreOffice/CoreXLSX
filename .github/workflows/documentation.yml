@@ -15,14 +15,9 @@ jobs:
           module-name: CoreXLSX
           format: html
           output: ./.build/documentation
-      - run: |
-          mkdir ../test
-          cp -rf ./.build/documentation ../test
-          ls -lR ../test
+      - run: sudo chmod o+r -R ./.build/documentation
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: .build/documentation
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.build/documentation
