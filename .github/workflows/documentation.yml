@@ -1,8 +1,6 @@
 name: Documentation
 
-on:
-  push:
-    branches: [main]
+on: [push]
 
 jobs:
   build:
@@ -11,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Generate Documentation
-        uses: SwiftDocOrg/swift-doc@master
+        uses: MaxDesiatov/swift-doc@patch-1
         with:
           inputs: "Sources"
           module-name: CoreXLSX
