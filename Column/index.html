@@ -39,7 +39,8 @@
 
 <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Column</span>: <span class="type">Codable</span>, <span class="type">Equatable</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
-    <p>The styling information for a given column. More details are available in <a href="https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1">Microsoft
+    <p>The styling information for a given column. Full specification for the internals of this type
+is available in <a href="https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1">Microsoft
 docs</a>.</p>
 
 </div>
@@ -76,7 +77,7 @@ docs</a>.</p>
 </g>
 </g>
 <!-- Column&#45;&gt;Codable -->
-<g id="edge2" class="edge conformsTo">
+<g id="edge1" class="edge conformsTo">
 <title>Column&#45;&gt;Codable</title>
 <path fill="none" stroke="#000000" d="M375.5134,-71.9243C344.4871,-61.9959 305.8297,-49.6255 273.3694,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="274.1008,-35.7975 263.5098,-36.0831 271.9673,-42.4645 274.1008,-35.7975"/>
@@ -91,7 +92,7 @@ docs</a>.</p>
 </g>
 </g>
 <!-- Column&#45;&gt;Equatable -->
-<g id="edge1" class="edge conformsTo">
+<g id="edge2" class="edge conformsTo">
 <title>Column&#45;&gt;Equatable</title>
 <path fill="none" stroke="#000000" d="M488.4866,-71.9243C519.5129,-61.9959 558.1703,-49.6255 590.6306,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="592.0327,-42.4645 600.4902,-36.0831 589.8992,-35.7975 592.0327,-42.4645"/>
@@ -115,31 +116,51 @@ docs</a>.</p>
     <h3>
         <code>min</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">min</span>: <span class="type">UInt32</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">min</span>: <span class="type">Int</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The first column where this formatting information applies.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="column.max">
     <h3>
         <code>max</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">max</span>: <span class="type">UInt32</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">max</span>: <span class="type">Int</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The last column where this formatting information applies.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="column.width">
     <h3>
         <code>width</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">width</span>: <span class="type">Double</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Width of a column in width values of widest digist in normal font style.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="column.style">
     <h3>
         <code>style</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">style</span>: <span class="type">UInt32</span>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Default style for related columns.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="column.customwidth">
     <h3>
         <code>custom​Width</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">customWidth</span>: <span class="type">Bool</span>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Set to <code>true</code> when width for related columns differs from the default.</p>
+
+</div>
 </div>
     </section>
 
@@ -150,7 +171,7 @@ docs</a>.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-14T20:19:06+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-09-14T20:56:09+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>

@@ -107,7 +107,8 @@ user's filesystem.</p>
 </dt>
 <dd>
     <p>Relationship to an entity stored in a given <code>.xlsx</code> archive. These can be worksheets,
-chartsheets, thumbnails and others.</p>
+chartsheets, thumbnails and a few other internal entities. Most of the time users of CoreXLSX
+wouldn't need to handle relationships directly.</p>
 
 </dd>
 <dt class="structure">
@@ -344,7 +345,7 @@ you should use <code>stringValue(_: SharedStrings)</code> function on <code>Cell
     </a>
 </dt>
 <dd>
-    <p>Properties of this format describe cell formatting. More details are available at
+    <p>Storage for cell formatting properties. More details are available at
 <a href="http://www.datypic.com/sc/ooxml/t-ssml_CT_Xf.html">datypic.com</a></p>
 
 </dd>
@@ -378,7 +379,7 @@ you should use <code>stringValue(_: SharedStrings)</code> function on <code>Cell
     </a>
 </dt>
 <dd>
-    <p>This type allows specifying a subset of formatting instead of applying formatting globally.
+    <p>Specifies a subset of formatting instead of applying formatting globally.
 More details are available at <a href="http://officeopenxml.com/SSstyles.php">officeopenxml.com</a>.</p>
 
 </dd>
@@ -585,7 +586,8 @@ More details of how cells are encoded in <code>.xlsx</code> internals are availa
     </a>
 </dt>
 <dd>
-    <p>The styling information for a given column. More details are available in <a href="https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1">Microsoft
+    <p>The styling information for a given column. Full specification for the internals of this type
+is available in <a href="https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.column?view=openxml-2.8.1">Microsoft
 docs</a>.</p>
 
 </dd>
@@ -641,8 +643,8 @@ docs</a>.</p>
     </a>
 </dt>
 <dd>
-    <p>The type of the value stored in a spreadsheet cell. More details are available at
-<a href="http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html">datypic.com</a>.</p>
+    <p>The type of the value stored in a spreadsheet cell. The specification for the internals is
+available at <a href="http://www.datypic.com/sc/ooxml/t-ssml_ST_CellType.html">datypic.com</a>.</p>
 
 </dd>
 <dt class="enumeration">
@@ -721,7 +723,7 @@ docs</a>.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-14T20:19:07+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-09-14T20:56:09+0000">September 14, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>
