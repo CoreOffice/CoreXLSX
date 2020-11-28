@@ -67,33 +67,33 @@ More details of how cells are encoded in <code>.xlsx</code> internals are availa
 </a>
 </g>
 </g>
-<!-- Codable -->
-<g id="node2" class="node unknown">
-<title>Codable</title>
-<g id="a_node2"><a xlink:href="/CoreXLSX/Codable" xlink:title="Codable">
-<path fill="none" stroke="#000000" d="M303,-36C303,-36 111,-36 111,-36 105,-36 99,-30 99,-24 99,-24 99,-12 99,-12 99,-6 105,0 111,0 111,0 303,0 303,0 309,0 315,-6 315,-12 315,-12 315,-24 315,-24 315,-30 309,-36 303,-36"/>
-<text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Codable</text>
-</a>
-</g>
-</g>
-<!-- Cell&#45;&gt;Codable -->
-<g id="edge1" class="edge conformsTo">
-<title>Cell&#45;&gt;Codable</title>
-<path fill="none" stroke="#000000" d="M375.5134,-71.9243C344.4871,-61.9959 305.8297,-49.6255 273.3694,-39.2382"/>
-<polygon fill="#000000" stroke="#000000" points="274.1008,-35.7975 263.5098,-36.0831 271.9673,-42.4645 274.1008,-35.7975"/>
-</g>
 <!-- Equatable -->
-<g id="node3" class="node unknown">
+<g id="node2" class="node unknown">
 <title>Equatable</title>
-<g id="a_node3"><a xlink:href="/CoreXLSX/Equatable" xlink:title="Equatable">
-<path fill="none" stroke="#000000" d="M753,-36C753,-36 561,-36 561,-36 555,-36 549,-30 549,-24 549,-24 549,-12 549,-12 549,-6 555,0 561,0 561,0 753,0 753,0 759,0 765,-6 765,-12 765,-12 765,-24 765,-24 765,-30 759,-36 753,-36"/>
-<text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Equatable</text>
+<g id="a_node2"><a xlink:href="/CoreXLSX/Equatable" xlink:title="Equatable">
+<path fill="none" stroke="#000000" d="M303,-36C303,-36 111,-36 111,-36 105,-36 99,-30 99,-24 99,-24 99,-12 99,-12 99,-6 105,0 111,0 111,0 303,0 303,0 309,0 315,-6 315,-12 315,-12 315,-24 315,-24 315,-30 309,-36 303,-36"/>
+<text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Equatable</text>
 </a>
 </g>
 </g>
 <!-- Cell&#45;&gt;Equatable -->
-<g id="edge2" class="edge conformsTo">
+<g id="edge1" class="edge conformsTo">
 <title>Cell&#45;&gt;Equatable</title>
+<path fill="none" stroke="#000000" d="M375.5134,-71.9243C344.4871,-61.9959 305.8297,-49.6255 273.3694,-39.2382"/>
+<polygon fill="#000000" stroke="#000000" points="274.1008,-35.7975 263.5098,-36.0831 271.9673,-42.4645 274.1008,-35.7975"/>
+</g>
+<!-- Codable -->
+<g id="node3" class="node unknown">
+<title>Codable</title>
+<g id="a_node3"><a xlink:href="/CoreXLSX/Codable" xlink:title="Codable">
+<path fill="none" stroke="#000000" d="M753,-36C753,-36 561,-36 561,-36 555,-36 549,-30 549,-24 549,-24 549,-12 549,-12 549,-6 555,0 561,0 561,0 753,0 753,0 759,0 765,-6 765,-12 765,-12 765,-24 765,-24 765,-30 759,-36 753,-36"/>
+<text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Codable</text>
+</a>
+</g>
+</g>
+<!-- Cell&#45;&gt;Codable -->
+<g id="edge2" class="edge conformsTo">
+<title>Cell&#45;&gt;Codable</title>
 <path fill="none" stroke="#000000" d="M488.4866,-71.9243C519.5129,-61.9959 558.1703,-49.6255 590.6306,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="592.0327,-42.4645 600.4902,-36.0831 589.8992,-35.7975 592.0327,-42.4645"/>
 </g>
@@ -166,7 +166,7 @@ instance first. If any of those calls return <code>nil</code>, you can then atte
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dateValue</span>: <span class="type">Date</span>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
-    <p>Returns a date value parsed from the cell in the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tooadate?view=netframework-4.8">OLE Automation
+    <p>Returns a date value parsed from this cell in the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tooadate?view=netframework-4.8">OLE Automation
 Date</a>
 format. As this format doesn't encode time zones, current user's time zone is used, which is
 taken from <code>TimeZone.autoupdatingCurrent</code>.</p>
@@ -194,7 +194,7 @@ given <code>sharedStrings</code> argument.</p>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">richStringValue</span>(<span class="keyword">_</span> <span class="variable">sharedStrings</span>: <a href="/CoreXLSX/SharedStrings"><span class="type">SharedStrings</span></a>) -&gt; [<a href="/CoreXLSX/RichText"><span class="type">RichText</span></a>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
-    <p>Returns the value of the cell as a RichText, from a given <code>sharedStrings</code> argument.</p>
+    <p>Returns a value of this cell as a RichText, from a given <code>sharedStrings</code> argument.</p>
 
 </div>
 </div>
@@ -203,12 +203,20 @@ given <code>sharedStrings</code> argument.</p>
         <code>format(in:​)</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">format</span>(<span class="variable">in</span> <span class="variable">styles</span>: <a href="/CoreXLSX/Styles"><span class="type">Styles</span></a>) -&gt; <a href="/CoreXLSX/Format"><span class="type">Format</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Returns a <code>Format</code> value applied to this cell, if any.</p>
+
+</div>
 </div>
 <div role="article" class="function" id="cell.font(in:)">
     <h3>
         <code>font(in:​)</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">font</span>(<span class="variable">in</span> <span class="variable">styles</span>: <a href="/CoreXLSX/Styles"><span class="type">Styles</span></a>) -&gt; <a href="/CoreXLSX/Font"><span class="type">Font</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Returns a <code>Font</code> value applied to this cell, if any.</p>
+
+</div>
 </div>
     </section>
 
@@ -219,7 +227,7 @@ given <code>sharedStrings</code> argument.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-11-28T23:07:36+0000">November 28, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-11-28T23:11:05+0000">November 28, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>
