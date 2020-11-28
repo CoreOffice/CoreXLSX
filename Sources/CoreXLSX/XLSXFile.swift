@@ -154,7 +154,7 @@ public class XLSXFile {
     let range = NSRange(location: 0, length: path.utf16.count)
 
     if let match = regex.firstMatch(in: path, options: [], range: range),
-      let worksheetIdRange = Range(match.range(at: 1), in: path)
+       let worksheetIdRange = Range(match.range(at: 1), in: path)
     {
       let worksheetId = path[worksheetIdRange]
       return "xl/comments\(worksheetId).xml"

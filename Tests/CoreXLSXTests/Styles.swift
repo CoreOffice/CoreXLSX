@@ -106,5 +106,14 @@ final class StylesTests: XCTestCase {
     XCTAssertEqual(styles.differentialFormats!.count, 0)
     XCTAssertEqual(styles.tableStyles!.count, 0)
     XCTAssertEqual(styles.colors!.indexed.rgbColors.count, 14)
+
+    let ws = try file.parseWorksheet(at: file.parseWorksheetPaths()[0])
+    guard let sd = ws.data else {
+      XCTFail("no sheet data available")
+      return
+    }
+
+    XCTAssertEqual(sd.rows.first?.cells.first?.font(in: styles)?.size?.value, 12)
+    XCTAssertEqual(sd.rows.last?.cells.first?.font(in: styles)?.size?.value, 10)
   }
 }

@@ -480,6 +480,12 @@
 			attributes = {
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
+					"CoreXLSX::CoreXLSX" = {
+						LastSwiftMigration = 1220;
+					};
+					"CoreXLSX::CoreXLSXTests" = {
+						LastSwiftMigration = 1220;
+					};
 					D15021D021A1CA7D00BFA4FC = {
 						CreatedOnToolsVersion = 10.1;
 					};

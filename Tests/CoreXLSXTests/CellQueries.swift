@@ -25,7 +25,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("I")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.39583333333212067"
@@ -33,7 +33,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("J")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.54166666666787933"
@@ -41,7 +41,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("K")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.625"
@@ -49,7 +49,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("L")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.8125"
@@ -57,7 +57,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("O")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.625"
@@ -65,7 +65,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("P")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.75"
@@ -73,7 +73,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("U")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.33333333333212067"
@@ -81,7 +81,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("V")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.45833333333212067"
@@ -89,7 +89,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("Y")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.33333333333212067"
@@ -97,7 +97,7 @@ final class CellQueriesTests: XCTestCase {
       Cell(
         reference: CellReference(ColumnReference("Z")!, 2),
         type: nil,
-        s: Optional("7"),
+        styleIndex: 7,
         inlineString: nil,
         formula: nil,
         value: "0.45833333333212067"

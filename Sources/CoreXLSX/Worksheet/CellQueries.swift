@@ -105,4 +105,16 @@ public extension Cell {
 
     return referenceCalendar.date(byAdding: .second, value: seconds, to: addedDays)
   }
+
+  func format(in styles: Styles) -> Format? {
+    guard let styleIndex = styleIndex else { return nil }
+
+    return styles.cellFormats?.items[styleIndex]
+  }
+
+  func font(in styles: Styles) -> Font? {
+    guard let fontID = format(in: styles)?.fontId else { return nil }
+
+    return styles.fonts?.items[fontID]
+  }
 }

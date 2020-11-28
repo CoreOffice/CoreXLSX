@@ -44,6 +44,9 @@ final class CoreXLSXTests: XCTestCase {
 
     let ws = try file.parseWorksheet(at: "xl/worksheets/sheet1.xml")
     XCTAssertEqual(ws.data?.rows.count, 1)
+
+    let cell = ws.data?.rows.first?.cells.first
+    XCTAssertEqual(cell?.font(in: styles)?.size, nil)
   }
 
   func testMultiline() throws {
