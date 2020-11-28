@@ -120,3 +120,9 @@ jobs:
     container: norionomura/swift:525
     steps:
       - script: ./test_swiftpm.sh
+  - job: test_linux_5_3
+    pool:
+      vmImage: "Ubuntu 18.04"
+    container: norionomura/swift:53
+    steps:
+      - script: ./test_swiftpm.sh
