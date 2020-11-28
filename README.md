@@ -113,6 +113,15 @@ let styles = try file.parseStyles()
 let fonts = styles.fonts?.items.compactMap { $0.name?.value }
 ```
 
+To get formatting for a given cell, use `format(in:)` and `font(in:)` functions, passing it
+the result of `parseStyles`:
+
+```swift
+let styles = try file.parseStyles()
+let format = worksheet.data?.rows.first?.cells.first?.format(in: styles)
+let font = worksheet.data?.rows.first?.cells.first?.font(in: styles)
+```
+
 ## Reporting compatibility issues
 
 If you stumble upon a file that can't be parsed, please [file an
