@@ -75,7 +75,7 @@ public extension Cell {
     return sharedStrings.items[index].text
   }
 
-  /// Returns the value of the cell as a RichText, from a given `sharedStrings` argument.
+  /// Returns a value of this cell as a RichText, from a given `sharedStrings` argument.
   func richStringValue(_ sharedStrings: SharedStrings) -> [RichText] {
     guard type == .sharedString, let index = value.flatMap(Int.init) else { return [] }
 
@@ -83,7 +83,7 @@ public extension Cell {
   }
 
   // swiftlint:disable line_length
-  /// Returns a date value parsed from the cell in the [OLE Automation
+  /// Returns a date value parsed from this cell in the [OLE Automation
   /// Date](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tooadate?view=netframework-4.8)
   /// format. As this format doesn't encode time zones, current user's time zone is used, which is
   /// taken from `TimeZone.autoupdatingCurrent`.
@@ -106,12 +106,14 @@ public extension Cell {
     return referenceCalendar.date(byAdding: .second, value: seconds, to: addedDays)
   }
 
+  /// Returns a `Format` value applied to this cell, if any.
   func format(in styles: Styles) -> Format? {
     guard let styleIndex = styleIndex else { return nil }
 
     return styles.cellFormats?.items[styleIndex]
   }
 
+  /// Returns a `Font` value applied to this cell, if any.
   func font(in styles: Styles) -> Font? {
     guard let fontID = format(in: styles)?.fontId else { return nil }
 
