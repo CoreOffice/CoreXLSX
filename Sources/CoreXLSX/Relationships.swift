@@ -117,6 +117,11 @@ public struct Relationship: Codable, Equatable {
       http://schemas.microsoft.com/office/2017/10/relationships/\
       person
       """
+    case webExtensionTaskPanes =
+      """
+      http://schemas.microsoft.com/office/2011/relationships/\
+      webextensiontaskpanes
+      """
   }
 
   /// The identifier for this entity.

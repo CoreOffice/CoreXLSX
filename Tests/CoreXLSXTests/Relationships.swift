@@ -56,6 +56,13 @@ Target="xl/workbook.xml"/>
 </Relationships>
 """.data(using: .utf8)!
 
+private let parsedFaultyWorksheet = [
+  CoreXLSX.Relationship(id: "rId3", type: CoreXLSX.Relationship.SchemaType.packageCoreProperties, target: "docProps/core.xml"),
+  CoreXLSX.Relationship(id: "rId2", type: CoreXLSX.Relationship.SchemaType.webExtensionTaskPanes, target: "xl/webextensions/taskpanes.xml"),
+  CoreXLSX.Relationship(id: "rId1", type: CoreXLSX.Relationship.SchemaType.officeDocument, target: "xl/workbook.xml"),
+  CoreXLSX.Relationship(id: "rId4", type: CoreXLSX.Relationship.SchemaType.extendedProperties, target: "docProps/app.xml"),
+]
+
 private let parsed = [
   Relationship(id: "rId1",
                type: .packageCoreProperties,
@@ -74,13 +81,15 @@ private let person =
                target: "xl/workbook.xml")
 
 final class RelationshipsTests: XCTestCase {
-  func testRelationships() throws {
+  func testRelationshipsXML() throws {
     let decoder = XMLDecoder()
     decoder.keyDecodingStrategy = .convertFromCapitalized
     let relationships = try decoder.decode(Relationships.self,
                                            from: exampleXML)
     XCTAssertEqual(relationships.items, parsed)
+  }
 
+  func testRelationshipsFromFile() throws {
     guard let file =
       XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
     else {
@@ -91,6 +100,19 @@ final class RelationshipsTests: XCTestCase {
     let relationshipsFromFile = try file.parseRelationships()
 
     XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
+  }
+
+  func testRelationshipsFaultyWorksheet() throws {
+    guard let file =
+      XLSXFile(filepath: "\(currentWorkingPath)/faulty_worksheet.xlsx")
+    else {
+      XCTFail("failed to open the file")
+      return
+    }
+
+    let relationshipsFromFile = try file.parseRelationships()
+
+    XCTAssertEqual(relationshipsFromFile, Relationships(items: parsedFaultyWorksheet))
   }
 
   func testPersonRelationship() throws {
