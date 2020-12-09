@@ -152,8 +152,8 @@ here](https://desiatov.com/swift-codable-xlsx/).
 
 **Apple Platforms**
 
-- Xcode 10.0 or later
-- Swift 4.2 or later
+- Xcode 11.0 or later
+- Swift 5.1 or later
 - iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later deployment targets
 
 **Linux**
