@@ -6,10 +6,9 @@ set -o pipefail
 sudo xcode-select --switch /Applications/$1.app/Contents/Developer
 
 xcodebuild -version
-carthage bootstrap
-xcodebuild build -scheme CoreXLSXiOS \
+xcodebuild test -scheme CoreXLSX \
   -sdk iphonesimulator -destination "$IOS_DEVICE" | xcpretty
-xcodebuild build -scheme CoreXLSXtvOS \
+xcodebuild test -scheme CoreXLSX \
   -sdk appletvsimulator -destination "$TVOS_DEVICE" | xcpretty
 
 if [ -n "$CODECOV_JOB" ]; then

@@ -200,42 +200,6 @@ target '<Your Target Name>' do
 end
 ```
 
-### Carthage
-
-**WARNING: Carthage support is deprecated and will be removed in a future
-version of CoreXLSX. You're encouraged to use Swift Package Manager support
-in Xcode or CocoaPods instead. If neither of those options are suitable for
-you, and you still need to use Carthage for some reason, please [open a new
-issue](https://github.com/CoreOffice/CoreXLSX/issues/new/choose) with
-a detailed description of your use case.**
-
-[Carthage](https://github.com/Carthage/Carthage) is a dependency manager that
-builds your dependencies and provides you with binary frameworks on Apple's
-platforms.
-
-Carthage can be installed with [Homebrew](https://brew.sh/) using the following
-command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
-
-```ogdl
-github "CoreOffice/CoreXLSX" ~> 0.13.0
-```
-
-Then, run the following command to build the framework:
-
-```bash
-$ carthage update
-```
-
-Drag the built frameworks (including the subdependencies `XMLCoder` and
-`ZIPFoundation`) into your Xcode project.
-
 ## Contributing
 
 ### Sponsorship
