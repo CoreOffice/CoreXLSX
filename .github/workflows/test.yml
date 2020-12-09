@@ -8,7 +8,7 @@ on:
 
 jobs:
   xcode_12_0:
-    runs-on: macos-11.0
+    runs-on: macos-10.15
 
     steps:
       - name: Checkout
@@ -21,7 +21,7 @@ jobs:
           TVOS_DEVICE: "platform=tvOS Simulator,OS=14.0,name=Apple TV 4K"
 
   xcode_12_1:
-    runs-on: macos-11.0
+    runs-on: macos-10.15
 
     steps:
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
           TVOS_DEVICE: "platform=tvOS Simulator,OS=14.0,name=Apple TV 4K"
 
   xcode_12_2:
-    runs-on: macos-11.0
+    runs-on: macos-10.15
 
     steps:
       - name: Checkout
