@@ -152,8 +152,8 @@ here](https://desiatov.com/swift-codable-xlsx/).
 
 **Apple Platforms**
 
-- Xcode 10.0 or later
-- Swift 4.2 or later
+- Xcode 11.0 or later
+- Swift 5.1 or later
 - iOS 9.0 / watchOS 2.0 / tvOS 9.0 / macOS 10.11 or later deployment targets
 
 **Linux**
@@ -200,42 +200,6 @@ target '<Your Target Name>' do
 end
 ```
 
-### Carthage
-
-**WARNING: Carthage support is deprecated and will be removed in a future
-version of CoreXLSX. You're encouraged to use Swift Package Manager support
-in Xcode or CocoaPods instead. If neither of those options are suitable for
-you, and you still need to use Carthage for some reason, please [open a new
-issue](https://github.com/CoreOffice/CoreXLSX/issues/new/choose) with
-a detailed description of your use case.**
-
-[Carthage](https://github.com/Carthage/Carthage) is a dependency manager that
-builds your dependencies and provides you with binary frameworks on Apple's
-platforms.
-
-Carthage can be installed with [Homebrew](https://brew.sh/) using the following
-command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-Inside of your `Cartfile`, add GitHub path to `CoreXLSX` and its latest version:
-
-```ogdl
-github "CoreOffice/CoreXLSX" ~> 0.13.0
-```
-
-Then, run the following command to build the framework:
-
-```bash
-$ carthage update
-```
-
-Drag the built frameworks (including the subdependencies `XMLCoder` and
-`ZIPFoundation`) into your Xcode project.
-
 ## Contributing
 
 ### Sponsorship
@@ -248,19 +212,9 @@ appreciated and helps in maintaining the project.
 ### Development Workflow
 
 On macOS the easiest way to start working on the project is to open the
-`Package.swift` file in Xcode 11. There is an extensive test suite that both
+`Package.swift` file in Xcode 11 or later. There is an extensive test suite that both
 tests files end-to-end and isolated snippets against their corresponding model
 values.
-
-If Xcode 11 is not available for you and you'd like to develop the library
-or to run the test suite in Xcode 10, you need to run
-`carthage bootstrap` in the root directory of the cloned repository first.
-Please refer to [the Carthage installation instructions](#carthage) described
-in the section above if you don't have Carthage installed.
-Then you can open the `CoreXLSX.xcodeproj` from the same directory and select
-the `CoreXLSXmacOS` scheme. This is the only scheme that has the tests
-set up, but you can also build any other scheme (e.g. `CoreXLSXiOS`) to make
-sure it builds on other platforms.
 
 If you prefer not to work with Xcode, the project fully supports SwiftPM and the
 usual workflow with `swift build` and `swift test` should work, otherwise please
