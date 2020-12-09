@@ -176,7 +176,7 @@ easy as adding it to the `dependencies` value of your `Package.swift`.
 ```swift
 dependencies: [
   .package(url: "https://github.com/CoreOffice/CoreXLSX.git",
-           .upToNextMinor(from: "0.13.0"))
+           .upToNextMinor(from: "0.14.0"))
 ]
 ```
 
@@ -187,7 +187,7 @@ GUI](https://developer.apple.com/documentation/xcode/adding_package_dependencies
 ### CocoaPods
 
 CoreXLSX is available through [CocoaPods](https://cocoapods.org) on Apple's
-platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.13.0'` to your
+platforms. To install it, simply add `pod 'CoreXLSX', '~> 0.14.0'` to your
 `Podfile` like shown here:
 
 ```ruby
@@ -196,7 +196,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 # platform :ios, '9.0'
 use_frameworks!
 target '<Your Target Name>' do
-  pod 'CoreXLSX', '~> 0.13.0'
+  pod 'CoreXLSX', '~> 0.14.0'
 end
 ```
 

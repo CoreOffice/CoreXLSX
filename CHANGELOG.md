@@ -1,3 +1,38 @@
+# 0.14.0 (9 December 2020)
+
+This release improves compatibility with different spreadsheet formats, simplifies cell font and
+formatting APIs, and drops support for Carthage. Additionally, Xcode 11.3 on macOS is now the
+oldest supported version for building CoreXLSX.
+
+**Breaking changes:**
+
+- Make `parseSharedStrings` return optional value ([#122](https://github.com/CoreOffice/CoreXLSX/pull/122)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Test with Xcode 12, drop Carthage and Xcode 10 support ([#140](https://github.com/CoreOffice/CoreXLSX/pull/140)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+
+**Closed issues:**
+
+- Unable to sort columns by `intValue` ([#137](https://github.com/CoreOffice/CoreXLSX/issues/137))
+- Cannot initialize SchemaType from invalid String value ([#136](https://github.com/CoreOffice/CoreXLSX/issues/136))
+- Odd cell.s value ([#134](https://github.com/CoreOffice/CoreXLSX/issues/134))
+- 0.13.0 not available on Cocoapods ([#133](https://github.com/CoreOffice/CoreXLSX/issues/133))
+- Unable to read xlsx file ([#130](https://github.com/CoreOffice/CoreXLSX/issues/130))
+- Increase speed of parsing? ([#127](https://github.com/CoreOffice/CoreXLSX/issues/127))
+- .xlsx File not opening with XLSXFile() ([#125](https://github.com/CoreOffice/CoreXLSX/issues/125))
+- Getting Data From a specific Worksheet ([#124](https://github.com/CoreOffice/CoreXLSX/issues/124))
+- ArchiveEntryNotFound error ([#121](https://github.com/CoreOffice/CoreXLSX/issues/121))
+- Printing an empty cell? ([#118](https://github.com/CoreOffice/CoreXLSX/issues/118))
+- Handling encrypted spreadsheets? ([#101](https://github.com/CoreOffice/CoreXLSX/issues/101))
+
+**Merged pull requests:**
+
+- Compare `ColumnReference` by `intValue` ([#139](https://github.com/CoreOffice/CoreXLSX/pull/139)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Add missing `SchemaType.webExtensionTaskPanes` ([#138](https://github.com/CoreOffice/CoreXLSX/pull/138)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Add `font(in:)` and `format(in:)` functions ([#135](https://github.com/CoreOffice/CoreXLSX/pull/135)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Test with Swift 5.3 for Linux ([#132](https://github.com/CoreOffice/CoreXLSX/pull/132)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Generate and publish docs with `swift-doc` ([#131](https://github.com/CoreOffice/CoreXLSX/pull/131)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Add “person” to the relationship types ([#126](https://github.com/CoreOffice/CoreXLSX/pull/126)) via [@texuf](https://github.com/texuf)
+- Fix parsing root relationships worksheet paths ([#123](https://github.com/CoreOffice/CoreXLSX/pull/123)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+
 # 0.13.0 (8 July 2020)
 
 This is a bugfix release with breaking changes that make `count` property on `MergeCells` and all
