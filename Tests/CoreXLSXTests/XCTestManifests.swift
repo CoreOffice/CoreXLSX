@@ -27,6 +27,7 @@ extension CellReferenceTests {
     ("testCellReference", testCellReference),
     ("testColumnReference", testColumnReference),
     ("testColumnReferenceAdvancedBy", testColumnReferenceAdvancedBy),
+    ("testColumnReferenceComparable", testColumnReferenceComparable),
     ("testColumnReferenceDistance", testColumnReferenceDistance),
     ("testColumnReferenceIntInitializer", testColumnReferenceIntInitializer),
     ("testColumnReferenceIntInitializerPerformance", testColumnReferenceIntInitializerPerformance),

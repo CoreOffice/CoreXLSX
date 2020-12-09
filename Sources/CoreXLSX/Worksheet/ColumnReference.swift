@@ -118,7 +118,7 @@ extension ColumnReference: CustomStringConvertible {
 
 extension ColumnReference: Comparable {
   public static func <(lhs: ColumnReference, rhs: ColumnReference) -> Bool {
-    return lhs.value < rhs.value
+    return lhs.intValue < rhs.intValue
   }
 
   public static func ==(lhs: ColumnReference, rhs: ColumnReference) -> Bool {
