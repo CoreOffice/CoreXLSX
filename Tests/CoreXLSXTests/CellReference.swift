@@ -109,6 +109,16 @@ final class CellReferenceTests: XCTestCase {
     XCTAssertEqual((az ... bz).count, alphabetLength + 1)
   }
 
+  func testColumnReferenceComparable() {
+    guard let ab = ColumnReference("AB"), let b = ColumnReference("B")
+    else {
+      XCTFail("failed to create simple column references")
+      return
+    }
+
+    XCTAssertGreaterThan(ab, b)
+  }
+
   func testColumnReferenceIntInitializer() {
     guard let a = ColumnReference("A"), let z = ColumnReference("z"),
           let aa = ColumnReference("AA"), let az = ColumnReference("Az"),
