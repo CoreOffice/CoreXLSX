@@ -27,13 +27,13 @@ public struct CellReference {
 
 extension CellReference: Equatable {
   public static func ==(lhs: CellReference, rhs: CellReference) -> Bool {
-    return lhs.column == rhs.column && lhs.row == rhs.row
+    lhs.column == rhs.column && lhs.row == rhs.row
   }
 }
 
 extension CellReference: CustomStringConvertible {
   public var description: String {
-    return "\(column)\(row)"
+    "\(column)\(row)"
   }
 }
 

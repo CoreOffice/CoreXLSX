@@ -47,7 +47,7 @@ public struct Worksheet: Codable {
   public struct FormatProperties: Codable, Equatable {
     @available(*, deprecated, renamed: "defaultColumnWidth")
     public var defaultColWidth: String? {
-      return defaultColumnWidth
+      defaultColumnWidth
     }
 
     public let defaultColumnWidth: String?
@@ -58,7 +58,7 @@ public struct Worksheet: Codable {
 
     @available(*, deprecated, renamed: "outlineLevelColumn")
     public var outlineLevelCol: String? {
-      return outlineLevelColumn
+      outlineLevelColumn
     }
 
     public let outlineLevelColumn: String?
@@ -88,7 +88,7 @@ public struct Worksheet: Codable {
 
   @available(*, deprecated, renamed: "properties")
   public var sheetPr: SheetPr? {
-    return properties
+    properties
   }
 
   public let properties: Properties?
@@ -96,7 +96,7 @@ public struct Worksheet: Codable {
   public struct Dimension: Codable {
     @available(*, deprecated, renamed: "reference")
     public var ref: String {
-      return reference
+      reference
     }
 
     public let reference: String
@@ -114,7 +114,7 @@ public struct Worksheet: Codable {
 
   @available(*, deprecated, renamed: "formatProperties")
   public var sheetFormatPr: SheetFormatPr {
-    return formatProperties ?? FormatProperties()
+    formatProperties ?? FormatProperties()
   }
 
   public let formatProperties: FormatProperties?
@@ -122,14 +122,14 @@ public struct Worksheet: Codable {
 
   @available(*, deprecated, renamed: "columns")
   public var cols: Cols? {
-    return columns
+    columns
   }
 
   public let data: Data?
 
   @available(*, deprecated, renamed: "data")
   public var sheetData: SheetData {
-    return data ?? Data(rows: [])
+    data ?? Data(rows: [])
   }
 
   public let mergeCells: MergeCells?
@@ -221,7 +221,7 @@ public struct Row: Codable {
 
   @available(*, deprecated, renamed: "height")
   public var ht: String? {
-    return height?.description
+    height?.description
   }
 
   public let height: Double?
@@ -252,7 +252,7 @@ public struct MergeCell: Codable {
 
   @available(*, deprecated, renamed: "reference")
   public var ref: String {
-    return reference
+    reference
   }
 
   enum CodingKeys: String, CodingKey {

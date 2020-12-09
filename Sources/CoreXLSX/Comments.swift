@@ -20,7 +20,7 @@ public struct CommentList: Codable, Equatable {
   public let items: [Comment]
 
   public var itemsByReference: [String: Comment] {
-    return Dictionary(uniqueKeysWithValues: items.map { ($0.reference, $0) })
+    Dictionary(uniqueKeysWithValues: items.map { ($0.reference, $0) })
   }
 
   enum CodingKeys: String, CodingKey {

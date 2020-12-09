@@ -134,6 +134,6 @@ public struct Relationship: Codable, Equatable {
   public let target: String
 
   func path(from root: String) -> String {
-    return Path(target).isRoot ? target : "\(root)/\(target)"
+    Path(target).isRoot ? target : "\(root)/\(target)"
   }
 }

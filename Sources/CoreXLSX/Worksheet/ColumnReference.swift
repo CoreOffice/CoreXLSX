@@ -50,7 +50,7 @@ public struct ColumnReference {
     }
 
     func reducer(acc: String, i: Int) -> String {
-      return String(Character(UnicodeScalar(
+      String(Character(UnicodeScalar(
         ColumnReference.firstAllowedCharacter.value - 1 + UInt32(i)
       )!)) + acc
     }
@@ -112,23 +112,23 @@ public struct ColumnReference {
 
 extension ColumnReference: CustomStringConvertible {
   public var description: String {
-    return "\(value)"
+    "\(value)"
   }
 }
 
 extension ColumnReference: Comparable {
   public static func <(lhs: ColumnReference, rhs: ColumnReference) -> Bool {
-    return lhs.intValue < rhs.intValue
+    lhs.intValue < rhs.intValue
   }
 
   public static func ==(lhs: ColumnReference, rhs: ColumnReference) -> Bool {
-    return lhs.value == rhs.value
+    lhs.value == rhs.value
   }
 }
 
 extension ColumnReference: Strideable {
   public func distance(to target: ColumnReference) -> Int {
-    return target.intValue - intValue
+    target.intValue - intValue
   }
 
   public func advanced(by offset: Int) -> ColumnReference {

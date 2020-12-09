@@ -132,7 +132,7 @@ extension WorksheetTests {
 }
 
 public func __allTests() -> [XCTestCaseEntry] {
-  return [
+  [
     testCase(BorderTest.__allTests__BorderTest),
     testCase(CellQueriesTests.__allTests__CellQueriesTests),
     testCase(CellReferenceTests.__allTests__CellReferenceTests),

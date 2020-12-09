@@ -14,7 +14,6 @@ function_body_length:
   - 50
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
   - .build
   - Example/Pods
   - Tests/CoreXLSXTests/XCTestManifests.swift

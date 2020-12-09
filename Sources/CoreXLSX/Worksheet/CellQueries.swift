@@ -23,7 +23,7 @@ public extension Worksheet {
   func cells<T>(atColumns columns: T) -> [Cell]
     where T: Collection, T.Element == ColumnReference
   {
-    return data?.rows.map {
+    data?.rows.map {
       $0.cells.filter { columns.contains($0.reference.column) }
     }
     .reduce([]) { $0 + $1 } ?? []
@@ -34,7 +34,7 @@ public extension Worksheet {
   func cells<T>(atRows rows: T) -> [Cell]
     where T: Collection, T.Element == UInt
   {
-    return data?.rows.filter { rows.contains($0.reference) }
+    data?.rows.filter { rows.contains($0.reference) }
       .reduce([]) { $0 + $1.cells } ?? []
   }
 
@@ -44,7 +44,7 @@ public extension Worksheet {
     where T1: Collection, T1.Element == ColumnReference,
     T2: Collection, T2.Element == UInt
   {
-    return data?.rows.filter { rows.contains($0.reference) }.map {
+    data?.rows.filter { rows.contains($0.reference) }.map {
       $0.cells.filter { columns.contains($0.reference.column) }
     }
     .reduce([]) { $0 + $1 } ?? []

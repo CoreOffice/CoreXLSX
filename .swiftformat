@@ -7,5 +7,4 @@
 --ifdef noindent
 --stripunusedargs closure-only
 --disable andOperator
---swiftversion 4.2
---exclude Carthage
+--swiftversion 5.1
