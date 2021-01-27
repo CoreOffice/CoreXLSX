@@ -40,6 +40,11 @@ Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
 officeDocument"
 Target="xl/workbook.xml"/>
 
+<Relationship
+Id="rId4"
+Type="http://customschemas.google.com/relationships/workbookmetadata"
+Target="xl/metadata.xml"/>
+
 </Relationships>
 """.data(using: .utf8)!
 
@@ -73,6 +78,9 @@ private let parsed = [
   Relationship(id: "rId3",
                type: .officeDocument,
                target: "xl/workbook.xml"),
+  Relationship(id: "rId4",
+               type: .googleWorkbookMetadata,
+               target: "xl/metadata.xml"),
 ]
 
 private let person =
@@ -99,7 +107,7 @@ final class RelationshipsTests: XCTestCase {
 
     let relationshipsFromFile = try file.parseRelationships()
 
-    XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed))
+    XCTAssertEqual(relationshipsFromFile, Relationships(items: parsed.dropLast()))
   }
 
   func testRelationshipsFaultyWorksheet() throws {
