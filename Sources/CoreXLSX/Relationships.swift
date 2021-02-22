@@ -122,7 +122,14 @@ public struct Relationship: Codable, Equatable {
       http://schemas.microsoft.com/office/2011/relationships/\
       webextensiontaskpanes
       """
-    case googleWorkbookMetadata = "http://customschemas.google.com/relationships/workbookmetadata"
+    case googleWorkbookMetadata =
+      """
+      http://customschemas.google.com/relationships/workbookmetadata
+      """
+    case purlOCLC =
+      """
+      http://purl.oclc.org/ooxml/officeDocument/relationships/extendedProperties
+      """
   }
 
   /// The identifier for this entity.

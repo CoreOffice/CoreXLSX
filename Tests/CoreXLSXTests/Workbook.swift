@@ -50,7 +50,7 @@ private let expectedWorkbook =
 final class WorkbookTests: XCTestCase {
   func testWorkbook() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
+      XLSXFile(filepath: "\(fixturesPath)/categories.xlsx")
     else {
       XCTFail("failed to open the file")
       return
@@ -62,7 +62,7 @@ final class WorkbookTests: XCTestCase {
 
   func testWorksheetPathsAndNames() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
+      XLSXFile(filepath: "\(fixturesPath)/categories.xlsx")
     else {
       XCTFail("failed to open the file")
       return

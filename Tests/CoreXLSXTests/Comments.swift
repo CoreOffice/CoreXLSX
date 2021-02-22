@@ -18,7 +18,7 @@ import XCTest
 final class CommentsTests: XCTestCase {
   func testComments() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/comments.xlsx")
+      XLSXFile(filepath: "\(fixturesPath)/comments.xlsx")
     else {
       XCTFail("failed to open the file")
       return

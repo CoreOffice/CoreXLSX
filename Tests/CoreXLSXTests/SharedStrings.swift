@@ -92,7 +92,7 @@ private let richTextXML = """
 final class SharedStringsTests: XCTestCase {
   func testSharedStrings() throws {
     guard
-      let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx"),
+      let file = XLSXFile(filepath: "\(fixturesPath)/categories.xlsx"),
       let sharedStrings = try file.parseSharedStrings()
     else {
       XCTFail("failed to open the file and get access to its shared strings")
@@ -111,7 +111,7 @@ final class SharedStringsTests: XCTestCase {
 
   func testSharedStringsOrder() throws {
     guard
-      let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx"),
+      let file = XLSXFile(filepath: "\(fixturesPath)/categories.xlsx"),
       let sharedStrings = try file.parseSharedStrings()
     else {
       XCTFail("failed to open the file and get access to its shared strings")
