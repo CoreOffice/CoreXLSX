@@ -9,13 +9,16 @@
 import Foundation
 import XCTest
 
-let currentWorkingPath = URL(fileURLWithPath: #file).deletingLastPathComponent().path
+let fixturesPath = URL(fileURLWithPath: #file)
+  .deletingLastPathComponent()
+  .appendingPathComponent("Fixtures")
+  .path
 
 final class CoreXLSXTests: XCTestCase {
   private let sheetPath = "xl/worksheets/sheet1.xml"
 
   func testBlank() throws {
-    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/Blank.xlsx")
+    guard let file = XLSXFile(filepath: "\(fixturesPath)/Blank.xlsx")
     else {
       XCTFail("failed to open the file")
       return
@@ -31,7 +34,7 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testHelloWorld() throws {
-    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/HelloWorld.xlsx")
+    guard let file = XLSXFile(filepath: "\(fixturesPath)/HelloWorld.xlsx")
     else {
       XCTFail("failed to open the file")
       return
@@ -51,7 +54,7 @@ final class CoreXLSXTests: XCTestCase {
 
   func testMultiline() throws {
     guard
-      let file = XLSXFile(filepath: "\(currentWorkingPath)/multi-line.text.in.cell.xlsx"),
+      let file = XLSXFile(filepath: "\(fixturesPath)/multi-line.text.in.cell.xlsx"),
       let strings = try file.parseSharedStrings()
     else {
       XCTFail("failed to open the file and get access to its shared strings")
@@ -73,7 +76,7 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testDates() throws {
-    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/Dates.xlsx") else {
+    guard let file = XLSXFile(filepath: "\(fixturesPath)/Dates.xlsx") else {
       XCTFail("failed to open the file")
       return
     }
@@ -103,7 +106,7 @@ final class CoreXLSXTests: XCTestCase {
 
   func testPublicAPI() throws {
     guard
-      let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx"),
+      let file = XLSXFile(filepath: "\(fixturesPath)/categories.xlsx"),
       let strings = try file.parseSharedStrings()
     else {
       XCTFail("failed to open the file and get access to its shared strings")
@@ -150,7 +153,7 @@ final class CoreXLSXTests: XCTestCase {
   }
 
   func testLegacyPublicAPI() throws {
-    guard let file = XLSXFile(filepath: "\(currentWorkingPath)/categories.xlsx")
+    guard let file = XLSXFile(filepath: "\(fixturesPath)/categories.xlsx")
     else {
       XCTFail("failed to open the file")
       return
@@ -212,7 +215,7 @@ final class CoreXLSXTests: XCTestCase {
 
   func testRootRelationships() throws {
     guard let file =
-      XLSXFile(filepath: "\(currentWorkingPath)/root_relationships.xlsx")
+      XLSXFile(filepath: "\(fixturesPath)/root_relationships.xlsx")
     else {
       XCTFail("failed to open the file")
       return
