@@ -65,6 +65,21 @@ to the [`Worksheet`
 model](https://github.com/CoreOffice/CoreXLSX/blob/main/Sources/CoreXLSX/Worksheet/Worksheet.swift)
 for more atttributes you might need to read from a parsed file.
 
+### Cell references
+
+You should not address cells via their indices in the `cells` array. Every
+cell has [a `reference` property](https://github.com/CoreOffice/CoreXLSX/blob/ef0380fc2a6f1382073431244ce347708aefe09f/Sources/CoreXLSX/Worksheet/Cell.swift#L37), which you can read to understand where exactly a given cell is located. Corresponding properties on [the `CellReference` struct](https://github.com/CoreOffice/CoreXLSX/blob/ef0380fc2a6f1382073431244ce347708aefe09f/Sources/CoreXLSX/Worksheet/CellReference.swift#L18) give you the exact position of a cell.
+
+### Empty cells
+
+The `.xlsx` format makes a clear distinction between an empty cell and absence of a cell. If you're not getting a cell or a row when iterating through the `cells` array, this means that there is no such cell or row in your document. Your `.xlsx` document should have empty cells and rows written in it in the first place for you to be able to read them.
+
+Making this distinction makes the format more efficient, especially for sparse spreadsheets. If you had a spreadsheet with a single cell Z1000000, it wouldn't contain millions of empty cells and a single cell with a value. The file only stores a single cell, which allows sparse spreadsheets to be quickly saved and loaded, also taking less space on the filesystem.
+
+### Finding a cell by a cell reference
+
+Given how the `.xlsx` format stores cells, you potentially have to iterate through all cells and build your own mapping from cell references to actual cell values. The CoreXLSX library does not currently do this automatically, and you will have to implement your own mapping if you need it. You're welcome to submit a pull request that adds such functionality as an optional step during parsing.
+
 ### Shared strings
 
 Strings in spreadsheet internals are frequently represented as strings
