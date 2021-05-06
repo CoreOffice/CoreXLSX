@@ -1,5 +1,7 @@
 # 0.14.1 (6 May 2021)
 
+This is a patch release improving compatibility with different spreadsheet formats.
+
 **Closed issues:**
 
 - Cannot initialize SchemaType from invalid String value `extendedProperties` ([#145](https://github.com/CoreOffice/CoreXLSX/issues/145))
