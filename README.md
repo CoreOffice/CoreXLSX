@@ -271,7 +271,7 @@ unacceptable behavior to conduct@coreoffice.org.
 
 ## Maintainers
 
-[Max Desiatov](https://desiatov.com), [Matvii Hodovaniuk](https://matvii.hodovani.uk).
+[Max Desiatov](https://desiatov.com).
 
 ## License
 
