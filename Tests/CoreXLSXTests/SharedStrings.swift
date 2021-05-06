@@ -138,7 +138,7 @@ final class SharedStringsTests: XCTestCase {
   func testRichTextXML() throws {
     let decoder = XMLDecoder()
     let strings = try decoder.decode(SharedStrings.self, from: richTextXML)
-    let text = strings.items[1].richText.reduce("") { (t, rt) -> String in
+    let text = strings.items[1].richText.reduce("") { t, rt -> String in
       t + (rt.text ?? "")
     }
     XCTAssertEqual(text, "CellA2")
