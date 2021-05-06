@@ -242,7 +242,7 @@ public class XLSXFile {
   ) throws -> [(name: String?, path: String)] {
     try parseDocumentPaths().map {
       try parseDocumentRelationships(path: $0)
-    }.flatMap { (path, relationships) -> [(name: String?, path: String)] in
+    }.flatMap { path, relationships -> [(name: String?, path: String)] in
       let worksheets = relationships.items.filter { $0.type == .worksheet }
 
       guard !path.isRoot else { return worksheets.map { (name: nil, path: $0.target) } }
@@ -263,7 +263,7 @@ public class XLSXFile {
   public func parseWorksheetPaths() throws -> [String] {
     try parseDocumentPaths().map {
       try parseDocumentRelationships(path: $0)
-    }.flatMap { (path, relationships) -> [String] in
+    }.flatMap { path, relationships -> [String] in
       let worksheets = relationships.items.filter { $0.type == .worksheet }
 
       guard !path.isRoot else { return worksheets.map { $0.target } }
