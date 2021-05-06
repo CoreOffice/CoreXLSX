@@ -1,3 +1,18 @@
+# 0.14.1 (6 May 2021)
+
+**Closed issues:**
+
+- Cannot initialize SchemaType from invalid String value `extendedProperties` ([#145](https://github.com/CoreOffice/CoreXLSX/issues/145))
+- Cannot initialize SchemaType from invalid String value `workbookmetadata` ([#142](https://github.com/CoreOffice/CoreXLSX/issues/142))
+
+**Merged pull requests:**
+
+- Update dependencies ([#147](https://github.com/CoreOffice/CoreXLSX/pull/147)) via [@ie-ahm-robox](https://github.com/ie-ahm-robox)
+- Add `purl.oclc.org` relationship schema type ([#146](https://github.com/CoreOffice/CoreXLSX/pull/146)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Add `googleWorkbookMetadata` case to relationships ([#143](https://github.com/CoreOffice/CoreXLSX/pull/143)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Add Xcode 12.3 to the `test.yml` workflow ([#144](https://github.com/CoreOffice/CoreXLSX/pull/144)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+- Add Xcode 12.4 to the `test.yml` workflow ([#149](https://github.com/CoreOffice/CoreXLSX/pull/149)) via [@MaxDesiatov](https://github.com/MaxDesiatov)
+
 # 0.14.0 (9 December 2020)
 
 This release improves compatibility with different spreadsheet formats, simplifies cell font and
