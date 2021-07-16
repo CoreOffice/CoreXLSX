@@ -46,7 +46,7 @@ public class XLSXFile {
 
   /// - Parameters:
   ///   - filepath: path to the `.xlsx` file to be processed.
-  ///   - bufferSize: ZIP archive buffer size in bytes. The default is 10KB.
+  ///   - bufferSize: ZIP archive buffer size in bytes. The default is 10MB.
   /// You may need to set a bigger buffer size for bigger files.
   ///   - errorContextLength: The error context length. The default is `0`.
   /// Non-zero length makes an error thrown from
@@ -76,7 +76,7 @@ public class XLSXFile {
   #if swift(>=5.0)
   /// - Parameters:
   ///   - data: content of the `.xlsx` file to be processed.
-  ///   - bufferSize: ZIP archive buffer size in bytes. The default is 10KB.
+  ///   - bufferSize: ZIP archive buffer size in bytes. The default is 10MB.
   /// You may need to set a bigger buffer size for bigger files.
   ///   - errorContextLength: The error context length. The default is `0`.
   /// Non-zero length makes an error thrown from
