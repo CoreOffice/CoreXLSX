@@ -3,5 +3,7 @@
 set -e 
 set -o pipefail
 
-cd Example && pod install --repo-update && cd ..
-pod lib lint --verbose
+bundle install
+
+cd Example && bundle exec pod install --repo-update && cd ..
+bundle exec pod lib lint --verbose
