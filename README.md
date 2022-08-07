@@ -1,5 +1,3 @@
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
-
 # CoreXLSX
 
 ## Excel spreadsheet (XLSX) format parser written in pure Swift
@@ -269,11 +267,7 @@ PRs before merging.
 This project adheres to the [Contributor Covenant Code of
 Conduct](https://github.com/CoreOffice/CoreXLSX/blob/main/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
-unacceptable behavior to conduct@coreoffice.org.
-
-## Maintainers
-
-[Max Desiatov](https://desiatov.com).
+unacceptable behavior to coreoffice@desiatov.com.
 
 ## License
 
