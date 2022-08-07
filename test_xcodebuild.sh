@@ -13,9 +13,9 @@ xcodebuild test -scheme CoreXLSX \
 
 if [ -n "$CODECOV_JOB" ]; then
   xcodebuild test -enableCodeCoverage YES -scheme CoreXLSX \
-    -sdk macosx | xcpretty
+    -destination platform=macOS | xcpretty
   bash <(curl -s https://codecov.io/bash)
 else
   xcodebuild test -scheme CoreXLSX \
-    -sdk macosx | xcpretty
+    -destination platform=macOS | xcpretty
 fi
