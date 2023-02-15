@@ -28,6 +28,8 @@ encryption](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-of
 
 Automatically generated documentation is available on [our GitHub Pages](https://coreoffice.github.io/CoreXLSX/).
 
+[Join our Discord](https://discord.gg/H6799jh) for any questions and friendly banter.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the
