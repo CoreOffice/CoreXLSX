@@ -50,10 +50,16 @@ public struct Cell: Codable, Equatable {
   public struct Formula: Codable, Equatable {
     public let calculationIndex: Int?
     public let value: String?
+    public let type: String?
+    public let ref: String?
+    public let shared: Int?
 
     enum CodingKeys: String, CodingKey {
       case calculationIndex = "ca"
       case value = ""
+      case type = "t"
+      case ref = "ref"
+      case shared = "si"
     }
   }
 
