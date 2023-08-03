@@ -30,18 +30,23 @@ public struct CommentList: Codable, Equatable {
 
 public struct Comment: Codable, Equatable {
   public let reference: String
-  public let text: Text
+  public let r: R?
 
   enum CodingKeys: String, CodingKey {
     case reference = "ref"
-    case text
+    case r = "r"
+  }
+    
+  public var text: String? {
+      return self.r?.plain
   }
 }
 
-public struct Text: Codable, Equatable {
+public struct R: Codable, Equatable {
   public let plain: String?
 
   enum CodingKeys: String, CodingKey {
     case plain = "t"
   }
 }
+
