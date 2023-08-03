@@ -25,7 +25,7 @@ final class CommentsTests: XCTestCase {
     }
     let paths = try file.parseWorksheetPaths()
     let comments = try file.parseComments(forWorksheet: paths[0])
-    XCTAssertEqual(comments.commentList.itemsByReference["A1"]?.text.plain,
+    XCTAssertEqual(comments.commentList.itemsByReference["A1"]?.plain,
                    "my note")
   }
 }
