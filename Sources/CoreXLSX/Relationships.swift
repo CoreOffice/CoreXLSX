@@ -22,7 +22,7 @@ public struct Relationships: Codable, Equatable {
   public let items: [Relationship]
 
   enum CodingKeys: String, CodingKey {
-    case items = "Relationships"
+    case items = "relationship"
   }
 }
 
@@ -148,12 +148,6 @@ public struct Relationship: Codable, Equatable {
 
   /// The path to this entity in the `.xlsx` archive.
   public let target: String
-    
-  enum CodingKeys: String, CodingKey {
-    case id = "Id"
-    case type = "Type"
-    case target = "Target"
-  }
 
   func path(from root: String) -> String {
     Path(target).isRoot ? target : "\(root)/\(target)"
