@@ -157,7 +157,12 @@ public class XLSXFile {
        let worksheetIdRange = Range(match.range(at: 1), in: path)
     {
       let worksheetId = path[worksheetIdRange]
-      return "xl/comments\(worksheetId).xml"
+        if let relationships = try? parseEntry("xl/_rels/sheet\(worksheetId).xml.rels", Relationships.self) {
+            if let commentRelationship = relationships.items.filter({  $0.type == .sheetComment }).first {
+                return "xl/\(commentRelationship.target.replacingOccurrences(of: "../", with: ""))"
+            }
+        }
+      return ""//"xl/comments\(worksheetId).xml"
     }
 
     throw CoreXLSXError.unsupportedWorksheetPath
@@ -165,7 +170,9 @@ public class XLSXFile {
 
   public func parseComments(forWorksheet path: String) throws -> Comments {
     let commentsPath = try buildCommentsPath(forWorksheet: path)
-
+    if commentsPath.isEmpty {
+      return Comments(commentList: CommentList(items: []))
+    }
     decoder.keyDecodingStrategy = .useDefaultKeys
 
     return try parseEntry(commentsPath, Comments.self)

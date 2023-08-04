@@ -130,6 +130,14 @@ public struct Relationship: Codable, Equatable {
       """
       http://purl.oclc.org/ooxml/officeDocument/relationships/extendedProperties
       """
+    case sheetComment =
+    """
+    http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments
+    """
+    case sheetVmlDrawing =
+    """
+    http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing
+    """
   }
 
   /// The identifier for this entity.
