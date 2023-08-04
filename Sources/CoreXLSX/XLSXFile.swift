@@ -157,7 +157,7 @@ public class XLSXFile {
        let worksheetIdRange = Range(match.range(at: 1), in: path)
     {
       let worksheetId = path[worksheetIdRange]
-        if let relationships = try? parseEntry("xl/_rels/sheet\(worksheetId).xml.rels", Relationships.self) {
+        if let relationships = try? parseEntry("xl/worksheets/_rels/sheet\(worksheetId).xml.rels", Relationships.self) {
             if let commentRelationship = relationships.items.filter({  $0.type == .sheetComment }).first {
                 return "xl/\(commentRelationship.target.replacingOccurrences(of: "../", with: ""))"
             }
