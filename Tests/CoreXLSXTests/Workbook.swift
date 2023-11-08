@@ -22,14 +22,15 @@ import XMLCoder
 private let parsedSheet = [
   Workbook.Sheet(name: "Sheet 1",
                  id: "1",
-                 relationship: "rId4"),
+                 relationship: "rId4",
+                 state: nil),
 ]
 
 // swiftlint:disable line_length
 private let workbookNoViews =
   """
   <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mx="http://schemas.microsoft.com/office/mac/excel/2008/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:x14="http://schemas.microsoft.com/office/spreadsheetml/2009/9/main" xmlns:x15="http://schemas.microsoft.com/office/spreadsheetml/2010/11/main" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac" xmlns:xm="http://schemas.microsoft.com/office/excel/2006/main"><workbookPr/><sheets><sheet state="visible" name="Summary" sheetId="1" r:id="rId4"/><sheet state="visible" name="General" sheetId="2" r:id="rId5"/></sheets><definedNames/><calcPr/></workbook>
+  <workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mx="http://schemas.microsoft.com/office/mac/excel/2008/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:x14="http://schemas.microsoft.com/office/spreadsheetml/2009/9/main" xmlns:x15="http://schemas.microsoft.com/office/spreadsheetml/2010/11/main" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac" xmlns:xm="http://schemas.microsoft.com/office/excel/2006/main"><workbookPr/><sheets><sheet state="visible" name="Summary" sheetId="1" r:id="rId4"/><sheet state="hidden" name="General" sheetId="2" r:id="rId5"/></sheets><definedNames/><calcPr/></workbook>
   """.data(using: .utf8)!
 // swiftlint:enable line_length
 
@@ -38,12 +39,14 @@ private let expectedWorkbook =
     .init(
       name: "Summary",
       id: "1",
-      relationship: "rId4"
+      relationship: "rId4",
+      state: "visible"
     ),
     .init(
       name: "General",
       id: "2",
-      relationship: "rId5"
+      relationship: "rId5",
+      state: "hidden"
     ),
   ]))
 

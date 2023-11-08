@@ -45,11 +45,13 @@ public struct Workbook: Codable, Equatable {
     public let name: String?
     public let id: String
     public let relationship: String
+    public let state: String?
 
     enum CodingKeys: String, CodingKey {
       case name
       case id = "sheetId"
       case relationship = "r:id"
+      case state
     }
   }
 
