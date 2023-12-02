@@ -45,7 +45,14 @@ public struct Workbook: Codable, Equatable {
     public let name: String?
     public let id: String
     public let relationship: String
-    public let state: String?
+
+    public enum State: String, Codable {
+      case visible
+      case hidden
+      case veryHidden
+    }
+
+    public let state: State?
 
     enum CodingKeys: String, CodingKey {
       case name

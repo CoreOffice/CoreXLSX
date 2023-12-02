@@ -40,13 +40,13 @@ private let expectedWorkbook =
       name: "Summary",
       id: "1",
       relationship: "rId4",
-      state: "visible"
+      state: .visible
     ),
     .init(
       name: "General",
       id: "2",
       relationship: "rId5",
-      state: "hidden"
+      state: .hidden
     ),
   ]))
 
