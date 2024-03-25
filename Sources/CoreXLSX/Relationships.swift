@@ -67,6 +67,11 @@ public struct Relationship: Codable, Equatable {
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
       worksheet
       """
+    case worksheetMetadata =
+        """
+        http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
+        sheetMetadata
+        """
     case chartsheet =
       """
       http://schemas.openxmlformats.org/officeDocument/2006/relationships/\
